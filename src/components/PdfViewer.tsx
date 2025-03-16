@@ -65,11 +65,11 @@ export default function PdfViewer({ pdfUrl, title, isExternalUrl = false, viewUr
   }
 
   function zoomIn() {
-    setScale(prevScale => Math.min(prevScale + 0.2, 3.0));
+    setScale((prevScale: number) => Math.min(prevScale + 0.2, 3.0));
   }
 
   function zoomOut() {
-    setScale(prevScale => Math.max(prevScale - 0.2, 0.5));
+    setScale((prevScale: number) => Math.max(prevScale - 0.2, 0.5));
   }
 
   function resetZoom() {
