@@ -5,8 +5,8 @@ import { getExamenesByAsignatura } from '@/data/examenes';
 import { getVideosBySubject } from '@/data/videos';
 
 export const metadata: Metadata = {
-  title: 'Història de l'Art | SelectiviCat',
-  description: 'Recursos, vídeos i exàmens de Història de l'Art per a la selectivitat. Prepara\'t per a les PAU amb els millors materials.',
+  title: 'Història de l\'Art | SelectiviCat',
+  description: 'Recursos, vídeos i exàmens de Història de l\'Art per a la selectivitat. Prepara\'t per a les PAU amb els millors materials.',
 };
 // Definir el tipo correcto para los parámetros de la página
 type Props = {
