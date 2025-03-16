@@ -85,18 +85,20 @@ const allArticles = [
   }
 ];
 
-// Definir la interfaz para los parámetros de búsqueda
-interface SearchParams {
+// Definir el tipo correcto para los parámetros de búsqueda
+type SearchParams = {
   page?: string;
   categoria?: string;
   tag?: string;
-}
+};
 
-export default async function Blog({ 
-  searchParams 
-}: { 
-  searchParams: SearchParams 
-}) {
+// Definir el tipo para los parámetros de la página
+type PageProps = {
+  params: { [key: string]: string };
+  searchParams: SearchParams;
+};
+
+export default async function Blog({ searchParams }: PageProps) {
   // Obtener la página actual de los parámetros de búsqueda o usar 1 por defecto
   const pageParam = searchParams?.page;
   const currentPage = pageParam ? Number(pageParam) : 1;
