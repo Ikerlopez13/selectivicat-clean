@@ -1,29 +1,74 @@
-# SelectiviCat - Fix for useSearchParams
+# SelectiviCAT
 
-Este repositorio contiene la solución para el error de `useSearchParams()` en la página `/notes-de-tall`.
+Repositori d'exàmens de selectivitat de Catalunya amb solucions i recursos per a estudiants.
 
-## Solución implementada
+## Tecnologies
 
-1. Se ha creado un componente cliente separado (`client-search.tsx`) que contiene solo la lógica de búsqueda y utiliza `useSearchParams()`.
-2. La página principal (`page.tsx`) sigue siendo un Server Component que renderiza el componente cliente dentro de un `Suspense`.
-3. El componente cliente está aislado y solo maneja la funcionalidad específica que requiere `useSearchParams()`.
+- Next.js 14 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- NextAuth.js
+- MongoDB
+- Mongoose
+- SWR
 
-## Pasos para implementar
+## Requisits
 
-1. Crea el archivo `src/app/notes-de-tall/client-search.tsx` con el contenido proporcionado.
-2. Actualiza el archivo `src/app/notes-de-tall/page.tsx` para usar el componente cliente dentro de un `Suspense`.
-3. Despliega la aplicación en Vercel.
+- Node.js 18.17 o superior
+- MongoDB
 
-## Explicación técnica
+## Instal·lació
 
-El error ocurre porque `useSearchParams()` debe estar envuelto en un límite de Suspense. Al mover solo la lógica de búsqueda a un componente cliente separado y envolverlo en `Suspense`, nos aseguramos de que el componente se cargue correctamente en el cliente.
+1. Clona el repositori:
+```bash
+git clone https://github.com/yourusername/selectivicat.git
+cd selectivicat
+```
 
-Esta solución sigue las recomendaciones oficiales de Next.js para manejar hooks de cliente como `useSearchParams()` en aplicaciones con App Router.
+2. Instal·la les dependències:
+```bash
+npm install
+```
 
-## Diferencia con la solución anterior
+3. Crea un arxiu `.env.local` a l'arrel del projecte amb les següents variables:
+```env
+MONGODB_URI=your_mongodb_uri
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
 
-La solución anterior movía toda la página a un componente cliente, lo que podría causar problemas de rendimiento y SEO. Esta nueva solución es más eficiente porque:
+4. Inicia el servidor de desenvolupament:
+```bash
+npm run dev
+```
 
-1. Mantiene la mayor parte de la página como un Server Component
-2. Solo mueve a un componente cliente la parte que realmente necesita `useSearchParams()`
-3. Es más simple y directa, lo que reduce la posibilidad de errores 
+5. Obre [http://localhost:3000](http://localhost:3000) al teu navegador.
+
+## Estructura del Projecte
+
+```
+src/
+├── app/              # Pàgines i layouts de Next.js
+├── components/       # Components reutilitzables
+├── lib/             # Configuracions i utilitats
+├── models/          # Models de Mongoose
+├── styles/          # Estils globals
+└── utils/           # Funcions utilitàries
+```
+
+## Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desenvolupament
+- `npm run build`: Crea la versió de producció
+- `npm start`: Inicia el servidor de producció
+- `npm run lint`: Executa el linter
+
+## Contribuir
+
+Les contribucions són benvingudes! Si us plau, llegeix les nostres [guies de contribució](CONTRIBUTING.md) abans d'enviar un pull request.
+
+## Llicència
+
+Aquest projecte està sota la llicència MIT. Vegeu l'arxiu [LICENSE](LICENSE) per més detalls. 

@@ -1,0 +1,37 @@
+{
+  "name": "selectivicat",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.4.16",
+    "daisyui": "latest",
+    "framer-motion": "^12.5.0",
+    "mongoose": "latest",
+    "next": "^15.2.2",
+    "next-auth": "latest",
+    "postcss": "^8.4.31",
+    "react": "^19.0.0",
+    "react-dom": "latest",
+    "react-pdf": "^9.2.1",
+    "swr": "latest",
+    "tailwindcss": "^3.3.0",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-next": "latest"
+  }
+}

@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
 import PopularDegrees from '@/components/PopularDegrees';
+import SaasRecommendation from '@/components/SaasRecommendation';
 import Link from 'next/link';
 import ClientSearchComponent from './client-search';
 
@@ -107,6 +108,13 @@ export default function NotesPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Recomendación de FocusCircle */}
+        <div className="py-8 px-4 md:px-8 bg-gray-50">
+          <div className="container mx-auto max-w-6xl">
+            <SaasRecommendation />
           </div>
         </div>
       </div>
