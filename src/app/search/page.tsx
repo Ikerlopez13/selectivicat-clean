@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import NavbarMain from '@/components/NavbarMain';
@@ -15,7 +15,8 @@ import {
   Asignatura 
 } from '@/data/itinerarios';
 
-export default function SearchPage() {
+// Componente que contiene la lógica de búsqueda
+function SearchContent() {
   const searchParams = useSearchParams();
   const searchTerm = searchParams.get('q') || '';
   const [results, setResults] = useState<{ itinerarios: Itinerario[], asignaturas: Asignatura[] }>({ 
@@ -111,122 +112,156 @@ export default function SearchPage() {
   );
 
   return (
+    <div className="max-w-5xl mx-auto">
+      <h1 className="text-3xl font-bold mb-2">
+        {searchTerm ? 'Resultats de cerca' : 'Descobreix itineraris i assignatures'}
+      </h1>
+      
+      {searchTerm && (
+        <p className="text-gray-600 mb-6">
+          {isLoading ? 'Cercant...' : 
+            `S'han trobat ${totalResults} resultats per "${searchTerm}"`}
+        </p>
+      )}
+
+      {/* Búsquedas populares - mostrar siempre */}
+      <div className="mb-8">
+        <h2 className="text-lg font-medium mb-3">Tendències de cerca:</h2>
+        <div className="flex flex-wrap gap-2">
+          {busquedasPopulares.map((busqueda, index) => (
+            <Link 
+              key={index} 
+              href={busqueda.url}
+              className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium transition-colors"
+            >
+              {busqueda.texto}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Resultados de búsqueda */}
+      {searchTerm && !isLoading && totalResults === 0 && (
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-semibold mb-2">No s'han trobat resultats</h2>
+          <p className="text-gray-600 mb-4">
+            No hem trobat cap itinerari ni assignatura que coincideixi amb "{searchTerm}". 
+            Prova amb un altre terme de cerca o explora les nostres recomanacions.
+          </p>
+        </div>
+      )}
+
+      {/* Mostrar resultados de búsqueda si hay término de búsqueda */}
+      {searchTerm && results.itinerarios.length > 0 && (
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Itineraris ({results.itinerarios.length})</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {results.itinerarios.map(renderItinerarioCard)}
+          </div>
+        </div>
+      )}
+
+      {searchTerm && results.asignaturas.length > 0 && (
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Assignatures ({results.asignaturas.length})</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {results.asignaturas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
+          </div>
+        </div>
+      )}
+
+      {/* Mostrar asignaturas relacionadas si hay búsqueda */}
+      {searchTerm && relacionadas.length > 0 && (
+        <div className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">També et pot interessar</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {relacionadas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
+          </div>
+        </div>
+      )}
+
+      {/* Mostrar recomendaciones si no hay término de búsqueda o no hay resultados */}
+      {(!searchTerm || (searchTerm && totalResults === 0)) && (
+        <>
+          <div className="mb-10">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-semibold">Itineraris destacats</h2>
+              <Link href="/categories" className="text-selectivi-yellow hover:underline">
+                Veure tots
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {recomendaciones.itinerarios.map(renderItinerarioCard)}
+            </div>
+          </div>
+
+          <div className="mb-10">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-semibold">Assignatures populars</h2>
+              <Link href="/assignatures" className="text-selectivi-yellow hover:underline">
+                Veure totes
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {recomendaciones.asignaturas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
+            </div>
+          </div>
+
+          <div className="bg-selectivi-yellow/10 rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">No saps per on començar?</h2>
+            <p className="text-gray-700 mb-4">
+              Explora els diferents itineraris per descobrir quines assignatures s'adapten millor als teus interessos i objectius acadèmics.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/categories/tecnologic" className="btn bg-selectivi-yellow hover:bg-selectivi-yellow/90 text-white border-none">
+                Itinerari Tecnològic
+              </Link>
+              <Link href="/calculadora" className="btn bg-white text-selectivi-yellow hover:bg-gray-100 border border-selectivi-yellow">
+                Calculadora de notes
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// Componente de fallback mientras se carga
+function SearchLoading() {
+  return (
+    <div className="max-w-5xl mx-auto">
+      <div className="animate-pulse">
+        <div className="h-8 bg-gray-200 rounded w-2/3 mb-4"></div>
+        <div className="h-4 bg-gray-200 rounded w-1/2 mb-8"></div>
+        
+        <div className="h-6 bg-gray-200 rounded w-1/3 mb-3"></div>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {[1, 2, 3, 4].map(i => (
+            <div key={i} className="h-8 bg-gray-200 rounded-full w-24"></div>
+          ))}
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          {[1, 2, 3, 4].map(i => (
+            <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Componente principal que renderiza la página
+export default function SearchPage() {
+  return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
       
       <main className="flex-grow container mx-auto px-4 py-8 mt-16">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold mb-2">
-            {searchTerm ? 'Resultats de cerca' : 'Descobreix itineraris i assignatures'}
-          </h1>
-          
-          {searchTerm && (
-            <p className="text-gray-600 mb-6">
-              {isLoading ? 'Cercant...' : 
-                `S'han trobat ${totalResults} resultats per "${searchTerm}"`}
-            </p>
-          )}
-
-          {/* Búsquedas populares - mostrar siempre */}
-          <div className="mb-8">
-            <h2 className="text-lg font-medium mb-3">Tendències de cerca:</h2>
-            <div className="flex flex-wrap gap-2">
-              {busquedasPopulares.map((busqueda, index) => (
-                <Link 
-                  key={index} 
-                  href={busqueda.url}
-                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium transition-colors"
-                >
-                  {busqueda.texto}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Resultados de búsqueda */}
-          {searchTerm && !isLoading && totalResults === 0 && (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-              <h2 className="text-xl font-semibold mb-2">No s'han trobat resultats</h2>
-              <p className="text-gray-600 mb-4">
-                No hem trobat cap itinerari ni assignatura que coincideixi amb "{searchTerm}". 
-                Prova amb un altre terme de cerca o explora les nostres recomanacions.
-              </p>
-            </div>
-          )}
-
-          {/* Mostrar resultados de búsqueda si hay término de búsqueda */}
-          {searchTerm && results.itinerarios.length > 0 && (
-            <div className="mb-10">
-              <h2 className="text-2xl font-semibold mb-4">Itineraris ({results.itinerarios.length})</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {results.itinerarios.map(renderItinerarioCard)}
-              </div>
-            </div>
-          )}
-
-          {searchTerm && results.asignaturas.length > 0 && (
-            <div className="mb-10">
-              <h2 className="text-2xl font-semibold mb-4">Assignatures ({results.asignaturas.length})</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {results.asignaturas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
-              </div>
-            </div>
-          )}
-
-          {/* Mostrar asignaturas relacionadas si hay búsqueda */}
-          {searchTerm && relacionadas.length > 0 && (
-            <div className="mb-10">
-              <h2 className="text-2xl font-semibold mb-4">També et pot interessar</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {relacionadas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
-              </div>
-            </div>
-          )}
-
-          {/* Mostrar recomendaciones si no hay término de búsqueda o no hay resultados */}
-          {(!searchTerm || (searchTerm && totalResults === 0)) && (
-            <>
-              <div className="mb-10">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-semibold">Itineraris destacats</h2>
-                  <Link href="/categories" className="text-selectivi-yellow hover:underline">
-                    Veure tots
-                  </Link>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {recomendaciones.itinerarios.map(renderItinerarioCard)}
-                </div>
-              </div>
-
-              <div className="mb-10">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-semibold">Assignatures populars</h2>
-                  <Link href="/assignatures" className="text-selectivi-yellow hover:underline">
-                    Veure totes
-                  </Link>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {recomendaciones.asignaturas.map((asignatura, index) => renderAsignaturaCard(asignatura, index))}
-                </div>
-              </div>
-
-              <div className="bg-selectivi-yellow/10 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-2">No saps per on començar?</h2>
-                <p className="text-gray-700 mb-4">
-                  Explora els diferents itineraris per descobrir quines assignatures s'adapten millor als teus interessos i objectius acadèmics.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Link href="/categories/tecnologic" className="btn bg-selectivi-yellow hover:bg-selectivi-yellow/90 text-white border-none">
-                    Itinerari Tecnològic
-                  </Link>
-                  <Link href="/calculadora" className="btn bg-white text-selectivi-yellow hover:bg-gray-100 border border-selectivi-yellow">
-                    Calculadora de notes
-                  </Link>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+        <Suspense fallback={<SearchLoading />}>
+          <SearchContent />
+        </Suspense>
       </main>
 
       <FooterMain />
