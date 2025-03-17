@@ -85,20 +85,15 @@ const allArticles = [
   }
 ];
 
-// Definir el tipo correcto para los parámetros de búsqueda
-type SearchParams = {
-  page?: string;
-  categoria?: string;
-  tag?: string;
-};
-
-// En lugar de definir nuestro propio tipo PageProps, usamos el tipo que Next.js espera
-type Props = {
-  params: Promise<any>;
-  searchParams: SearchParams;
-};
-
-export default async function Blog({ searchParams }: Props) {
+export default async function Blog({ 
+  searchParams 
+}: { 
+  searchParams?: { 
+    page?: string;
+    categoria?: string;
+    tag?: string;
+  }
+}) {
   // Obtener la página actual de los parámetros de búsqueda o usar 1 por defecto
   const pageParam = searchParams?.page;
   const currentPage = pageParam ? Number(pageParam) : 1;
