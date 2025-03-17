@@ -94,7 +94,7 @@ type SearchParams = {
 
 // En lugar de definir nuestro propio tipo PageProps, usamos el tipo que Next.js espera
 type Props = {
-  params: {};
+  params: Promise<any>;
   searchParams: SearchParams;
 };
 
