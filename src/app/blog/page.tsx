@@ -85,17 +85,11 @@ const allArticles = [
   }
 ];
 
-export default async function Blog({ 
-  searchParams 
-}: { 
-  searchParams?: { 
-    page?: string;
-    categoria?: string;
-    tag?: string;
-  }
-}) {
+export default async function Blog(props: any) {
+  const searchParams = props.searchParams || {};
+  
   // Obtener la página actual de los parámetros de búsqueda o usar 1 por defecto
-  const pageParam = searchParams?.page;
+  const pageParam = searchParams.page;
   const currentPage = pageParam ? Number(pageParam) : 1;
   const articlesPerPage = 5;
   
