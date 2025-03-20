@@ -89,13 +89,25 @@ export default function MillorsVideosPage() {
                 Química
               </button>
               <button 
-                className={`${activeFilter === 'Història' ? 'bg-selectivi-yellow' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full hover:bg-gray-200 transition-colors`}
+                className={`${activeFilter === 'Història' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow`}
                 onClick={() => handleFilterClick('Història')}
               >
                 Història
               </button>
               <button 
-                className={`${activeFilter === 'Llengua Castellana' ? 'bg-selectivi-yellow' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full hover:bg-gray-200 transition-colors`}
+                className={`${activeFilter === 'Filosofia' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow`}
+                onClick={() => handleFilterClick('Filosofia')}
+              >
+                Filosofia
+              </button>
+              <button 
+                className={`${activeFilter === 'Història de la Filosofia' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow`}
+                onClick={() => handleFilterClick('Història de la Filosofia')}
+              >
+                Història de la Filosofia
+              </button>
+              <button 
+                className={`${activeFilter === 'Llengua Castellana' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow`}
                 onClick={() => handleFilterClick('Llengua Castellana')}
               >
                 Llengua Castellana
@@ -206,6 +218,90 @@ export default function MillorsVideosPage() {
                   onClick={() => handleSubFilterClick('Sintaxi')}
                 >
                   Sintaxi
+                </button>
+              </div>
+            )}
+            
+            {/* Subfiltres per a Filosofia */}
+            {activeFilter === 'Filosofia' && (
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <button 
+                  className={`${activeSubFilter === 'all' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('all')}
+                >
+                  Tots els temes
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Plató' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Plató')}
+                >
+                  Plató
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Ontologia' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Ontologia')}
+                >
+                  Ontologia
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Aristòtil' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Aristòtil')}
+                >
+                  Aristòtil
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Kant' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Kant')}
+                >
+                  Kant
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Nietzsche' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Nietzsche')}
+                >
+                  Nietzsche
+                </button>
+              </div>
+            )}
+            
+            {/* Subfiltres per a Història de la Filosofia (los mismos que Filosofia) */}
+            {activeFilter === 'Història de la Filosofia' && (
+              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+                <button 
+                  className={`${activeSubFilter === 'all' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('all')}
+                >
+                  Tots els temes
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Plató' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Plató')}
+                >
+                  Plató
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Ontologia' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Ontologia')}
+                >
+                  Ontologia
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Aristòtil' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Aristòtil')}
+                >
+                  Aristòtil
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Kant' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Kant')}
+                >
+                  Kant
+                </button>
+                <button 
+                  className={`${activeSubFilter === 'Nietzsche' ? 'bg-selectivi-yellow/70' : 'bg-white'} text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition-colors`}
+                  onClick={() => handleSubFilterClick('Nietzsche')}
+                >
+                  Nietzsche
                 </button>
               </div>
             )}
@@ -842,7 +938,7 @@ export default function MillorsVideosPage() {
         {activeFilter === 'all' && (
           <div className="py-16 px-4 md:px-8 bg-gray-50">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-3xl font-bold mb-8 text-center">Explora altres categories</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center">Explora altres categoríes</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Categoría Física */}
