@@ -323,6 +323,8 @@ export default function MillorsVideosPage() {
              activeFilter !== 'Matemàtiques CCSS' &&
              activeFilter !== 'Física' &&
              activeFilter !== 'Llengua Castellana' &&
+             activeFilter !== 'Filosofia' &&
+             activeFilter !== 'Història de la Filosofia' &&
              activeFilter !== 'Història' && (
               <div className="text-center py-12">
                 <p className="text-xl text-gray-600 mb-4">Encara no hi ha vídeos disponibles per a aquesta categoria.</p>
@@ -691,92 +693,6 @@ export default function MillorsVideosPage() {
               </div>
             )}
             
-            {/* Vídeo de Atodaleche - Història */}
-            {shouldShowVideo(['Història']) && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                {/* Vídeo principal destacat */}
-                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
-                  <div className="aspect-video">
-                    <iframe 
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/0x5A4Jji8k4" 
-                      title="La GUERRA CIVIL ESPAÑOLA [1936-1939]" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowFullScreen>
-                    </iframe>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">🇪🇸 La GUERRA CIVIL ESPAÑOLA [1936-1939] 🌐 HISTORIA de ESPAÑA</h3>
-                    <p className="text-gray-600 mb-4">
-                      Resumen completo de la Guerra Civil Española (1936-1939) para preparar la Selectividad. Causas, desarrollo y consecuencias explicadas de forma clara y concisa.
-                    </p>
-                    <div className="flex items-center mb-4">
-                      <img 
-                        src="https://yt3.googleusercontent.com/ytc/AIf8zZQHGYGnEZcpBVyXqcWgVoFEgkpGMOFRTQKu4A=s176-c-k-c0x00ffffff-no-rj" 
-                        alt="Atodaleche" 
-                        className="w-10 h-10 rounded-full mr-3"
-                      />
-                      <div>
-                        <p className="font-semibold">Atodaleche</p>
-                        <p className="text-sm text-gray-500">Professor d'Història</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Història</span>
-                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Guerra Civil</span>
-                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Segle XX</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <a 
-                        href="https://www.youtube.com/watch?v=0x5A4Jji8k4" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-800 hover:text-black font-medium"
-                      >
-                        Veure a YouTube
-                      </a>
-                      <a 
-                        href="https://www.youtube.com/@Atodaleche" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded-lg hover:bg-selectivi-yellow/80 transition-colors"
-                      >
-                        Subscriu-te al canal
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Informació sobre el professor */}
-                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md p-6 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold mb-4">Per què recomanem a Atodaleche?</h3>
-                  <p className="mb-4">
-                    Atodaleche és un excel·lent professor d'història que destaca per la seva capacitat de sintetitzar i explicar esdeveniments històrics complexos de manera clara i entretinguda. Els seus vídeos destaquen per:
-                  </p>
-                  <ul className="list-disc pl-6 mb-6 space-y-2">
-                    <li>Explicacions detallades dels esdeveniments històrics més importants</li>
-                    <li>Ús d'imatges i recursos visuals per facilitar la comprensió</li>
-                    <li>Anàlisi de causes i conseqüències dels fets històrics</li>
-                    <li>Contingut específic per preparar la selectivitat</li>
-                  </ul>
-                  <p className="mb-6">
-                    El seu canal de YouTube és un recurs molt valuós per als estudiants que volen entendre millor la història i preparar-se adequadament per a la selectivitat.
-                  </p>
-                  <div className="mt-auto">
-                    <a 
-                      href="https://www.youtube.com/@Atodaleche" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-block bg-white text-gray-800 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors"
-                    >
-                      Visita el seu canal
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
-            
             {/* Més vídeos d'història */}
             {shouldShowVideo(['Història']) && (
               <div className="mb-16">
@@ -876,6 +792,426 @@ export default function MillorsVideosPage() {
                     className="inline-block bg-selectivi-yellow text-gray-800 px-6 py-3 rounded-lg hover:bg-selectivi-yellow/80 transition-colors font-medium"
                   >
                     Veure tots els vídeos d'història
+                  </a>
+                </div>
+              </div>
+            )}
+            
+            {/* Vídeos de Filosofia */}
+            {shouldShowVideo(['Filosofia']) && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                {/* Vídeo principal destacat - Plató */}
+                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                  <div className="aspect-video">
+                    <iframe 
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/63QfNrSEVY4" 
+                      title="PLATÓN (Selectividad): LA TEORÍA DE LAS IDEAS" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen>
+                    </iframe>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">PLATÓN: LA TEORÍA DE LAS IDEAS</h3>
+                    <p className="text-gray-600 mb-4">
+                      Explicació detallada de la Teoria de las Ideas de Plató, concepto fundamental para entender su pensamiento filosófico y para la selectividad.
+                    </p>
+                    <div className="flex items-center mb-4">
+                      <img 
+                        src="https://yt3.googleusercontent.com/4RM7sEvCZ5hb5aIQnRbZfZXYEQ27Jjj13jt46iUsUJyXjMxF6WxGAJ4PzagYQ6JUm00leYL9=s176-c-k-c0x00ffffff-no-rj" 
+                        alt="Unprofesor - Filosofía" 
+                        className="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p className="font-semibold">Unprofesor - Filosofía</p>
+                        <p className="text-sm text-gray-500">Professor de Filosofía</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Filosofía</span>
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Plató</span>
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Teoria de las Ideas</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <a 
+                        href="https://www.youtube.com/watch?v=63QfNrSEVY4" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-gray-800 hover:text-black font-medium"
+                      >
+                        Veure a YouTube
+                      </a>
+                      <a 
+                        href="https://www.youtube.com/@UnprofesorFilosofia" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded-lg hover:bg-selectivi-yellow/80 transition-colors"
+                      >
+                        Subscriu-te al canal
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Informació sobre los videos de filosofía */}
+                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md p-6 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold mb-4">Contenidos de Filosofía para la Selectividad</h3>
+                  <p className="mb-4">
+                    Estos vídeos de filosofía cubren los principales temas y autores que necesitas dominar para la selectividad:
+                  </p>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li>Teoria de las Ideas de Plató</li>
+                    <li>Ontología y metafísica</li>
+                    <li>La ética de Aristóteles</li>
+                    <li>El imperativo categórico de Kant</li>
+                    <li>El nihilismo de Nietzsche</li>
+                  </ul>
+                  <p className="mb-6">
+                    Estos recursos audiovisuales han sido seleccionados por su claridad y profundidad, y son especialmente útiles para comprender los conceptos filosóficos más complejos.
+                  </p>
+                </div>
+              </div>
+            )}
+            
+            {/* Més vídeos de Filosofia */}
+            {shouldShowVideo(['Filosofia']) && (
+              <div className="mb-16">
+                <h3 className="text-2xl font-bold mb-6">Més vídeos de Filosofia</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Vídeo 1: Ontologia */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=F6HstBW8lX4" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/F6HstBW8lX4/hqdefault.jpg" 
+                          alt="Ontología - Filosofía - Selectividad - Metafísica" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">Ontología - Filosofía - Selectividad - Metafísica</h3>
+                        <p className="text-gray-600 text-sm mb-2">Unprofesor - Filosofía</p>
+                        <p className="text-gray-500 text-xs">13:41 • 234.512 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 2: Aristòtil */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=trwXp6hMN8M" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/trwXp6hMN8M/hqdefault.jpg" 
+                          alt="ARISTÓTELES: La ÉTICA y la FELICIDAD" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">ARISTÓTELES: La ÉTICA y la FELICIDAD</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">10:28 • 189.754 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 3: Kant */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=ZhN-grPFGQI" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/ZhN-grPFGQI/hqdefault.jpg" 
+                          alt="KANT: El IMPERATIVO CATEGÓRICO explicado fácil" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">KANT: El IMPERATIVO CATEGÓRICO explicado fácil</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">11:12 • 342.876 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 4: Nietzsche */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=QIQvy3nF_mE" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/QIQvy3nF_mE/hqdefault.jpg" 
+                          alt="NIETZSCHE y la MUERTE de DIOS" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">NIETZSCHE y la MUERTE de DIOS</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">12:34 • 285.329 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="text-center mt-8">
+                  <a 
+                    href="/subjects/filosofia" 
+                    className="inline-block bg-selectivi-yellow text-gray-800 px-6 py-3 rounded-lg hover:bg-selectivi-yellow/80 transition-colors font-medium"
+                  >
+                    Veure tots els vídeos de Filosofia
+                  </a>
+                </div>
+              </div>
+            )}
+            
+            {/* Vídeos d'Història de la Filosofia */}
+            {shouldShowVideo(['Història de la Filosofia']) && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                {/* Vídeo principal destacat - Plató */}
+                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                  <div className="aspect-video">
+                    <iframe 
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/63QfNrSEVY4" 
+                      title="PLATÓN (Selectividad): LA TEORÍA DE LAS IDEAS" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen>
+                    </iframe>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">PLATÓN: LA TEORÍA DE LAS IDEAS</h3>
+                    <p className="text-gray-600 mb-4">
+                      Explicació detallada de la Teoria de las Idees de Plató, concepte fonamental en la Història de la Filosofia i per a la selectivitat.
+                    </p>
+                    <div className="flex items-center mb-4">
+                      <img 
+                        src="https://yt3.googleusercontent.com/4RM7sEvCZ5hb5aIQnRbZfZXYEQ27Jjj13jt46iUsUJyXjMxF6WxGAJ4PzagYQ6JUm00leYL9=s176-c-k-c0x00ffffff-no-rj" 
+                        alt="Unprofesor - Filosofía" 
+                        className="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p className="font-semibold">Unprofesor - Filosofía</p>
+                        <p className="text-sm text-gray-500">Professor de Filosofia</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Història de la Filosofia</span>
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Plató</span>
+                      <span className="bg-selectivi-yellow/20 text-gray-800 px-3 py-1 rounded-full text-sm">Teoria de las Idees</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <a 
+                        href="https://www.youtube.com/watch?v=63QfNrSEVY4" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-gray-800 hover:text-black font-medium"
+                      >
+                        Veure a YouTube
+                      </a>
+                      <a 
+                        href="https://www.youtube.com/@UnprofesorFilosofia" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded-lg hover:bg-selectivi-yellow/80 transition-colors"
+                      >
+                        Subscriu-te al canal
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Informació sobre els videos d'història de la filosofia */}
+                <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md p-6 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold mb-4">Continguts d'Història de la Filosofia per a la Selectivitat</h3>
+                  <p className="mb-4">
+                    Aquests vídeos cobreixen el desenvolupament històric del pensament filosòfic occidental i els principals autors del programa de selectivitat:
+                  </p>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li>La filosofia antiga: Plató i Aristòtil</li>
+                    <li>La filosofia medieval i moderna</li>
+                    <li>La filosofia contemporània: Kant i Nietzsche</li>
+                    <li>Contextos històrics i influències filosòfiques</li>
+                    <li>Comparativa entre diferents corrents filosòfiques</li>
+                  </ul>
+                  <p className="mb-6">
+                    Aquests materials audiovisuals presenten de manera clara i concisa el pensament dels grans filòsofs, facilitant la comprensió dels seus conceptes i la relació entre ells.
+                  </p>
+                </div>
+              </div>
+            )}
+            
+            {/* Més vídeos d'Història de la Filosofia */}
+            {shouldShowVideo(['Història de la Filosofia']) && (
+              <div className="mb-16">
+                <h3 className="text-2xl font-bold mb-6">Més vídeos d'Història de la Filosofia</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Vídeo 1: Ontologia */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=F6HstBW8lX4" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/F6HstBW8lX4/hqdefault.jpg" 
+                          alt="Ontología - Filosofía - Selectividad - Metafísica" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">Ontología - Filosofía - Selectividad - Metafísica</h3>
+                        <p className="text-gray-600 text-sm mb-2">Unprofesor - Filosofía</p>
+                        <p className="text-gray-500 text-xs">13:41 • 234.512 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 2: Aristòtil */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=trwXp6hMN8M" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/trwXp6hMN8M/hqdefault.jpg" 
+                          alt="ARISTÓTELES: La ÉTICA y la FELICIDAD" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">ARISTÓTELES: La ÉTICA y la FELICIDAD</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">10:28 • 189.754 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 3: Kant */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=ZhN-grPFGQI" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/ZhN-grPFGQI/hqdefault.jpg" 
+                          alt="KANT: El IMPERATIVO CATEGÓRICO explicado fácil" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">KANT: El IMPERATIVO CATEGÓRICO explicado fácil</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">11:12 • 342.876 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  {/* Vídeo 4: Nietzsche */}
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <a 
+                      href="https://www.youtube.com/watch?v=QIQvy3nF_mE" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <div className="relative pb-[56.25%]">
+                        <img 
+                          src="https://i.ytimg.com/vi/QIQvy3nF_mE/hqdefault.jpg" 
+                          alt="NIETZSCHE y la MUERTE de DIOS" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                          <div className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg mb-1 line-clamp-2">NIETZSCHE y la MUERTE de DIOS</h3>
+                        <p className="text-gray-600 text-sm mb-2">Adictos a la Filosofía</p>
+                        <p className="text-gray-500 text-xs">12:34 • 285.329 visualizaciones</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="text-center mt-8">
+                  <a 
+                    href="/subjects/historia-filosofia" 
+                    className="inline-block bg-selectivi-yellow text-gray-800 px-6 py-3 rounded-lg hover:bg-selectivi-yellow/80 transition-colors font-medium"
+                  >
+                    Veure tots els vídeos d'Història de la Filosofia
                   </a>
                 </div>
               </div>
