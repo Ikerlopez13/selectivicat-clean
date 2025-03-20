@@ -20,7 +20,7 @@ export const videos: Video[] = [
     title: "PLATÓN (Selectividad): LA TEORÍA DE LAS IDEAS",
     description: "Una explicación detallada de la Teoría de las Ideas de Platón, fundamental para la selectividad. El vídeo analiza los conceptos clave del pensamiento platónico.",
     videoUrl: "https://www.youtube.com/watch?v=63QfNrSEVY4",
-    thumbnailUrl: "https://img.youtube.com/vi/63QfNrSEVY4/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/63QfNrSEVY4/hqdefault.jpg",
     channelName: "Adictos a la Filosofía",
     channelUrl: "https://www.youtube.com/@AdictosalaFilosofia",
     publishedAt: "2020-05-15",
@@ -34,7 +34,7 @@ export const videos: Video[] = [
     title: "Ontología - Filosofía - Selectividad - Metafísica",
     description: "Explicación de la ontología como rama de la metafísica. Una guía completa para entender los conceptos básicos necesarios para la selectividad.",
     videoUrl: "https://youtu.be/F6HstBW8lX4",
-    thumbnailUrl: "https://img.youtube.com/vi/F6HstBW8lX4/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/F6HstBW8lX4/hqdefault.jpg",
     channelName: "Filosofía en minutos",
     channelUrl: "https://www.youtube.com/@FilosofiaEnMinutos",
     publishedAt: "2021-03-10",
@@ -48,7 +48,7 @@ export const videos: Video[] = [
     title: "ARISTÓTELES: La ÉTICA y la FELICIDAD",
     description: "Análisis de la ética aristotélica y su concepto de felicidad (eudaimonía). Un vídeo esencial para comprender el pensamiento ético de Aristóteles de cara a la selectividad.",
     videoUrl: "https://youtu.be/trwXp6hMN8M",
-    thumbnailUrl: "https://img.youtube.com/vi/trwXp6hMN8M/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/trwXp6hMN8M/hqdefault.jpg",
     channelName: "Filosofía y Educación",
     channelUrl: "https://www.youtube.com/@FilosofiaYEducacion",
     publishedAt: "2022-01-20",
@@ -62,7 +62,7 @@ export const videos: Video[] = [
     title: "KANT: El IMPERATIVO CATEGÓRICO explicado fácil",
     description: "Explicación clara y concisa del imperativo categórico de Kant, uno de los conceptos fundamentales de la ética kantiana para la selectividad.",
     videoUrl: "https://youtu.be/ZhN-grPFGQI",
-    thumbnailUrl: "https://img.youtube.com/vi/ZhN-grPFGQI/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/ZhN-grPFGQI/hqdefault.jpg",
     channelName: "Filosofía en Contexto",
     channelUrl: "https://www.youtube.com/@FilosofiaEnContexto",
     publishedAt: "2021-11-15",
@@ -76,7 +76,7 @@ export const videos: Video[] = [
     title: "NIETZSCHE y la MUERTE de DIOS",
     description: "Análisis del concepto de la muerte de Dios en Nietzsche y sus implicaciones para la filosofía contemporánea. Un tema clave para entender a Nietzsche en selectividad.",
     videoUrl: "https://youtu.be/QIQvy3nF_mE",
-    thumbnailUrl: "https://img.youtube.com/vi/QIQvy3nF_mE/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/QIQvy3nF_mE/hqdefault.jpg",
     channelName: "Pensamiento Crítico",
     channelUrl: "https://www.youtube.com/@PensamientoCritico",
     publishedAt: "2022-04-10",
@@ -232,7 +232,7 @@ export const videos: Video[] = [
     title: "PLATÓN (Selectividad): LA TEORÍA DE LAS IDEAS",
     description: "Una explicación detallada de la Teoría de las Ideas de Platón, fundamental para la selectividad. El vídeo analiza los conceptos clave del pensamiento platónico.",
     videoUrl: "https://www.youtube.com/watch?v=63QfNrSEVY4",
-    thumbnailUrl: "https://img.youtube.com/vi/63QfNrSEVY4/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/63QfNrSEVY4/hqdefault.jpg",
     channelName: "Adictos a la Filosofía",
     channelUrl: "https://www.youtube.com/@AdictosalaFilosofia",
     publishedAt: "2020-05-15",
@@ -246,7 +246,7 @@ export const videos: Video[] = [
     title: "Ontología - Filosofía - Selectividad - Metafísica",
     description: "Explicación de la ontología como rama de la metafísica. Una guía completa para entender los conceptos básicos necesarios para la selectividad.",
     videoUrl: "https://youtu.be/F6HstBW8lX4",
-    thumbnailUrl: "https://img.youtube.com/vi/F6HstBW8lX4/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/F6HstBW8lX4/hqdefault.jpg",
     channelName: "Filosofía en minutos",
     channelUrl: "https://www.youtube.com/@FilosofiaEnMinutos",
     publishedAt: "2021-03-10",
@@ -260,7 +260,7 @@ export const videos: Video[] = [
     title: "ARISTÓTELES: La ÉTICA y la FELICIDAD",
     description: "Análisis de la ética aristotélica y su concepto de felicidad (eudaimonía). Un vídeo esencial para comprender el pensamiento ético de Aristóteles de cara a la selectividad.",
     videoUrl: "https://youtu.be/trwXp6hMN8M",
-    thumbnailUrl: "https://img.youtube.com/vi/trwXp6hMN8M/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/trwXp6hMN8M/hqdefault.jpg",
     channelName: "Filosofía y Educación",
     channelUrl: "https://www.youtube.com/@FilosofiaYEducacion",
     publishedAt: "2022-01-20",
@@ -274,7 +274,7 @@ export const videos: Video[] = [
     title: "KANT: El IMPERATIVO CATEGÓRICO explicado fácil",
     description: "Explicación clara y concisa del imperativo categórico de Kant, uno de los conceptos fundamentales de la ética kantiana para la selectividad.",
     videoUrl: "https://youtu.be/ZhN-grPFGQI",
-    thumbnailUrl: "https://img.youtube.com/vi/ZhN-grPFGQI/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/ZhN-grPFGQI/hqdefault.jpg",
     channelName: "Filosofía en Contexto",
     channelUrl: "https://www.youtube.com/@FilosofiaEnContexto",
     publishedAt: "2021-11-15",
@@ -288,7 +288,7 @@ export const videos: Video[] = [
     title: "NIETZSCHE y la MUERTE de DIOS",
     description: "Análisis del concepto de la muerte de Dios en Nietzsche y sus implicaciones para la filosofía contemporánea. Un tema clave para entender a Nietzsche en selectividad.",
     videoUrl: "https://youtu.be/QIQvy3nF_mE",
-    thumbnailUrl: "https://img.youtube.com/vi/QIQvy3nF_mE/maxresdefault.jpg",
+    thumbnailUrl: "https://i.ytimg.com/vi/QIQvy3nF_mE/hqdefault.jpg",
     channelName: "Pensamiento Crítico",
     channelUrl: "https://www.youtube.com/@PensamientoCritico",
     publishedAt: "2022-04-10",
@@ -309,8 +309,15 @@ export function getVideosBySubject(subjectId: string): Video[] {
 
 // Función para obtener videos destacados
 export function getFeaturedVideos(): Video[] {
-  // Devuelve los primeros 6 videos o menos si no hay suficientes
-  return videos.slice(0, 6);
+  // Incluir explícitamente videos de Historia de la Filosofía en los destacados
+  const historiaFilosofiaVideos = videos.filter(video => video.subjectId === 'historia-filosofia').slice(0, 3);
+  const filosofiaVideos = videos.filter(video => video.subjectId === 'filosofia').slice(0, 2);
+  const otrosVideos = videos.filter(video => 
+    video.subjectId !== 'historia-filosofia' && video.subjectId !== 'filosofia'
+  ).slice(0, 3);
+  
+  // Combinar los tres grupos de videos
+  return [...historiaFilosofiaVideos, ...filosofiaVideos, ...otrosVideos];
 }
 
 // Función para obtener un video por su ID
