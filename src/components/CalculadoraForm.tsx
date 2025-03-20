@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react';
 
 export default function CalculadoraForm() {
   // Estado para las notas
-  const [notaBachillerato, setNotaBachillerato] = useState<string>('');
-  const [notaCatalan, setNotaCatalan] = useState<string>('');
-  const [notaCastellano, setNotaCastellano] = useState<string>('');
-  const [notaLenguaExtranjera, setNotaLenguaExtranjera] = useState<string>('');
+  const [notaBatxillerat, setNotaBatxillerat] = useState<string>('');
+  const [notaCatala, setNotaCatala] = useState<string>('');
+  const [notaCastella, setNotaCastella] = useState<string>('');
+  const [notaLlenguaEstrangera, setNotaLlenguaEstrangera] = useState<string>('');
   const [notaHistoria, setNotaHistoria] = useState<string>('');
   const [notaOptativa, setNotaOptativa] = useState<string>('');
   
   // Estado para las ponderaciones de la fase específica
-  const [ponderacion1, setPonderacion1] = useState<string>('0.2');
-  const [ponderacion2, setPonderacion2] = useState<string>('0.2');
+  const [ponderacio1, setPonderacio1] = useState<string>('0.2');
+  const [ponderacio2, setPonderacio2] = useState<string>('0.2');
   
   // Estado para las asignaturas específicas
   const [especifica1, setEspecifica1] = useState<string>('');
@@ -35,55 +35,55 @@ export default function CalculadoraForm() {
   const calcularNota = () => {
     // Validar que todos los campos obligatorios estén completos
     if (
-      !notaBachillerato ||
-      !notaCatalan ||
-      !notaCastellano ||
-      !notaLenguaExtranjera ||
+      !notaBatxillerat ||
+      !notaCatala ||
+      !notaCastella ||
+      !notaLlenguaEstrangera ||
       !notaHistoria ||
       !notaOptativa
     ) {
-      alert('Por favor, completa todos los campos de la fase general.');
+      alert('Si us plau, completa tots els camps de la fase general.');
       return;
     }
 
     // Convertir las notas a números
-    const bachillerato = parseFloat(notaBachillerato);
-    const catalan = parseFloat(notaCatalan);
-    const castellano = parseFloat(notaCastellano);
-    const lenguaExtranjera = parseFloat(notaLenguaExtranjera);
+    const batxillerat = parseFloat(notaBatxillerat);
+    const catala = parseFloat(notaCatala);
+    const castella = parseFloat(notaCastella);
+    const llenguaEstrangera = parseFloat(notaLlenguaEstrangera);
     const historia = parseFloat(notaHistoria);
     const optativa = parseFloat(notaOptativa);
 
     // Calcular la nota de la fase general (media de las 5 asignaturas)
-    const mediaFaseGeneral = (catalan + castellano + lenguaExtranjera + historia + optativa) / 5;
+    const mediaFaseGeneral = (catala + castella + llenguaEstrangera + historia + optativa) / 5;
     
     // Calcular la nota de acceso a la universidad (60% bachillerato + 40% fase general)
-    const notaAcceso = bachillerato * 0.6 + mediaFaseGeneral * 0.4;
+    const notaAcces = batxillerat * 0.6 + mediaFaseGeneral * 0.4;
     
-    setNotaFaseGeneral(parseFloat(notaAcceso.toFixed(3)));
+    setNotaFaseGeneral(parseFloat(notaAcces.toFixed(3)));
 
     // Calcular la nota de la fase específica si hay asignaturas
     let notaEspecifica = 0;
     
-    if (especifica1 && ponderacion1) {
-      notaEspecifica += parseFloat(especifica1) * parseFloat(ponderacion1);
+    if (especifica1 && ponderacio1) {
+      notaEspecifica += parseFloat(especifica1) * parseFloat(ponderacio1);
     }
     
-    if (especifica2 && ponderacion2) {
-      notaEspecifica += parseFloat(especifica2) * parseFloat(ponderacion2);
+    if (especifica2 && ponderacio2) {
+      notaEspecifica += parseFloat(especifica2) * parseFloat(ponderacio2);
     }
     
     setNotaFaseEspecifica(parseFloat(notaEspecifica.toFixed(3)));
 
     // Calcular la nota final (nota de acceso + nota específica)
-    const final = notaAcceso + notaEspecifica;
+    const final = notaAcces + notaEspecifica;
     setNotaFinal(parseFloat(final.toFixed(3)));
   };
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <div className="mb-8">
-        <h2 className="text-xl font-bold mb-4">Nota de Bachillerato</h2>
+        <h2 className="text-xl font-bold mb-4">Nota de Batxillerat</h2>
         <div className="mb-4">
           <input
             type="number"
@@ -91,11 +91,11 @@ export default function CalculadoraForm() {
             max="10"
             step="0.001"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Nota de Bachillerato"
-            value={notaBachillerato}
+            placeholder="Nota de Batxillerat"
+            value={notaBatxillerat}
             onChange={(e) => {
               if (validarNota(e.target.value)) {
-                setNotaBachillerato(e.target.value);
+                setNotaBatxillerat(e.target.value);
               }
             }}
           />
@@ -111,11 +111,11 @@ export default function CalculadoraForm() {
             max="10"
             step="0.001"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Catalán"
-            value={notaCatalan}
+            placeholder="Català"
+            value={notaCatala}
             onChange={(e) => {
               if (validarNota(e.target.value)) {
-                setNotaCatalan(e.target.value);
+                setNotaCatala(e.target.value);
               }
             }}
           />
@@ -126,11 +126,11 @@ export default function CalculadoraForm() {
             max="10"
             step="0.001"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Castellano"
-            value={notaCastellano}
+            placeholder="Castellà"
+            value={notaCastella}
             onChange={(e) => {
               if (validarNota(e.target.value)) {
-                setNotaCastellano(e.target.value);
+                setNotaCastella(e.target.value);
               }
             }}
           />
@@ -141,11 +141,11 @@ export default function CalculadoraForm() {
             max="10"
             step="0.001"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Lengua extranjera"
-            value={notaLenguaExtranjera}
+            placeholder="Llengua estrangera"
+            value={notaLlenguaEstrangera}
             onChange={(e) => {
               if (validarNota(e.target.value)) {
-                setNotaLenguaExtranjera(e.target.value);
+                setNotaLlenguaEstrangera(e.target.value);
               }
             }}
           />
@@ -156,7 +156,7 @@ export default function CalculadoraForm() {
             max="10"
             step="0.001"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Historia"
+            placeholder="Història"
             value={notaHistoria}
             onChange={(e) => {
               if (validarNota(e.target.value)) {
@@ -193,8 +193,8 @@ export default function CalculadoraForm() {
               step="0.1"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
               placeholder="0.2"
-              value={ponderacion1}
-              onChange={(e) => setPonderacion1(e.target.value)}
+              value={ponderacio1}
+              onChange={(e) => setPonderacio1(e.target.value)}
             />
           </div>
           <div className="col-span-3">
@@ -224,8 +224,8 @@ export default function CalculadoraForm() {
               step="0.1"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
               placeholder="0.2"
-              value={ponderacion2}
-              onChange={(e) => setPonderacion2(e.target.value)}
+              value={ponderacio2}
+              onChange={(e) => setPonderacio2(e.target.value)}
             />
           </div>
           <div className="col-span-3">
@@ -250,27 +250,30 @@ export default function CalculadoraForm() {
       <div className="flex justify-end">
         <button
           onClick={calcularNota}
-          className="bg-selectivi-yellow hover:bg-amber-500 text-black font-bold py-3 px-6 rounded-md transition duration-300"
+          className="px-6 py-3 bg-selectivi-yellow text-black rounded-md font-medium hover:bg-opacity-90 transition-colors"
         >
-          Calcular
+          Calcular nota
         </button>
       </div>
 
       {notaFinal !== null && (
-        <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-          <h3 className="text-lg font-bold mb-2">Resultado:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-3 rounded shadow">
-              <p className="text-sm text-gray-600">Nota de acceso:</p>
-              <p className="text-xl font-bold text-selectivi-yellow">{notaFaseGeneral?.toFixed(3)}</p>
+        <div className="mt-8 p-6 bg-selectivi-yellow/10 rounded-lg">
+          <h3 className="text-xl font-bold mb-4">Resultats</h3>
+          
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="text-sm text-gray-600 mb-1">Nota de fase general:</p>
+              <p className="text-2xl font-bold">{notaFaseGeneral}</p>
             </div>
-            <div className="bg-white p-3 rounded shadow">
-              <p className="text-sm text-gray-600">Nota fase específica:</p>
-              <p className="text-xl font-bold text-selectivi-yellow">{notaFaseEspecifica?.toFixed(3)}</p>
+            
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="text-sm text-gray-600 mb-1">Punts fase específica:</p>
+              <p className="text-2xl font-bold">{notaFaseEspecifica}</p>
             </div>
-            <div className="bg-white p-3 rounded shadow">
-              <p className="text-sm text-gray-600">Nota final:</p>
-              <p className="text-xl font-bold text-selectivi-yellow">{notaFinal.toFixed(3)}</p>
+            
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="text-sm text-gray-600 mb-1">Nota final d'admissió:</p>
+              <p className="text-2xl font-bold">{notaFinal}</p>
             </div>
           </div>
         </div>

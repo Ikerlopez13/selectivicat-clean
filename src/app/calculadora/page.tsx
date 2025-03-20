@@ -4,8 +4,8 @@ import FooterMain from '@/components/FooterMain';
 import SaasRecommendation from '@/components/SaasRecommendation';
 
 export const metadata = {
-  title: 'Calculadora de Nota Selectividad y Bachillerato | SelectiviCat',
-  description: 'Calcula tu nota de acceso a la universidad llenando los siguientes campos. De esta forma podrás prever la nota de tu expediente de bachillerato.',
+  title: 'Calculadora de Nota Selectivitat i Batxillerat | SelectiviCat',
+  description: 'Calcula la teva nota d\'accés a la universitat omplint els següents camps. D\'aquesta manera podràs preveure la nota del teu expedient de batxillerat.',
 };
 
 export default function CalculadoraPage() {
@@ -18,15 +18,15 @@ export default function CalculadoraPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-3/5">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Calculadora de Nota Selectividad y Bachillerato</h1>
-              <p className="text-xl mb-6">Calcula tu nota de acceso a la universidad.</p>
-              <p className="mb-8">Llena los siguientes campos (las notas son sobre 10) y podrás prever la nota de tu expediente de bachillerato.</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Calculadora de Nota Selectivitat i Batxillerat</h1>
+              <p className="text-xl mb-6">Calcula la teva nota d'accés a la universitat.</p>
+              <p className="mb-8">Omple els següents camps (les notes són sobre 10) i podràs preveure la nota del teu expedient de batxillerat.</p>
             </div>
             
             <div className="lg:w-2/5 flex justify-center">
               <img 
                 src="/images/Group11.png" 
-                alt="Estudiante calculando su nota" 
+                alt="Estudiant calculant la seva nota" 
                 className="w-s max-w-sm h-auto"
               />
             </div>
@@ -46,35 +46,35 @@ export default function CalculadoraPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-4">¿Cómo se calcula la nota de acceso?</h2>
-              <p className="mb-4">La nota de acceso a la universidad se calcula:</p>
+              <h2 className="text-2xl font-bold mb-4">Com es calcula la nota d'accés?</h2>
+              <p className="mb-4">La nota d'accés a la universitat es calcula:</p>
               <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                <p className="font-semibold">Nota de acceso = 0,6 × NMB + 0,4 × CFG</p>
-                <p className="text-sm mt-2">Donde:</p>
+                <p className="font-semibold">Nota d'accés = 0,6 × NMB + 0,4 × CFG</p>
+                <p className="text-sm mt-2">On:</p>
                 <ul className="text-sm list-disc pl-6">
-                  <li>NMB = Nota media del bachillerato</li>
-                  <li>CFG = Calificación de la fase general de las PAU</li>
+                  <li>NMB = Nota mitjana del batxillerat</li>
+                  <li>CFG = Qualificació de la fase general de les PAU</li>
                 </ul>
               </div>
-              <p>A esta nota se le pueden sumar las calificaciones de las materias específicas (hasta 4 puntos adicionales).</p>
+              <p>A aquesta nota se li poden sumar les qualificacions de les matèries específiques (fins a 4 punts addicionals).</p>
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-4">¿Qué es la fase específica?</h2>
-              <p className="mb-4">La fase específica permite mejorar la nota de admisión hasta un máximo de 4 puntos adicionales:</p>
+              <h2 className="text-2xl font-bold mb-4">Què és la fase específica?</h2>
+              <p className="mb-4">La fase específica permet millorar la nota d'admissió fins a un màxim de 4 punts addicionals:</p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Puedes examinarte de un máximo de 3 materias de modalidad</li>
-                <li>Cada materia se pondera según el grado universitario (0.1 o 0.2)</li>
-                <li>Solo se consideran las dos mejores calificaciones ponderadas</li>
-                <li>La nota de las materias específicas debe ser igual o superior a 5</li>
+                <li>Pots examinar-te d'un màxim de 3 matèries de modalitat</li>
+                <li>Cada matèria es pondera segons el grau universitari (0.1 o 0.2)</li>
+                <li>Només es consideren les dues millors qualificacions ponderades</li>
+                <li>La nota de les matèries específiques ha de ser igual o superior a 5</li>
               </ul>
-              <p>La fórmula para la nota de admisión es:</p>
+              <p>La fórmula per a la nota d'admissió és:</p>
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p className="font-semibold">Nota de admisión = Nota de acceso + a×M1 + b×M2</p>
-                <p className="text-sm mt-2">Donde:</p>
+                <p className="font-semibold">Nota d'admissió = Nota d'accés + a×M1 + b×M2</p>
+                <p className="text-sm mt-2">On:</p>
                 <ul className="text-sm list-disc pl-6">
-                  <li>M1, M2 = Las calificaciones de las dos materias específicas</li>
-                  <li>a, b = Parámetros de ponderación (0.1 o 0.2)</li>
+                  <li>M1, M2 = Les qualificacions de les dues matèries específiques</li>
+                  <li>a, b = Paràmetres de ponderació (0.1 o 0.2)</li>
                 </ul>
               </div>
             </div>
