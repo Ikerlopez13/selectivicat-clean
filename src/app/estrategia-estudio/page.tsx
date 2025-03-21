@@ -78,50 +78,103 @@ const Step1 = ({ formData, updateFormData, nextStep }) => {
 };
 
 const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
-  const asignaturas = [
-    "Lengua Castellana", 
-    "Catalán",
-    "Historia",
-    "Inglés", 
-    "Matemáticas II", 
-    "Matemáticas CCSS", 
-    "Física", 
-    "Química", 
-    "Biología", 
-    "Historia de la Filosofía"
+  const faseGeneral = [
+    "Català",
+    "Castellà",
+    "Llengua estrangera",
+    "Història",
+    "Optativa Fase General"
+  ];
+  
+  const faseEspecifica = [
+    "Específica 1",
+    "Específica 2"
   ];
   
   return (
     <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Tus asignaturas</h2>
+      <h2 className="text-2xl font-bold mb-6">¿Qué nota necesitas?</h2>
       <p className="text-gray-600 mb-6">
-        Indica las calificaciones que esperas obtener en cada asignatura de la Selectividad.
+        Introduce las notas que crees que necesitas obtener en cada asignatura para alcanzar tu objetivo.
       </p>
       
-      <div className="space-y-4">
-        {asignaturas.map((asignatura) => (
-          <div key={asignatura} className="flex items-center">
-            <label className="w-1/2 text-sm font-medium text-gray-700">
-              {asignatura}
-            </label>
-            <input
-              type="number"
-              step="0.01"
-              min="0"
-              max="10"
-              placeholder="0-10"
-              value={formData.asignaturas?.[asignatura] || ''}
-              onChange={(e) => {
-                const updatedAsignaturas = {
-                  ...(formData.asignaturas || {}),
-                  [asignatura]: e.target.value
-                };
-                updateFormData('asignaturas', updatedAsignaturas);
-              }}
-              className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            />
-          </div>
-        ))}
+      {/* Nota de Bachillerato */}
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold mb-4">Nota de Batxillerat</h3>
+        <div className="bg-white border border-gray-300 rounded-md">
+          <input
+            type="number"
+            step="0.01"
+            min="5"
+            max="10"
+            placeholder="Nota de Batxillerat"
+            value={formData.notaBachilleratoInput || ''}
+            onChange={(e) => updateFormData('notaBachilleratoInput', e.target.value)}
+            className="w-full px-4 py-3 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow border-0"
+          />
+        </div>
+      </div>
+      
+      {/* Fase General */}
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold mb-4">Fase General</h3>
+        <div className="space-y-3">
+          {faseGeneral.map((asignatura) => (
+            <div key={asignatura} className="w-full">
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                max="10"
+                placeholder={asignatura}
+                value={formData.faseGeneral?.[asignatura] || ''}
+                onChange={(e) => {
+                  const updatedFaseGeneral = {
+                    ...(formData.faseGeneral || {}),
+                    [asignatura]: e.target.value
+                  };
+                  updateFormData('faseGeneral', updatedFaseGeneral);
+                }}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
+                aria-label={asignatura}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Fase Específica */}
+      <div className="mb-6">
+        <h3 className="text-xl font-semibold mb-4">Fase específica</h3>
+        <div className="space-y-3">
+          {faseEspecifica.map((asignatura, index) => (
+            <div key={asignatura} className="flex gap-3">
+              <div className="w-1/6 flex items-center justify-center bg-gray-100 text-gray-700 font-semibold rounded-md">
+                0,2
+              </div>
+              <div className="w-5/6">
+                <input
+                  type="text"
+                  placeholder={asignatura}
+                  value={formData.faseEspecifica?.[asignatura]?.asignatura || ''}
+                  onChange={(e) => {
+                    const updatedFaseEspecifica = {
+                      ...(formData.faseEspecifica || {}),
+                      [asignatura]: {
+                        ...(formData.faseEspecifica?.[asignatura] || {}),
+                        asignatura: e.target.value,
+                        ponderacion: 0.2
+                      }
+                    };
+                    updateFormData('faseEspecifica', updatedFaseEspecifica);
+                  }}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
+                  aria-label={`Asignatura ${asignatura}`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       
       <div className="mt-8 flex justify-between">
@@ -168,6 +221,32 @@ const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
                   {lugar === 'Biblioteca' ? '📚' : lugar === 'Casa' ? '🏠' : '🔄'}
                 </span>
                 <span className="font-medium">{lugar}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            ¿En qué momento del día rindes mejor?
+          </label>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { valor: 'Mañana', emoji: '🌅' },
+              { valor: 'Tarde', emoji: '🌇' }
+            ].map((momento) => (
+              <button
+                key={momento.valor}
+                type="button"
+                onClick={() => updateFormData('momentoDia', momento.valor)}
+                className={`p-4 border rounded-lg flex flex-col items-center transition-colors ${
+                  formData.momentoDia === momento.valor 
+                    ? 'border-selectivi-yellow bg-selectivi-yellow bg-opacity-10' 
+                    : 'border-gray-200 hover:bg-gray-50'
+                }`}
+              >
+                <span className="text-3xl mb-2">{momento.emoji}</span>
+                <span className="font-medium">{momento.valor}</span>
               </button>
             ))}
           </div>
@@ -252,8 +331,67 @@ const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
 };
 
 const ResultStep = ({ formData }) => {
-  // Aquí se implementaría la lógica real para generar el plan personalizado
-  // Por ahora mostramos una representación visual simplificada
+  // Función para generar un horario semanal basado en la disponibilidad y preferencias
+  const generarHorarioSemanal = () => {
+    const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+    const horario = [];
+    
+    // Obtener asignaturas de fase general y específica
+    const asignaturas = [
+      ...Object.keys(formData.faseGeneral || {}).filter(a => formData.faseGeneral[a]),
+      ...Object.keys(formData.faseEspecifica || {}).map(k => formData.faseEspecifica[k]?.asignatura).filter(Boolean)
+    ];
+    
+    // Calcular horas disponibles por día
+    const horasDiarias = parseInt(formData.horasDiarias) || 4;
+    const duracionPomodoro = parseInt(formData.duracionPomodoro) || 25;
+    const momentoDia = formData.momentoDia || 'Mañana';
+    
+    // Crear bloques de estudio basados en la duración de pomodoro
+    const bloquesPorDia = Math.floor(horasDiarias * 60 / (duracionPomodoro + 5)); // +5 para descansos
+    
+    // Para cada día de la semana, asignar bloques de estudio
+    diasSemana.forEach((dia, i) => {
+      const bloquesDia = [];
+      
+      // Distribuir asignaturas en los bloques
+      for (let bloque = 0; bloque < bloquesPorDia; bloque++) {
+        const asignaturaIndex = (i + bloque) % asignaturas.length;
+        const asignatura = asignaturas[asignaturaIndex];
+        
+        // Calcular hora aproximada basada en preferencia (mañana/tarde)
+        const horaInicio = momentoDia === 'Mañana' 
+          ? 9 + Math.floor(bloque * (duracionPomodoro + 5) / 60)
+          : 15 + Math.floor(bloque * (duracionPomodoro + 5) / 60);
+          
+        const minutoInicio = (bloque * (duracionPomodoro + 5)) % 60;
+        const horaFormateada = `${horaInicio}:${minutoInicio < 10 ? '0' + minutoInicio : minutoInicio}`;
+        
+        bloquesDia.push({
+          hora: horaFormateada,
+          asignatura,
+          duracion: duracionPomodoro
+        });
+      }
+      
+      horario.push({
+        dia,
+        bloques: bloquesDia,
+        esFinDeSemana: i > 4 // Sábado y domingo
+      });
+    });
+    
+    return horario;
+  };
+  
+  const horarioSemanal = generarHorarioSemanal();
+  
+  // Función para crear URL de Google Calendar
+  const crearEnlaceGoogleCalendar = () => {
+    // En una implementación real, aquí generaríamos los enlaces a la API de Google Calendar
+    // Para una demostración, simplemente devolvemos la URL de autorización
+    return "https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=https://www.googleapis.com/auth/calendar&response_type=code";
+  };
   
   return (
     <div className="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto">
@@ -276,7 +414,7 @@ const ResultStep = ({ formData }) => {
             
             <div>
               <p className="font-medium">Nota actual de bachillerato:</p>
-              <p className="text-lg">{formData.notaBachillerato}</p>
+              <p className="text-lg">{formData.notaBachilleratoInput || formData.notaBachillerato}</p>
             </div>
             
             <div>
@@ -289,6 +427,11 @@ const ResultStep = ({ formData }) => {
               <p className="text-lg">
                 {formData.fechaExamen ? Math.max(0, Math.floor((new Date(formData.fechaExamen) - new Date()) / (1000 * 60 * 60 * 24))) : "No especificado"}
               </p>
+            </div>
+            
+            <div>
+              <p className="font-medium">Horario preferido:</p>
+              <p className="text-lg">{formData.momentoDia || "No especificado"}</p>
             </div>
             
             <div>
@@ -310,32 +453,66 @@ const ResultStep = ({ formData }) => {
               Descargar plan completo (PDF)
             </button>
             
-            <button className="mt-3 bg-white border border-selectivi-yellow text-gray-800 px-6 py-3 rounded-md hover:bg-gray-50 transition-colors w-full flex items-center justify-center">
+            <a 
+              href={crearEnlaceGoogleCalendar()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 bg-white border border-selectivi-yellow text-gray-800 px-6 py-3 rounded-md hover:bg-gray-50 transition-colors w-full flex items-center justify-center"
+            >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               Añadir a Google Calendar
-            </button>
+            </a>
           </div>
         </div>
         
         <div>
-          <h3 className="text-xl font-semibold mb-4 pb-2 border-b">Distribución recomendada</h3>
+          <h3 className="text-xl font-semibold mb-4 pb-2 border-b">Tu calendario de estudio</h3>
+          
+          {/* Calendario semanal */}
+          <div className="bg-gray-50 rounded-lg p-4 mb-4 max-h-80 overflow-y-auto">
+            {horarioSemanal.map((dia) => (
+              <div key={dia.dia} className={`mb-4 ${dia.esFinDeSemana ? 'opacity-75' : ''}`}>
+                <h4 className={`font-medium mb-2 pb-1 border-b ${dia.esFinDeSemana ? 'text-purple-700' : 'text-gray-800'}`}>
+                  {dia.dia}
+                </h4>
+                <div className="space-y-2">
+                  {dia.bloques.map((bloque, i) => (
+                    <div key={i} className="flex p-2 rounded bg-white border border-gray-200">
+                      <div className="w-16 text-xs font-medium text-gray-500">{bloque.hora}</div>
+                      <div className="flex-grow px-2 py-1 bg-selectivi-yellow bg-opacity-20 rounded">
+                        {bloque.asignatura} ({bloque.duracion} min)
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
           
           <div className="bg-gray-50 p-4 rounded-lg mb-4">
-            <h4 className="font-medium mb-2">Priorización de asignaturas</h4>
+            <h4 className="font-medium mb-2">Notas necesarias para aprobar</h4>
             <div className="space-y-2">
-              {Object.entries(formData.asignaturas || {})
+              {Object.entries(formData.faseGeneral || {})
                 .filter(([_, nota]) => nota)
-                .sort((a, b) => b[1] - a[1])
-                .slice(0, 5)
-                .map(([asignatura, nota], index) => (
+                .map(([asignatura, nota]) => (
                   <div key={asignatura} className="flex items-center">
                     <div className="w-8 h-8 rounded-full bg-selectivi-yellow text-center leading-8 mr-2">
-                      {index + 1}
+                      {nota}
                     </div>
                     <span className="flex-grow">{asignatura}</span>
-                    <span className="font-medium">{nota}/10</span>
+                  </div>
+                ))}
+                
+              {Object.entries(formData.faseEspecifica || {})
+                .filter(([_, data]) => data?.asignatura)
+                .map(([key, data]) => (
+                  <div key={key} className="flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 text-center leading-8 mr-2">
+                      {data.ponderacion}
+                    </div>
+                    <span className="flex-grow">{data.asignatura}</span>
                   </div>
                 ))}
             </div>
@@ -355,16 +532,6 @@ const ResultStep = ({ formData }) => {
               Conectar con FocusCircle
             </a>
           </div>
-          
-          <div className="mt-4 bg-purple-100 p-4 rounded-lg">
-            <h4 className="font-medium mb-2 text-purple-800">¿Necesitas ayuda personalizada?</h4>
-            <p className="text-sm text-purple-600 mb-3">
-              Nuestros tutores profesionales pueden ayudarte a entender mejor las materias y resolver tus dudas.
-            </p>
-            <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-              Reservar sesión con tutor
-            </button>
-          </div>
         </div>
       </div>
     </div>
@@ -377,9 +544,13 @@ export default function EstrategiaEstudio() {
     carrera: '',
     notaCorte: '',
     notaBachillerato: '',
+    notaBachilleratoInput: '',
+    faseGeneral: {},
+    faseEspecifica: {},
     asignaturas: {},
     lugarEstudio: '',
     horasDiarias: '',
+    momentoDia: '', // Mañana o tarde
     fechaExamen: '',
     duracionPomodoro: 25, // Valor por defecto
   });
