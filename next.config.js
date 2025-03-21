@@ -11,6 +11,8 @@ const nextConfig = {
       },
     ];
   },
+  // Configuración para servir archivos PDF estáticos correctamente
+  output: 'standalone',
 };
 
 module.exports = nextConfig; 
