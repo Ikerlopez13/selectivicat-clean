@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
 import { examenes, Examen, getExamenesByAsignatura } from '@/data/examenes';
@@ -100,11 +100,10 @@ export default function ExamenesPage() {
                     </p>
                     <div className="flex justify-between items-center">
                       <a 
-                        onClick={(e) => {
-                          e.preventDefault();
-                          alert("Los archivos PDF estarán disponibles próximamente. Estamos preparando los documentos oficiales.");
-                        }}
-                        className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors flex items-center cursor-pointer"
+                        href={fisicaExamen.rutaExamen} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors flex items-center"
                       >
                         <span className="mr-2">Ver Examen</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -112,12 +111,13 @@ export default function ExamenesPage() {
                           <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                         </svg>
                       </a>
-                      <span 
-                        className="text-blue-600 hover:underline flex items-center cursor-not-allowed opacity-50"
-                        title="Disponible próximamente"
+                      <a 
+                        href={fisicaExamen.rutaExamen} 
+                        download
+                        className="text-blue-600 hover:underline flex items-center"
                       >
                         Descargar
-                      </span>
+                      </a>
                     </div>
                   </div>
                   
@@ -162,11 +162,10 @@ export default function ExamenesPage() {
                       {fisicaExamen.rutaCorreccion ? (
                         <>
                           <a 
-                            onClick={(e) => {
-                              e.preventDefault();
-                              alert("Los criterios de corrección estarán disponibles próximamente. Estamos preparando los documentos oficiales.");
-                            }}
-                            className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors flex items-center cursor-pointer"
+                            href={fisicaExamen.rutaCorreccion} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors flex items-center"
                           >
                             <span className="mr-2">Ver Criterios</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -174,12 +173,13 @@ export default function ExamenesPage() {
                               <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
                             </svg>
                           </a>
-                          <span 
-                            className="text-blue-600 hover:underline flex items-center cursor-not-allowed opacity-50"
-                            title="Disponible próximamente"
+                          <a 
+                            href={fisicaExamen.rutaCorreccion} 
+                            download
+                            className="text-blue-600 hover:underline flex items-center"
                           >
                             Descargar
-                          </span>
+                          </a>
                         </>
                       ) : (
                         <span className="text-gray-500 italic">Próximamente</span>
@@ -238,12 +238,14 @@ export default function ExamenesPage() {
                           : 'Modelos en preparación'}
                       </p>
                       {hayExamenes ? (
-                        <button 
-                          onClick={() => alert("Los archivos PDF estarán disponibles próximamente. Estamos preparando los documentos oficiales.")}
+                        <a 
+                          href={examenesAsignatura[0].rutaExamen}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="block w-full text-center bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors"
                         >
                           Ver modelo
-                        </button>
+                        </a>
                       ) : (
                         <button 
                           disabled
