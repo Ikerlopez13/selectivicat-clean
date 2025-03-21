@@ -86,6 +86,21 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
     "Optativa Fase General"
   ];
   
+  const asignaturasEspecificas = [
+    "Matemáticas II",
+    "Matemáticas CCSS", 
+    "Física",
+    "Química",
+    "Biología",
+    "Dibujo Técnico",
+    "Economía",
+    "Geografía",
+    "Historia del Arte",
+    "Latín",
+    "Literatura Castellana",
+    "Literatura Catalana"
+  ];
+  
   const faseEspecifica = [
     "Específica 1",
     "Específica 2"
@@ -97,23 +112,6 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
       <p className="text-gray-600 mb-6">
         Introduce las notas que crees que necesitas obtener en cada asignatura para alcanzar tu objetivo.
       </p>
-      
-      {/* Nota de Bachillerato */}
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Nota de Batxillerat</h3>
-        <div className="bg-white border border-gray-300 rounded-md">
-          <input
-            type="number"
-            step="0.01"
-            min="5"
-            max="10"
-            placeholder="Nota de Batxillerat"
-            value={formData.notaBachilleratoInput || ''}
-            onChange={(e) => updateFormData('notaBachilleratoInput', e.target.value)}
-            className="w-full px-4 py-3 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow border-0"
-          />
-        </div>
-      </div>
       
       {/* Fase General */}
       <div className="mb-8">
@@ -153,9 +151,7 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
                 0,2
               </div>
               <div className="w-5/6">
-                <input
-                  type="text"
-                  placeholder={asignatura}
+                <select
                   value={formData.faseEspecifica?.[asignatura]?.asignatura || ''}
                   onChange={(e) => {
                     const updatedFaseEspecifica = {
@@ -170,7 +166,34 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
                   }}
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
                   aria-label={`Asignatura ${asignatura}`}
-                />
+                >
+                  <option value="">Selecciona una asignatura</option>
+                  {asignaturasEspecificas.map((opcion) => (
+                    <option key={opcion} value={opcion}>{opcion}</option>
+                  ))}
+                  <option value="otra">Otra (especificar)</option>
+                </select>
+                
+                {formData.faseEspecifica?.[asignatura]?.asignatura === 'otra' && (
+                  <input
+                    type="text"
+                    placeholder="Especifica la asignatura"
+                    value={formData.faseEspecifica?.[asignatura]?.asignaturaPersonalizada || ''}
+                    onChange={(e) => {
+                      const updatedFaseEspecifica = {
+                        ...(formData.faseEspecifica || {}),
+                        [asignatura]: {
+                          ...(formData.faseEspecifica?.[asignatura] || {}),
+                          asignaturaPersonalizada: e.target.value,
+                          ponderacion: 0.2
+                        }
+                      };
+                      updateFormData('faseEspecifica', updatedFaseEspecifica);
+                    }}
+                    className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
+                    aria-label={`Otra asignatura para ${asignatura}`}
+                  />
+                )}
               </div>
             </div>
           ))}
@@ -196,6 +219,8 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
 };
 
 const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
+  const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+  
   return (
     <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Tu modo de estudio</h2>
@@ -250,6 +275,29 @@ const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
               </button>
             ))}
           </div>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            ¿Qué día de la semana prefieres descansar?
+          </label>
+          <div className="grid grid-cols-4 gap-3 sm:grid-cols-7">
+            {diasSemana.map((dia) => (
+              <button
+                key={dia}
+                type="button"
+                onClick={() => updateFormData('diaDescanso', dia)}
+                className={`p-3 border rounded-lg flex flex-col items-center transition-colors ${
+                  formData.diaDescanso === dia 
+                    ? 'border-selectivi-yellow bg-selectivi-yellow bg-opacity-10' 
+                    : 'border-gray-200 hover:bg-gray-50'
+                }`}
+              >
+                <span className="text-sm font-medium">{dia.substring(0, 3)}</span>
+              </button>
+            ))}
+          </div>
+          <p className="text-sm text-gray-500 mt-1">Este día no se programarán sesiones de estudio</p>
         </div>
         
         <div>
@@ -331,27 +379,108 @@ const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
 };
 
 const ResultStep = ({ formData }) => {
-  // Función para generar un horario semanal basado en la disponibilidad y preferencias
-  const generarHorarioSemanal = () => {
+  // Función para generar un color basado en el nombre de la asignatura
+  const getColorForAsignatura = (nombre) => {
+    if (!nombre) return 'bg-gray-200';
+    
+    // Colores para asignaturas específicas
+    const colores = {
+      'Català': 'bg-red-100',
+      'Castellà': 'bg-orange-100',
+      'Llenguaestranger': 'bg-yellow-100',
+      'Història': 'bg-green-100',
+      'Optativa Fase General': 'bg-blue-100',
+      'Matemáticas II': 'bg-purple-100',
+      'Matemáticas CCSS': 'bg-indigo-100',
+      'Física': 'bg-pink-100',
+      'Química': 'bg-teal-100',
+      'Biología': 'bg-emerald-100',
+      'Dibujo Técnico': 'bg-cyan-100',
+      'Economía': 'bg-amber-100',
+      'Geografía': 'bg-lime-100',
+      'Historia del Arte': 'bg-violet-100',
+      'Latín': 'bg-fuchsia-100',
+      'Literatura Castellana': 'bg-rose-100',
+      'Literatura Catalana': 'bg-sky-100'
+    };
+    
+    // Si el nombre está en el objeto de colores, devolver ese color
+    if (colores[nombre]) return colores[nombre];
+    
+    // Si no, generar un color basado en el nombre (hash simple)
+    const total = nombre.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const hue = total % 360;
+    return `bg-[hsl(${hue},85%,95%)]`;
+  };
+  
+  // Función para obtener el nombre real de la asignatura específica
+  const getNombreAsignaturaEspecifica = (asignatura) => {
+    const data = formData.faseEspecifica?.[asignatura];
+    if (!data) return '';
+    return data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura;
+  };
+  
+  // Función para generar un horario semanal para una fase específica
+  const generarHorarioFase = (fase) => {
     const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
     const horario = [];
     
-    // Obtener asignaturas de fase general y específica
-    const asignaturas = [
+    // Obtener asignaturas basadas en la fase
+    let asignaturas = [
       ...Object.keys(formData.faseGeneral || {}).filter(a => formData.faseGeneral[a]),
-      ...Object.keys(formData.faseEspecifica || {}).map(k => formData.faseEspecifica[k]?.asignatura).filter(Boolean)
+      ...Object.keys(formData.faseEspecifica || {})
+        .map(k => {
+          const data = formData.faseEspecifica[k];
+          return data?.asignatura === 'otra' ? data.asignaturaPersonalizada : data?.asignatura;
+        })
+        .filter(Boolean)
     ];
+    
+    // Ajustar el enfoque basado en la fase
+    if (fase === 'preparacion') {
+      // Distribuir uniformemente todas las asignaturas
+      // Ya están todas incluidas por defecto
+    } else if (fase === 'practica') {
+      // Priorizar asignaturas específicas en la fase de práctica
+      const asignaturasEspecificas = Object.keys(formData.faseEspecifica || {})
+        .map(k => {
+          const data = formData.faseEspecifica[k];
+          return data?.asignatura === 'otra' ? data.asignaturaPersonalizada : data?.asignatura;
+        })
+        .filter(Boolean);
+      
+      // Dar más peso a las asignaturas específicas duplicándolas en el array
+      asignaturas = [
+        ...asignaturas,
+        ...asignaturasEspecificas
+      ];
+    } else if (fase === 'repaso') {
+      // En la fase de repaso final, enfocarse en todas las asignaturas pero con más intensidad
+      // Se mantiene la misma distribución pero se ajusta la intensidad en el título
+    }
     
     // Calcular horas disponibles por día
     const horasDiarias = parseInt(formData.horasDiarias) || 4;
     const duracionPomodoro = parseInt(formData.duracionPomodoro) || 25;
     const momentoDia = formData.momentoDia || 'Mañana';
+    const diaDescanso = formData.diaDescanso || 'Domingo'; // Día de descanso por defecto
     
     // Crear bloques de estudio basados en la duración de pomodoro
     const bloquesPorDia = Math.floor(horasDiarias * 60 / (duracionPomodoro + 5)); // +5 para descansos
     
     // Para cada día de la semana, asignar bloques de estudio
     diasSemana.forEach((dia, i) => {
+      // Saltar el día de descanso
+      if (dia === diaDescanso) {
+        horario.push({
+          dia,
+          bloques: [],
+          esDescanso: true,
+          esFinDeSemana: i > 4 // Sábado y domingo
+        });
+        return;
+      }
+      
       const bloquesDia = [];
       
       // Distribuir asignaturas en los bloques
@@ -370,13 +499,15 @@ const ResultStep = ({ formData }) => {
         bloquesDia.push({
           hora: horaFormateada,
           asignatura,
-          duracion: duracionPomodoro
+          duracion: duracionPomodoro,
+          color: getColorForAsignatura(asignatura)
         });
       }
       
       horario.push({
         dia,
         bloques: bloquesDia,
+        esDescanso: false,
         esFinDeSemana: i > 4 // Sábado y domingo
       });
     });
@@ -384,7 +515,93 @@ const ResultStep = ({ formData }) => {
     return horario;
   };
   
-  const horarioSemanal = generarHorarioSemanal();
+  // Generar horarios para cada fase
+  const horarioPreparacion = generarHorarioFase('preparacion');
+  const horarioPractica = generarHorarioFase('practica');
+  const horarioRepaso = generarHorarioFase('repaso');
+  
+  // Función para generar un plan estratégico hasta la fecha del examen
+  const generarEstrategia = () => {
+    if (!formData.fechaExamen) return [];
+    
+    const fechaExamen = new Date(formData.fechaExamen);
+    const fechaActual = new Date();
+    const diasRestantes = Math.max(0, Math.floor((fechaExamen - fechaActual) / (1000 * 60 * 60 * 24)));
+    
+    // Si no hay días restantes o la fecha es inválida, retornar un array vacío
+    if (diasRestantes <= 0) return [];
+    
+    // Obtener asignaturas
+    const asignaturasGeneral = Object.keys(formData.faseGeneral || {})
+      .filter(a => formData.faseGeneral[a])
+      .map(a => ({
+        nombre: a,
+        nota: formData.faseGeneral[a],
+        tipo: 'General'
+      }));
+      
+    const asignaturasEspecificas = Object.keys(formData.faseEspecifica || {})
+      .filter(k => formData.faseEspecifica[k]?.asignatura)
+      .map(k => ({
+        nombre: formData.faseEspecifica[k].asignatura,
+        ponderacion: formData.faseEspecifica[k].ponderacion,
+        tipo: 'Específica'
+      }));
+    
+    const todasAsignaturas = [...asignaturasGeneral, ...asignaturasEspecificas];
+    
+    // Distribuir días de estudio entre asignaturas
+    const semanas = Math.ceil(diasRestantes / 7);
+    
+    // Crear estrategia por semanas
+    const estrategia = [];
+    
+    // Primera fase: preparación general (60% del tiempo)
+    const semanasPreparacion = Math.max(1, Math.round(semanas * 0.6));
+    
+    estrategia.push({
+      fase: 'Fase de preparación',
+      duracion: `${semanasPreparacion} semanas`,
+      descripcion: 'Estudio completo del temario y resolución de problemas básicos',
+      actividades: todasAsignaturas.map(asig => ({
+        asignatura: asig.nombre,
+        enfoque: 'Repasar el temario completo y resolver problemas básicos',
+        prioridad: asig.tipo === 'Específica' ? 'Alta' : 'Media'
+      }))
+    });
+    
+    // Segunda fase: práctica intensiva (30% del tiempo)
+    const semanasPractica = Math.max(1, Math.round(semanas * 0.3));
+    
+    estrategia.push({
+      fase: 'Fase de práctica intensiva',
+      duracion: `${semanasPractica} semanas`,
+      descripcion: 'Resolver exámenes de años anteriores y problemas complejos',
+      actividades: todasAsignaturas.map(asig => ({
+        asignatura: asig.nombre,
+        enfoque: 'Resolver exámenes de selectividad de años anteriores',
+        prioridad: asig.tipo === 'Específica' ? 'Alta' : 'Media'
+      }))
+    });
+    
+    // Última fase: repaso final (10% del tiempo)
+    const semanasRepaso = Math.max(1, semanas - semanasPreparacion - semanasPractica);
+    
+    estrategia.push({
+      fase: 'Fase de repaso final',
+      duracion: `${semanasRepaso} semanas`,
+      descripcion: 'Repaso general y focalización en puntos débiles',
+      actividades: todasAsignaturas.map(asig => ({
+        asignatura: asig.nombre,
+        enfoque: 'Repasar conceptos clave y resolver dudas finales',
+        prioridad: 'Alta'
+      }))
+    });
+    
+    return estrategia;
+  };
+  
+  const estrategia = generarEstrategia();
   
   // Función para crear URL de Google Calendar
   const crearEnlaceGoogleCalendar = () => {
@@ -393,13 +610,126 @@ const ResultStep = ({ formData }) => {
     return "https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=https://www.googleapis.com/auth/calendar&response_type=code";
   };
   
+  // Función para elegir el título apropiado según la fase
+  const getTituloFase = (fase) => {
+    switch (fase) {
+      case 'preparacion':
+        return "Calendario de Fase de Preparación";
+      case 'practica':
+        return "Calendario de Fase de Práctica Intensiva";
+      case 'repaso':
+        return "Calendario de Fase de Repaso Final";
+      default:
+        return "Calendario Semanal";
+    }
+  };
+  
+  // Función para renderizar un horario
+  const renderizarHorario = (horario, fase) => {
+    return (
+      <div className="mb-8">
+        <h4 className="font-medium mb-3 text-lg">{getTituloFase(fase)}</h4>
+        <div className="bg-gray-50 rounded-lg p-4 max-h-[400px] overflow-y-auto">
+          {horario.map((dia) => (
+            <div key={dia.dia} className={`mb-4 ${dia.esFinDeSemana ? 'opacity-75' : ''}`}>
+              <h4 className={`font-medium mb-2 pb-1 border-b ${
+                dia.esDescanso ? 'text-green-700' : 
+                dia.esFinDeSemana ? 'text-purple-700' : 'text-gray-800'
+              }`}>
+                {dia.dia} {dia.esDescanso && '(Descanso)'}
+              </h4>
+              {dia.esDescanso ? (
+                <div className="p-3 bg-green-50 text-green-800 rounded-lg text-sm">
+                  Día de descanso - Aprovecha para recuperarte y hacer actividades diferentes.
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {dia.bloques.map((bloque, i) => (
+                    <div key={i} className="flex p-2 rounded bg-white border border-gray-200">
+                      <div className="w-16 text-xs font-medium text-gray-500">{bloque.hora}</div>
+                      <div className={`flex-grow px-2 py-1 rounded ${bloque.color}`}>
+                        {bloque.asignatura} ({bloque.duracion} min)
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+  
   return (
-    <div className="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto">
+    <div className="bg-white rounded-lg shadow-md p-8 max-w-5xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-2">¡Tu plan personalizado está listo!</h2>
         <p className="text-gray-600">
           Hemos creado un plan de estudios adaptado a tus necesidades para ayudarte a alcanzar el {formData.notaCorte} que necesitas para {formData.carrera}.
         </p>
+      </div>
+      
+      {/* Plan estratégico */}
+      <div className="mb-8">
+        <h3 className="text-2xl font-semibold mb-4 pb-2 border-b">Tu estrategia de estudio</h3>
+        
+        <div className="mb-6">
+          <div className="bg-blue-50 p-4 rounded-lg mb-4 text-center">
+            <p className="font-medium text-blue-800">
+              Faltan <span className="text-2xl font-bold">{formData.fechaExamen ? Math.max(0, Math.floor((new Date(formData.fechaExamen) - new Date()) / (1000 * 60 * 60 * 24))) : "?"}</span> días para el examen
+            </p>
+          </div>
+          
+          <div className="overflow-hidden bg-gray-100 h-3 rounded-full">
+            <div 
+              className="bg-selectivi-yellow h-full rounded-full" 
+              style={{ width: '33%' }}
+            ></div>
+          </div>
+          
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>Hoy</span>
+            <span>Mitad del camino</span>
+            <span>Examen</span>
+          </div>
+        </div>
+        
+        {estrategia.length > 0 ? (
+          <div className="space-y-6">
+            {estrategia.map((fase, index) => (
+              <div key={index} className="border rounded-lg overflow-hidden">
+                <div className={`p-4 font-medium ${
+                  index === 0 ? 'bg-blue-100 text-blue-800' : 
+                  index === 1 ? 'bg-purple-100 text-purple-800' : 
+                  'bg-green-100 text-green-800'
+                }`}>
+                  {fase.fase} <span className="text-sm font-normal">({fase.duracion})</span>
+                </div>
+                <div className="p-4">
+                  <p className="mb-3 text-gray-600">{fase.descripcion}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {fase.actividades.map((act, i) => (
+                      <div key={i} className="bg-gray-50 p-3 rounded border border-gray-200">
+                        <div className="font-medium">{act.asignatura}</div>
+                        <div className="text-sm text-gray-600">{act.enfoque}</div>
+                        <div className={`text-xs mt-1 ${
+                          act.prioridad === 'Alta' ? 'text-red-600' : 'text-blue-600'
+                        }`}>
+                          Prioridad: {act.prioridad}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8 text-gray-500">
+            Establece una fecha de examen para generar una estrategia
+          </div>
+        )}
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -414,7 +744,7 @@ const ResultStep = ({ formData }) => {
             
             <div>
               <p className="font-medium">Nota actual de bachillerato:</p>
-              <p className="text-lg">{formData.notaBachilleratoInput || formData.notaBachillerato}</p>
+              <p className="text-lg">{formData.notaBachillerato}</p>
             </div>
             
             <div>
@@ -465,56 +795,102 @@ const ResultStep = ({ formData }) => {
               Añadir a Google Calendar
             </a>
           </div>
+          
+          <div className="mt-6">
+            <div className="bg-gray-50 p-4 rounded-lg mb-4">
+              <h4 className="font-medium mb-2">Notas necesarias para aprobar</h4>
+              <div className="space-y-2">
+                {Object.entries(formData.faseGeneral || {})
+                  .filter(([_, nota]) => nota)
+                  .map(([asignatura, nota]) => (
+                    <div key={asignatura} className="flex items-center">
+                      <div className={`w-8 h-8 rounded-full text-center leading-8 mr-2 ${getColorForAsignatura(asignatura)}`}>
+                        {nota}
+                      </div>
+                      <span className="flex-grow">{asignatura}</span>
+                    </div>
+                  ))}
+                  
+                {Object.entries(formData.faseEspecifica || {})
+                  .filter(([_, data]) => data?.asignatura)
+                  .map(([key, data]) => (
+                    <div key={key} className="flex items-center">
+                      <div className={`w-8 h-8 rounded-full text-center leading-8 mr-2 ${getColorForAsignatura(data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura)}`}>
+                        {data.ponderacion}
+                      </div>
+                      <span className="flex-grow">
+                        {data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura}
+                      </span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
         </div>
         
         <div>
-          <h3 className="text-xl font-semibold mb-4 pb-2 border-b">Tu calendario de estudio</h3>
+          <h3 className="text-xl font-semibold mb-4 pb-2 border-b">Tus calendarios por fases</h3>
           
-          {/* Calendario semanal */}
-          <div className="bg-gray-50 rounded-lg p-4 mb-4 max-h-80 overflow-y-auto">
-            {horarioSemanal.map((dia) => (
-              <div key={dia.dia} className={`mb-4 ${dia.esFinDeSemana ? 'opacity-75' : ''}`}>
-                <h4 className={`font-medium mb-2 pb-1 border-b ${dia.esFinDeSemana ? 'text-purple-700' : 'text-gray-800'}`}>
-                  {dia.dia}
-                </h4>
-                <div className="space-y-2">
-                  {dia.bloques.map((bloque, i) => (
-                    <div key={i} className="flex p-2 rounded bg-white border border-gray-200">
-                      <div className="w-16 text-xs font-medium text-gray-500">{bloque.hora}</div>
-                      <div className="flex-grow px-2 py-1 bg-selectivi-yellow bg-opacity-20 rounded">
-                        {bloque.asignatura} ({bloque.duracion} min)
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+          {/* Tabs para los diferentes calendarios */}
+          <div className="mb-4">
+            <div className="border-b border-gray-200">
+              <nav className="-mb-px flex space-x-4">
+                <button 
+                  className="border-selectivi-yellow text-gray-800 py-2 px-1 border-b-2 font-medium text-sm"
+                  onClick={() => document.getElementById('calendario-preparacion').scrollIntoView({behavior: 'smooth'})}
+                >
+                  Preparación
+                </button>
+                <button 
+                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 border-b-2 font-medium text-sm"
+                  onClick={() => document.getElementById('calendario-practica').scrollIntoView({behavior: 'smooth'})}
+                >
+                  Práctica
+                </button>
+                <button 
+                  className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 py-2 px-1 border-b-2 font-medium text-sm"
+                  onClick={() => document.getElementById('calendario-repaso').scrollIntoView({behavior: 'smooth'})}
+                >
+                  Repaso
+                </button>
+              </nav>
+            </div>
           </div>
           
+          {/* Calendarios para cada fase */}
+          <div className="space-y-4 overflow-y-auto max-h-[700px] pr-2" style={{scrollBehavior: 'smooth'}}>
+            <div id="calendario-preparacion">
+              {renderizarHorario(horarioPreparacion, 'preparacion')}
+            </div>
+            
+            <div id="calendario-practica">
+              {renderizarHorario(horarioPractica, 'practica')}
+            </div>
+            
+            <div id="calendario-repaso">
+              {renderizarHorario(horarioRepaso, 'repaso')}
+            </div>
+          </div>
+          
+          {/* Leyenda de colores */}
           <div className="bg-gray-50 p-4 rounded-lg mb-4">
-            <h4 className="font-medium mb-2">Notas necesarias para aprobar</h4>
-            <div className="space-y-2">
-              {Object.entries(formData.faseGeneral || {})
-                .filter(([_, nota]) => nota)
-                .map(([asignatura, nota]) => (
-                  <div key={asignatura} className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-selectivi-yellow text-center leading-8 mr-2">
-                      {nota}
-                    </div>
-                    <span className="flex-grow">{asignatura}</span>
-                  </div>
-                ))}
-                
-              {Object.entries(formData.faseEspecifica || {})
-                .filter(([_, data]) => data?.asignatura)
-                .map(([key, data]) => (
-                  <div key={key} className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-blue-100 text-center leading-8 mr-2">
-                      {data.ponderacion}
-                    </div>
-                    <span className="flex-grow">{data.asignatura}</span>
-                  </div>
-                ))}
+            <h4 className="font-medium mb-2">Leyenda de asignaturas</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                ...Object.keys(formData.faseGeneral || {}).filter(a => formData.faseGeneral[a]),
+                ...Object.keys(formData.faseEspecifica || {})
+                  .filter(k => formData.faseEspecifica[k]?.asignatura)
+                  .map(k => {
+                    const data = formData.faseEspecifica[k];
+                    return data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura;
+                  })
+              ].filter((v, i, a) => a.indexOf(v) === i) // Eliminar duplicados
+               .map(asignatura => (
+                <div key={asignatura} className="flex items-center">
+                  <div className={`w-4 h-4 rounded mr-2 ${getColorForAsignatura(asignatura)}`}></div>
+                  <span className="text-sm">{asignatura}</span>
+                </div>
+              ))}
             </div>
           </div>
           
@@ -544,13 +920,13 @@ export default function EstrategiaEstudio() {
     carrera: '',
     notaCorte: '',
     notaBachillerato: '',
-    notaBachilleratoInput: '',
     faseGeneral: {},
     faseEspecifica: {},
     asignaturas: {},
     lugarEstudio: '',
     horasDiarias: '',
     momentoDia: '', // Mañana o tarde
+    diaDescanso: 'Domingo', // Día de descanso por defecto
     fechaExamen: '',
     duracionPomodoro: 25, // Valor por defecto
   });
