@@ -11,7 +11,7 @@ const fisicaExamen = examenes[0]; // Ahora solo hay un examen en el array (el mo
 
 // Definir las asignaturas disponibles (para cuando se agreguen más modelos 0)
 const asignaturas = [
-  { id: 'fisica', nombre: 'Física', imagen: '@fisica.png' },
+  { id: 'fisica', nombre: 'Física', imagen: '/images/placeholder.jpg' },
   { id: 'matematicas', nombre: 'Matemáticas II', imagen: '/images/placeholder.jpg' },
   { id: 'matematicas-sociales', nombre: 'Matemáticas CCSS', imagen: '/images/placeholder.jpg' },
   { id: 'quimica', nombre: 'Química', imagen: '/images/placeholder.jpg' }
@@ -61,7 +61,7 @@ export default function ExamenesPage() {
             <div className="bg-gray-50 p-4 rounded-lg mb-6">
               <div className="flex justify-center">
                 <img 
-                  src="@fisica.png" 
+                  src="/images/placeholder.jpg" 
                   alt="Vista previa del examen de Física - Modelo 0 PAU 2025" 
                   className="shadow-sm rounded-lg object-contain max-h-[400px]"
                 />
