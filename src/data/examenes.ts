@@ -6,6 +6,7 @@ export interface Examen {
   titulo: string;
   rutaExamen: string;
   rutaSolucion?: string;
+  rutaCorreccion?: string;
   comunidadAutonoma?: string;
   isExternalUrl?: boolean;
   viewUrl?: string;
@@ -20,6 +21,7 @@ export const examenes: Examen[] = [
     titulo: "Física - Modelo 0 PAU 2025",
     rutaExamen: "/examenes/fisica/01_pau25_fisica_0.pdf",
     rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/fisica/01_pau25_fisica_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
   }

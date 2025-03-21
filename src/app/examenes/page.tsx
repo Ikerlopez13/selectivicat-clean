@@ -11,10 +11,30 @@ const fisicaExamen = examenes[0]; // Ahora solo hay un examen en el array (el mo
 
 // Definir las asignaturas disponibles (para cuando se agreguen más modelos 0)
 const asignaturas = [
-  { id: 'fisica', nombre: 'Física', imagen: '/images/placeholder.jpg' },
-  { id: 'matematicas', nombre: 'Matemáticas II', imagen: '/images/placeholder.jpg' },
-  { id: 'matematicas-sociales', nombre: 'Matemáticas CCSS', imagen: '/images/placeholder.jpg' },
-  { id: 'quimica', nombre: 'Química', imagen: '/images/placeholder.jpg' }
+  { 
+    id: 'fisica', 
+    nombre: 'Física', 
+    emoji: '🔭', 
+    color: 'bg-blue-100' 
+  },
+  { 
+    id: 'matematicas', 
+    nombre: 'Matemáticas II', 
+    emoji: '📊', 
+    color: 'bg-purple-100'
+  },
+  { 
+    id: 'matematicas-sociales', 
+    nombre: 'Matemáticas CCSS', 
+    emoji: '📈', 
+    color: 'bg-green-100'
+  },
+  { 
+    id: 'quimica', 
+    nombre: 'Química', 
+    emoji: '🧪', 
+    color: 'bg-pink-100'
+  }
 ];
 
 export default function ExamenesPage() {
@@ -60,11 +80,9 @@ export default function ExamenesPage() {
             {/* Vista previa del PDF */}
             <div className="bg-gray-50 p-4 rounded-lg mb-6">
               <div className="flex justify-center">
-                <img 
-                  src="/images/placeholder.jpg" 
-                  alt="Vista previa del examen de Física - Modelo 0 PAU 2025" 
-                  className="shadow-sm rounded-lg object-contain max-h-[400px]"
-                />
+                <div className="flex items-center justify-center w-full h-64 bg-blue-100 rounded-lg shadow-sm">
+                  <span className="text-8xl">🔭</span>
+                </div>
               </div>
             </div>
             
@@ -134,18 +152,40 @@ export default function ExamenesPage() {
                     </div>
                   )}
                   
-                  {/* Mensaje si no hay solución */}
-                  {(!fisicaExamen.rutaSolucion || fisicaExamen.rutaSolucion === "") && (
-                    <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                      <h4 className="text-lg font-medium mb-3">Solución Oficial</h4>
-                      <p className="text-gray-600 mb-4">
-                        La solución oficial aún no está disponible para este modelo de examen.
-                      </p>
-                      <div className="flex justify-start items-center">
+                  {/* Tarjeta de la Corrección (siempre incluida, puede ser próximamente) */}
+                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+                    <h4 className="text-lg font-medium mb-3">Criterios de Corrección</h4>
+                    <p className="text-gray-600 mb-4">
+                      Consulta los criterios de corrección aplicados en este modelo de examen.
+                    </p>
+                    <div className="flex justify-between items-center">
+                      {fisicaExamen.rutaCorreccion ? (
+                        <>
+                          <a 
+                            href={fisicaExamen.rutaCorreccion} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded hover:bg-opacity-80 transition-colors flex items-center"
+                          >
+                            <span className="mr-2">Ver Criterios</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                              <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                            </svg>
+                          </a>
+                          <a 
+                            href={fisicaExamen.rutaCorreccion} 
+                            download
+                            className="text-blue-600 hover:underline flex items-center"
+                          >
+                            Descargar
+                          </a>
+                        </>
+                      ) : (
                         <span className="text-gray-500 italic">Próximamente</span>
-                      </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -182,12 +222,8 @@ export default function ExamenesPage() {
                     key={asignatura.id}
                     className={`bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow ${!hayExamenes ? 'opacity-50' : ''}`}
                   >
-                    <div className="h-48 overflow-hidden relative">
-                      <img 
-                        src={asignatura.imagen} 
-                        alt={`Exámenes de ${asignatura.nombre}`}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className={`h-48 overflow-hidden relative flex items-center justify-center ${asignatura.color}`}>
+                      <span className="text-7xl">{asignatura.emoji}</span>
                       {!hayExamenes && (
                         <div className="absolute inset-0 bg-gray-800 bg-opacity-60 flex items-center justify-center">
                           <span className="text-white font-medium text-lg">Próximamente</span>
