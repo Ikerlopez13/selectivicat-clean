@@ -26,50 +26,26 @@ export const examenes: Examen[] = [
     isExternalUrl: false
   },
   {
-    id: "aleman-2023-ordinaria",
+    id: "aleman-2025-modelo-0",
     asignatura: "aleman",
-    año: 2023,
-    convocatoria: "ordinaria",
-    titulo: "Alemán - PAU 2023 Ordinaria",
-    rutaExamen: "/examenes/aleman/01_pau23_aleman.pdf",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Alemán - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/aleman/pau_alemany25_0.pdf",
     rutaSolucion: "", // No hay solución disponible aún
-    rutaCorreccion: "/examenes/aleman/01_pau23_aleman_c.pdf", // Criterios de corrección
+    rutaCorreccion: "/examenes/aleman/pau_alemany25_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
   },
   {
-    id: "aleman-2023-extraordinaria",
-    asignatura: "aleman",
-    año: 2023,
-    convocatoria: "extraordinaria",
-    titulo: "Alemán - PAU 2023 Extraordinaria",
-    rutaExamen: "/examenes/aleman/02_pau23_aleman.pdf",
-    rutaSolucion: "", // No hay solución disponible aún
-    rutaCorreccion: "/examenes/aleman/02_pau23_aleman_c.pdf", // Criterios de corrección
-    comunidadAutonoma: "Cataluña",
-    isExternalUrl: false
-  },
-  {
-    id: "ciencias-generales-2023-ordinaria",
+    id: "ciencias-generales-2025-modelo-0",
     asignatura: "ciencias-generales",
-    año: 2023,
-    convocatoria: "ordinaria",
-    titulo: "Ciencias Generales - PAU 2023 Ordinaria",
-    rutaExamen: "/examenes/ciencias-generales/01_pau23_ciencias_generales.pdf",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Ciencias Generales - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/ciencias generales/01_pau25_ccgg_0.pdf",
     rutaSolucion: "", // No hay solución disponible aún
-    rutaCorreccion: "/examenes/ciencias-generales/01_pau23_ciencias_generales_c.pdf", // Criterios de corrección
-    comunidadAutonoma: "Cataluña",
-    isExternalUrl: false
-  },
-  {
-    id: "ciencias-generales-2023-extraordinaria",
-    asignatura: "ciencias-generales",
-    año: 2023,
-    convocatoria: "extraordinaria",
-    titulo: "Ciencias Generales - PAU 2023 Extraordinaria",
-    rutaExamen: "/examenes/ciencias-generales/02_pau23_ciencias_generales.pdf",
-    rutaSolucion: "", // No hay solución disponible aún
-    rutaCorreccion: "/examenes/ciencias-generales/02_pau23_ciencias_generales_c.pdf", // Criterios de corrección
+    rutaCorreccion: "/examenes/ciencias generales/01_pau25_ccgg_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
   }
