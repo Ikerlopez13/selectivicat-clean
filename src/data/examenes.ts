@@ -84,6 +84,66 @@ export const examenes: Examen[] = [
     rutaCorreccion: "/examenes/historia/01_PAU25_Historia_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
+  },
+  {
+    id: "analisis-musical-2025-modelo-0",
+    asignatura: "analisis-musical",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Análisis Musical - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/analisis-musical/01_pau25_AMusical_model0_CA_CORR.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/analisis-musical/01_pau25_AMusical_model0_pautes_CA_CORR.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "ingles-2025-modelo-0",
+    asignatura: "ingles",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Inglés - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/ingles/pau_angl25_0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/ingles/pau_angl25_0c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "lengua-cultura-griegas-2025-modelo-0",
+    asignatura: "lengua-cultura-griegas",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Lengua y Cultura Griegas - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/lengua-cultura-griegas/01_PAU25_Grec_0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/lengua-cultura-griegas/01_PAU25_grec_0_correccio.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "literatura-dramatica-2025-modelo-0",
+    asignatura: "literatura-dramatica",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Literatura Dramática - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/literatura-dramatica/01_PAU25_Literatura-Dramatica_0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/literatura-dramatica/01_PAU25_Literatura-Dramatica_0c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "quimica-2025-modelo-0",
+    asignatura: "quimica",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Química - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/quimica/01_PAU25_quimica_Model-0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/quimica/01_PAU25_quimica_Model0_c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
   }
 ];
 

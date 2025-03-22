@@ -42,6 +42,12 @@ const asignaturas = [
     color: 'bg-red-100'
   },
   { 
+    id: 'ingles', 
+    nombre: 'Inglés', 
+    emoji: '🇬🇧', 
+    color: 'bg-cyan-100'
+  },
+  { 
     id: 'aleman', 
     nombre: 'Alemán', 
     emoji: '🇩🇪', 
@@ -64,6 +70,24 @@ const asignaturas = [
     nombre: 'Fundamentos de la Empresa', 
     emoji: '💼', 
     color: 'bg-indigo-100'
+  },
+  { 
+    id: 'analisis-musical', 
+    nombre: 'Análisis Musical', 
+    emoji: '🎵', 
+    color: 'bg-purple-200'
+  },
+  { 
+    id: 'lengua-cultura-griegas', 
+    nombre: 'Lengua y Cultura Griegas', 
+    emoji: '🏛️', 
+    color: 'bg-blue-200'
+  },
+  { 
+    id: 'literatura-dramatica', 
+    nombre: 'Literatura Dramática', 
+    emoji: '🎭', 
+    color: 'bg-amber-100'
   }
 ];
 
