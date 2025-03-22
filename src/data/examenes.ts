@@ -24,6 +24,54 @@ export const examenes: Examen[] = [
     rutaCorreccion: "/examenes/fisica/01_pau25_fisica_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
+  },
+  {
+    id: "aleman-2023-ordinaria",
+    asignatura: "aleman",
+    año: 2023,
+    convocatoria: "ordinaria",
+    titulo: "Alemán - PAU 2023 Ordinaria",
+    rutaExamen: "/examenes/aleman/01_pau23_aleman.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/aleman/01_pau23_aleman_c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "aleman-2023-extraordinaria",
+    asignatura: "aleman",
+    año: 2023,
+    convocatoria: "extraordinaria",
+    titulo: "Alemán - PAU 2023 Extraordinaria",
+    rutaExamen: "/examenes/aleman/02_pau23_aleman.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/aleman/02_pau23_aleman_c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "ciencias-generales-2023-ordinaria",
+    asignatura: "ciencias-generales",
+    año: 2023,
+    convocatoria: "ordinaria",
+    titulo: "Ciencias Generales - PAU 2023 Ordinaria",
+    rutaExamen: "/examenes/ciencias-generales/01_pau23_ciencias_generales.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/ciencias-generales/01_pau23_ciencias_generales_c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "ciencias-generales-2023-extraordinaria",
+    asignatura: "ciencias-generales",
+    año: 2023,
+    convocatoria: "extraordinaria",
+    titulo: "Ciencias Generales - PAU 2023 Extraordinaria",
+    rutaExamen: "/examenes/ciencias-generales/02_pau23_ciencias_generales.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/ciencias-generales/02_pau23_ciencias_generales_c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
   }
 ];
 

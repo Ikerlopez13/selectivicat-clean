@@ -34,6 +34,18 @@ const asignaturas = [
     nombre: 'Química', 
     emoji: '🧪', 
     color: 'bg-pink-100'
+  },
+  { 
+    id: 'aleman', 
+    nombre: 'Alemán', 
+    emoji: '🇩🇪', 
+    color: 'bg-yellow-100'
+  },
+  { 
+    id: 'ciencias-generales', 
+    nombre: 'Ciencias Generales', 
+    emoji: '🧬', 
+    color: 'bg-teal-100'
   }
 ];
 
@@ -163,10 +175,10 @@ export default function ExamenesPage() {
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          Criterios de Corrección
+                          Criterios de Corrección y Solución
                         </h4>
                         <p className="text-gray-600 mb-4">
-                          Consulta los criterios de corrección aplicados en este modelo de examen.
+                          Documento con los criterios de corrección que incluye las soluciones detalladas del examen.
                         </p>
                         <div className="flex flex-wrap gap-3">
                           <a 
@@ -185,72 +197,16 @@ export default function ExamenesPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
-                            Ver Criterios
+                            Ver Solución
                           </a>
                           <a 
                             href={fisicaExamen.rutaCorreccion} 
-                            download="fisica_modelo0_pau2025_criterios.pdf"
+                            download="fisica_modelo0_pau2025_solucion.pdf"
                             className="text-blue-600 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-md transition-colors flex items-center border border-blue-200"
                             onClick={(e) => {
                               if (!fisicaExamen.isExternalUrl && fisicaExamen.rutaCorreccion) {
                                 const link = document.createElement('a');
                                 link.href = fisicaExamen.rutaCorreccion;
-                                link.download = "fisica_modelo0_pau2025_criterios.pdf";
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                                e.preventDefault();
-                              }
-                            }}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Descargar
-                          </a>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Tarjeta de Solución (oculta ya que no hay solución disponible) */}
-                    {fisicaExamen.rutaSolucion && fisicaExamen.rutaSolucion !== "" && (
-                      <div className="bg-gradient-to-r from-green-50 to-green-100 p-5 rounded-lg border border-green-200 shadow-sm">
-                        <h4 className="text-lg font-bold mb-2 flex items-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-green-600" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          Solución Oficial
-                        </h4>
-                        <p className="text-gray-600 mb-4">
-                          Accede a la solución oficial del examen para comprobar tus respuestas.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <a 
-                            href={fisicaExamen.rutaSolucion} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="bg-selectivi-yellow text-gray-800 px-4 py-2 rounded-md hover:bg-opacity-80 transition-colors flex items-center shadow-sm"
-                            onClick={(e) => {
-                              if (!fisicaExamen.isExternalUrl && fisicaExamen.rutaSolucion) {
-                                e.preventDefault();
-                                window.open(fisicaExamen.rutaSolucion, '_blank');
-                              }
-                            }}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                            Ver Solución
-                          </a>
-                          <a 
-                            href={fisicaExamen.rutaSolucion} 
-                            download="fisica_modelo0_pau2025_solucion.pdf"
-                            className="text-blue-600 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-md transition-colors flex items-center border border-blue-200"
-                            onClick={(e) => {
-                              if (!fisicaExamen.isExternalUrl && fisicaExamen.rutaSolucion) {
-                                const link = document.createElement('a');
-                                link.href = fisicaExamen.rutaSolucion;
                                 link.download = "fisica_modelo0_pau2025_solucion.pdf";
                                 document.body.appendChild(link);
                                 link.click();
@@ -269,7 +225,7 @@ export default function ExamenesPage() {
                     )}
                     
                     {/* Mensaje sobre disponibilidad futura */}
-                    {!fisicaExamen.rutaSolucion || fisicaExamen.rutaSolucion === "" ? (
+                    {!fisicaExamen.rutaCorreccion || fisicaExamen.rutaCorreccion === "" ? (
                       <div className="bg-gray-50 p-5 rounded-lg border border-gray-200">
                         <div className="flex items-start">
                           <div className="flex-shrink-0 pt-0.5">
@@ -281,7 +237,7 @@ export default function ExamenesPage() {
                             <h3 className="text-sm font-medium text-gray-600">Soluciones en desarrollo</h3>
                             <div className="mt-2 text-sm text-gray-500">
                               <p>
-                                Las soluciones oficiales estarán disponibles próximamente. Te recomendamos consultar los criterios de corrección mientras tanto.
+                                Las soluciones y criterios de corrección estarán disponibles próximamente.
                               </p>
                             </div>
                           </div>
@@ -304,6 +260,9 @@ export default function ExamenesPage() {
             <p className="mb-4">
               El modelo 0 muestra la nueva estructura de examen que se utilizará en la PAU 2025,
               siguiendo los cambios establecidos en el nuevo currículum.
+            </p>
+            <p className="mb-4">
+              Los criterios de corrección incluyen las soluciones detalladas de cada problema y ejercicio.
             </p>
             <p>
               Puedes acceder al examen utilizando los enlaces proporcionados.
