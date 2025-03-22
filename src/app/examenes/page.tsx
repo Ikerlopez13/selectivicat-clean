@@ -36,6 +36,12 @@ const asignaturas = [
     color: 'bg-pink-100'
   },
   { 
+    id: 'historia', 
+    nombre: 'Historia', 
+    emoji: '📜', 
+    color: 'bg-red-100'
+  },
+  { 
     id: 'aleman', 
     nombre: 'Alemán', 
     emoji: '🇩🇪', 
@@ -46,6 +52,18 @@ const asignaturas = [
     nombre: 'Ciencias Generales', 
     emoji: '🧬', 
     color: 'bg-teal-100'
+  },
+  { 
+    id: 'dibujo-tecnico', 
+    nombre: 'Dibujo Técnico Aplicado', 
+    emoji: '✏️', 
+    color: 'bg-orange-100'
+  },
+  { 
+    id: 'fundamentos-empresa', 
+    nombre: 'Fundamentos de la Empresa', 
+    emoji: '💼', 
+    color: 'bg-indigo-100'
   }
 ];
 

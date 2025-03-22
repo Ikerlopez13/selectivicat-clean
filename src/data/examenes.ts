@@ -48,6 +48,42 @@ export const examenes: Examen[] = [
     rutaCorreccion: "/examenes/ciencias-generales/01_pau25_ccgg_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
+  },
+  {
+    id: "dibujo-tecnico-2025-modelo-0",
+    asignatura: "dibujo-tecnico",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Dibujo Técnico Aplicado - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/dibujo-tecnico/pau_dtaap25_0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/dibujo-tecnico/pau25_dtaap_0c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "fundamentos-empresa-2025-modelo-0",
+    asignatura: "fundamentos-empresa",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Fundamentos de la Empresa - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/fundamentos-empresa/01_PAU25_FEiDMN_Model_0-corr-ca.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/fundamentos-empresa/01_PAU25_FEiDMN_Model_0_pautes-corr-ca.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
+  },
+  {
+    id: "historia-2025-modelo-0",
+    asignatura: "historia",
+    año: 2025,
+    convocatoria: "modelo-0",
+    titulo: "Historia - Modelo 0 PAU 2025",
+    rutaExamen: "/examenes/historia/01_PAU25_Historia_0.pdf",
+    rutaSolucion: "", // No hay solución disponible aún
+    rutaCorreccion: "/examenes/historia/01_PAU25_Historia_0c.pdf", // Criterios de corrección
+    comunidadAutonoma: "Cataluña",
+    isExternalUrl: false
   }
 ];
 
