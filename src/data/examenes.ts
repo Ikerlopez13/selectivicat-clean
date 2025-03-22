@@ -43,9 +43,9 @@ export const examenes: Examen[] = [
     año: 2025,
     convocatoria: "modelo-0",
     titulo: "Ciencias Generales - Modelo 0 PAU 2025",
-    rutaExamen: "/examenes/ciencias generales/01_pau25_ccgg_0.pdf",
+    rutaExamen: "/examenes/ciencias-generales/01_pau25_ccgg_0.pdf",
     rutaSolucion: "", // No hay solución disponible aún
-    rutaCorreccion: "/examenes/ciencias generales/01_pau25_ccgg_0c.pdf", // Criterios de corrección
+    rutaCorreccion: "/examenes/ciencias-generales/01_pau25_ccgg_0c.pdf", // Criterios de corrección
     comunidadAutonoma: "Cataluña",
     isExternalUrl: false
   }
