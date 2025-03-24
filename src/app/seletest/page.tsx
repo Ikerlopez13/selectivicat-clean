@@ -301,6 +301,46 @@ const Question: React.FC<QuestionProps> = ({
   onSelectAnswer, 
   hasAnswered 
 }) => {
+  if (!question) return null;
+
+  const formatText = (text: string) => {
+    // Implementar el formateo de texto si es necesario
+    return text;
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+      <h3 className="text-xl font-semibold mb-4">{formatText(question.pregunta)}</h3>
+      <div className="space-y-3">
+        {question.opciones.map((opcion, index) => (
+          <button
+            key={index}
+            onClick={() => !hasAnswered && onSelectAnswer(opcion)}
+            className={`w-full text-left p-4 rounded-lg transition-colors ${
+              hasAnswered
+                ? opcion === question.respuesta_correcta
+                  ? 'bg-green-100 border-green-500'
+                  : opcion === selectedAnswer
+                  ? 'bg-red-100 border-red-500'
+                  : 'bg-gray-50'
+                : selectedAnswer === opcion
+                ? 'bg-selectivi-yellow/20 border-selectivi-yellow'
+                : 'bg-gray-50 hover:bg-gray-100'
+            } border`}
+            disabled={hasAnswered}
+          >
+            {formatText(opcion)}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Componente de Onboarding
+const Onboarding: React.FC<{
+  onComplete: (selectedSubjects: string[]) => void;
+}> = ({ onComplete }) => {
   // Verificar si question es undefined o null
   if (!question) {
     return (

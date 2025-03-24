@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import AnimateOnScroll from './AnimateOnScroll';
 import { getAsignaturasPopulares, getBusquedasPopulares, getSugerenciasBusqueda } from '@/data/itinerarios';
+import Image from 'next/image';
 
 export default function HeroMain() {
   const router = useRouter();
@@ -225,10 +226,14 @@ export default function HeroMain() {
             <div className="flex justify-center items-center">
               <div className="w-full h-full relative">
                 <div className="p-4 rounded-lg w-full h-auto flex items-center justify-center">
-                  <img 
+                  <Image 
                     src="/images/Group10.png" 
                     alt="SelectiviCAT Ilustración" 
+                    width={500}
+                    height={500}
                     className="w-full h-auto object-contain max-w-[500px]"
+                    priority
+                    unoptimized
                   />
                 </div>
               </div>

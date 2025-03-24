@@ -42,6 +42,8 @@ export default function NavbarMain() {
             width={32}
             height={32}
             className="w-8 h-8"
+            priority
+            unoptimized
           />
           <span className="text-2xl font-bold">selectivi<span className="text-selectivi-yellow">CAT</span></span>
         </Link>
