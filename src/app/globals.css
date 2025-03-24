@@ -8,29 +8,31 @@
     --foreground: 222.2 84% 4.9%;
   }
   
+  body {
+    @apply bg-white text-gray-900;
+  }
+
   /* Estilos para inputs y selects */
   input[type='text'],
   input[type='number'],
   input[type='email'],
   input[type='search'],
   select {
-    @apply bg-white text-gray-900 border-gray-200;
+    @apply bg-white text-gray-900 border border-gray-200 rounded-lg;
   }
 
   /* Estilos específicos para checkboxes */
   input[type='checkbox'] {
-    @apply bg-white border-gray-300 text-selectivi-yellow;
-    @apply focus:ring-2 focus:ring-selectivi-yellow focus:ring-offset-2;
+    @apply bg-white border border-gray-300 rounded text-[#FFC22D] focus:ring-2 focus:ring-[#FFC22D] focus:ring-offset-2;
   }
 
   input[type='checkbox']:checked {
-    @apply bg-selectivi-yellow border-transparent;
+    @apply bg-[#FFC22D] border-transparent;
   }
 
   /* Estilos para selects */
   select {
-    @apply bg-white text-gray-900 border-gray-200;
-    @apply focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent;
+    @apply focus:ring-2 focus:ring-[#FFC22D] focus:border-transparent;
   }
 
   /* Asegurarse de que los elementos de DaisyUI no se vean afectados */
@@ -39,26 +41,20 @@
   }
 
   .checkbox:not(.checkbox-ghost) {
-    @apply bg-white border-gray-300;
-  }
-}
-
-@layer base {
-  body {
-    @apply bg-white text-gray-900;
+    @apply bg-white border border-gray-300;
   }
 }
 
 @layer components {
   .bg-selectivi-yellow {
-    background-color: #FFC22D;
+    @apply bg-[#FFC22D];
   }
   
   .text-selectivi-yellow {
-    color: #FFC22D;
+    @apply text-[#FFC22D];
   }
   
   .border-selectivi-yellow {
-    border-color: #FFC22D;
+    @apply border-[#FFC22D];
   }
 } 
