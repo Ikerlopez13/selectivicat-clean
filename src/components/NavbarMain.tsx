@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function NavbarMain() {
@@ -15,6 +16,7 @@ export default function NavbarMain() {
             <li><Link href="/notes-de-tall" className="hover:text-selectivi-yellow">Notes de tall</Link></li>
             <li><Link href="/examenes" className="hover:text-selectivi-yellow">Exàmens</Link></li>
             <li><Link href="/millors-videos" className="hover:text-selectivi-yellow">Millors Videos</Link></li>
+            <li><Link href="/seletest" className="hover:text-selectivi-yellow">SeleTest</Link></li>
             <li><Link href="/blog" className="hover:text-selectivi-yellow">Blog</Link></li>
             <li><Link href="/premium" className="hover:text-selectivi-yellow">Fes-te Premium ✨</Link></li>
             <li>
@@ -33,7 +35,14 @@ export default function NavbarMain() {
             </li>
           </ul>
         </div>
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/images/logo/icon.png"
+            alt="SelectiviCat Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
           <span className="text-2xl font-bold">selectivi<span className="text-selectivi-yellow">CAT</span></span>
         </Link>
       </div>
@@ -43,6 +52,7 @@ export default function NavbarMain() {
           <li><Link href="/notes-de-tall" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Notes de tall</Link></li>
           <li><Link href="/examenes" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Exàmens</Link></li>
           <li><Link href="/millors-videos" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Millors Videos</Link></li>
+          <li><Link href="/seletest" className="text-base font-medium hover:text-selectivi-yellow transition-colors">SeleTest</Link></li>
           <li><Link href="/blog" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Blog</Link></li>
           <li><Link href="/premium" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Fes-te Premium ✨</Link></li>
         </ul>

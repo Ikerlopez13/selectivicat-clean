@@ -28,7 +28,7 @@ module.exports = {
           "error": "#F87272",
         },
       },
-      "light",
     ],
+    theme: "selectivicat",
   },
 } 

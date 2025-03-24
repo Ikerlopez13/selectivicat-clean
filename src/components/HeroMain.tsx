@@ -131,36 +131,33 @@ export default function HeroMain() {
               <div className="pt-4">
                 <div className="relative" ref={searchRef}>
                   <form onSubmit={handleSearch} className="join relative">
-                    <input 
-                      ref={inputRef}
-                      className="input join-item w-full md:w-80 focus:outline-none focus:border-white" 
-                      placeholder="Cerca itineraris, assignatures..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      onFocus={() => {
-                        if (suggestions.length > 0) {
-                          setShowSuggestions(true);
-                        }
-                      }}
-                    />
-                    <button 
-                      type="button"
-                      className="btn join-item bg-white text-selectivi-yellow hover:bg-white/90 flex items-center gap-2 border-none"
-                      onClick={() => setShowDropdown(!showDropdown)}
-                    >
-                      Filtra
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    <button 
-                      type="submit" 
-                      className="btn join-item bg-white text-selectivi-yellow hover:bg-white/90 border-none"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                    </button>
+                    <div className="relative">
+                      <input
+                        ref={inputRef}
+                        className="w-full p-4 pl-12 rounded-xl bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+                        placeholder="Cerca itineraris, assignatures..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onFocus={() => {
+                          if (suggestions.length > 0) {
+                            setShowSuggestions(true);
+                          }
+                        }}
+                      />
+                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="absolute inset-y-0 right-0 flex items-center pr-4">
+                        <button className="bg-white text-selectivi-yellow hover:text-selectivi-yellow/80 p-2 rounded-lg flex items-center gap-2">
+                          <span>Filtra</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                     
                     {/* Sugerencias de búsqueda */}
                     {showSuggestions && (

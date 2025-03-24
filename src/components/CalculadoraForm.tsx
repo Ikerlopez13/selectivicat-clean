@@ -85,165 +85,89 @@ export default function CalculadoraForm() {
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Nota de Batxillerat</h2>
         <div className="mb-4">
-          <input
-            type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Nota de Batxillerat"
+          <select
             value={notaBatxillerat}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaBatxillerat(e.target.value);
-              }
-            }}
-          />
+            onChange={(e) => setNotaBatxillerat(e.target.value)}
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+          >
+            <option value="">Nota de Batxillerat</option>
+            {/* opciones */}
+          </select>
         </div>
       </div>
 
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Fase General</h2>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="space-y-4">
           <input
             type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Català"
             value={notaCatala}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaCatala(e.target.value);
-              }
-            }}
+            onChange={(e) => setNotaCatala(e.target.value)}
+            placeholder="Català"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
-          
           <input
             type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Castellà"
             value={notaCastella}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaCastella(e.target.value);
-              }
-            }}
+            onChange={(e) => setNotaCastella(e.target.value)}
+            placeholder="Castellà"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
-          
           <input
             type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Llengua estrangera"
             value={notaLlenguaEstrangera}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaLlenguaEstrangera(e.target.value);
-              }
-            }}
+            onChange={(e) => setNotaLlenguaEstrangera(e.target.value)}
+            placeholder="Llengua estrangera"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
-          
           <input
             type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Història"
             value={notaHistoria}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaHistoria(e.target.value);
-              }
-            }}
+            onChange={(e) => setNotaHistoria(e.target.value)}
+            placeholder="Història"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
-          
           <input
             type="number"
-            min="0"
-            max="10"
-            step="0.001"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            placeholder="Optativa"
             value={notaOptativa}
-            onChange={(e) => {
-              if (validarNota(e.target.value)) {
-                setNotaOptativa(e.target.value);
-              }
-            }}
+            onChange={(e) => setNotaOptativa(e.target.value)}
+            placeholder="Optativa"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
         </div>
       </div>
 
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Fase específica</h2>
-        <div className="grid grid-cols-4 gap-4 mb-4">
-          <div className="col-span-1">
-            <input
-              type="number"
-              min="0"
-              max="1"
-              step="0.1"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-              placeholder="0.2"
-              value={ponderacio1}
-              onChange={(e) => setPonderacio1(e.target.value)}
-            />
-          </div>
-          <div className="col-span-3">
-            <input
-              type="number"
-              min="0"
-              max="10"
-              step="0.001"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-              placeholder="Específica 1"
-              value={especifica1}
-              onChange={(e) => {
-                if (validarNota(e.target.value)) {
-                  setEspecifica1(e.target.value);
-                }
-              }}
-            />
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-4 gap-4">
-          <div className="col-span-1">
-            <input
-              type="number"
-              min="0"
-              max="1"
-              step="0.1"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-              placeholder="0.2"
-              value={ponderacio2}
-              onChange={(e) => setPonderacio2(e.target.value)}
-            />
-          </div>
-          <div className="col-span-3">
-            <input
-              type="number"
-              min="0"
-              max="10"
-              step="0.001"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-              placeholder="Específica 2"
-              value={especifica2}
-              onChange={(e) => {
-                if (validarNota(e.target.value)) {
-                  setEspecifica2(e.target.value);
-                }
-              }}
-            />
-          </div>
+        <div className="space-y-4">
+          <input
+            type="number"
+            value={ponderacio1}
+            onChange={(e) => setPonderacio1(e.target.value)}
+            placeholder="0.2"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+          />
+          <input
+            type="number"
+            value={especifica1}
+            onChange={(e) => setEspecifica1(e.target.value)}
+            placeholder="Específica 1"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+          />
+          <input
+            type="number"
+            value={ponderacio2}
+            onChange={(e) => setPonderacio2(e.target.value)}
+            placeholder="0.2"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+          />
+          <input
+            type="number"
+            value={especifica2}
+            onChange={(e) => setEspecifica2(e.target.value)}
+            placeholder="Específica 2"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+          />
         </div>
       </div>
 

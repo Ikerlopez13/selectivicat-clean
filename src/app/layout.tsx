@@ -5,8 +5,13 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SelectiviCAT - Exàmens de Selectivitat de Catalunya',
-  description: 'Repositori d\'exàmens de selectivitat de Catalunya amb solucions i recursos per a estudiants',
+  title: 'SelectiviCat - La web de la Selectividad en Cataluña',
+  description: 'Prepárate para la Selectividad en Cataluña. Encuentra notas de corte, exámenes resueltos y practica con tests personalizados.',
+  icons: {
+    icon: '/images/logo/icon.png',
+    shortcut: '/images/logo/icon.png',
+    apple: '/images/logo/icon.png',
+  }
 }
 
 export default function RootLayout({
@@ -15,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ca" data-theme="light">
+    <html lang="es">
       <head>
-        <meta name="google" content="notranslate" />
+        <link rel="icon" type="image/png" href="/images/logo/icon.png" />
+        <link rel="apple-touch-icon" href="/images/logo/icon.png" />
       </head>
       <body className={inter.className}>
         <main className="min-h-screen">

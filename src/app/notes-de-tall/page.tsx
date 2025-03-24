@@ -42,9 +42,11 @@ export default function NotesPage() {
                 </div>
                 
                 {/* Buscador con valores iniciales */}
-                <Suspense fallback={<div>Loading search...</div>}>
-                  <ClientSearchComponent />
-                </Suspense>
+                <div className="w-full lg:w-[140%]">
+                  <Suspense fallback={<div>Loading search...</div>}>
+                    <ClientSearchComponent />
+                  </Suspense>
+                </div>
               </div>
               
               <div className="lg:w-2/5 flex justify-center">

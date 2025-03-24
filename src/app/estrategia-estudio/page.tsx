@@ -151,28 +151,55 @@ const Step2 = ({ formData, updateFormData, nextStep, prevStep }) => {
                 0,2
               </div>
               <div className="w-5/6">
-                <select
-                  value={formData.faseEspecifica?.[asignatura]?.asignatura || ''}
-                  onChange={(e) => {
-                    const updatedFaseEspecifica = {
-                      ...(formData.faseEspecifica || {}),
-                      [asignatura]: {
-                        ...(formData.faseEspecifica?.[asignatura] || {}),
-                        asignatura: e.target.value,
-                        ponderacion: 0.2
-                      }
-                    };
-                    updateFormData('faseEspecifica', updatedFaseEspecifica);
-                  }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-                  aria-label={`Asignatura ${asignatura}`}
-                >
-                  <option value="">Selecciona una asignatura</option>
-                  {asignaturasEspecificas.map((opcion) => (
-                    <option key={opcion} value={opcion}>{opcion}</option>
-                  ))}
-                  <option value="otra">Otra (especificar)</option>
-                </select>
+                <div className="flex gap-3 mb-2">
+                  <div className="w-2/3">
+                    <select
+                      value={formData.faseEspecifica?.[asignatura]?.asignatura || ''}
+                      onChange={(e) => {
+                        const updatedFaseEspecifica = {
+                          ...(formData.faseEspecifica || {}),
+                          [asignatura]: {
+                            ...(formData.faseEspecifica?.[asignatura] || {}),
+                            asignatura: e.target.value,
+                            ponderacion: 0.2
+                          }
+                        };
+                        updateFormData('faseEspecifica', updatedFaseEspecifica);
+                      }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
+                      aria-label={`Asignatura ${asignatura}`}
+                    >
+                      <option value="">Selecciona una asignatura</option>
+                      {asignaturasEspecificas.map((opcion) => (
+                        <option key={opcion} value={opcion}>{opcion}</option>
+                      ))}
+                      <option value="otra">Otra (especificar)</option>
+                    </select>
+                  </div>
+                  <div className="w-1/3">
+                    <input
+                      type="number"
+                      step="0.01"
+                      min="0"
+                      max="10"
+                      placeholder="Nota necesaria"
+                      value={formData.faseEspecifica?.[asignatura]?.notaNecesaria || ''}
+                      onChange={(e) => {
+                        const updatedFaseEspecifica = {
+                          ...(formData.faseEspecifica || {}),
+                          [asignatura]: {
+                            ...(formData.faseEspecifica?.[asignatura] || {}),
+                            notaNecesaria: e.target.value,
+                            ponderacion: 0.2
+                          }
+                        };
+                        updateFormData('faseEspecifica', updatedFaseEspecifica);
+                      }}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
+                      aria-label={`Nota necesaria para ${asignatura}`}
+                    />
+                  </div>
+                </div>
                 
                 {formData.faseEspecifica?.[asignatura]?.asignatura === 'otra' && (
                   <input
@@ -231,25 +258,147 @@ const Step3 = ({ formData, updateFormData, nextStep, prevStep }) => {
             ¿Dónde prefieres estudiar?
           </label>
           <div className="grid grid-cols-3 gap-4">
-            {['Biblioteca', 'Casa', 'Mixto'].map((lugar) => (
+            {[
+              { valor: 'Biblioteca', emoji: '📚', desc: 'Espacios para concentrarte sin distracciones' },
+              { valor: 'Casa', emoji: '🏠', desc: 'Flexibilidad y comodidad en tu propio espacio' },
+              { valor: 'Mixto', emoji: '🔄', desc: 'Alternando entre ambos entornos según necesidad' }
+            ].map((lugar) => (
               <button
-                key={lugar}
+                key={lugar.valor}
                 type="button"
-                onClick={() => updateFormData('lugarEstudio', lugar)}
+                onClick={() => updateFormData('lugarEstudio', lugar.valor)}
                 className={`p-4 border rounded-lg flex flex-col items-center transition-colors ${
-                  formData.lugarEstudio === lugar 
+                  formData.lugarEstudio === lugar.valor 
                     ? 'border-selectivi-yellow bg-selectivi-yellow bg-opacity-10' 
                     : 'border-gray-200 hover:bg-gray-50'
                 }`}
               >
-                <span className="text-3xl mb-2">
-                  {lugar === 'Biblioteca' ? '📚' : lugar === 'Casa' ? '🏠' : '🔄'}
-                </span>
-                <span className="font-medium">{lugar}</span>
+                <span className="text-3xl mb-2">{lugar.emoji}</span>
+                <span className="font-medium">{lugar.valor}</span>
+                <span className="text-xs text-gray-500 text-center mt-1">{lugar.desc}</span>
               </button>
             ))}
           </div>
         </div>
+        
+        {formData.lugarEstudio === 'Biblioteca' && (
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="font-medium mb-2 flex items-center">
+              <span className="text-blue-600 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </span>
+              Consejos para estudiar en biblioteca
+            </h4>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Reserva un sitio fijo si es posible para crear rutina</li>
+              <li>Lleva auriculares con cancelación de ruido</li>
+              <li>Prepara todo el material necesario antes de salir de casa</li>
+              <li>Programa descansos para caminar entre sesiones largas</li>
+            </ul>
+            <div className="mt-3">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                ¿Cuánto tiempo tardas en llegar a la biblioteca?
+              </label>
+              <select
+                value={formData.tiempoBiblioteca || ''}
+                onChange={(e) => updateFormData('tiempoBiblioteca', e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Selecciona una opción</option>
+                <option value="menos-15">Menos de 15 minutos</option>
+                <option value="15-30">Entre 15 y 30 minutos</option>
+                <option value="mas-30">Más de 30 minutos</option>
+              </select>
+            </div>
+          </div>
+        )}
+        
+        {formData.lugarEstudio === 'Casa' && (
+          <div className="bg-green-50 p-4 rounded-lg">
+            <h4 className="font-medium mb-2 flex items-center">
+              <span className="text-green-600 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </span>
+              Optimiza tu espacio en casa
+            </h4>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Establece un espacio dedicado únicamente al estudio</li>
+              <li>Elimina distracciones digitales (apps, notificaciones)</li>
+              <li>Comunica a tu familia tus horarios de concentración</li>
+              <li>Mantén una buena iluminación y postura ergonómica</li>
+            </ul>
+            <div className="mt-3">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                ¿Tienes distracciones en casa?
+              </label>
+              <select
+                value={formData.nivelDistraccion || ''}
+                onChange={(e) => updateFormData('nivelDistraccion', e.target.value)}
+                className="w-full p-2 border border-gray-300 rounded-md"
+              >
+                <option value="">Selecciona una opción</option>
+                <option value="bajo">Pocas distracciones (ambiente tranquilo)</option>
+                <option value="medio">Nivel medio (algunas interrupciones)</option>
+                <option value="alto">Muchas distracciones (difícil concentrarse)</option>
+              </select>
+            </div>
+          </div>
+        )}
+        
+        {formData.lugarEstudio === 'Mixto' && (
+          <div className="bg-purple-50 p-4 rounded-lg">
+            <h4 className="font-medium mb-2 flex items-center">
+              <span className="text-purple-600 mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </span>
+              Estrategia de estudio mixto
+            </h4>
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <li>Usa la biblioteca para temas que requieren mayor concentración</li>
+              <li>Aprovecha el hogar para repasos y tareas más ligeras</li>
+              <li>Mantén los mismos materiales en ambos lugares</li>
+              <li>Crea una rutina clara para cada entorno</li>
+            </ul>
+            <div className="mt-3 grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Días preferidos en biblioteca
+                </label>
+                <select
+                  value={formData.diasBiblioteca || ''}
+                  onChange={(e) => updateFormData('diasBiblioteca', e.target.value)}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="">Selecciona</option>
+                  <option value="semana">Entre semana</option>
+                  <option value="finde">Fines de semana</option>
+                  <option value="alternos">Días alternos</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Días preferidos en casa
+                </label>
+                <select
+                  value={formData.diasCasa || ''}
+                  onChange={(e) => updateFormData('diasCasa', e.target.value)}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="">Selecciona</option>
+                  <option value="semana">Entre semana</option>
+                  <option value="finde">Fines de semana</option>
+                  <option value="alternos">Días alternos</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        )}
         
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -661,6 +810,124 @@ const ResultStep = ({ formData }) => {
     );
   };
   
+  // Función para calcular la contribución de cada asignatura a la nota final
+  const calcularContribucionAsignaturas = () => {
+    let contribuciones = [];
+    
+    // Calcular la contribución de las asignaturas de la fase general (60% total)
+    const asignaturasGeneralConNota = Object.entries(formData.faseGeneral || {})
+      .filter(([_, nota]) => nota);
+    
+    // Cálculo correcto para fase general - dividen el 60% entre todas las asignaturas con nota
+    const numAsignaturasGeneral = asignaturasGeneralConNota.length || 1; // Evitar división por cero
+    const porcentajePorAsignaturaGeneral = 60 / numAsignaturasGeneral;
+    
+    const asignaturasGeneral = asignaturasGeneralConNota
+      .map(([asignatura, nota]) => ({
+        nombre: asignatura,
+        nota: parseFloat(nota),
+        tipo: 'General',
+        // Cada asignatura general contribuye con su parte proporcional del 60%
+        contribucion: (parseFloat(nota) * 0.6) / numAsignaturasGeneral,
+        pesoRelativo: porcentajePorAsignaturaGeneral, // % del total
+        maxPuntos: 10 * 0.6 / numAsignaturasGeneral
+      }));
+    
+    // Calcular la contribución de las asignaturas de la fase específica (40% total)
+    const asignaturasEspecificasConAsignatura = Object.entries(formData.faseEspecifica || {})
+      .filter(([_, data]) => data?.asignatura);
+    
+    // Cálculo correcto para fase específica - dividen el 40% entre todas las asignaturas específicas
+    const numAsignaturasEspecificas = asignaturasEspecificasConAsignatura.length || 1; // Evitar división por cero
+    const porcentajePorAsignaturaEspecifica = 40 / numAsignaturasEspecificas;
+    
+    const asignaturasEspecificas = asignaturasEspecificasConAsignatura
+      .map(([key, data]) => {
+        const nombreAsignatura = data.asignatura === 'otra' ? 
+          data.asignaturaPersonalizada : data.asignatura;
+        
+        // Nota que se necesita obtener (si está definida)
+        const notaNecesaria = data.notaNecesaria ? parseFloat(data.notaNecesaria) : 0;
+        
+        return {
+          nombre: nombreAsignatura,
+          tipo: 'Específica',
+          nota: notaNecesaria,
+          ponderacion: data.ponderacion,
+          // Cada asignatura específica contribuye con su parte proporcional del 40%
+          contribucion: notaNecesaria * data.ponderacion * 2, // Multiplicado por 2 porque se pondera doble
+          pesoRelativo: porcentajePorAsignaturaEspecifica, // % del total
+          maxPuntos: 10 * data.ponderacion * 2 // Máxima contribución posible de esta asignatura
+        };
+      });
+    
+    contribuciones = [...asignaturasGeneral, ...asignaturasEspecificas];
+    
+    // Ordenar por contribución de mayor a menor
+    return contribuciones.sort((a, b) => b.pesoRelativo - a.pesoRelativo);
+  };
+  
+  // Obtener las estadísticas de contribución
+  const estadisticasAsignaturas = calcularContribucionAsignaturas();
+  
+  // Función para determinar recomendaciones basadas en el lugar de estudio
+  const obtenerRecomendacionesLugarEstudio = () => {
+    const recomendaciones = {
+      general: [],
+      especificas: []
+    };
+    
+    // Recomendaciones generales para todos
+    recomendaciones.general = [
+      "Establece objetivos diarios y semanales claros",
+      "Alterna entre asignaturas para mantener la motivación",
+      "Reserva tiempo para repasos frecuentes"
+    ];
+    
+    // Recomendaciones según el lugar elegido
+    if (formData.lugarEstudio === 'Biblioteca') {
+      recomendaciones.especificas = [
+        "Aprovecha el ambiente tranquilo para temas complejos",
+        "Considera llevar auriculares con cancelación de ruido",
+        "Lleva todos los materiales necesarios para evitar viajes extra",
+        "Establece bloques largos de estudio (más de 90 minutos)"
+      ];
+      
+      if (formData.tiempoBiblioteca === 'mas-30') {
+        recomendaciones.especificas.push("Organiza sesiones largas para compensar el tiempo de desplazamiento");
+      }
+    } 
+    else if (formData.lugarEstudio === 'Casa') {
+      recomendaciones.especificas = [
+        "Define claramente tu espacio de estudio",
+        "Comunica a tu familia tus horarios para evitar interrupciones",
+        "Utiliza aplicaciones de bloqueo de distracciones",
+        "Programa sesiones más cortas y frecuentes"
+      ];
+      
+      if (formData.nivelDistraccion === 'alto') {
+        recomendaciones.especificas.push("Considera estudiar temprano por la mañana o tarde en la noche");
+        recomendaciones.especificas.push("Utiliza técnicas de concentración como Pomodoro con intervalos más cortos");
+      }
+    } 
+    else if (formData.lugarEstudio === 'Mixto') {
+      recomendaciones.especificas = [
+        "Dedica las sesiones de biblioteca a los temas más complejos",
+        "Realiza los repasos en casa aprovechando la flexibilidad",
+        "Mantén una organización consistente entre ambos lugares",
+        "Adapta tu intensidad según el entorno donde estudies"
+      ];
+      
+      if (formData.diasBiblioteca === 'finde') {
+        recomendaciones.especificas.push("Aprovecha los fines de semana en biblioteca para avanzar en contenido nuevo");
+      }
+    }
+    
+    return recomendaciones;
+  };
+  
+  const recomendacionesEstudio = obtenerRecomendacionesLugarEstudio();
+  
   return (
     <div className="bg-white rounded-lg shadow-md p-8 max-w-5xl mx-auto">
       <div className="text-center mb-8">
@@ -798,31 +1065,72 @@ const ResultStep = ({ formData }) => {
           
           <div className="mt-6">
             <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <h4 className="font-medium mb-2">Notas necesarias para aprobar</h4>
-              <div className="space-y-2">
-                {Object.entries(formData.faseGeneral || {})
-                  .filter(([_, nota]) => nota)
-                  .map(([asignatura, nota]) => (
-                    <div key={asignatura} className="flex items-center">
-                      <div className={`w-8 h-8 rounded-full text-center leading-8 mr-2 ${getColorForAsignatura(asignatura)}`}>
-                        {nota}
+              <h4 className="font-medium mb-4">Impacto de cada asignatura en tu nota final</h4>
+              
+              {estadisticasAsignaturas.length > 0 ? (
+                <div className="space-y-4">
+                  {estadisticasAsignaturas.map((asig, index) => (
+                    <div key={index}>
+                      <div className="flex justify-between items-center mb-1">
+                        <div className="flex items-center">
+                          <div className={`w-3 h-3 rounded-full mr-2 ${getColorForAsignatura(asig.nombre)}`}></div>
+                          <span className="font-medium text-sm">{asig.nombre}</span>
+                        </div>
+                        <span className="text-sm font-medium">{asig.pesoRelativo.toFixed(1)}%</span>
                       </div>
-                      <span className="flex-grow">{asignatura}</span>
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div 
+                          className={`h-2.5 rounded-full ${getColorForAsignatura(asig.nombre).replace('bg-', 'bg-opacity-80 bg-')}`} 
+                          style={{ width: `${asig.pesoRelativo}%` }}
+                        ></div>
+                      </div>
+                      <div className="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>0 puntos</span>
+                        <span>{asig.maxPuntos.toFixed(2)} puntos</span>
+                      </div>
                     </div>
                   ))}
-                  
-                {Object.entries(formData.faseEspecifica || {})
-                  .filter(([_, data]) => data?.asignatura)
-                  .map(([key, data]) => (
-                    <div key={key} className="flex items-center">
-                      <div className={`w-8 h-8 rounded-full text-center leading-8 mr-2 ${getColorForAsignatura(data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura)}`}>
-                        {data.ponderacion}
-                      </div>
-                      <span className="flex-grow">
-                        {data.asignatura === 'otra' ? data.asignaturaPersonalizada : data.asignatura}
-                      </span>
-                    </div>
-                  ))}
+                </div>
+              ) : (
+                <p className="text-gray-500 text-center py-4">
+                  Indica tus asignaturas para ver su impacto
+                </p>
+              )}
+              
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <h5 className="font-medium text-sm mb-2">Cómo interpretar estos datos:</h5>
+                <p className="text-xs text-gray-600">
+                  Las barras muestran la contribución máxima de cada asignatura a tu nota final de Selectividad. 
+                  Enfócate en mejorar las asignaturas con mayor impacto porcentual.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6">
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-medium mb-3">Recomendaciones personalizadas</h4>
+              
+              <div className="space-y-4">
+                <div>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">Recomendaciones generales</h5>
+                  <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    {recomendacionesEstudio.general.map((rec, index) => (
+                      <li key={index}>{rec}</li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h5 className="text-sm font-medium text-gray-700 mb-2">
+                    Según tu lugar de estudio ({formData.lugarEstudio || "No especificado"})
+                  </h5>
+                  <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+                    {recomendacionesEstudio.especificas.map((rec, index) => (
+                      <li key={index}>{rec}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -924,6 +1232,10 @@ export default function EstrategiaEstudio() {
     faseEspecifica: {},
     asignaturas: {},
     lugarEstudio: '',
+    tiempoBiblioteca: '',
+    nivelDistraccion: '',
+    diasBiblioteca: '',
+    diasCasa: '',
     horasDiarias: '',
     momentoDia: '', // Mañana o tarde
     diaDescanso: 'Domingo', // Día de descanso por defecto

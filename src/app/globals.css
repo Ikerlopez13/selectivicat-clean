@@ -7,6 +7,40 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
   }
+  
+  /* Estilos para inputs y selects */
+  input[type='text'],
+  input[type='number'],
+  input[type='email'],
+  input[type='search'],
+  select {
+    @apply bg-white text-gray-900 border-gray-200;
+  }
+
+  /* Estilos específicos para checkboxes */
+  input[type='checkbox'] {
+    @apply bg-white border-gray-300 text-selectivi-yellow;
+    @apply focus:ring-2 focus:ring-selectivi-yellow focus:ring-offset-2;
+  }
+
+  input[type='checkbox']:checked {
+    @apply bg-selectivi-yellow border-transparent;
+  }
+
+  /* Estilos para selects */
+  select {
+    @apply bg-white text-gray-900 border-gray-200;
+    @apply focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent;
+  }
+
+  /* Asegurarse de que los elementos de DaisyUI no se vean afectados */
+  .select:not(.select-ghost) {
+    @apply bg-white text-gray-900;
+  }
+
+  .checkbox:not(.checkbox-ghost) {
+    @apply bg-white border-gray-300;
+  }
 }
 
 @layer base {
