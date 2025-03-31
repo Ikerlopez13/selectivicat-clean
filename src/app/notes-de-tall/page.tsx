@@ -23,7 +23,7 @@ export default function NotesPage() {
         <div className="bg-selectivi-yellow py-16 px-4 md:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="lg:w-3/5">
+              <div className="w-full">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Cercador de notes de Tall</h1>
                 <p className="text-xl mb-6">Cerca qualsevol grau universitari.</p>
                 <p className="mb-8">Nosaltres et proporcionem la dada oficial de <strong>totes les universitats</strong> de Catalunya.</p>
@@ -42,19 +42,11 @@ export default function NotesPage() {
                 </div>
                 
                 {/* Buscador con valores iniciales */}
-                <div className="w-full lg:w-[140%]">
+                <div className="w-full">
                   <Suspense fallback={<div>Loading search...</div>}>
                     <ClientSearchComponent />
                   </Suspense>
                 </div>
-              </div>
-              
-              <div className="lg:w-2/5 flex justify-center">
-                <img 
-                  src="/images/Group11.png" 
-                  alt="Estudiant buscant notes de tall" 
-                  className="w-s max-w-sm h-auto"
-                />
               </div>
             </div>
           </div>
