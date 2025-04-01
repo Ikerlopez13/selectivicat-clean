@@ -6,61 +6,83 @@ import Link from 'next/link';
 
 export default function PopupCR7() {
   const [isVisible, setIsVisible] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
-    // Mostrar el popup después de un pequeño delay para mejor UX
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1500);
+    const hasVisitedPremium = localStorage.getItem('hasVisitedPremium');
+    
+    if (!hasVisitedPremium) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 1500);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
+
+  const handlePremiumClick = () => {
+    localStorage.setItem('hasVisitedPremium', 'true');
+    setIsVisible(false);
+  };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-      <div className="relative bg-white rounded-2xl shadow-xl max-w-lg w-full overflow-hidden">
-        {/* Botón de cerrar */}
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        <div className="flex flex-col md:flex-row items-center">
-          {/* Imagen de CR7 */}
-          <div className="w-full md:w-1/2 relative h-64 md:h-auto">
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
+      <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+        <div className="flex flex-col items-center text-center space-y-8">
+          <div className="relative w-[280px] h-[280px] mb-2">
             <Image
-              src="/images/cr7.jpg"
-              alt="Cristiano Ronaldo"
-              fill
-              className="object-cover"
+              src="/images/cr7.png"
+              alt="CR7 Motivational"
+              width={280}
+              height={280}
+              priority
+              unoptimized
+              className="object-contain"
+              onError={(e) => {
+                console.error('Error loading image:', e);
+                e.currentTarget.style.display = 'none';
+                setImageError(true);
+              }}
+              onLoad={() => {
+                console.log('Image loaded successfully');
+                setImageError(false);
+              }}
             />
+            {imageError && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500 rounded-xl">
+                Error cargando imagen
+              </div>
+            )}
           </div>
+          
+          <h3 className="text-2xl font-bold text-gray-800 italic leading-relaxed">
+            "Todosh losh problemash tienen solusion"
+          </h3>
+          
+          <p className="text-gray-600 text-lg">
+            Accedeix a totes les preguntes i explicacions amb el pla Premium
+          </p>
 
-          {/* Contenido */}
-          <div className="p-6 md:p-8 w-full md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">
-              "Tots els problemes tenen solució"
-            </h3>
-            
-            <p className="text-gray-600 mb-6">
-              Amb SeleTest pots aconseguir problemes i solucions de selectivitat il·limitades.
-            </p>
-
-            <Link 
-              href="/fes-te-premium"
-              className="block w-full bg-selectivi-yellow text-black text-center py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
+          <Link 
+            href="/premium"
+            onClick={handlePremiumClick}
+            className="group relative w-full inline-flex items-center justify-center py-4 px-8 font-bold text-white bg-gradient-to-r from-selectivi-yellow to-yellow-500 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200 overflow-hidden"
+          >
+            <div className="absolute inset-0 w-3 bg-white bg-opacity-30 skew-x-[20deg] group-hover:animate-shine" />
+            <span className="mr-2 text-lg">Fes-te Premium</span>
+            <svg 
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
             >
-              Fes-te Premium ara
-            </Link>
-          </div>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
   );
-} 
+}

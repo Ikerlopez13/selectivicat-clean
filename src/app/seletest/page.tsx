@@ -56,8 +56,8 @@ const initialQuestions: Question[] = [
     "pregunta": "¿Cuál de los siguientes problemas NO está directamente asociado a la pérdida de cobertura vegetal?",
     "opciones": [
       "Erosión del suelo",
-      "Inundaciones",
       "Aumento de la biodiversidad",
+      "Inundaciones",
       "Pérdida de hábitats para especies animales"
     ],
     "respuesta_correcta": "Aumento de la biodiversidad",
@@ -69,8 +69,8 @@ const initialQuestions: Question[] = [
     "pregunta": "Según el documento, ¿qué caracteriza el clima mediterráneo semiárido de Lleida?",
     "opciones": [
       "Precipitaciones abundantes todo el año",
-      "Inviernos húmedos y muy fríos, veranos cálidos",
       "Ausencia total de sequía estival",
+      "Inviernos húmedos y muy fríos, veranos cálidos",
       "Amplitud térmica muy baja"
     ],
     "respuesta_correcta": "Inviernos húmedos y muy fríos, veranos cálidos",
@@ -78,52 +78,13 @@ const initialQuestions: Question[] = [
     "categoria": "Geografia"
   },
   {
-    "id": 16,
-    "pregunta": "¿Qué efecto del cambio climático se menciona específicamente para la costa catalana?",
-    "opciones": [
-      "Disminución del nivel del mar",
-      "Reducción de la intensidad de los temporales",
-      "Litoral amenazado por el aumento del nivel del mar",
-      "Aumento de la vegetación costera"
-    ],
-    "respuesta_correcta": "Litoral amenazado por el aumento del nivel del mar",
-    "explicacion": "El documento destaca que el litoral catalán está amenazado por el incremento del nivel del mar y el mayor embate de temporales debido al cambio climático.",
-    "categoria": "Geografia"
-  },
-  {
-    "id": 17,
-    "pregunta": "En los Pirineos, ¿qué tipo de vegetación predomina en el piso alpino (2,400-3,000 m)?",
-    "opciones": [
-      "Bosques de coníferas",
-      "Prados alpinos",
-      "Selva tropical",
-      "Cultivos agrícolas"
-    ],
-    "respuesta_correcta": "Prados alpinos",
-    "explicacion": "En el piso alpino, la vegetación está dominada por prados alpinos debido a las condiciones extremas y la cobertura de nieve durante gran parte del año.",
-    "categoria": "Geografia"
-  },
-  {
-    "id": 18,
-    "pregunta": "¿Qué define un 'paisaje cultural' según el documento?",
-    "opciones": [
-      "Áreas naturales sin intervención humana",
-      "Resultado de la interacción entre actividades humanas y el medio natural a lo largo del tiempo",
-      "Zonas exclusivamente urbanas",
-      "Espacios protegidos sin valor histórico"
-    ],
-    "respuesta_correcta": "Resultado de la interacción entre actividades humanas y el medio natural a lo largo del tiempo",
-    "explicacion": "Un paisaje cultural surge de la modificación humana del paisaje natural, reflejando identidad comunitaria y procesos económicos, sociales y culturales.",
-    "categoria": "Geografia"
-  },
-  {
     "id": 19,
     "pregunta": "¿Cuál de estas provincias españolas se menciona como ejemplo de área con escaso dinamismo económico y fuerte emigración?",
     "opciones": [
+      "Valencia",
       "Barcelona",
       "Madrid",
-      "Ourense",
-      "Valencia"
+      "Ourense"
     ],
     "respuesta_correcta": "Ourense",
     "explicacion": "Ourense, en el noroeste peninsular, es citada como ejemplo de provincia con bajo dinamismo económico y históricas migraciones.",
@@ -134,8 +95,8 @@ const initialQuestions: Question[] = [
     "pregunta": "¿Qué consecuencia demográfica se deriva de la emigración juvenil en zonas rurales?",
     "opciones": [
       "Aumento de la natalidad",
-      "Rejuvenecimiento de la población",
       "Acentuación del envejecimiento poblacional",
+      "Rejuvenecimiento de la población",
       "Equilibrio entre grupos de edad"
     ],
     "respuesta_correcta": "Acentuación del envejecimiento poblacional",
@@ -148,8 +109,8 @@ const initialQuestions: Question[] = [
     "id": 14,
     "pregunta": "Durante la Segunda República española (1931-1936), ¿qué derecho fundamental se reconoció por primera vez a las mujeres?",
     "opciones": [
-      "Derecho al voto",
       "Derecho a la propiedad privada",
+      "Derecho al voto",
       "Derecho a la educación superior",
       "Derecho al divorcio"
     ],
@@ -162,77 +123,12 @@ const initialQuestions: Question[] = [
     "pregunta": "¿Qué caracterizó el papel de la mujer durante el franquismo (1939-1975)?",
     "opciones": [
       "Igualdad legal y participación política activa",
-      "Rol doméstico y sumisión al género masculino",
       "Libertad para ejercer cualquier profesión",
+      "Rol doméstico y sumisión al género masculino",
       "Acceso prioritario a la educación universitaria"
     ],
     "respuesta_correcta": "Rol doméstico y sumisión al género masculino",
     "explicacion": "El franquismo promovió un modelo de mujer centrado en la familia y la sumisión al hombre, eliminando derechos como el divorcio y restringiendo su participación pública.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 16,
-    "pregunta": "La Semana Trágica de Barcelona (1909) fue un conflicto provocado principalmente por:",
-    "opciones": [
-      "La industrialización acelerada",
-      "El embarque de reservistas para la Guerra de Melilla",
-      "La prohibición del catalán",
-      "La influencia del anarquismo internacional"
-    ],
-    "respuesta_correcta": "El embarque de reservistas para la Guerra de Melilla",
-    "explicacion": "El malestar social estalló por el reclutamiento forzoso de reservistas para la guerra en Marruecos, llevando a protestas, barricadas y una fuerte represión.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 17,
-    "pregunta": "¿Qué reivindicaciones promovió la Assemblea de Catalunya durante el franquismo?",
-    "opciones": [
-      "Amnistía para presos políticos y autonomía para Cataluña",
-      "Restauración de la monarquía borbónica",
-      "Adhesión a la OTAN",
-      "Liberalización económica"
-    ],
-    "respuesta_correcta": "Amnistía para presos políticos y autonomía para Cataluña",
-    "explicacion": "Esta plataforma unitaria antifranquista buscaba libertades políticas, la liberación de presos y el restablecimiento del Estatut d'Autonomia de 1932.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 18,
-    "pregunta": "¿Qué grupo guerrillero antifranquista operó en zonas rurales después de la Guerra Civil?",
-    "opciones": [
-      "Los maquis",
-      "Los tercios de Flandes",
-      "Las Brigadas Internacionales",
-      "La Falange"
-    ],
-    "respuesta_correcta": "Los maquis",
-    "explicacion": "Los maquis fueron guerrilleros republicanos que continuaron la resistencia armada contra el régimen franquista hasta los años 50, especialmente en áreas montañosas.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 19,
-    "pregunta": "La 'Vaga de La Canadenca' (1919) en Barcelona fue un hito del movimiento obrero porque:",
-    "opciones": [
-      "Logró la jornada laboral de 8 horas",
-      "Derrocó al gobierno central",
-      "Impulsó el sufragio femenino",
-      "Promovió la independencia de Cataluña"
-    ],
-    "respuesta_correcta": "Logró la jornada laboral de 8 horas",
-    "explicacion": "Esta huelga general, liderada por anarquistas, obligó al gobierno a decretar la jornada de 8 horas, siendo una de las primeras conquistas laborales en Europa.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 20,
-    "pregunta": "¿Qué caracterizó al sistema político de la Restauración borbónica (1874-1923)?",
-    "opciones": [
-      "Democracia participativa y pluralismo",
-      "Alternancia pactada entre conservadores y liberales (turnismo)",
-      "Gobierno militar permanente",
-      "Federalismo descentralizado"
-    ],
-    "respuesta_correcta": "Alternancia pactada entre conservadores y liberales (turnismo)",
-    "explicacion": "El sistema se basaba en el turno pacífico de partidos (conservadores y liberales) mediante elecciones amañadas, excluyendo a otras fuerzas políticas.",
     "categoria": "Historia"
   },
 
@@ -241,10 +137,10 @@ const initialQuestions: Question[] = [
     "id": 14,
     "pregunta": "Un satélite orbita Mercurio a una distancia de 3.36 × 10⁶ m de su centro. Si la masa de Mercurio es 3.285 × 10²³ kg, ¿cuál es la velocidad orbital del satélite? (Dato: G = 6.67 × 10⁻¹¹ N·m²/kg²)",
     "opciones": [
+      "4.92 × 10³ m/s",
       "1.23 × 10³ m/s",
       "2.55 × 10³ m/s",
-      "3.78 × 10³ m/s",
-      "4.92 × 10³ m/s"
+      "3.78 × 10³ m/s"
     ],
     "respuesta_correcta": "2.55 × 10³ m/s",
     "explicacion": "La velocidad orbital se calcula con la fórmula $v = \\sqrt{\\frac{G M}{r}}$. Sustituyendo los valores: $v = \\sqrt{\\frac{6.67 \\times 10^{-11} \\times 3.285 \\times 10^{23}}{3.36 \\times 10^6}} = 2.55 \\times 10^3 \\, \\text{m/s}$.",
@@ -254,78 +150,13 @@ const initialQuestions: Question[] = [
     "id": 15,
     "pregunta": "Para que un satélite escape del campo gravitatorio de Mercurio, su energía mecánica debe ser:",
     "opciones": [
-      "Negativa",
-      "Cero",
       "Positiva",
-      "Igual a su energía cinética"
+      "Igual a su energía cinética",
+      "Negativa",
+      "Cero"
     ],
     "respuesta_correcta": "Cero",
     "explicacion": "La energía mecánica mínima para escapar de un campo gravitatorio es cero (Em ≥ 0). Esto implica que la energía cinética debe ser suficiente para superar la energía potencial gravitatoria negativa.",
-    "categoria": "Física"
-  },
-  {
-    "id": 16,
-    "pregunta": "Un rayo produce una corriente máxima de 10⁵ A. ¿Cuál es el campo magnético a 0.1 m del rayo? (Dato: μ₀ = 4π × 10⁻⁷ T·m/A)",
-    "opciones": [
-      "0.1 T",
-      "0.2 T",
-      "0.3 T",
-      "0.4 T"
-    ],
-    "respuesta_correcta": "0.2 T",
-    "explicacion": "El campo magnético alrededor de un conductor rectilíneo se calcula con $B = \\frac{\\mu_0 I}{2 \\pi r}$. Sustituyendo: $B = \\frac{4\\pi \\times 10^{-7} \\times 10^5}{2 \\pi \\times 0.1} = 0.2 \\, \\text{T}$.",
-    "categoria": "Física"
-  },
-  {
-    "id": 17,
-    "pregunta": "Un electrón se mueve a 10³ m/s perpendicularmente a un campo magnético de 0.2 T. ¿Cuál es la fuerza magnética sobre el electrón? (Dato: q = 1.602 × 10⁻¹⁹ C)",
-    "opciones": [
-      "3.2 × 10⁻¹⁷ N",
-      "1.6 × 10⁻¹⁹ N",
-      "6.4 × 10⁻²⁰ N",
-      "8.0 × 10⁻¹⁸ N"
-    ],
-    "respuesta_correcta": "3.2 × 10⁻¹⁷ N",
-    "explicacion": "La fuerza magnética es $F = q v B$. Sustituyendo: $F = 1.602 \\times 10^{-19} \\times 10^3 \\times 0.2 = 3.2 \\times 10^{-17} \\, \\text{N}$.",
-    "categoria": "Física"
-  },
-  {
-    "id": 18,
-    "pregunta": "Un objeto de 0.5 kg oscila con un MAS de amplitud 0.19 m y frecuencia angular 6.41 rad/s. ¿Cuál es su energía mecánica total?",
-    "opciones": [
-      "0.186 J",
-      "0.371 J",
-      "0.742 J",
-      "1.112 J"
-    ],
-    "respuesta_correcta": "0.371 J",
-    "explicacion": "La energía mecánica en un MAS es $E_m = \\frac{1}{2} k A^2$. Primero calculamos $k = m \\omega^2 = 0.5 \\times (6.41)^2 = 20.54 \\, \\text{N/m}$. Luego, $E_m = \\frac{1}{2} \\times 20.54 \\times (0.19)^2 = 0.371 \\, \\text{J}$.",
-    "categoria": "Física"
-  },
-  {
-    "id": 19,
-    "pregunta": "El polonio-210 (²¹⁰Po) se desintegra emitiendo una partícula alfa. ¿Cuál es el núcleo resultante?",
-    "opciones": [
-      "²⁰⁶Pb",
-      "²¹⁰Bi",
-      "²⁰⁸Hg",
-      "²¹⁰At"
-    ],
-    "respuesta_correcta": "²⁰⁶Pb",
-    "explicacion": "La desintegración alfa reduce el número atómico en 2 y el número másico en 4: $^{210}_{84}Po \\rightarrow ^{4}_{2}He + ^{206}_{82}Pb$.",
-    "categoria": "Física"
-  },
-  {
-    "id": 20,
-    "pregunta": "En el efecto fotoeléctrico, si la longitud de onda umbral es 650 nm, ¿cuál es el trabajo de extracción del material? (Datos: h = 6.626 × 10⁻³⁴ J·s, c = 3 × 10⁸ m/s, 1 eV = 1.602 × 10⁻¹⁹ J)",
-    "opciones": [
-      "1.91 eV",
-      "2.45 eV",
-      "3.06 eV",
-      "4.12 eV"
-    ],
-    "respuesta_correcta": "1.91 eV",
-    "explicacion": "El trabajo de extracción es $W_0 = h f_0 = \\frac{h c}{\\lambda_0}$. Calculamos $W_0 = \\frac{6.626 \\times 10^{-34} \\times 3 \\times 10^8}{650 \\times 10^{-9}} = 3.06 \\times 10^{-19} \\, \\text{J} = 1.91 \\, \\text{eV}$.",
     "categoria": "Física"
   },
 
@@ -334,10 +165,10 @@ const initialQuestions: Question[] = [
     "id": 14,
     "pregunta": "Un elemento con configuración electrónica 1s² 2s² 2p⁶ 3s¹ pertenece al:",
     "opciones": [
-      "Período 3, grupo 1, bloque s",
       "Período 2, grupo 1, bloque p",
       "Período 3, grupo 17, bloque p",
-      "Período 4, grupo 1, bloque d"
+      "Período 4, grupo 1, bloque d",
+      "Período 3, grupo 1, bloque s"
     ],
     "respuesta_correcta": "Período 3, grupo 1, bloque s",
     "explicacion": "El último electrón está en el nivel 3 (período 3), en el orbital s con 1 electrón (grupo 1, alcalinos). Los elementos del bloque s tienen su electrón diferencial en orbitales s.",
@@ -347,78 +178,13 @@ const initialQuestions: Question[] = [
     "id": 15,
     "pregunta": "¿Qué energía tiene un fotón de luz con λ = 6 × 10⁻¹¹ m? (Datos: h = 6.63 × 10⁻³⁴ J·s; c = 3 × 10⁸ m/s)",
     "opciones": [
-      "3.315 × 10⁻¹⁵ J",
       "2.189 × 10⁻¹⁸ J",
+      "3.315 × 10⁻¹⁵ J",
       "1.326 × 10⁻¹⁷ J",
       "5.521 × 10⁻¹⁶ J"
     ],
     "respuesta_correcta": "3.315 × 10⁻¹⁵ J",
     "explicacion": "Usando $E = h\\cdot c/\\lambda$: $(6.63 × 10^{-34} × 3 × 10^8) / 6 × 10^{-11} = 3.315 × 10^{-15}$ J.",
-    "categoria": "Química"
-  },
-  {
-    "id": 16,
-    "pregunta": "Para la reacción CH₃COOH + CH₃CH₂OH ⇌ CH₃COOCH₂CH₃ + H₂O, si en el equilibrio hay 0.15 mol de ácido acético y inicialmente había 1 mol, ¿cuál es el valor de Kc?",
-    "opciones": [
-      "1.25",
-      "4.19",
-      "0.85",
-      "2.50"
-    ],
-    "respuesta_correcta": "4.19",
-    "explicacion": "x = moles consumidos = 1 - 0.15 = 0.85 mol. Kc = [Éster][Agua]/[Ácido][Alcohol] = (0.85 × 0.85)/(0.15 × 1.15) = 4.19. Los volúmenes se cancelan al ser constantes.",
-    "categoria": "Química"
-  },
-  {
-    "id": 17,
-    "pregunta": "Según Le Châtelier, ¿cómo afecta un exceso de etanol al rendimiento de la formación de acetato de etilo?",
-    "opciones": [
-      "Disminuye el rendimiento",
-      "No tiene efecto",
-      "Aumenta el rendimiento",
-      "Solo acelera la reacción"
-    ],
-    "respuesta_correcta": "Aumenta el rendimiento",
-    "explicacion": "Un exceso de reactivo (etanol) desplaza el equilibrio hacia los productos (acetato de etilo + agua), aumentando el rendimiento según el principio de Le Châtelier.",
-    "categoria": "Química"
-  },
-  {
-    "id": 18,
-    "pregunta": "¿Cuál es la relación entre butan-1-ol (CH₃CH₂CH₂CH₂OH) y dietiléter (CH₃CH₂OCH₂CH₃)?",
-    "opciones": [
-      "Isómeros geométricos",
-      "Isómeros de cadena",
-      "Isómeros de grupo funcional",
-      "El mismo compuesto"
-    ],
-    "respuesta_correcta": "Isómeros de grupo funcional",
-    "explicacion": "Ambos tienen fórmula C₄H₁₀O pero difieren en su grupo funcional: alcohol (-OH) vs. éter (-O-). Son isómeros constitucionales de grupo funcional.",
-    "categoria": "Química"
-  },
-  {
-    "id": 19,
-    "pregunta": "¿Por qué el ciclohexanol es más soluble en agua que el ciclohexeno?",
-    "opciones": [
-      "Tiene menor masa molar",
-      "Puede formar puentes de hidrógeno",
-      "Es un compuesto iónico",
-      "Tiene más átomos de carbono"
-    ],
-    "respuesta_correcta": "Puede formar puentes de hidrógeno",
-    "explicacion": "El grupo -OH del ciclohexanol forma puentes de hidrógeno con el agua, mientras que el ciclohexeno (hidrocarburo apolar) solo tiene interacciones débiles de London.",
-    "categoria": "Química"
-  },
-  {
-    "id": 20,
-    "pregunta": "En la electrólisis del agua acidulada, ¿qué gas se produce en el cátodo?",
-    "opciones": [
-      "Oxígeno",
-      "Hidrógeno",
-      "Dióxido de carbono",
-      "Cloro"
-    ],
-    "respuesta_correcta": "Hidrógeno",
-    "explicacion": "En el cátodo ocurre la reducción: 2H⁺ + 2e⁻ → H₂(g). El oxígeno se genera en el ánodo por oxidación del agua.",
     "categoria": "Química"
   },
 
@@ -427,8 +193,8 @@ const initialQuestions: Question[] = [
     "id": 14,
     "pregunta": "¿Cuál es la diferencia principal entre el azúcar del DNA y el del RNA?",
     "opciones": [
-      "El DNA tiene ribosa y el RNA desoxiribosa",
       "El DNA tiene desoxiribosa y el RNA ribosa",
+      "El DNA tiene ribosa y el RNA desoxiribosa",
       "Ambos tienen glucosa pero en configuraciones diferentes",
       "El DNA tiene fructosa y el RNA sacarosa"
     ],
@@ -440,79 +206,42 @@ const initialQuestions: Question[] = [
     "id": 15,
     "pregunta": "Si la secuencia de DNA transcrito es TAA-GCA-CTC, ¿cuál será la secuencia de RNA resultante?",
     "opciones": [
-      "AUU-CGU-GAG",
-      "ATT-CGT-GAG",
+      "TAA-GCA-CTC",
       "UAA-GCA-CUC",
-      "TAA-GCA-CTC"
+      "ATT-CGT-GAG",
+      "AUU-CGU-GAG"
     ],
     "respuesta_correcta": "AUU-CGU-GAG",
     "explicacion": "En la transcripción, el DNA (TAA-GCA-CTC) se convierte en RNA sustituyendo timina (T) por uracilo (U). Por tanto, T → A, A → U, G → C, C → G.",
     "categoria": "Biología"
   },
+
+  // Filosofía
   {
-    "id": 16,
-    "pregunta": "La enfermedad de Stargardt, que requiere heredar dos alelos defectuosos del gen ABCA4, tiene un patrón de herencia:",
+    "id": 14,
+    "pregunta": "¿Qué entiende Platón por 'mundo de las ideas'?",
     "opciones": [
-      "Dominante y ligado al sexo",
-      "Recesivo y autosómico",
-      "Dominante y autosómico",
-      "Recesivo y ligado al sexo"
+      "El mundo de los sueños y la imaginación",
+      "El mundo de las opiniones personales",
+      "El mundo de las formas perfectas e inmutables",
+      "El mundo de los sentidos y la experiencia"
     ],
-    "respuesta_correcta": "Recesivo y autosómico",
-    "explicacion": "Es recesiva porque se necesitan dos copias del alelo defectuoso, y autosómica porque el gen ABCA4 está en el cromosoma 1 (no sexual). Afecta por igual a hombres y mujeres.",
-    "categoria": "Biología"
+    "respuesta_correcta": "El mundo de las formas perfectas e inmutables",
+    "explicacion": "Para Platón, el mundo de las ideas es el reino de las formas perfectas, eternas e inmutables, que son la verdadera realidad de la que el mundo físico es solo una copia imperfecta.",
+    "categoria": "Filosofía"
   },
   {
-    "id": 17,
-    "pregunta": "En terapia génica para la enfermedad de Stargardt, ¿qué función cumple el virus modificado?",
+    "id": 15,
+    "pregunta": "¿Cuál es la principal diferencia entre el racionalismo de Descartes y el empirismo de Hume?",
     "opciones": [
-      "Destruir células defectuosas",
-      "Actuar como vector para introducir el gen funcional",
-      "Producir anticuerpos contra el gen mutado",
-      "Estimular la división celular"
+      "Sus creencias religiosas",
+      "La fuente del conocimiento: razón vs. experiencia sensorial",
+      "El idioma en que escribieron",
+      "La época en que vivieron"
     ],
-    "respuesta_correcta": "Actuar como vector para introducir el gen funcional",
-    "explicacion": "Los virus modificados se usan como vectores para transportar e insertar el gen terapéutico (ABCA4 funcional) en las células de la retina.",
-    "categoria": "Biología"
-  },
-  {
-    "id": 18,
-    "pregunta": "¿Qué enzima es esencial para cortar y unir fragmentos de DNA en la creación de DNA recombinante?",
-    "opciones": [
-      "ADN polimerasa y helicasa",
-      "Enzimas de restricción y ligasas",
-      "Transcriptasa inversa y primasa",
-      "Amilasas y proteasas"
-    ],
-    "respuesta_correcta": "Enzimas de restricción y ligasas",
-    "explicacion": "Las enzimas de restricción cortan el DNA en secuencias específicas, y las ligasas unen los fragmentos para formar el DNA recombinante.",
-    "categoria": "Biología"
-  },
-  {
-    "id": 19,
-    "pregunta": "El herbicida Paraquat® inhibe la fotofosforilación. ¿En qué orgánulo y estructura celular actúa?",
-    "opciones": [
-      "Mitocondria - Crestas mitocondriales",
-      "Cloroplasto - Membrana tilacoidal",
-      "Núcleo - Cromatina",
-      "Retículo endoplasmático - Membrana rugosa"
-    ],
-    "respuesta_correcta": "Cloroplasto - Membrana tilacoidal",
-    "explicacion": "La fotofosforilación ocurre en los tilacoides de los cloroplastos durante la fase luminosa de la fotosíntesis. Paraquat® bloquea esta cadena de transporte de electrones.",
-    "categoria": "Biología"
-  },
-  {
-    "id": 20,
-    "pregunta": "¿Por qué el calentamiento global podría aumentar las infecciones fúngicas en mamíferos?",
-    "opciones": [
-      "Los hongos desarrollan paredes celulares más resistentes",
-      "Mutaciones aleatorias permiten a los hongos tolerar temperaturas corporales más altas",
-      "Los mamíferos pierden inmunidad con el calor",
-      "Los hongos se vuelven fotosintéticos"
-    ],
-    "respuesta_correcta": "Mutaciones aleatorias permiten a los hongos tolerar temperaturas corporales más altas",
-    "explicacion": "El aumento de temperaturas selecciona hongos con mutaciones que les permiten sobrevivir en ambientes más cálidos, incluyendo el cuerpo de mamíferos (selección natural).",
-    "categoria": "Biología"
+    "respuesta_correcta": "La fuente del conocimiento: razón vs. experiencia sensorial",
+    "explicacion": "Descartes defendía que el conocimiento verdadero proviene de la razón pura, mientras que Hume sostenía que todo conocimiento deriva de la experiencia sensorial.",
+    "categoria": "Filosofía"
   },
 
   // Matemáticas
@@ -628,32 +357,6 @@ const initialQuestions: Question[] = [
   },
 
   // Filosofía
-  {
-    "id": 14,
-    "pregunta": "¿Qué entiende Platón por 'mundo de las ideas'?",
-    "opciones": [
-      "El mundo de los sueños y la imaginación",
-      "El mundo de las formas perfectas e inmutables",
-      "El mundo de las opiniones personales",
-      "El mundo de los sentidos y la experiencia"
-    ],
-    "respuesta_correcta": "El mundo de las formas perfectas e inmutables",
-    "explicacion": "Para Platón, el mundo de las ideas es el reino de las formas perfectas, eternas e inmutables, que son la verdadera realidad de la que el mundo físico es solo una copia imperfecta.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 15,
-    "pregunta": "¿Cuál es la principal diferencia entre el racionalismo de Descartes y el empirismo de Hume?",
-    "opciones": [
-      "El idioma en que escribieron",
-      "La fuente del conocimiento: razón vs. experiencia sensorial",
-      "La época en que vivieron",
-      "Sus creencias religiosas"
-    ],
-    "respuesta_correcta": "La fuente del conocimiento: razón vs. experiencia sensorial",
-    "explicacion": "Descartes defendía que el conocimiento verdadero proviene de la razón pura, mientras que Hume sostenía que todo conocimiento deriva de la experiencia sensorial.",
-    "categoria": "Filosofía"
-  },
   {
     "id": 16,
     "pregunta": "¿Qué significa el 'imperativo categórico' de Kant?",
@@ -797,7 +500,7 @@ const Question: React.FC<QuestionProps> = ({
           <div className={`p-4 rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'}`}>
             <h4 className="font-semibold mb-2">Explicación:</h4>
             <p className="text-gray-700">
-              {question.explicacion || "La respuesta correcta es: " + formatText(question.respuesta_correcta)}
+              {question.explicacion ? formatText(question.explicacion) : "La respuesta correcta es: " + formatText(question.respuesta_correcta)}
             </p>
           </div>
           <button

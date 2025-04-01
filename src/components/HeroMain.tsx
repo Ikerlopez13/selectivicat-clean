@@ -136,25 +136,25 @@ export default function HeroMain() {
                   Nou!
                 </span>
               </Link>
-              
-              <div className="space-y-4 mt-8">
-                <div className="flex items-center gap-3">
-                  <svg className="w-6 h-6 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <svg className="w-5 h-5 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg text-gray-600">Preguntes reals de Selectivitat</span>
+                  <span>Preguntes il·limitades</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <svg className="w-6 h-6 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <svg className="w-5 h-5 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg text-gray-600">Simulador intel·ligent</span>
+                  <span>Seguiment del teu progrés</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <svg className="w-6 h-6 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <svg className="w-5 h-5 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg text-gray-600">Resultats instantanis</span>
+                  <span>Atenció Premium 24/7</span>
                 </div>
               </div>
             </div>
