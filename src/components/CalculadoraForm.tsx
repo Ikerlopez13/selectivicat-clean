@@ -85,14 +85,16 @@ export default function CalculadoraForm() {
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Nota de Batxillerat</h2>
         <div className="mb-4">
-          <select
+          <input
+            type="number"
             value={notaBatxillerat}
             onChange={(e) => setNotaBatxillerat(e.target.value)}
+            placeholder="Nota de Batxillerat"
+            step="0.001"
+            min="0"
+            max="10"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          >
-            <option value="">Nota de Batxillerat</option>
-            {/* opciones */}
-          </select>
+          />
         </div>
       </div>
 
