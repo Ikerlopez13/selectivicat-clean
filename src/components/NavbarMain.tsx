@@ -73,7 +73,7 @@ export default function NavbarMain() {
           </svg>
           <span className="hidden lg:inline">FocusCircle</span>
         </a>
-        <Link href="/login" className="btn bg-selectivi-yellow text-white hover:bg-selectivi-yellow/90 border-none">
+        <Link href="/api/auth/signin" className="btn bg-selectivi-yellow text-white hover:bg-selectivi-yellow/90 border-none">
           Iniciar Sessió
         </Link>
       </div>
