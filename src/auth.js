@@ -8,8 +8,10 @@ const config = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/",
+    error: "/",
   },
   callbacks: {
     async redirect({ url, baseUrl }) {

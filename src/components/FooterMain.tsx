@@ -56,7 +56,7 @@ export default function FooterMain() {
             <div className="flex flex-col space-y-2">
               <Link href="/sobre" className="text-gray-600 hover:text-[#FFC22D]">Qui som</Link>
               <Link href="/contacte" className="text-gray-600 hover:text-[#FFC22D]">Contacte</Link>
-              <Link href="/privacitat" className="text-gray-600 hover:text-[#FFC22D]">Política de privacitat</Link>
+              <Link href="/politica-privacidad" className="text-gray-600 hover:text-[#FFC22D]">Política de privacitat</Link>
               <Link href="/cookies" className="text-gray-600 hover:text-[#FFC22D]">Cookies</Link>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function FooterMain() {
         {/* Copyright */}
         <div className="py-4 px-6 border-t bg-white text-gray-700 border-gray-200">
           <div className="text-center">
-            <p>Copyright © 2023 - Tots els drets reservats per <span className="font-semibold">selectivi<span className="text-[#FFC22D]">CAT</span></span></p>
+            <p>Copyright © {new Date().getFullYear()} - Tots els drets reservats per <span className="font-semibold">selectivi<span className="text-[#FFC22D]">CAT</span></span></p>
           </div>
         </div>
       </div>
