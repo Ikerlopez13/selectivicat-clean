@@ -8,9 +8,13 @@ const config = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
+  secret: process.env.AUTH_SECRET,
+  session: {
+    strategy: "jwt",
+  },
   pages: {
     signIn: "/api/auth/signin",
-    error: "/auth/error",
+    error: "/api/auth/error",
   },
 };
 
