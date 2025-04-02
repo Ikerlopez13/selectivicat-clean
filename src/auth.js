@@ -10,23 +10,27 @@ const config = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: "/",
-    error: "/",
+    signIn: "/auth/signin",
+    error: "/auth/error",
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      if (url.startsWith("/")) return `${baseUrl}${url}`
-      else if (new URL(url).origin === baseUrl) return url
-      return baseUrl + "/dashboard"
+      if (url.startsWith("/")) {
+        return `${baseUrl}${url}`;
+      }
+      else if (new URL(url).origin === baseUrl) {
+        return url;
+      }
+      return `${baseUrl}/dashboard`;
     },
     async session({ session, token }) {
-      return session
+      return session;
     },
     async jwt({ token, user, account }) {
       if (account && user) {
-        token.accessToken = account.access_token
+        token.accessToken = account.access_token;
       }
-      return token
+      return token;
     },
   },
 };
