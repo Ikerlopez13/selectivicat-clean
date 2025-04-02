@@ -8,14 +8,6 @@ const config = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
-  secret: process.env.AUTH_SECRET,
-  session: {
-    strategy: "jwt",
-  },
-  pages: {
-    signIn: "/api/auth/signin",
-    error: "/api/auth/error",
-  },
 };
 
-export const { handlers, signIn, signOut, auth } = NextAuth(config); 
+export const { handlers, signIn, signOut, auth } = NextAuth(config);
