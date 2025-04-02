@@ -32,6 +32,7 @@
     "react-helmet": "^6.1.0",
     "react-katex": "^3.0.1",
     "react-pdf": "^9.2.1",
+    "stripe": "^18.0.0",
     "swr": "latest",
     "tailwindcss": "^3.3.0",
     "typescript": "latest"

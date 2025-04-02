@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import Stripe from 'stripe';
-import { User } from '@/models/User';
+import User from '@/models/User';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const PREMIUM_PRICE_ID = process.env.STRIPE_PREMIUM_PRICE_ID;
