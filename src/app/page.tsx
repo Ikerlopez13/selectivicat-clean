@@ -8,8 +8,12 @@ import SectionStats from '@/components/SectionStats';
 import SectionRecentExams from '@/components/SectionRecentExams';
 import FooterMain from '@/components/FooterMain';
 import SaasRecommendation from '@/components/SaasRecommendation';
+import { auth } from '@/auth';
 
-export default function Home() {
+export default async function Home() {
+
+  const session = await auth();
+
   return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
