@@ -8,17 +8,23 @@ const config = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
-  secret: process.env.AUTH_SECRET,
   pages: {
     signIn: "/",
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      // Allows relative callback URLs
       if (url.startsWith("/")) return `${baseUrl}${url}`
-      // Allows callback URLs on the same origin
       else if (new URL(url).origin === baseUrl) return url
-      return baseUrl
+      return baseUrl + "/dashboard"
+    },
+    async session({ session, token }) {
+      return session
+    },
+    async jwt({ token, user, account }) {
+      if (account && user) {
+        token.accessToken = account.access_token
+      }
+      return token
     },
   },
 };
