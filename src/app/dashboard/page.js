@@ -1,97 +1,95 @@
 import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 
 export default async function DashboardPage() {
   const session = await auth();
+  
+  if (!session?.user) {
+    redirect("/");
+  }
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-16">
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
+    <main className="container mx-auto px-4 py-8 mt-16">
+      {/* User Profile Card */}
+      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <div className="flex items-center space-x-4">
-          {session?.user?.image && (
-            <img 
-              src={session.user.image} 
-              alt="Foto de perfil"
-              className="w-16 h-16 rounded-full"
-            />
-          )}
+          <img
+            src={session.user.image}
+            alt={session.user.name}
+            className="w-16 h-16 rounded-full"
+          />
           <div>
-            <h2 className="text-2xl font-semibold">{session?.user?.name}</h2>
-            <p className="text-gray-600">{session?.user?.email}</p>
+            <h1 className="text-2xl font-bold">{session.user.name}</h1>
+            <p className="text-gray-600">{session.user.email}</p>
           </div>
         </div>
       </div>
 
-      {/* Sección de Planes */}
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* Plans Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Plan Premium */}
-        <div className="bg-gradient-to-br from-selectivi-yellow/20 to-selectivi-yellow/5 rounded-lg p-6 shadow-lg border border-selectivi-yellow/20">
-          <h3 className="text-xl font-bold mb-4 flex items-center">
-            <span className="text-2xl mr-2">✨</span>
-            Plan Premium
-          </h3>
+        <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg shadow-lg p-6">
+          <h2 className="text-2xl font-bold text-white mb-4">Plan Premium</h2>
           <ul className="space-y-3 mb-6">
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-white">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Acceso ilimitado a todas las preguntas
+              Accés il·limitat a totes les preguntes
             </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-white">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Preguntas premium exclusivas
+              Preguntes premium exclusives
             </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-selectivi-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-white">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Soporte prioritario
+              Suport prioritari
             </li>
           </ul>
           <Link 
-            href="/premium" 
-            className="btn bg-selectivi-yellow text-white hover:bg-selectivi-yellow/90 w-full"
+            href="/premium"
+            className="block w-full text-center bg-white text-yellow-500 font-semibold py-2 px-4 rounded-lg hover:bg-yellow-50 transition-colors"
           >
             Obtenir Premium
           </Link>
         </div>
 
         {/* Plan Standard */}
-        <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-200">
-          <h3 className="text-xl font-bold mb-4 flex items-center">
-            <span className="text-2xl mr-2">🎯</span>
-            Plan Standard
-          </h3>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Plan Standard</h2>
           <ul className="space-y-3 mb-6">
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-gray-600">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Acceso a preguntas básicas
+              Accés a preguntes bàsiques
             </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-gray-600">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Práctica limitada
+              Pràctica limitada
             </li>
-            <li className="flex items-center">
-              <svg className="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            <li className="flex items-center text-gray-600">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
               </svg>
-              Soporte básico
+              Suport bàsic
             </li>
           </ul>
           <Link 
-            href="/seletest" 
-            className="btn bg-gray-100 text-gray-700 hover:bg-gray-200 w-full"
+            href="/seletest"
+            className="block w-full text-center bg-gray-100 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
           >
-            Continuar con Standard
+            Continuar amb Standard
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 } 
