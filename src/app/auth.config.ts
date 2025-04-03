@@ -1,7 +1,7 @@
 import type { NextAuthConfig } from "next-auth"
 import Google from "next-auth/providers/google"
 
-export const authConfig = {
+export const authConfig: NextAuthConfig = {
   providers: [
     Google({
       clientId: process.env.GOOGLE_ID,
@@ -40,14 +40,14 @@ export const authConfig = {
       // Por defecto, redirigir a la URL canónica
       return canonicalBaseUrl
     },
-    async session({ session, user, token }) {
+    async session({ session, token }) {
       return session
     },
-    async jwt({ token, user, account, profile }) {
+    async jwt({ token, user }) {
       if (user) {
         token.id = user.id
       }
       return token
     }
   }
-} satisfies NextAuthConfig 
+} 
