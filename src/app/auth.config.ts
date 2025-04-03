@@ -1,53 +1,26 @@
 import type { NextAuthConfig } from "next-auth"
 import Google from "next-auth/providers/google"
 
-export const authConfig: NextAuthConfig = {
+export const authConfig = {
   providers: [
     Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
+      clientId: process.env.GOOGLE_ID ?? "",
+      clientSecret: process.env.GOOGLE_SECRET ?? "",
     })
   ],
-  trustHost: true,
-  secret: process.env.AUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   session: { 
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60, // 30 días
   },
   pages: {
     signIn: '/auth/signin',
     error: '/auth/error',
   },
   callbacks: {
-    async signIn({ user, account, profile }) {
-      return true
-    },
     async redirect({ url, baseUrl }) {
-      // Asegurarnos de que baseUrl sea la URL canónica (www)
-      const canonicalBaseUrl = baseUrl.replace('://selectivi.cat', '://www.selectivi.cat')
-      
-      // Si la URL comienza con la URL base (con o sin www)
-      if (url.startsWith(baseUrl) || url.startsWith(canonicalBaseUrl)) {
-        // Asegurarnos de que usamos la versión www
-        return url.replace('://selectivi.cat', '://www.selectivi.cat')
-      }
-      
-      // Si es una ruta relativa
-      if (url.startsWith("/")) {
-        return canonicalBaseUrl + url
-      }
-      
-      // Por defecto, redirigir a la URL canónica
-      return canonicalBaseUrl
-    },
-    async session({ session, token }) {
-      return session
-    },
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id
-      }
-      return token
+      if (url.startsWith(baseUrl)) return url
+      if (url.startsWith("/")) return `${baseUrl}${url}`
+      return baseUrl
     }
   }
-} 
+} satisfies NextAuthConfig 
