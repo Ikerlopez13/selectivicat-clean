@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation';
 
 export default function HeroMain() {
   const router = useRouter();
+  const { data: session } = useSession();
   const [searchTerm, setSearchTerm] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [suggestions, setSuggestions] = useState<{ texto: string; url: string; tipo: string }[]>([]);
@@ -83,8 +84,13 @@ export default function HeroMain() {
     setShowSuggestions(false);
   };
 
-  const handleSignIn = () => {
-    signIn("google", { callbackUrl: "/dashboard" });
+  const handleSeleTestClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (session) {
+      router.push('/seletest');
+    } else {
+      signIn("google", { callbackUrl: "/seletest" });
+    }
   };
 
   const handleOptionClick = (path: string) => {
@@ -118,9 +124,8 @@ export default function HeroMain() {
           
           <AnimateOnScroll animation="fadeIn" delay={0.2} duration={0.8}>
             <div className="space-y-4">
-              <Link 
-                onClick={handleSignIn} 
-                href="/seletest" 
+              <button 
+                onClick={handleSeleTestClick}
                 className="group inline-flex items-center px-8 py-4 bg-selectivi-yellow text-white rounded-2xl text-lg font-semibold hover:bg-selectivi-yellow/90 transition-all shadow-lg hover:shadow-xl"
               >
                 <span className="flex items-center gap-2">
@@ -137,12 +142,12 @@ export default function HeroMain() {
                       strokeWidth="1.5"
                     />
                   </svg>
-                  Prova SeleTest Gratis
+                  {session ? 'Accedir a SeleTest' : 'Prova SeleTest Gratis'}
                 </span>
                 <span className="ml-3 bg-selectivi-yellow text-white px-3 py-1 rounded-full text-sm border border-white/20">
                   Nou!
                 </span>
-              </Link>
+              </button>
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2 text-gray-700">
