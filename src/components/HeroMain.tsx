@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import AnimateOnScroll from './AnimateOnScroll';
 import { getAsignaturasPopulares, getBusquedasPopulares, getSugerenciasBusqueda } from '@/data/itinerarios';
 import Image from 'next/image';
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 
 export default function HeroMain() {
@@ -28,6 +28,8 @@ export default function HeroMain() {
     { nombre: 'Videos educatius', path: '/videos' },
     { nombre: 'Itineraris i Assignatures', path: '/search' },
   ];
+
+  const { data: session } = useSession();
 
   // Cargar búsquedas populares y asignaturas al inicio
   useEffect(() => {
@@ -83,8 +85,13 @@ export default function HeroMain() {
     setShowSuggestions(false);
   };
 
-  const handleSignIn = () => {
-    signIn("google", { callbackUrl: "/dashboard" });
+  const handleSeleTestClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!session) {
+      await signIn('google', { callbackUrl: '/seletest' });
+    } else {
+      router.push('/seletest');
+    }
   };
 
   const handleOptionClick = (path: string) => {
@@ -118,9 +125,8 @@ export default function HeroMain() {
           
           <AnimateOnScroll animation="fadeIn" delay={0.2} duration={0.8}>
             <div className="space-y-4">
-              <Link 
-                onClick={handleSignIn} 
-                href="/seletest" 
+              <button 
+                onClick={handleSeleTestClick}
                 className="group inline-flex items-center px-8 py-4 bg-selectivi-yellow text-white rounded-2xl text-lg font-semibold hover:bg-selectivi-yellow/90 transition-all shadow-lg hover:shadow-xl"
               >
                 <span className="flex items-center gap-2">
@@ -142,7 +148,7 @@ export default function HeroMain() {
                 <span className="ml-3 bg-selectivi-yellow text-white px-3 py-1 rounded-full text-sm border border-white/20">
                   Nou!
                 </span>
-              </Link>
+              </button>
 
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2 text-gray-700">
