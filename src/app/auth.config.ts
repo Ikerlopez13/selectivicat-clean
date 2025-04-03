@@ -5,31 +5,36 @@ import Google from "next-auth/providers/google"
 export const authConfig = {
   providers: [
     Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
-    }),
-    Credentials({
-      name: "credentials",
-      credentials: {
-        email: { label: "Email", type: "email", placeholder: "example@example.com" },
-        password: { label: "Password", type: "password" }
-      },
-      async authorize(credentials) {
-        // Por ahora, permitiremos cualquier usuario para pruebas
-        if (!credentials?.email || !credentials?.password) return null
-        
-        return {
-          id: "1",
-          name: "Test User",
-          email: credentials.email as string
-        }
-      }
+      clientId: process.env.GOOGLE_ID || "",
+      clientSecret: process.env.GOOGLE_SECRET || "",
     })
   ],
-  trustHost: true,
-  secret: process.env.AUTH_SECRET,
-  session: { strategy: "jwt" },
+  callbacks: {
+    async signIn({ user, account, profile }) {
+      return true
+    },
+    async redirect({ url, baseUrl }) {
+      if (url.startsWith("/")) return `${baseUrl}${url}`
+      else if (new URL(url).origin === baseUrl) return url
+      return baseUrl
+    },
+    async session({ session, user, token }) {
+      return session
+    },
+    async jwt({ token, user, account, profile }) {
+      return token
+    }
+  },
   pages: {
-    signIn: '/auth/signin'
-  }
+    signIn: '/auth/signin',
+    error: '/auth/error',
+    signOut: '/'
+  },
+  debug: process.env.NODE_ENV === 'development',
+  session: { 
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 días
+  },
+  secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET,
+  trustHost: true,
 } satisfies NextAuthConfig 
