@@ -86,6 +86,7 @@ export default function HeroMain() {
 
   const handleSeleTestClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    // Redirect to SeleTest if logged in, otherwise trigger Google login
     if (session) {
       router.push('/seletest');
     } else {
