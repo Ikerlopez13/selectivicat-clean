@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 
+// NavbarMain component - Main navigation bar for the application
 export default function NavbarMain() {
   const { data: session } = useSession();
   const pathname = usePathname();
