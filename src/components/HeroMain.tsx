@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import AnimateOnScroll from './AnimateOnScroll';
 import { getAsignaturasPopulares, getBusquedasPopulares, getSugerenciasBusqueda } from '@/data/itinerarios';
 import Image from 'next/image';
+import { useSession, signIn, signOut } from "next-auth/react";
+import { usePathname } from 'next/navigation';
 
 export default function HeroMain() {
   const router = useRouter();
@@ -81,6 +83,10 @@ export default function HeroMain() {
     setShowSuggestions(false);
   };
 
+  const handleSignIn = () => {
+    signIn("google", { callbackUrl: "/dashboard" });
+  };
+
   const handleOptionClick = (path: string) => {
     if (searchTerm.trim()) {
       router.push(`${path}?q=${encodeURIComponent(searchTerm)}`);
@@ -113,6 +119,7 @@ export default function HeroMain() {
           <AnimateOnScroll animation="fadeIn" delay={0.2} duration={0.8}>
             <div className="space-y-4">
               <Link 
+                onClick={handleSignIn} 
                 href="/seletest" 
                 className="group inline-flex items-center px-8 py-4 bg-selectivi-yellow text-white rounded-2xl text-lg font-semibold hover:bg-selectivi-yellow/90 transition-all shadow-lg hover:shadow-xl"
               >

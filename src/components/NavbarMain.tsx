@@ -23,7 +23,7 @@ export default function NavbarMain() {
     { href: "/notes-de-tall", text: "Notes de tall" },
     { href: "/examenes", text: "Exàmens" },
     { href: "/millors-videos", text: "Millors Videos" },
-    { href: "/seletest", text: "SeleTest" },
+    /*{ href: "/seletest", text: "SeleTest" },*/
     { href: "/blog", text: "Blog" },
     { href: "/premium", text: "Fes-te Premium ✨" }
   ];
