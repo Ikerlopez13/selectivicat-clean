@@ -11,7 +11,7 @@ const nextConfig = {
         hostname: 'img.youtube.com',
       },
     ],
-    unoptimized: false,
+    unoptimized: true,
   },
   async rewrites() {
     return [
@@ -34,6 +34,10 @@ const nextConfig = {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
+  },
+  // Added for Vercel deployment
+  experimental: {
+    serverActions: true,
   },
 };
 
