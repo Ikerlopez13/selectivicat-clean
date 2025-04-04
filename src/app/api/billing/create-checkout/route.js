@@ -31,17 +31,32 @@ export async function POST(req) {
     
     console.log("Store ID:", storeId);
     console.log("Variant ID:", variantId);
+    console.log("User ID:", session.user.id);
+    console.log("User Email:", session.user.email);
 
     // Obtener URL base para el webhook
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://selectivi.cat";
     const webhookUrl = `${baseUrl}/api/webhooks/lemonsqueezy`;
     
-    // Construir URL directamente
-    const checkoutUrl = `https://selectivi.cat/checkout?variant=${variantId}&store=${storeId}&email=${encodeURIComponent(session.user.email)}&custom[user_id]=${encodeURIComponent(session.user.id)}&success_url=${encodeURIComponent(body.successUrl)}&cancel_url=${encodeURIComponent(body.cancelUrl)}&webhook_url=${encodeURIComponent(webhookUrl)}&test=true`;
+    // Construir la URL con mejor formato para los parámetros
+    let checkoutUrl = new URL("https://selectivi.cat/checkout");
     
-    console.log("Generated checkout URL:", checkoutUrl);
+    // Añadir parámetros principales
+    checkoutUrl.searchParams.append("variant", variantId);
+    checkoutUrl.searchParams.append("store", storeId);
+    checkoutUrl.searchParams.append("email", session.user.email);
+    checkoutUrl.searchParams.append("custom[user_id]", session.user.id);
+    checkoutUrl.searchParams.append("success_url", body.successUrl);
+    checkoutUrl.searchParams.append("cancel_url", body.cancelUrl);
+    checkoutUrl.searchParams.append("webhook_url", webhookUrl);
+    checkoutUrl.searchParams.append("test", "true");
+    
+    // Convertir a string
+    const checkoutUrlString = checkoutUrl.toString();
+    
+    console.log("Generated checkout URL:", checkoutUrlString);
 
-    const checkoutLS = { data: { attributes: { url: checkoutUrl } } };
+    const checkoutLS = { data: { attributes: { url: checkoutUrlString } } };
 
     if (!checkoutLS?.data?.attributes?.url) {
       console.error("Invalid checkout response:", checkoutLS);
