@@ -24,11 +24,28 @@ export default function CalculadoraForm() {
   const [notaFaseGeneral, setNotaFaseGeneral] = useState<number | null>(null);
   const [notaFaseEspecifica, setNotaFaseEspecifica] = useState<number | null>(null);
 
-  // Función para validar que un valor sea un número entre 0 y 10
-  const validarNota = (valor: string): boolean => {
-    if (valor === '') return true;
-    const numero = parseFloat(valor);
-    return !isNaN(numero) && numero >= 0 && numero <= 10;
+  // Función para validar y formatear una nota
+  const handleNotaChange = (
+    value: string, 
+    setter: React.Dispatch<React.SetStateAction<string>>
+  ) => {
+    // Solo permitir números y un punto decimal
+    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+      const numValue = parseFloat(value);
+      
+      // Si es un número válido, asegurarse de que está entre 0 y 10
+      if (!isNaN(numValue)) {
+        if (numValue > 10) {
+          setter('10');
+        } else if (numValue < 0) {
+          setter('0');
+        } else {
+          setter(value);
+        }
+      } else {
+        setter(value);
+      }
+    }
   };
 
   // Función para calcular la nota
@@ -86,13 +103,10 @@ export default function CalculadoraForm() {
         <h2 className="text-xl font-bold mb-4">Nota de Batxillerat</h2>
         <div className="mb-4">
           <input
-            type="number"
+            type="text"
             value={notaBatxillerat}
-            onChange={(e) => setNotaBatxillerat(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaBatxillerat)}
             placeholder="Nota de Batxillerat"
-            step="0.001"
-            min="0"
-            max="10"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
         </div>
@@ -102,37 +116,37 @@ export default function CalculadoraForm() {
         <h2 className="text-xl font-bold mb-4">Fase General</h2>
         <div className="space-y-4">
           <input
-            type="number"
+            type="text"
             value={notaCatala}
-            onChange={(e) => setNotaCatala(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaCatala)}
             placeholder="Català"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
           <input
-            type="number"
+            type="text"
             value={notaCastella}
-            onChange={(e) => setNotaCastella(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaCastella)}
             placeholder="Castellà"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
           <input
-            type="number"
+            type="text"
             value={notaLlenguaEstrangera}
-            onChange={(e) => setNotaLlenguaEstrangera(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaLlenguaEstrangera)}
             placeholder="Llengua estrangera"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
           <input
-            type="number"
+            type="text"
             value={notaHistoria}
-            onChange={(e) => setNotaHistoria(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaHistoria)}
             placeholder="Història"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
           <input
-            type="number"
+            type="text"
             value={notaOptativa}
-            onChange={(e) => setNotaOptativa(e.target.value)}
+            onChange={(e) => handleNotaChange(e.target.value, setNotaOptativa)}
             placeholder="Optativa"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
           />
@@ -142,34 +156,41 @@ export default function CalculadoraForm() {
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Fase específica</h2>
         <div className="space-y-4">
-          <input
-            type="number"
-            value={ponderacio1}
-            onChange={(e) => setPonderacio1(e.target.value)}
-            placeholder="0.2"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
-          <input
-            type="number"
-            value={especifica1}
-            onChange={(e) => setEspecifica1(e.target.value)}
-            placeholder="Específica 1"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
-          <input
-            type="number"
-            value={ponderacio2}
-            onChange={(e) => setPonderacio2(e.target.value)}
-            placeholder="0.2"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
-          <input
-            type="number"
-            value={especifica2}
-            onChange={(e) => setEspecifica2(e.target.value)}
-            placeholder="Específica 2"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
+          <div className="flex gap-4 items-center">
+            <select
+              value={ponderacio1}
+              onChange={(e) => setPonderacio1(e.target.value)}
+              className="w-24 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            >
+              <option value="0.1">0.1</option>
+              <option value="0.2">0.2</option>
+            </select>
+            <input
+              type="text"
+              value={especifica1}
+              onChange={(e) => handleNotaChange(e.target.value, setEspecifica1)}
+              placeholder="Específica 1"
+              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            />
+          </div>
+          
+          <div className="flex gap-4 items-center">
+            <select
+              value={ponderacio2}
+              onChange={(e) => setPonderacio2(e.target.value)}
+              className="w-24 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            >
+              <option value="0.1">0.1</option>
+              <option value="0.2">0.2</option>
+            </select>
+            <input
+              type="text"
+              value={especifica2}
+              onChange={(e) => handleNotaChange(e.target.value, setEspecifica2)}
+              placeholder="Específica 2"
+              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            />
+          </div>
         </div>
       </div>
 
