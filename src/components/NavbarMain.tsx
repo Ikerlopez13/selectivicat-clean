@@ -45,20 +45,6 @@ export default function NavbarMain() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a 
-                href="https://focuscircle.net" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[#FF2D70] font-medium"
-              >
-                FocusCircle
-                <svg viewBox="0 0 24 24" className="w-4 h-4 ml-1 inline-block">
-                  <circle cx="12" cy="12" r="10" fill="#FF2D70" />
-                  <circle cx="12" cy="12" r="7" fill="white" />
-                </svg>
-              </a>
-            </li>
           </ul>
         </div>
         <Link href="/" className="flex items-center gap-2">
@@ -86,19 +72,6 @@ export default function NavbarMain() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a 
-          href="https://focuscircle.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="btn bg-[#FF2D70] text-white hover:bg-[#FF4585] border-none mr-2 hidden md:flex items-center"
-        >
-          <svg viewBox="0 0 24 24" className="w-5 h-5 mr-1">
-            <circle cx="12" cy="12" r="11" fill="#FF2D70" />
-            <circle cx="12" cy="12" r="8" fill="white" />
-            <circle cx="12" cy="12" r="6" fill="#FF2D70" />
-          </svg>
-          <span className="hidden lg:inline">FocusCircle</span>
-        </a>
         {session ? (
           isDashboard ? (
             <button 

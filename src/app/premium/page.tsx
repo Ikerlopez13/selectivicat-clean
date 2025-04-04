@@ -5,6 +5,7 @@ import FooterMain from '@/components/FooterMain';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import ButtonCheckout from '@/components/ButtonCheckout';
 
 export default function PremiumPage() {
   return (
@@ -146,20 +147,7 @@ export default function PremiumPage() {
                     Suport premium
                   </li>
                 </ul>
-                <button 
-                  className="w-full group bg-selectivi-yellow/50 text-black/70 px-6 py-4 rounded-xl font-bold text-lg cursor-not-allowed relative overflow-hidden"
-                  disabled
-                >
-                  <span className="relative z-10 flex flex-col items-center justify-center gap-1">
-                    <span className="text-sm font-normal">Pròximament</span>
-                    <span className="flex items-center gap-2">
-                      Començar ara
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </span>
-                  </span>
-                </button>
+                <ButtonCheckout />
               </motion.div>
             </div>
 
@@ -265,15 +253,7 @@ export default function PremiumPage() {
                 Uneix-te a milers d'estudiants que ja confien en SelectiviCAT Premium. 
                 <span className="block mt-2 font-medium">Un sol pagament. Accés permanent. Sense sorpreses.</span>
               </p>
-              <button 
-                className="bg-selectivi-yellow/50 text-black/70 px-8 py-4 rounded-xl font-bold text-lg cursor-not-allowed relative"
-                disabled
-              >
-                <span className="flex flex-col items-center gap-1">
-                  <span className="text-sm font-normal">Pròximament</span>
-                  <span>Començar ara per només 14.99€</span>
-                </span>
-              </button>
+              <ButtonCheckout />
             </motion.div>
           </div>
         </div>

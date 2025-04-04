@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    LS_API_KEY: process.env.LS_API_KEY,
+    LS_STORE_ID: process.env.LS_STORE_ID,
+    LS_VARIANT_ID: process.env.LS_VARIANT_ID,
+  },
   images: {
     remotePatterns: [
       {
