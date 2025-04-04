@@ -31,14 +31,12 @@ export async function POST(req) {
     
     console.log("Store ID:", storeId);
     console.log("Variant ID:", variantId);
-    console.log("User ID:", session.user.id);
-    console.log("User Email:", session.user.email);
 
     // Obtener URL base para el webhook
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://selectivi.cat";
     const webhookUrl = `${baseUrl}/api/webhooks/lemonsqueezy`;
     
-    // Volvemos a la construcción original que funcionaba
+    // URL exacta que funcionaba antes
     const checkoutUrl = `https://selectivi.cat/checkout/${variantId}?store=${storeId}&email=${encodeURIComponent(session.user.email)}&custom[user_id]=${encodeURIComponent(session.user.id)}&success_url=${encodeURIComponent(body.successUrl)}&cancel_url=${encodeURIComponent(body.cancelUrl)}&webhook_url=${encodeURIComponent(webhookUrl)}&test=true`;
     
     console.log("Generated checkout URL:", checkoutUrl);
