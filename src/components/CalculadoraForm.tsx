@@ -104,10 +104,12 @@ export default function CalculadoraForm() {
         <div className="mb-4">
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaBatxillerat}
             onChange={(e) => handleNotaChange(e.target.value, setNotaBatxillerat)}
             placeholder="Nota de Batxillerat"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
       </div>
@@ -117,38 +119,48 @@ export default function CalculadoraForm() {
         <div className="space-y-4">
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaCatala}
             onChange={(e) => handleNotaChange(e.target.value, setNotaCatala)}
             placeholder="Català"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaCastella}
             onChange={(e) => handleNotaChange(e.target.value, setNotaCastella)}
             placeholder="Castellà"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaLlenguaEstrangera}
             onChange={(e) => handleNotaChange(e.target.value, setNotaLlenguaEstrangera)}
             placeholder="Llengua estrangera"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaHistoria}
             onChange={(e) => handleNotaChange(e.target.value, setNotaHistoria)}
             placeholder="Història"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
             type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaOptativa}
             onChange={(e) => handleNotaChange(e.target.value, setNotaOptativa)}
             placeholder="Optativa"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
       </div>
@@ -167,10 +179,12 @@ export default function CalculadoraForm() {
             </select>
             <input
               type="text"
+              inputMode="decimal"
+              pattern="[0-9]*[.]?[0-9]*"
               value={especifica1}
               onChange={(e) => handleNotaChange(e.target.value, setEspecifica1)}
               placeholder="Específica 1"
-              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
           </div>
           
@@ -185,10 +199,12 @@ export default function CalculadoraForm() {
             </select>
             <input
               type="text"
+              inputMode="decimal"
+              pattern="[0-9]*[.]?[0-9]*"
               value={especifica2}
               onChange={(e) => handleNotaChange(e.target.value, setEspecifica2)}
               placeholder="Específica 2"
-              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+              className="flex-1 p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
           </div>
         </div>

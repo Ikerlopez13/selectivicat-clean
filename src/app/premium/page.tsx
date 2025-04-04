@@ -5,7 +5,7 @@ import FooterMain from '@/components/FooterMain';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonCheckout from "@/components/ButtonCheckout";
+import ButtonCheckout from '@/components/ButtonCheckout';
 
 export default function PremiumPage() {
   return (

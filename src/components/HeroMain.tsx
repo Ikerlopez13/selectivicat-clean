@@ -6,12 +6,11 @@ import { useRouter } from 'next/navigation';
 import AnimateOnScroll from './AnimateOnScroll';
 import { getAsignaturasPopulares, getBusquedasPopulares, getSugerenciasBusqueda } from '@/data/itinerarios';
 import Image from 'next/image';
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 
 export default function HeroMain() {
   const router = useRouter();
-  const { data: session } = useSession();
   const [searchTerm, setSearchTerm] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [suggestions, setSuggestions] = useState<{ texto: string; url: string; tipo: string }[]>([]);
@@ -29,6 +28,8 @@ export default function HeroMain() {
     { nombre: 'Videos educatius', path: '/videos' },
     { nombre: 'Itineraris i Assignatures', path: '/search' },
   ];
+
+  const { data: session } = useSession();
 
   // Cargar búsquedas populares y asignaturas al inicio
   useEffect(() => {
@@ -79,18 +80,17 @@ export default function HeroMain() {
     }
   };
 
-  const handleSuggestionClick = (url: string) => {
-    router.push(url);
+  const handleSuggestionClick = (suggestion: string) => {
+    setSearchTerm(suggestion);
     setShowSuggestions(false);
   };
 
-  const handleSeleTestClick = (e: React.MouseEvent) => {
+  const handleSeleTestClick = async (e: React.MouseEvent) => {
     e.preventDefault();
-    // Redirect to SeleTest if logged in, otherwise trigger Google login
-    if (session) {
-      router.push('/seletest');
+    if (!session) {
+      await signIn('google', { callbackUrl: '/seletest' });
     } else {
-      signIn("google", { callbackUrl: "/seletest" });
+      router.push('/seletest');
     }
   };
 
@@ -143,7 +143,7 @@ export default function HeroMain() {
                       strokeWidth="1.5"
                     />
                   </svg>
-                  {session ? 'Accedir a SeleTest' : 'Prova SeleTest Gratis'}
+                  Prova SeleTest Gratis
                 </span>
                 <span className="ml-3 bg-selectivi-yellow text-white px-3 py-1 rounded-full text-sm border border-white/20">
                   Nou!
