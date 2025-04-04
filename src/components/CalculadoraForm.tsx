@@ -86,14 +86,18 @@ export default function CalculadoraForm() {
         <h2 className="text-xl font-bold mb-4">Nota de Batxillerat</h2>
         <div className="mb-4">
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaBatxillerat}
-            onChange={(e) => setNotaBatxillerat(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaBatxillerat(value);
+              }
+            }}
             placeholder="Nota de Batxillerat"
-            step="0.001"
-            min="0"
-            max="10"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
       </div>
@@ -102,39 +106,74 @@ export default function CalculadoraForm() {
         <h2 className="text-xl font-bold mb-4">Fase General</h2>
         <div className="space-y-4">
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaCatala}
-            onChange={(e) => setNotaCatala(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaCatala(value);
+              }
+            }}
             placeholder="Català"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaCastella}
-            onChange={(e) => setNotaCastella(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaCastella(value);
+              }
+            }}
             placeholder="Castellà"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaLlenguaEstrangera}
-            onChange={(e) => setNotaLlenguaEstrangera(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaLlenguaEstrangera(value);
+              }
+            }}
             placeholder="Llengua estrangera"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaHistoria}
-            onChange={(e) => setNotaHistoria(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaHistoria(value);
+              }
+            }}
             placeholder="Història"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={notaOptativa}
-            onChange={(e) => setNotaOptativa(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setNotaOptativa(value);
+              }
+            }}
             placeholder="Optativa"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
       </div>
@@ -142,33 +181,49 @@ export default function CalculadoraForm() {
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Fase específica</h2>
         <div className="space-y-4">
-          <input
-            type="number"
+          <select
             value={ponderacio1}
             onChange={(e) => setPonderacio1(e.target.value)}
-            placeholder="0.2"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
+          >
+            <option value="0.1">0.1</option>
+            <option value="0.2">0.2</option>
+          </select>
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={especifica1}
-            onChange={(e) => setEspecifica1(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setEspecifica1(value);
+              }
+            }}
             placeholder="Específica 1"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
-          <input
-            type="number"
+          <select
             value={ponderacio2}
             onChange={(e) => setPonderacio2(e.target.value)}
-            placeholder="0.2"
             className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
-          />
+          >
+            <option value="0.1">0.1</option>
+            <option value="0.2">0.2</option>
+          </select>
           <input
-            type="number"
+            type="text"
+            inputMode="decimal"
+            pattern="[0-9]*[.]?[0-9]*"
             value={especifica2}
-            onChange={(e) => setEspecifica2(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (parseFloat(value) >= 0 && parseFloat(value) <= 10)) {
+                setEspecifica2(value);
+              }
+            }}
             placeholder="Específica 2"
-            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent"
+            className="w-full p-4 rounded-lg bg-white text-gray-900 border border-gray-200 focus:ring-2 focus:ring-selectivi-yellow focus:border-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
           />
         </div>
       </div>

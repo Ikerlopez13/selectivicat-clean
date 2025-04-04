@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import AnimateOnScroll from './AnimateOnScroll';
 import { getAsignaturasPopulares, getBusquedasPopulares, getSugerenciasBusqueda } from '@/data/itinerarios';
 import Image from 'next/image';
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import { usePathname } from 'next/navigation';
 
 export default function HeroMain() {
@@ -29,6 +29,8 @@ export default function HeroMain() {
     { nombre: 'Videos educatius', path: '/videos' },
     { nombre: 'Itineraris i Assignatures', path: '/search' },
   ];
+
+  const { data: session } = useSession();
 
   // Cargar búsquedas populares y asignaturas al inicio
   useEffect(() => {
@@ -84,6 +86,7 @@ export default function HeroMain() {
     setShowSuggestions(false);
   };
 
+<<<<<<< HEAD
   const handleSeleTestClick = (e: React.MouseEvent) => {
     e.preventDefault();
     // Redirect to SeleTest if logged in, otherwise trigger Google login
@@ -91,6 +94,14 @@ export default function HeroMain() {
       router.push('/seletest');
     } else {
       signIn("google", { callbackUrl: "/seletest" });
+=======
+  const handleSeleTestClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!session) {
+      await signIn('google', { callbackUrl: '/seletest' });
+    } else {
+      router.push('/seletest');
+>>>>>>> funciona-definitivo
     }
   };
 
