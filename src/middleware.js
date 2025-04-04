@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { auth } from '@/auth';
 
 export async function middleware(request) {
   // Rutas que requieren autenticación
@@ -12,11 +11,10 @@ export async function middleware(request) {
   const isAuthPath = authPaths.some(path => request.nextUrl.pathname.startsWith(path));
   
   if (isAuthPath) {
-    const session = await auth();
-    
-    if (!session?.user) {
-      return NextResponse.redirect(new URL('/api/auth/signin', request.url));
-    }
+    // En lugar de verificar la sesión aquí (que causa problemas en Edge Runtime),
+    // redirigimos al layout del dashboard, que verificará la sesión por nosotros
+    // y redirigirá si es necesario
+    return NextResponse.next();
   }
 
   return NextResponse.next();
