@@ -28,23 +28,78 @@ export async function POST(req) {
     // Configuración
     const storeId = process.env.LS_STORE_ID || "167330";
     const variantId = process.env.LS_VARIANT_ID || "748103";
+    const apiKey = process.env.LS_API_KEY;
     
     console.log("Store ID:", storeId);
     console.log("Variant ID:", variantId);
 
-    // URL que sabemos que funciona con tu dominio personalizado
-    const checkoutUrl = `https://lemonsqueezy.com/checkout/${variantId}?store=${storeId}&email=${encodeURIComponent(session.user.email)}&custom[user_id]=${encodeURIComponent(session.user.id)}&success_url=${encodeURIComponent(body.successUrl)}&cancel_url=${encodeURIComponent(body.cancelUrl)}&test=true`;
-    
-    console.log("Generated checkout URL:", checkoutUrl);
+    // Formato correcto con JSON:API
+    const checkoutData = {
+      data: {
+        type: "checkouts",
+        attributes: {
+          test_mode: true,
+          product_options: {
+            name: "Plan Premium SelectiviCAT",
+            description: "Acceso completo a todos los exámenes y recursos de SelectiviCAT",
+            redirect_url: body.successUrl,
+            receipt_thank_you_note: "¡Gracias por tu compra! Ya tienes acceso premium."
+          },
+          checkout_data: {
+            email: session.user.email,
+            custom: {
+              user_id: session.user.id
+            }
+          }
+        },
+        relationships: {
+          store: {
+            data: {
+              type: "stores",
+              id: storeId
+            }
+          },
+          variant: {
+            data: {
+              type: "variants",
+              id: variantId
+            }
+          }
+        }
+      }
+    };
 
-    const checkoutLS = { data: { attributes: { url: checkoutUrl } } };
+    console.log("Checkout data:", JSON.stringify(checkoutData, null, 2));
 
-    if (!checkoutLS?.data?.attributes?.url) {
-      console.error("Invalid checkout response:", checkoutLS);
-      throw new Error("Failed to create checkout session");
+    // Hacer la solicitud a la API con formato JSON:API
+    const response = await fetch('https://api.lemonsqueezy.com/v1/checkouts', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/vnd.api+json',
+        'Accept': 'application/vnd.api+json'
+      },
+      body: JSON.stringify(checkoutData)
+    });
+
+    const checkoutResponse = await response.json();
+    console.log("LemonSqueezy Response:", JSON.stringify(checkoutResponse, null, 2));
+
+    if (!response.ok) {
+      console.error("Error response from LemonSqueezy:", checkoutResponse);
+      return NextResponse.json(
+        { error: checkoutResponse.errors?.[0]?.detail || "Error creating checkout" },
+        { status: response.status }
+      );
     }
 
-    return NextResponse.json({ url: checkoutLS.data.attributes.url });
+    // Obtener la URL de checkout de la respuesta
+    if (!checkoutResponse?.data?.attributes?.url) {
+      console.error("No checkout URL in response:", checkoutResponse);
+      throw new Error("No checkout URL returned");
+    }
+
+    return NextResponse.json({ url: checkoutResponse.data.attributes.url });
 
   } catch (e) {
     console.error("Error in checkout:", e);
