@@ -1,5 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
+import clientPromise from "./libs/mongodb";
 
 const config = {
   providers: [
@@ -8,6 +10,7 @@ const config = {
       clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
+  adapter: MongoDBAdapter(clientPromise),
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/auth/signin",
@@ -23,12 +26,16 @@ const config = {
       }
       return `${baseUrl}/dashboard`;
     },
-    async session({ session, token }) {
+    async session({ session, token, user }) {
+      if (session?.user) {
+        session.user.id = user.id;
+      }
       return session;
     },
     async jwt({ token, user, account }) {
       if (account && user) {
         token.accessToken = account.access_token;
+        token.userId = user.id;
       }
       return token;
     },
