@@ -7,6 +7,8 @@ import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
 import Image from 'next/image';
 import HeroSeleTest from '@/components/HeroSeleTest';
+import { useSession } from "next-auth/react";
+import { standardQuestions, premiumQuestions } from "@/data/questions";
 
 // Definición de interfaces y tipos
 interface Question {
@@ -31,397 +33,31 @@ interface Subject {
   category: string;
 }
 
+interface CustomUser {
+  hasPremiumStatus?: boolean;
+  // ... otros campos del usuario si los hay
+}
+
+interface CustomSession {
+  user?: CustomUser;
+  // ... otros campos de la sesión si los hay
+}
+
 // Lista de asignaturas disponibles (solo las que tienen preguntas)
 const availableSubjects: Subject[] = [
   // Fase General
-  { id: 'history', name: 'Història', category: 'Fase General' },
-  { id: 'philosophy', name: 'Filosofia', category: 'Fase General' },
+  { id: 'historia', name: 'Història', category: 'Fase General' },
+  { id: 'filosofia', name: 'Filosofia', category: 'Fase General' },
   
   // Fase Específica - Ciencias
-  { id: 'math', name: 'Matemàtiques', category: 'Científic' },
-  { id: 'physics', name: 'Física', category: 'Científic' },
-  { id: 'chemistry', name: 'Química', category: 'Científic' },
-  { id: 'biology', name: 'Biologia', category: 'Científic' },
+  { id: 'mates', name: 'Matemàtiques', category: 'Científic' },
+  { id: 'fisica', name: 'Física', category: 'Científic' },
+  { id: 'quimica', name: 'Química', category: 'Científic' },
+  { id: 'biologia', name: 'Biologia', category: 'Científic' },
   
   // Fase Específica - Humanidades y Ciencias Sociales
-  { id: 'mathSocials', name: 'Matemàtiques Aplicades', category: 'Social' },
-  { id: 'geography', name: 'Geografia', category: 'Social' }
-];
-
-// Banco de preguntas
-const initialQuestions: Question[] = [
-  // Geografía y Medio Ambiente
-  {
-    "id": 14,
-    "pregunta": "¿Cuál de los siguientes problemas NO está directamente asociado a la pérdida de cobertura vegetal?",
-    "opciones": [
-      "Erosión del suelo",
-      "Aumento de la biodiversidad",
-      "Inundaciones",
-      "Pérdida de hábitats para especies animales"
-    ],
-    "respuesta_correcta": "Aumento de la biodiversidad",
-    "explicacion": "La pérdida de cobertura vegetal generalmente reduce la biodiversidad al destruir hábitats y alterar ecosistemas, no aumenta.",
-    "categoria": "Geografia"
-  },
-  {
-    "id": 15,
-    "pregunta": "Según el documento, ¿qué caracteriza el clima mediterráneo semiárido de Lleida?",
-    "opciones": [
-      "Precipitaciones abundantes todo el año",
-      "Ausencia total de sequía estival",
-      "Inviernos húmedos y muy fríos, veranos cálidos",
-      "Amplitud térmica muy baja"
-    ],
-    "respuesta_correcta": "Inviernos húmedos y muy fríos, veranos cálidos",
-    "explicacion": "El clima de Lleida se describe con inviernos fríos y húmedos, veranos cálidos, y una precipitación anual escasa (340 mm).",
-    "categoria": "Geografia"
-  },
-  {
-    "id": 19,
-    "pregunta": "¿Cuál de estas provincias españolas se menciona como ejemplo de área con escaso dinamismo económico y fuerte emigración?",
-    "opciones": [
-      "Valencia",
-      "Barcelona",
-      "Madrid",
-      "Ourense"
-    ],
-    "respuesta_correcta": "Ourense",
-    "explicacion": "Ourense, en el noroeste peninsular, es citada como ejemplo de provincia con bajo dinamismo económico y históricas migraciones.",
-    "categoria": "Geografia"
-  },
-  {
-    "id": 20,
-    "pregunta": "¿Qué consecuencia demográfica se deriva de la emigración juvenil en zonas rurales?",
-    "opciones": [
-      "Aumento de la natalidad",
-      "Acentuación del envejecimiento poblacional",
-      "Rejuvenecimiento de la población",
-      "Equilibrio entre grupos de edad"
-    ],
-    "respuesta_correcta": "Acentuación del envejecimiento poblacional",
-    "explicacion": "La emigración de jóvenes agrava el envejecimiento demográfico, ya que reduce la población en edad reproductiva y laboral.",
-    "categoria": "Geografia"
-  },
-
-  // Historia
-  {
-    "id": 14,
-    "pregunta": "Durante la Segunda República española (1931-1936), ¿qué derecho fundamental se reconoció por primera vez a las mujeres?",
-    "opciones": [
-      "Derecho a la propiedad privada",
-      "Derecho al voto",
-      "Derecho a la educación superior",
-      "Derecho al divorcio"
-    ],
-    "respuesta_correcta": "Derecho al voto",
-    "explicacion": "La Constitución de 1931 reconoció el sufragio universal femenino, permitiendo a las mujeres votar por primera vez en las elecciones de 1933.",
-    "categoria": "Historia"
-  },
-  {
-    "id": 15,
-    "pregunta": "¿Qué caracterizó el papel de la mujer durante el franquismo (1939-1975)?",
-    "opciones": [
-      "Igualdad legal y participación política activa",
-      "Libertad para ejercer cualquier profesión",
-      "Rol doméstico y sumisión al género masculino",
-      "Acceso prioritario a la educación universitaria"
-    ],
-    "respuesta_correcta": "Rol doméstico y sumisión al género masculino",
-    "explicacion": "El franquismo promovió un modelo de mujer centrado en la familia y la sumisión al hombre, eliminando derechos como el divorcio y restringiendo su participación pública.",
-    "categoria": "Historia"
-  },
-
-  // Física
-  {
-    "id": 14,
-    "pregunta": "Un satélite orbita Mercurio a una distancia de 3.36 × 10⁶ m de su centro. Si la masa de Mercurio es 3.285 × 10²³ kg, ¿cuál es la velocidad orbital del satélite? (Dato: G = 6.67 × 10⁻¹¹ N·m²/kg²)",
-    "opciones": [
-      "4.92 × 10³ m/s",
-      "1.23 × 10³ m/s",
-      "2.55 × 10³ m/s",
-      "3.78 × 10³ m/s"
-    ],
-    "respuesta_correcta": "2.55 × 10³ m/s",
-    "explicacion": "La velocidad orbital se calcula con la fórmula $v = \\sqrt{\\frac{G M}{r}}$. Sustituyendo los valores: $v = \\sqrt{\\frac{6.67 \\times 10^{-11} \\times 3.285 \\times 10^{23}}{3.36 \\times 10^6}} = 2.55 \\times 10^3 \\, \\text{m/s}$.",
-    "categoria": "Física"
-  },
-  {
-    "id": 15,
-    "pregunta": "Para que un satélite escape del campo gravitatorio de Mercurio, su energía mecánica debe ser:",
-    "opciones": [
-      "Positiva",
-      "Igual a su energía cinética",
-      "Negativa",
-      "Cero"
-    ],
-    "respuesta_correcta": "Cero",
-    "explicacion": "La energía mecánica mínima para escapar de un campo gravitatorio es cero (Em ≥ 0). Esto implica que la energía cinética debe ser suficiente para superar la energía potencial gravitatoria negativa.",
-    "categoria": "Física"
-  },
-
-  // Química
-  {
-    "id": 14,
-    "pregunta": "Un elemento con configuración electrónica 1s² 2s² 2p⁶ 3s¹ pertenece al:",
-    "opciones": [
-      "Período 2, grupo 1, bloque p",
-      "Período 3, grupo 17, bloque p",
-      "Período 4, grupo 1, bloque d",
-      "Período 3, grupo 1, bloque s"
-    ],
-    "respuesta_correcta": "Período 3, grupo 1, bloque s",
-    "explicacion": "El último electrón está en el nivel 3 (período 3), en el orbital s con 1 electrón (grupo 1, alcalinos). Los elementos del bloque s tienen su electrón diferencial en orbitales s.",
-    "categoria": "Química"
-  },
-  {
-    "id": 15,
-    "pregunta": "¿Qué energía tiene un fotón de luz con λ = 6 × 10⁻¹¹ m? (Datos: h = 6.63 × 10⁻³⁴ J·s; c = 3 × 10⁸ m/s)",
-    "opciones": [
-      "2.189 × 10⁻¹⁸ J",
-      "3.315 × 10⁻¹⁵ J",
-      "1.326 × 10⁻¹⁷ J",
-      "5.521 × 10⁻¹⁶ J"
-    ],
-    "respuesta_correcta": "3.315 × 10⁻¹⁵ J",
-    "explicacion": "Usando $E = h\\cdot c/\\lambda$: $(6.63 × 10^{-34} × 3 × 10^8) / 6 × 10^{-11} = 3.315 × 10^{-15}$ J.",
-    "categoria": "Química"
-  },
-
-  // Biología
-  {
-    "id": 14,
-    "pregunta": "¿Cuál es la diferencia principal entre el azúcar del DNA y el del RNA?",
-    "opciones": [
-      "El DNA tiene desoxiribosa y el RNA ribosa",
-      "El DNA tiene ribosa y el RNA desoxiribosa",
-      "Ambos tienen glucosa pero en configuraciones diferentes",
-      "El DNA tiene fructosa y el RNA sacarosa"
-    ],
-    "respuesta_correcta": "El DNA tiene desoxiribosa y el RNA ribosa",
-    "explicacion": "La pentosa en el DNA es desoxiribosa (falta un grupo OH en el carbono 2'), mientras que en el RNA es ribosa. Esta diferencia afecta a la estabilidad de las moléculas.",
-    "categoria": "Biología"
-  },
-  {
-    "id": 15,
-    "pregunta": "Si la secuencia de DNA transcrito es TAA-GCA-CTC, ¿cuál será la secuencia de RNA resultante?",
-    "opciones": [
-      "TAA-GCA-CTC",
-      "UAA-GCA-CUC",
-      "ATT-CGT-GAG",
-      "AUU-CGU-GAG"
-    ],
-    "respuesta_correcta": "AUU-CGU-GAG",
-    "explicacion": "En la transcripción, el DNA (TAA-GCA-CTC) se convierte en RNA sustituyendo timina (T) por uracilo (U). Por tanto, T → A, A → U, G → C, C → G.",
-    "categoria": "Biología"
-  },
-
-  // Filosofía
-  {
-    "id": 14,
-    "pregunta": "¿Qué entiende Platón por 'mundo de las ideas'?",
-    "opciones": [
-      "El mundo de los sueños y la imaginación",
-      "El mundo de las opiniones personales",
-      "El mundo de las formas perfectas e inmutables",
-      "El mundo de los sentidos y la experiencia"
-    ],
-    "respuesta_correcta": "El mundo de las formas perfectas e inmutables",
-    "explicacion": "Para Platón, el mundo de las ideas es el reino de las formas perfectas, eternas e inmutables, que son la verdadera realidad de la que el mundo físico es solo una copia imperfecta.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 15,
-    "pregunta": "¿Cuál es la principal diferencia entre el racionalismo de Descartes y el empirismo de Hume?",
-    "opciones": [
-      "Sus creencias religiosas",
-      "La fuente del conocimiento: razón vs. experiencia sensorial",
-      "El idioma en que escribieron",
-      "La época en que vivieron"
-    ],
-    "respuesta_correcta": "La fuente del conocimiento: razón vs. experiencia sensorial",
-    "explicacion": "Descartes defendía que el conocimiento verdadero proviene de la razón pura, mientras que Hume sostenía que todo conocimiento deriva de la experiencia sensorial.",
-    "categoria": "Filosofía"
-  },
-
-  // Matemáticas
-  {
-    "id": 14,
-    "pregunta": "La tarifa de la companyia A segueix la funció $f(x) = 0.4x + 20$, mentre que la companyia B té la tarifa $g(x) = 0.01x^2 + 0.1x + 10$. Si un usuari recorre 10 km, ¿quánt més cara és la tarifa A respecte a la B?",
-    "opciones": ["12 euros", "24 euros", "10 euros", "5 euros"],
-    "respuesta_correcta": "12 euros",
-    "explicacion": "Per a $x = 10$, $f(10) = 24$ i $g(10) = 12$. La diferència és $24 - 12 = 12$ euros.",
-    "categoria": "Matemáticas"
-  },
-  {
-    "id": 15,
-    "pregunta": "En el mateix context de les tarifes de les companyies A i B, ¿per a quina distància les dues tarifes coincideixen?",
-    "opciones": ["20 km", "50 km", "15 km", "30 km"],
-    "respuesta_correcta": "50 km",
-    "explicacion": "Resolent l'equació $0.4x + 20 = 0.01x^2 + 0.1x + 10$, s'obté $x = 50$ km (la solució negativa es descarta).",
-    "categoria": "Matemáticas"
-  },
-  {
-    "id": 16,
-    "pregunta": "En un sistema de ecuaciones lineales con matriz ampliada $\\overline{M} = \\begin{pmatrix} 4 & 2 & -1 & 4 \\\\ 1 & -1 & k & 3 \\\\ 3 & 3 & 0 & 1 \\end{pmatrix}$, ¿para qué valor de $k$ el sistema es compatible indeterminado?",
-    "opciones": [
-      "0",
-      "-1",
-      "1",
-      "2"
-    ],
-    "respuesta_correcta": "-1",
-    "explicacion": "El sistema es compatible indeterminado cuando el determinante de la matriz de coeficientes es cero. Resolviendo $\\det(M) = -6k - 6 = 0$, se obtiene $k = -1$.",
-    "categoria": "Matemáticas"
-  },
-  {
-    "id": 17,
-    "pregunta": "En una urna con 2 bolas 'A', 2 bolas 'S' y 5 bolas con otras letras, ¿cuál es la probabilidad de sacar dos bolas con letras diferentes en dos extracciones sin reemplazo?",
-    "opciones": [
-      "$ \\frac{1}{36}$",
-      "$ \\frac{17}{18}$",
-      "$ \\frac{5}{9}$",
-      "$ \\frac{7}{8}$"
-    ],
-    "respuesta_correcta": "$ \\frac{17}{18}$",
-    "explicacion": "La probabilidad de que ambas letras sean iguales es $2 \\times \\left(\\frac{2}{9} \\times \\frac{1}{8}\\right) = \\frac{1}{36}$. Por lo tanto, la probabilidad de que sean diferentes es $1 - \\frac{1}{36} = \\frac{35}{36}$.",
-    "categoria": "Matemáticas"
-  },
-  {
-    "id": 18,
-    "pregunta": "Dados los puntos $A(1, 2, 3)$ y $B(-3, -2, 3)$, ¿cuál es la ecuación del plano mediador (equidistante a ambos puntos)?",
-    "opciones": [
-      "$x + y + 1 = 0$",
-      "$x - y + 1 = 0$",
-      "$x + z + 1 = 0$",
-      "$y - z + 1 = 0$"
-    ],
-    "respuesta_correcta": "$x + y + 1 = 0$",
-    "explicacion": "El vector $\\overrightarrow{AB} = (-4, -4, 0)$ es normal al plano. Usando el punto medio $(-1, 0, 3)$, la ecuación es $-4(x + 1) - 4(y - 0) + 0(z - 3) = 0$, que simplifica a $x + y + 1 = 0$.",
-    "categoria": "Matemáticas"
-  },
-  {
-    "id": 19,
-    "pregunta": "Para la función $f(x) = \\frac{2 \\ln x}{x}$, ¿en qué valor de $x$ se alcanza el máximo absoluto?",
-    "opciones": [
-      "$x = 1$",
-      "$x = e$",
-      "$x = 2$",
-      "$x = 0.5$"
-    ],
-    "respuesta_correcta": "$x = e$",
-    "explicacion": "La derivada $f'(x) = \\frac{2(1 - \\ln x)}{x^2}$ se anula en $\\ln x = 1$, es decir, $x = e$. La segunda derivada $f''(e) < 0$ confirma que es un máximo.",
-    "categoria": "Matemáticas"
-  },
-
-  // Matemáticas CCSS
-  {
-    "id": 14,
-    "pregunta": "La tarifa de la companyia A segueix la funció $f(x) = 0.4x + 20$, mentre que la companyia B té la tarifa $g(x) = 0.01x^2 + 0.1x + 10$. Si un usuari recorre 10 km, ¿quánt més cara és la tarifa A respecte a la B?",
-    "opciones": ["12 euros", "24 euros", "10 euros", "5 euros"],
-    "respuesta_correcta": "12 euros",
-    "explicacion": "Per a $x = 10$, $f(10) = 24$ i $g(10) = 12$. La diferència és $24 - 12 = 12$ euros.",
-    "categoria": "Matemáticas CCSS"
-  },
-  {
-    "id": 15,
-    "pregunta": "En el mateix context de les tarifes de les companyies A i B, ¿per a quina distància les dues tarifes coincideixen?",
-    "opciones": ["20 km", "50 km", "15 km", "30 km"],
-    "respuesta_correcta": "50 km",
-    "explicacion": "Resolent l'equació $0.4x + 20 = 0.01x^2 + 0.1x + 10$, s'obté $x = 50$ km (la solució negativa es descarta).",
-    "categoria": "Matemáticas CCSS"
-  },
-  {
-    "id": 16,
-    "pregunta": "En un sistema de producció de sofàs, si s'afegeix l'equació $0.1x + 0.3y + 0.2z = 284$ al sistema inicial, ¿quina és la producció de la tercera fàbrica (z)?",
-    "opciones": ["310", "630", "320", "284"],
-    "respuesta_correcta": "320",
-    "explicacion": "Resolent el sistema ampliat pel mètode de Gauss, s'obté $z = 320$ sofàs.",
-    "categoria": "Matemáticas CCSS"
-  },
-  {
-    "id": 17,
-    "pregunta": "En una enquesta, 218 de 350 persones estan a favor d'una proposta. Quin és l'interval de confiança del 95% per a la proporció poblacional?",
-    "opciones": ["[50%, 60%]", "[57.21%, 67.37%]", "[55%, 65%]", "[60%, 70%]"],
-    "respuesta_correcta": "[57.21%, 67.37%]",
-    "explicacion": "Utilitzant la fórmula $\\hat{p} \\pm z_{\\gamma} \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$, amb $\\hat{p} = 0.6229$, l'interval és [57.21%, 67.37%].",
-    "categoria": "Matemáticas CCSS"
-  },
-  {
-    "id": 18,
-    "pregunta": "Si un conductor té una probabilitat de $\\frac{1}{3}$ d'aturar-se en cada àrea de servei, ¿quina és la probabilitat que s'aturi exactamente dues vegades en tres àrees?",
-    "opciones": ["0.2222", "0.2963", "0.3333", "0.1481"],
-    "respuesta_correcta": "0.2222",
-    "explicacion": "Usant la distribució binomial: $P(X=2) = \\binom{3}{2} \\left(\\frac{1}{3}\\right)^2 \\left(\\frac{2}{3}\\right) = 0.2222$.",
-    "categoria": "Matemáticas CCSS"
-  },
-
-  // Filosofía
-  {
-    "id": 16,
-    "pregunta": "¿Qué significa el 'imperativo categórico' de Kant?",
-    "opciones": [
-      "Una orden militar absoluta",
-      "Un principio moral universal y necesario",
-      "Una ley física inmutable",
-      "Una regla de etiqueta social"
-    ],
-    "respuesta_correcta": "Un principio moral universal y necesario",
-    "explicacion": "El imperativo categórico de Kant es un principio ético que establece que debemos actuar solo según aquella máxima por la cual podamos querer que al mismo tiempo se convierta en ley universal.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 17,
-    "pregunta": "¿Qué concepto es fundamental en la filosofía existencialista de Sartre?",
-    "opciones": [
-      "La existencia precede a la esencia",
-      "La esencia precede a la existencia",
-      "El determinismo absoluto",
-      "La predestinación divina"
-    ],
-    "respuesta_correcta": "La existencia precede a la esencia",
-    "explicacion": "Sartre afirma que primero existimos y luego, a través de nuestras acciones y decisiones, creamos nuestra esencia, lo que implica una libertad radical y responsabilidad total.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 18,
-    "pregunta": "¿Qué propone Nietzsche con su concepto del 'eterno retorno'?",
-    "opciones": [
-      "Un ciclo literal de reencarnaciones",
-      "Una prueba existencial de afirmación de la vida",
-      "Una teoría astronómica",
-      "Un concepto religioso tradicional"
-    ],
-    "respuesta_correcta": "Una prueba existencial de afirmación de la vida",
-    "explicacion": "El eterno retorno es una prueba hipotética: si cada momento de tu vida se repitiera eternamente, ¿lo aceptarías? Es una forma de evaluar nuestra actitud hacia la vida y promover su afirmación plena.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 19,
-    "pregunta": "¿Qué es la 'dialéctica' según Hegel?",
-    "opciones": [
-      "Un método de debate político",
-      "Un proceso de tesis, antítesis y síntesis",
-      "Una forma de argumentación lógica",
-      "Un tipo de retórica antigua"
-    ],
-    "respuesta_correcta": "Un proceso de tesis, antítesis y síntesis",
-    "explicacion": "Para Hegel, la dialéctica es el proceso por el cual una idea (tesis) genera su opuesto (antítesis), y de su conflicto surge una resolución superior (síntesis) que conserva elementos de ambas.",
-    "categoria": "Filosofía"
-  },
-  {
-    "id": 20,
-    "pregunta": "¿Qué caracteriza al 'mito de la caverna' de Platón?",
-    "opciones": [
-      "Es una historia de aventuras",
-      "Es una alegoría sobre la ignorancia y el conocimiento",
-      "Es un relato sobre la creación del mundo",
-      "Es una descripción geológica"
-    ],
-    "respuesta_correcta": "Es una alegoría sobre la ignorancia y el conocimiento",
-    "explicacion": "El mito de la caverna ilustra cómo los humanos pueden estar encadenados a una realidad ilusoria (las sombras) y el proceso de liberación hacia el verdadero conocimiento (la luz del sol).",
-    "categoria": "Filosofía"
-  }
+  { id: 'mates-aplicades', name: 'Matemàtiques Aplicades', category: 'Social' },
+  { id: 'geografia', name: 'Geografia', category: 'Social' }
 ];
 
 // Componente para mostrar una pregunta individual
@@ -530,20 +166,17 @@ const Onboarding: React.FC<{
         : [...prev, subjectId];
       
       const categoryToSubjectId: Record<string, string> = {
-        'Matemáticas': 'math',
-        'Física': 'physics',
-        'Filosofía': 'philosophy',
-        'Química': 'chemistry',
-        'Biología': 'biology',
-        'Matemáticas CCSS': 'mathSocials',
-        'Geografia': 'geography',
-        'Historia': 'history'
+        'Matemáticas': 'mates',
+        'Física': 'fisica',
+        'Filosofía': 'filosofia',
+        'Química': 'quimica',
+        'Biología': 'biologia',
+        'Matemáticas CCSS': 'mates-aplicades',
+        'Geografia': 'geografia',
+        'Historia': 'historia'
       };
 
-      const availableQuestions = initialQuestions.filter(q => {
-        const subjectId = categoryToSubjectId[q.categoria];
-        return newSelection.includes(subjectId);
-      });
+      const availableQuestions = availableSubjects.filter(subject => newSelection.includes(subject.id));
 
       const newMaxQuestions = availableQuestions.length;
       setMaxQuestions(newMaxQuestions);
@@ -656,6 +289,7 @@ const Onboarding: React.FC<{
 
 // Componente principal SeleTest
 export default function SeleTest() {
+  const { data: session } = useSession() as { data: CustomSession | null };
   const [questions, setQuestions] = useState<Question[]>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('seletest_questions');
@@ -757,17 +391,20 @@ export default function SeleTest() {
   useEffect(() => {
     if (hasCompletedOnboarding && selectedSubjectsFromOnboarding.length > 0 && questions.length === 0) {
       const categoryToSubjectId: Record<string, string> = {
-        'Matemáticas': 'math',
-        'Física': 'physics',
-        'Filosofía': 'philosophy',
-        'Química': 'chemistry',
-        'Biología': 'biology',
-        'Matemáticas CCSS': 'mathSocials',
-        'Geografia': 'geography',
-        'Historia': 'history'
+        'Matemáticas': 'mates',
+        'Física': 'fisica',
+        'Filosofía': 'filosofia',
+        'Química': 'quimica',
+        'Biología': 'biologia',
+        'Matemáticas CCSS': 'mates-aplicades',
+        'Geografia': 'geografia',
+        'Historia': 'historia'
       };
 
-      const filteredQuestions = initialQuestions.filter(question => {
+      // Usar el banco de preguntas según si el usuario es premium o no
+      const questionBank = session?.user?.hasPremiumStatus ? premiumQuestions : standardQuestions;
+
+      const filteredQuestions = questionBank.filter((question: Question) => {
         const subjectId = categoryToSubjectId[question.categoria];
         return selectedSubjectsFromOnboarding.includes(subjectId);
       });
@@ -775,7 +412,7 @@ export default function SeleTest() {
       const shuffledQuestions = [...filteredQuestions].sort(() => Math.random() - 0.5);
       setQuestions(shuffledQuestions.slice(0, totalQuestionsRequested));
     }
-  }, [hasCompletedOnboarding, selectedSubjectsFromOnboarding, totalQuestionsRequested, questions.length]);
+  }, [hasCompletedOnboarding, selectedSubjectsFromOnboarding, totalQuestionsRequested, questions.length, session?.user?.hasPremiumStatus]);
 
   const handleSelectAnswer = (answer: string) => {
     if (answer === 'next') {

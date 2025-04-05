@@ -41,9 +41,9 @@ export async function POST(req) {
           test_mode: true,
           product_options: {
             name: "Plan Premium SelectiviCAT",
-            description: "Acceso completo a todos los exámenes y recursos de SelectiviCAT",
-            redirect_url: body.successUrl,
-            receipt_thank_you_note: "¡Gracias por tu compra! Ya tienes acceso premium."
+            description: "Accés complet a tots els exàmens i recursos de SelectiviCAT",
+            redirect_url: "https://selectivi.cat/premium/success",
+            receipt_thank_you_note: "Gràcies per la teva compra! Ja tens accés premium."
           },
           checkout_data: {
             email: session.user.email,
