@@ -12,11 +12,8 @@ export default function AdSenseAd({ slot, style }: AdSenseAdProps) {
 
   useEffect(() => {
     try {
-      const adsbygoogle = (window as any).adsbygoogle;
-      
-      if (adsbygoogle && adRef.current) {
-        adsbygoogle.push({});
-      }
+      const adsbygoogle = (window as any).adsbygoogle || [];
+      adsbygoogle.push({});
     } catch (err) {
       console.error('AdSense error:', err);
     }
@@ -25,7 +22,6 @@ export default function AdSenseAd({ slot, style }: AdSenseAdProps) {
   return (
     <div className="bg-gray-50 rounded-lg overflow-hidden">
       <ins
-        ref={adRef}
         className="adsbygoogle"
         style={{
           display: 'block',

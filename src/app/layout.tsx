@@ -32,7 +32,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/logo/icon.png" />
         <Script
           id="adsbygoogle-init"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829722017444918"
           crossOrigin="anonymous"
         />
