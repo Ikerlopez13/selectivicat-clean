@@ -27,13 +27,13 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="Content-Language" content="ca" />
         <meta name="google" content="notranslate" />
+        <meta name="google-adsense-account" content="ca-pub-4829722017444918"/>
         <link rel="icon" type="image/png" href="/images/logo/icon.png" />
         <link rel="apple-touch-icon" href="/images/logo/icon.png" />
-        <Script
-          async
+        <script 
+          async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829722017444918"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
       </head>
       <body className={inter.className}>
