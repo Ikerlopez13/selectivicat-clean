@@ -453,19 +453,38 @@ export default function SeleTest() {
       
       for (const subjectId of selectedSubjects) {
         const category = subjectIdToCategory[subjectId];
-        if (category) {
-          const fileName = categoryToJsonFile[category];
-          if (fileName) {
+        const fileName = categoryToJsonFile[category];
+        
+        if (fileName) {
+          try {
             const response = await fetch(`/data/questions/${fileName}`);
             const data = await response.json();
-            availableQuestions = [...availableQuestions, ...data];
+            
+            // Los archivos JSON tienen una estructura { standard: [], premium: [] }
+            if (data.standard) {
+              // Si el usuario es premium, incluir todas las preguntas
+              if (isPremium && data.premium) {
+                availableQuestions = [...availableQuestions, ...data.standard, ...data.premium];
+              } else {
+                // Si no es premium, solo incluir preguntas estándar
+                availableQuestions = [...availableQuestions, ...data.standard];
+              }
+            }
+          } catch (error) {
+            console.error(`Error loading questions for ${category}:`, error);
           }
         }
       }
 
+      if (availableQuestions.length === 0) {
+        console.warn('No se encontraron preguntas para los criterios seleccionados');
+        return;
+      }
+
+      // Mezclar y seleccionar preguntas
       const shuffledQuestions = availableQuestions
         .sort(() => Math.random() - 0.5)
-        .slice(0, totalQuestions);
+        .slice(0, Math.min(totalQuestions, availableQuestions.length));
 
       setQuestions(shuffledQuestions);
       setCurrentQuestionIndex(0);
@@ -614,4 +633,5 @@ export default function SeleTest() {
       <FooterMain />
     </div>
   );
+} 
 } 
