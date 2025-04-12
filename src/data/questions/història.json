@@ -1,0 +1,587 @@
+{
+  "standard": [
+    {
+      "id": "s8",
+      "categoria": "Història",
+      "pregunta": "Durant la Segona República espanyola (1931-1936), quin dret fonamental es va reconèixer per primera vegada a les dones?",
+      "opciones": [
+        "Dret a la propietat privada",
+        "Dret al vot",
+        "Dret a l'educació superior",
+        "Dret al divorci"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Constitució de 1931 va reconèixer el sufragi universal femení, permetent a les dones votar per primera vegada a les eleccions de 1933."
+    },
+    {
+      "id": "s9",
+      "categoria": "Història",
+      "pregunta": "Què va caracteritzar el paper de la dona durant el franquisme (1939-1975)?",
+      "opciones": [
+        "Igualtat legal i participació política activa",
+        "Llibertat per exercir qualsevol professió",
+        "Rol domèstic i submissió al gènere masculí",
+        "Accés prioritari a l'educació universitària"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El franquisme va promoure un model de dona centrat en la família i la submissió a l'home, eliminant drets com el divorci i restringint la seva participació pública."
+    },
+    {
+      "id": "s26",
+      "categoria": "Història",
+      "pregunta": "Quin dels següents esdeveniments NO forma part de l'evolució de l'obrerisme a Espanya entre els processos de Montjuïc i la fundació de la CNT?",
+      "opciones": [
+        "La vaga general de 1902",
+        "La formació de Solidaritat Obrera el 1907",
+        "La Setmana Tràgica de juliol de 1909",
+        "La Revolució de 1868"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "La Revolució de 1868 (La Gloriosa) és anterior als processos de Montjuïc (1896). Els altres esdeveniments sí que formen part de l'evolució de l'obrerisme en el període especificat."
+    },
+    {
+      "id": "s27",
+      "categoria": "Història",
+      "pregunta": "Quin va ser l'impacte principal de la Primera Guerra Mundial en la conflictivitat social a Espanya?",
+      "opciones": [
+        "La reducció de les tensions socials",
+        "L'enduriment de les condicions de vida i l'augment de la conflictivitat",
+        "La millora dels salaris dels treballadors",
+        "La disminució de l'atur"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Primera Guerra Mundial va provocar un enduriment de les condicions de vida a Espanya que va desembocar en la crisi de 1917 i la vaga general revolucionària de l'agost d'aquell any."
+    },
+    {
+      "id": "s28",
+      "categoria": "Història",
+      "pregunta": "Quin fenomen va caracteritzar la lluita obrera durant el trienni bolxevic (1918-1920)?",
+      "opciones": [
+        "El pistolerisme i l'enfrontament entre la CNT i la patronal",
+        "La col·laboració entre patrons i obrers",
+        "La desaparició dels sindicats",
+        "La fi de les vagues obreres"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El trienni bolxevic es va caracteritzar per l'augment de la violència social, especialment el pistolerisme, amb enfrontaments entre la CNT i la patronal, i entre la CNT i els Sindicats Lliures."
+    },
+    {
+      "id": "s29",
+      "categoria": "Història",
+      "pregunta": "Què va ser la vaga de La Canadenca de 1919?",
+      "opciones": [
+        "Una vaga de minaires asturians",
+        "Una vaga que va deixar Barcelona sense electricitat i va aconseguir la jornada de 8 hores",
+        "Una vaga del sector tèxtil",
+        "Una vaga dels treballadors del port"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La vaga de La Canadenca va ser una vaga a l'empresa d'electricitat de Barcelona que va paralitzar la ciutat i va aconseguir la implantació de la jornada laboral de 8 hores a Espanya."
+    },
+    {
+      "id": "s50",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quina va ser la causa immediata de l'arribada al poder de Primo de Rivera el 1923?",
+      "opciones": [
+        "L'Expedient Picasso i el problema del Marroc",
+        "La crisi econòmica de postguerra",
+        "L'agitació social a Catalunya",
+        "La crisi del sistema parlamentari"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'Expedient Picasso, que investigava les responsabilitats del desastre d'Annual al Marroc, va ser la causa immediata que va precipitar el cop d'estat de Primo de Rivera el 1923."
+    },
+    {
+      "id": "s51",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quina va ser una de les primeres mesures repressives de la dictadura de Primo de Rivera?",
+      "opciones": [
+        "La supressió de la Mancomunitat de Catalunya",
+        "La creació de la Unión Patriótica",
+        "El Directori Civil",
+        "La reforma agrària"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Una de les primeres mesures repressives va ser la supressió de la Mancomunitat de Catalunya, com a part de la seva política contra el catalanisme i les institucions d'autogovern."
+    },
+    {
+      "id": "s52",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quin organisme va crear Primo de Rivera per governar durant la primera etapa de la dictadura?",
+      "opciones": [
+        "El Directori Militar",
+        "El Directori Civil",
+        "La Unión Patriótica",
+        "El Consell d'Estat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Primo de Rivera va establir inicialment un Directori Militar format per generals que va substituir el govern civil, marcant el caràcter autoritari i militar del règim."
+    },
+    {
+      "id": "s53",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quins components formaven la triple crisi de 1917?",
+      "opciones": [
+        "Crisi militar, política i social",
+        "Crisi econòmica, social i internacional",
+        "Crisi agrària, industrial i financera",
+        "Crisi monàrquica, militar i econòmica"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La crisi de 1917 va tenir tres components principals: la crisi militar (Juntes de Defensa), la crisi política (Assemblea de Parlamentaris) i la crisi social (vaga general revolucionària)."
+    },
+    {
+      "id": "s54",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quin va ser l'impacte econòmic de la Primera Guerra Mundial a Espanya que va contribuir a la crisi de 1917?",
+      "opciones": [
+        "L'enduriment de les condicions de vida i l'augment dels preus",
+        "El creixement de les exportacions i la millora salarial",
+        "La disminució de l'atur i l'augment del consum",
+        "L'estabilitat dels preus i els salaris"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Primera Guerra Mundial va provocar un enduriment de les condicions de vida a Espanya, amb un augment dels preus que no va anar acompanyat d'un increment salarial equivalent, generant malestar social."
+    },
+    {
+      "id": "s55",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin organisme va assumir el poder real a Catalunya a l'inici de la Guerra Civil?",
+      "opciones": [
+        "El Comitè de Milícies Antifeixistes",
+        "La Generalitat de Catalunya",
+        "El govern de la República",
+        "L'exèrcit regular"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Comitè de Milícies Antifeixistes va assumir el poder real a Catalunya després del fracàs del cop d'estat, controlant l'ordre públic i organitzant les milícies populars."
+    },
+    {
+      "id": "s56",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin canvi econòmic fonamental es va produir a Catalunya durant els primers mesos de la Guerra Civil?",
+      "opciones": [
+        "Les col·lectivitzacions d'empreses i terres",
+        "La privatització de les indústries",
+        "La nacionalització estatal",
+        "El manteniment de l'estructura anterior"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Durant els primers mesos de la guerra es va produir un procés revolucionari que va portar a la col·lectivització d'empreses i terres, transformant l'estructura econòmica tradicional."
+    },
+    {
+      "id": "s57",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Què van ser els Fets de Maig de 1937 a Catalunya?",
+      "opciones": [
+        "Un enfrontament entre forces republicanes per el control polític",
+        "Una victòria de l'exèrcit franquista",
+        "Una revolta popular contra el govern",
+        "Una vaga general de treballadors"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Els Fets de Maig van ser enfrontaments armats a Barcelona entre les forces anarquistes i el POUM contra les forces governamentals i el PSUC, que van marcar el final del procés revolucionari."
+    },
+    {
+      "id": "s58",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Com va evolucionar la situació política a Catalunya després dels Fets de Maig de 1937?",
+      "opciones": [
+        "El govern central va recuperar competències de la Generalitat",
+        "Es va intensificar el procés revolucionari",
+        "La Generalitat va obtenir més autonomia",
+        "Es va mantenir l'statu quo anterior"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Després dels Fets de Maig, el govern central va recuperar competències que havia perdut, especialment en ordre públic i defensa, debilitant l'autonomia de la Generalitat."
+    },
+    {
+      "id": "b29",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin paper van tenir les dones durant la rereguarda de la Guerra Civil a Catalunya?",
+      "opciones": [
+        "Es van incorporar a la indústria de guerra i van tenir cura dels refugiats",
+        "Van romandre exclusivament en tasques domèstiques",
+        "No van participar en cap activitat relacionada amb la guerra",
+        "Només van treballar en tasques agrícoles"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Les dones van tenir un paper fonamental durant la rereguarda: es van incorporar a la indústria de guerra substituint els homes que anaven al front, i van tenir un paper clau en l'acollida i cura dels refugiats, especialment dones, avis i nens."
+    },
+    {
+      "id": "b30",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quina va ser una de les conseqüències més greus dels bombardeigs a Catalunya durant la Guerra Civil?",
+      "opciones": [
+        "L'erosió de les condicions de vida i la mort de població civil",
+        "La destrucció exclusiva d'objectius militars",
+        "L'augment de la producció industrial",
+        "La millora de les infraestructures de defensa"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Els bombardeigs van tenir un impacte devastador en la població civil, causant nombroses víctimes i deteriorant severament les condicions de vida a la rereguarda, especialment en ciutats com Barcelona."
+    },
+    {
+      "id": "b31",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Què va caracteritzar la revolució política i econòmica a Catalunya durant la Guerra Civil?",
+      "opciones": [
+        "La formació del Comitè de Milícies Antifeixistes i les col·lectivitzacions",
+        "El manteniment de l'estructura econòmica anterior",
+        "L'absència de canvis en l'organització política",
+        "La privatització de les indústries"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La revolució es va caracteritzar per la formació del Comitè de Milícies Antifeixistes, que va assumir el poder real, i per les col·lectivitzacions d'empreses i terres, transformant l'estructura econòmica tradicional."
+    },
+    {
+      "id": "b32",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin document oficial de 1937 mostra l'acollida de refugiats durant la Guerra Civil?",
+      "opciones": [
+        "El text oficial de l'ajuntament de Ripoll autoritzant el trasllat de refugiats",
+        "El manifest del Comitè de Milícies Antifeixistes",
+        "La declaració d'independència de Catalunya",
+        "L'ordre de mobilització general"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El text oficial emès per l'ajuntament de Ripoll el 18 d'agost de 1937 autoritzant el trasllat de refugiats a la població és un exemple de com els municipis catalans van gestionar l'acollida massiva de refugiats durant la guerra."
+    },
+    {
+      "id": "b33",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Com va evolucionar la guerra a Catalunya fins al seu final?",
+      "opciones": [
+        "Del fracàs del cop d'Estat a la batalla de l'Ebre i l'acabament de la guerra",
+        "Amb una ràpida victòria republicana",
+        "Sense grans operacions militars",
+        "Amb una rendició immediata"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La guerra a Catalunya va evolucionar des del fracàs inicial del cop d'Estat, passant per la guerra de columnes al front d'Aragó, fins a la batalla decisiva de l'Ebre i l'acabament final de la guerra amb la victòria franquista."
+    },
+    {
+      "id": "b34",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quin va ser el principal èxit electoral del catalanisme conservador a principis del segle XX?",
+      "opciones": [
+        "El triomf de la candidatura dels quatre presidents a les eleccions de 1901",
+        "La victòria a les eleccions municipals de 1899",
+        "L'obtenció de la majoria al Congrés dels Diputats",
+        "La formació del primer govern català"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El triomf de la candidatura dels quatre presidents a les eleccions generals de 1901 va marcar l'inici de l'hegemonia del catalanisme polític conservador, representat per la Lliga Regionalista."
+    },
+    {
+      "id": "b35",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Qui va ser el principal dirigent de la Lliga Regionalista i quina era la seva doctrina?",
+      "opciones": [
+        "Enric Prat de la Riba amb la doctrina de la 'Nacionalitat catalana'",
+        "Francesc Macià amb el separatisme català",
+        "Valentí Almirall amb el federalisme",
+        "Alejandro Lerroux amb el republicanisme radical"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Enric Prat de la Riba va ser el principal dirigent de la Lliga Regionalista i va exposar la seva doctrina del catalanisme conservador en l'obra 'La Nacionalitat catalana', que defensava l'autonomia de Catalunya dins d'Espanya."
+    },
+    {
+      "id": "b36",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quina va ser l'oposició principal a la Lliga Regionalista entre 1901 i 1914?",
+      "opciones": [
+        "El catalanisme d'esquerres i el republicanisme lerrouxista",
+        "El carlisme i el tradicionalisme",
+        "El moviment obrer anarquista",
+        "Els partits dinàstics espanyols"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La principal oposició a la Lliga Regionalista va venir del catalanisme d'esquerres i del republicanisme lerrouxista, que competien per l'hegemonia política a Catalunya amb projectes alternatius al conservadorisme de la Lliga."
+    },
+    {
+      "id": "b37",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Com es va crear la Mancomunitat de Catalunya?",
+      "opciones": [
+        "Mitjançant un decret que permetia la unió de les quatre diputacions provincials catalanes",
+        "Per una revolució popular",
+        "Per la proclamació unilateral del Parlament de Catalunya",
+        "Per un acord amb el govern republicà"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Mancomunitat de Catalunya es va crear el 1914 mitjançant un decret que autoritzava la unió de les quatre diputacions provincials catalanes, després d'anys de negociacions amb el govern espanyol."
+    },
+    {
+      "id": "b38",
+      "categoria": "Història",
+      "subTema": "Restauració Borbònica",
+      "pregunta": "Quina va ser l'obra principal de la Mancomunitat durant la seva existència (1914-1925)?",
+      "opciones": [
+        "La modernització d'infraestructures i la promoció de la cultura i l'educació catalanes",
+        "La independència de Catalunya",
+        "La revolució social i econòmica",
+        "L'establiment d'un exèrcit català"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Mancomunitat va dur a terme una important tasca de modernització d'infraestructures (carreteres, telèfons) i va promoure la cultura i l'educació catalanes a través de la creació d'escoles, biblioteques i institucions culturals."
+    },
+    {
+      "id": "b39",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Com va evolucionar la relació del règim franquista amb l'Alemanya nazi i la Itàlia feixista?",
+      "opciones": [
+        "Va passar de la identificació ideològica i el suport militar a l'aïllament internacional",
+        "Va mantenir una relació neutral durant tota la Segona Guerra Mundial",
+        "Va trencar relacions des del principi del règim",
+        "Va augmentar la col·laboració després de la Segona Guerra Mundial"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El règim franquista es va identificar ideològicament amb l'Alemanya nazi i la Itàlia feixista, donant suport militar a través de la División Azul, però després de la seva derrota a la Segona Guerra Mundial, Espanya va quedar aïllada internacionalment."
+    },
+    {
+      "id": "b40",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Com va canviar la relació d'Espanya amb els Estats Units i Europa occidental durant la Guerra Freda?",
+      "opciones": [
+        "Es va passar de l'aïllament al reconeixement internacional gràcies al context de la Guerra Freda",
+        "Es va mantenir l'aïllament internacional fins al final del règim",
+        "Es van trencar les relacions diplomàtiques",
+        "No hi va haver canvis significatius en les relacions internacionals"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El clima de la Guerra Freda va propiciar la incorporació d'Espanya al reconeixement internacional, restablint relacions diplomàtiques amb els EE.UU. i els països de l'Europa occidental, culminant amb l'entrada a l'ONU."
+    },
+    {
+      "id": "b41",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina llei va establir les bases jurídiques del règim franquista durant la seva primera etapa?",
+      "opciones": [
+        "La Ley de Responsabilidades Políticas de 1939",
+        "El Fuero de los Españoles de 1945",
+        "La Ley de Sucesión de 1947",
+        "La Ley de Principios del Movimiento Nacional de 1958"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Ley de Responsabilidades Políticas de 1939 va ser una de les primeres lleis fonamentals del règim, establint la repressió dels vençuts i l'articulació institucional del nou estat franquista."
+    },
+    {
+      "id": "b42",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quin va ser l'objectiu principal del Decreto de Unificación de 1937?",
+      "opciones": [
+        "Unificar totes les forces polítiques que donaven suport a Franco en un únic partit",
+        "Establir relacions diplomàtiques amb altres països",
+        "Regular l'economia de guerra",
+        "Organitzar l'administració territorial"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Decreto de Unificación de 1937 va unificar totes les forces polítiques que donaven suport a Franco (falangistes, carlins i altres grups dretans) en un únic partit: FET y de las JONS."
+    },
+    {
+      "id": "b43",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina característica va definir l'estructura de l'estat franquista?",
+      "opciones": [
+        "La concentració de tots els poders en la figura de Franco com a Cap d'Estat, Govern i Exèrcit",
+        "La separació de poders entre executiu, legislatiu i judicial",
+        "Un sistema federal amb autonomies",
+        "Un sistema parlamentari amb diversos partits"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'estat franquista es va caracteritzar per la concentració de tots els poders en la figura de Franco, que era Cap d'Estat, Cap de Govern, Cap del Movimiento Nacional i Generalíssim dels Exèrcits, establint així un règim dictatorial personalista."
+    },
+    {
+      "id": "s59",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quina va ser la principal batalla de la Guerra Civil a Catalunya?",
+      "opciones": [
+        "La batalla de l'Ebre",
+        "La batalla de Madrid",
+        "La batalla de Terol",
+        "La batalla de Guadalajara"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La batalla de l'Ebre (juliol-novembre 1938) va ser la batalla més important de la Guerra Civil a Catalunya i va suposar un punt d'inflexió decisiu cap a la derrota republicana."
+    },
+    {
+      "id": "b64",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Com es va proclamar la República a Catalunya l'abril de 1931?",
+      "opciones": [
+        "Macià va proclamar la República Catalana dins la Federació Ibèrica abans que Companys proclamés la República a Barcelona",
+        "Es va esperar a la proclamació de Madrid per fer-ho",
+        "Es va fer mitjançant un referèndum popular",
+        "Va ser una decisió del govern provisional de Madrid"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Francesc Macià va proclamar la República Catalana com a Estat integrant de la Federació Ibèrica des del balcó de la Diputació, abans fins i tot que Lluís Companys proclamés la República des de l'Ajuntament de Barcelona i que es proclamés a Madrid."
+    },
+    {
+      "id": "b65",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Com es va resoldre la tensió entre el govern provisional de la República i Macià després de la proclamació de la República Catalana?",
+      "opciones": [
+        "Amb la negociació que va convertir la República Catalana en la Generalitat de Catalunya",
+        "Amb la intervenció militar del govern central",
+        "Amb la declaració d'independència de Catalunya",
+        "Amb la dissolució del govern català"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Tres ministres del govern provisional (Domingo, Nicolau i De los Ríos) van negociar amb Macià, qui va acceptar substituir la República Catalana per la Generalitat de Catalunya, recuperant així la institució històrica d'autogovern."
+    },
+    {
+      "id": "b66",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quin procés es va seguir per aprovar l'Estatut d'Autonomia de 1932?",
+      "opciones": [
+        "Redacció a Núria, plebiscit català, negociació i aprovació a les Corts",
+        "Imposició directa del govern central",
+        "Acord entre partits sense consulta popular",
+        "Aplicació automàtica de l'Estatut de 1931"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'Estatut es va redactar a Núria, va ser aprovat en plebiscit pels catalans, després va ser negociat i modificat a les Corts espanyoles i finalment aprovat el setembre de 1932, amb retallades respecte al text original."
+    },
+    {
+      "id": "b67",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quines competències principals va obtenir la Generalitat amb l'Estatut de 1932?",
+      "opciones": [
+        "Ordre públic, justícia, ensenyament i legislació social, amb el català com a cooficial",
+        "Totes les competències excepte defensa i relacions internacionals",
+        "Només competències administratives sense capacitat legislativa",
+        "Les mateixes que la Mancomunitat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'Estatut de 1932 va concedir a la Generalitat competències en ordre públic (creació dels Mossos), justícia, ensenyament i legislació social, establint també la cooficialitat del català, tot i que amb limitacions respecte al projecte inicial."
+    },
+    {
+      "id": "b68",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quin paper va tenir Lluís Companys durant la presidència de Macià (1931-1933)?",
+      "opciones": [
+        "Va ser el primer president del Parlament de Catalunya i governador civil de Barcelona",
+        "Va ser només diputat a les Corts espanyoles",
+        "Va ser ministre del govern espanyol",
+        "Va ser conseller en cap de la Generalitat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Companys va ser escollit primer president del Parlament de Catalunya quan aquest es va constituir el 1932, i anteriorment havia estat governador civil de Barcelona, càrrecs des dels quals va donar suport a la política de Macià."
+    },
+    {
+      "id": "b69",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quin partit va ser hegemònic a Catalunya durant la Segona República?",
+      "opciones": [
+        "Esquerra Republicana de Catalunya (ERC)",
+        "Lliga Regionalista",
+        "Partit Radical",
+        "PSOE"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "ERC va ser el partit hegemònic a Catalunya durant la Segona República, guanyant totes les eleccions importants des de 1931. Sota el lideratge de Macià i després Companys, va governar la Generalitat durant tot el període republicà."
+    },
+    {
+      "id": "b70",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quins eren els principals sindicats a Catalunya durant la Segona República?",
+      "opciones": [
+        "CNT, UGT i Unió de Rabassaires",
+        "CCOO i UGT",
+        "CNT i FAI només",
+        "UGT i PSOE"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Els principals sindicats eren la CNT (anarcosindicalista i majoritària), la UGT (socialista) i la Unió de Rabassaires (sindicat agrari proper a ERC). La CNT tenia especial força en el sector industrial."
+    },
+    {
+      "id": "b71",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quina va ser la principal força d'oposició conservadora a ERC durant la Segona República?",
+      "opciones": [
+        "La Lliga Catalana (antiga Lliga Regionalista)",
+        "El Partit Radical",
+        "La CEDA",
+        "El Partit Tradicionalista"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Lliga Catalana (evolució de la Lliga Regionalista) va ser la principal força conservadora d'oposició, representant els interessos de la burgesia catalana i defensant un catalanisme més moderat que ERC."
+    },
+    {
+      "id": "b72",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Quin paper va tenir la Unió de Rabassaires durant el govern de Companys?",
+      "opciones": [
+        "Va donar suport a la Llei de Contractes de Conreu i va ser un aliat clau d'ERC",
+        "Es va oposar a les reformes agràries",
+        "Va donar suport a la Lliga Catalana",
+        "Va mantenir una posició neutral"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Unió de Rabassaires va ser un aliat fonamental d'ERC i va donar suport a la Llei de Contractes de Conreu de 1934, que buscava millorar les condicions dels rabassaires (pagesos) i va generar un fort conflicte amb els propietaris agraris."
+    },
+    {
+      "id": "b73",
+      "categoria": "Història",
+      "subTema": "Segona República",
+      "pregunta": "Com va evolucionar el PSUC durant la Segona República?",
+      "opciones": [
+        "Es va fundar el 1936 per la unificació de diversos partits marxistes catalans",
+        "Ja existia abans de la República",
+        "Era una branca del PSOE",
+        "Va desaparèixer durant la República"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Partit Socialista Unificat de Catalunya (PSUC) es va fundar el juliol de 1936 per la unificació de quatre partits marxistes catalans: Unió Socialista de Catalunya, Partit Comunista de Catalunya, Partit Català Proletari i la Federació Catalana del PSOE."
+    },
+    {
+      "id": "h10",
+      "categoria": "Història",
+      "subTema": "Història de l'Art",
+      "pregunta": "On es troben les pintures rupestres d'Altamira?",
+      "opciones": [
+        "Andalusia",
+        "Cantàbria",
+        "Castella i Lleó",
+        "Aragó"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Descobertes el 1879 a Santillana del Mar (Cantàbria), són considerades la 'Capella Sixtina' de l'art paleolític."
+    }
+  ],
+  "premium": []
+}

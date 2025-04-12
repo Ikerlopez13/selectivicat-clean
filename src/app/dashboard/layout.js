@@ -8,5 +8,9 @@ export default async function DashboardLayout({ children }) {
     redirect("/");
   }
 
-  return children;
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
 }

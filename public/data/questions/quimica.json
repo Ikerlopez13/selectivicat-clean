@@ -1,0 +1,84 @@
+{
+  "standard": [
+    {
+      "id": "s3",
+      "categoria": "Química",
+      "subTema": "Estructura atòmica",
+      "pregunta": "Quin és el número atòmic de l'oxigen?",
+      "opciones": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'oxigen té 8 protons al seu nucli, per tant el seu número atòmic és 8."
+    },
+    {
+      "id": "s12",
+      "categoria": "Química",
+      "pregunta": "Un element amb configuració electrònica 1s² 2s² 2p⁶ 3s¹ pertany al:",
+      "opciones": [
+        "Període 2, grup 1, bloc p",
+        "Període 3, grup 17, bloc p",
+        "Període 4, grup 1, bloc d",
+        "Període 3, grup 1, bloc s"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "L'últim electró està al nivell 3 (període 3), a l'orbital s amb 1 electró (grup 1, alcalins). Els elements del bloc s tenen el seu electró diferencial en orbitals s."
+    },
+    {
+      "id": "s46",
+      "categoria": "Química",
+      "pregunta": "Per què es considera l'àcid palmític un àcid gras saturat?",
+      "opciones": [
+        "Perquè tots els enllaços entre carbonis de la seva cadena són simples",
+        "Perquè conté dobles enllaços entre carbonis",
+        "Perquè té 16 àtoms de carboni",
+        "Perquè és sòlid a temperatura ambient"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Un àcid gras saturat es caracteritza per tenir només enllaços simples entre els àtoms de carboni de la seva cadena hidrocarbonada, sense presentar cap doble o triple enllaç entre carbonis."
+    },
+    {
+      "id": "s47",
+      "categoria": "Química",
+      "pregunta": "Quina característica de l'àcid palmític el fa adequat per a les cobertures de xocolata?",
+      "opciones": [
+        "El seu elevat punt de fusió per ser un àcid gras saturat",
+        "La seva capacitat per formar dobles enllaços",
+        "La seva solubilitat en aigua",
+        "El seu baix punt de fusió"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Els àcids grassos saturats, com l'àcid palmític, tenen punts de fusió més alts que els insaturats, el que fa que siguin més sòlids a temperatura ambient. Això permet que les cobertures de xocolata mantinguin la seva forma i costin més de fondre's."
+    },
+    {
+      "id": "s48",
+      "categoria": "Química",
+      "pregunta": "Què significa que l'àcid palmític sigui una molècula amfipàtica?",
+      "opciones": [
+        "Té una part polar (hidròfila) i una part apolar (hidròfoba)",
+        "És completament soluble en aigua",
+        "És completament insoluble en aigua",
+        "Només té parts apolars"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Una molècula amfipàtica es caracteritza per tenir dues parts amb diferent polaritat: una part polar o hidròfila (el grup carboxílic -COOH) i una part apolar o hidròfoba (la cadena hidrocarbonada)."
+    },
+    {
+      "id": "s49",
+      "categoria": "Química",
+      "pregunta": "Com s'anomena la reacció de síntesi de la tripalmitina a partir del glicerol i l'àcid palmític?",
+      "opciones": [
+        "Esterificació",
+        "Saponificació",
+        "Hidrogenació",
+        "Hidròlisi"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La reacció de síntesi d'un triglicèrid (com la tripalmitina) a partir d'un alcohol (glicerol) i àcids grassos (àcid palmític) s'anomena esterificació, on es formen enllaços èster entre els grups -OH del glicerol i els grups -COOH dels àcids grassos."
+    }
+  ],
+  "premium": []
+}

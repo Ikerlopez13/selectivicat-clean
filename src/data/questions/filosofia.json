@@ -1,0 +1,567 @@
+{
+  "standard": [
+    {
+      "id": "s16",
+      "categoria": "Filosofia",
+      "pregunta": "Què entén Plató per 'món de les idees'?",
+      "opciones": [
+        "El món dels somnis i la imaginació",
+        "El món de les opinions personals",
+        "El món de les formes perfectes i immutables",
+        "El món dels sentits i l'experiència"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Per a Plató, el món de les idees és el regne de les formes perfectes, eternes i immutables, que són la veritable realitat de la qual el món físic és només una còpia imperfecta."
+    },
+    {
+      "id": "s17",
+      "categoria": "Filosofia",
+      "pregunta": "Quina és la principal diferència entre el racionalisme de Descartes i l'empirisme de Hume?",
+      "opciones": [
+        "Les seves creences religioses",
+        "La font del coneixement: raó vs. experiència sensorial",
+        "L'idioma en què van escriure",
+        "L'època en què van viure"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Descartes defensava que el coneixement veritable prové de la raó pura, mentre que Hume sostenia que tot coneixement deriva de l'experiència sensorial."
+    },
+    {
+      "id": "s29",
+      "categoria": "Filosofia",
+      "pregunta": "¿Qué significa el 'imperativo categórico' de Kant?",
+      "opciones": [
+        "Una orden militar absoluta",
+        "Un principio moral universal y necesario",
+        "Una ley física inmutable",
+        "Una regla de etiqueta social"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El imperativo categórico de Kant es un principio ético que establece que debemos actuar solo según aquella máxima por la cual podamos querer que al mismo tiempo se convierta en ley universal."
+    },
+    {
+      "id": "s30",
+      "categoria": "Filosofia",
+      "pregunta": "¿Qué concepto es fundamental en la filosofía existencialista de Sartre?",
+      "opciones": [
+        "La existencia precede a la esencia",
+        "La esencia precede a la existencia",
+        "El determinismo absoluto",
+        "La predestinación divina"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Sartre afirma que primero existimos y luego, a través de nuestras acciones y decisiones, creamos nuestra esencia, lo que implica una libertad radical y responsabilidad total."
+    },
+    {
+      "id": "s31",
+      "categoria": "Filosofia",
+      "pregunta": "¿Qué propone Nietzsche con su concepto del 'eterno retorno'?",
+      "opciones": [
+        "Un ciclo literal de reencarnaciones",
+        "Una prueba existencial de afirmación de la vida",
+        "Una teoría astronómica",
+        "Un concepto religioso tradicional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El eterno retorno es una prueba hipotética: si cada momento de tu vida se repitiera eternamente, ¿lo aceptarías? Es una forma de evaluar nuestra actitud hacia la vida y promover su afirmación plena."
+    },
+    {
+      "id": "s65",
+      "categoria": "Filosofia",
+      "pregunta": "Segons Plató, quina és la funció de la part irascible (fogosa) de l'ànima?",
+      "opciones": [
+        "Ajudar a la part racional a controlar els desitjos de la part concupiscible",
+        "Governar sobre les altres parts",
+        "Satisfer els desitjos i plaers",
+        "Actuar independentment de les altres parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La part irascible o fogosa té la funció d'ajudar a la part racional a controlar els desitjos de la part concupiscible, actuant com un aliat de la raó en el govern de l'ànima."
+    },
+    {
+      "id": "s66",
+      "categoria": "Filosofia",
+      "pregunta": "Quina és la virtut pròpia de la part irascible de l'ànima segons Plató?",
+      "opciones": [
+        "La fortalesa o el coratge",
+        "La saviesa",
+        "La temprança",
+        "La justícia"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La fortalesa o el coratge és la virtut pròpia de la part irascible, que li permet complir la seva funció d'ajudar a la raó a controlar els desitjos."
+    },
+    {
+      "id": "s67",
+      "categoria": "Filosofia",
+      "pregunta": "Segons Plató, què passa quan la part concupiscible domina sobre les altres parts de l'ànima?",
+      "opciones": [
+        "L'ànima es torna esclava dels desitjos i perd el control racional",
+        "L'ànima assoleix la felicitat",
+        "L'ànima troba l'equilibri perfecte",
+        "L'ànima desenvolupa millor les seves capacitats"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Quan la part concupiscible domina, l'ànima es torna esclava dels seus desitjos i perd el control racional, portant al desordre i la infelicitat."
+    },
+    {
+      "id": "s68",
+      "categoria": "Filosofia",
+      "pregunta": "Com defineix Plató la justícia en l'ànima individual?",
+      "opciones": [
+        "Que cada part de l'ànima compleixi la seva funció pròpia sota el govern de la raó",
+        "Que totes les parts tinguin el mateix poder",
+        "Que la part concupiscible domini sobre les altres",
+        "Que no hi hagi jerarquia entre les parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La justícia en l'ànima consisteix en que cada part compleixi la seva funció natural sota el govern de la part racional, establint així l'harmonia interna."
+    },
+    {
+      "id": "s69",
+      "categoria": "Filosofia",
+      "pregunta": "Per què Plató considera que la raó ha de governar l'ànima?",
+      "opciones": [
+        "Perquè és l'única part que pot conèixer el que convé a cada part i al conjunt",
+        "Perquè és la part més forta",
+        "Perquè és la part més gran",
+        "Perquè és la part més antiga"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La raó ha de governar perquè és l'única part capaç de conèixer el que convé a cada part i al conjunt de l'ànima, tenint la saviesa necessària per prendre les millors decisions."
+    },
+    {
+      "id": "s32",
+      "categoria": "Filosofia",
+      "pregunta": "¿Qué es la 'dialéctica' según Hegel?",
+      "opciones": [
+        "Un método de debate político",
+        "Un proceso de tesis, antítesis y síntesis",
+        "Una forma de argumentación lógica",
+        "Un tipo de retórica antigua"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para Hegel, la dialéctica es el proceso por el cual una idea (tesis) genera su opuesto (antítesis), y de su conflicto surge una resolución superior (síntesis) que conserva elementos de ambas."
+    },
+    {
+      "id": "s33",
+      "categoria": "Filosofia",
+      "pregunta": "¿Qué caracteriza al 'mito de la caverna' de Plató?",
+      "opciones": [
+        "Es una historia de aventuras",
+        "Es una alegoría sobre la ignorancia y el conocimiento",
+        "Es un relato sobre la creación del mundo",
+        "Es una descripción geológica"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El mito de la caverna ilustra cómo los humanos pueden estar encadenados a una realidad ilusoria (las sombras) y el proceso de liberación hacia el verdadero conocimiento (la luz del sol)."
+    },
+    {
+      "id": "b94",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Segons Plató, què caracteritza la part concupiscible de l'ànima?",
+      "opciones": [
+        "És naturalment insaciable de béns i ocupa l'espai més gran de l'ànima",
+        "És la part racional que governa",
+        "És la part que dona coratge",
+        "És la part que busca la veritat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons el text, la part concupiscible ocupa l'espai més gran de l'ànima i és naturalment insaciable de béns, necessitant ser controlada per la part racional."
+    },
+    {
+      "id": "b95",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina relació estableix Plató entre la part racional i les altres parts de l'ànima?",
+      "opciones": [
+        "La part racional ha de governar i les altres parts han de ser súbdites i aliades",
+        "Totes les parts tenen el mateix poder i importància",
+        "La part concupiscible ha de governar sobre les altres",
+        "La part fogosa ha de dominar la part racional"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Plató estableix una jerarquia on la part racional ha de governar per ser sàvia i tenir previsió sobre tota l'ànima, mentre que les altres parts (fogosa i concupiscible) han de ser súbdites i aliades de la part racional."
+    },
+    {
+      "id": "b96",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Segons el text, què és necessari per aconseguir la temperança?",
+      "opciones": [
+        "La unanimitat i harmonia entre les tres parts de l'ànima, acceptant el govern de la raó",
+        "El domini absolut de la part fogosa",
+        "L'eliminació de la part concupiscible",
+        "La supressió de tots els desitjos"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La temperança s'aconsegueix quan hi ha unanimitat i harmonia entre les tres parts de l'ànima, sense conflictes entre l'element que mana (la raó) i els dos que obeeixen, estant tots d'acord que la raó ha de governar."
+    },
+    {
+      "id": "b97",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina és la relació entre la justícia individual i la justícia a la ciutat segons el text?",
+      "opciones": [
+        "No hi ha cap punt borrós entre la visió de la justícia individual i la de la ciutat",
+        "Són conceptes totalment diferents i incompatibles",
+        "La justícia individual és més important que la de la ciutat",
+        "La justícia de la ciutat no té relació amb la individual"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons el text, no hi ha cap punt borrós entre la visió de la justícia que es troba en l'individu i la que es troba a la ciutat, suggerint que són el mateix tipus de justícia aplicat a diferents escales."
+    },
+    {
+      "id": "b98",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Com defineix Plató la saviesa en relació amb les parts de l'ànima?",
+      "opciones": [
+        "Com el coneixement del que convé a cadascuna de les tres parts i a totes en conjunt",
+        "Com el domini exclusiu de la part racional",
+        "Com l'absència de conflictes entre les parts",
+        "Com la supressió de la part concupiscible"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La saviesa, segons Plató, consisteix en posseir el coneixement del que convé a cadascuna de les tres parts de l'ànima (racional, fogosa i concupiscible) i a totes elles en conjunt."
+    },
+    {
+      "id": "s21",
+      "categoria": "Filosofia",
+      "pregunta": "Segons Plató, quina és la característica principal de la part concupiscible de l'ànima?",
+      "opciones": [
+        "És insaciable de béns i ocupa el major espai en l'ànima",
+        "És la part racional que governa",
+        "És la part irascible que defensa",
+        "És la més petita de les tres parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La part concupiscible és la més gran de l'ànima i es caracteritza per ser insaciable de béns i plaers."
+    },
+    {
+      "id": "s22",
+      "categoria": "Filosofia",
+      "pregunta": "Quina relació ha d'existir entre la part racional i les altres parts de l'ànima segons Plató?",
+      "opciones": [
+        "La part racional ha de governar perquè és sàvia i té previsió",
+        "La part irascible ha de governar perquè és forta",
+        "La part concupiscible ha de governar perquè és majoritària",
+        "No hi ha d'haver jerarquia entre les parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons Plató, la part racional ha de governar les altres parts perquè té la saviesa i la capacitat de previsió necessàries."
+    },
+    {
+      "id": "s23",
+      "categoria": "Filosofia",
+      "pregunta": "Què és necessari per aconseguir la temprança segons Plató?",
+      "opciones": [
+        "Que les parts inferior i superior de l'ànima estiguin d'acord sobre qui ha de manar",
+        "Que la part irascible domini a la racional",
+        "Que la part concupiscible sigui la més forta",
+        "Que no hi hagi jerarquia entre les parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La temprança s'aconsegueix quan hi ha acord entre les parts superior i inferior de l'ànima sobre qui ha de governar."
+    },
+    {
+      "id": "s24",
+      "categoria": "Filosofia",
+      "pregunta": "Quina relació estableix Plató entre la justícia individual i la justícia a la ciutat?",
+      "opciones": [
+        "Són anàlogues: cada part ha de complir la seva funció pròpia",
+        "No tenen cap relació entre elles",
+        "La justícia individual és més important",
+        "La justícia de la ciutat és més important"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Plató estableix una analogia entre l'ànima individual i la ciutat: en ambdós casos, la justícia consisteix en que cada part compleixi la seva funció pròpia."
+    },
+    {
+      "id": "s25",
+      "categoria": "Filosofia",
+      "pregunta": "Com defineix Plató la saviesa en relació amb les parts de l'ànima?",
+      "opciones": [
+        "És la virtut de la part racional que permet governar amb previsió",
+        "És la virtut de la part irascible",
+        "És la virtut de la part concupiscible",
+        "És independent de les parts de l'ànima"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La saviesa és la virtut pròpia de la part racional de l'ànima, que li permet governar amb previsió sobre les altres parts."
+    },
+    {
+      "id": "s70",
+      "categoria": "Filosofia",
+      "pregunta": "Quina és la distinció fonamental que fa Plató entre el món sensible i el món intel·ligible?",
+      "opciones": [
+        "El món sensible conté còpies imperfectes de les Formes o Idees que existeixen en el món intel·ligible",
+        "El món sensible és més real que el món intel·ligible",
+        "No hi ha connexió entre els dos mons",
+        "Els dos mons són idèntics en naturalesa"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons Plató, el món sensible conté objectes que són còpies imperfectes de les Formes o Idees perfectes que existeixen en el món intel·ligible. Aquesta distinció és fonamental en la seva teoria del coneixement."
+    },
+    {
+      "id": "s71",
+      "categoria": "Filosofia",
+      "pregunta": "Segons Plató, quina és la diferència entre opinió i ciència?",
+      "opciones": [
+        "L'opinió es basa en les aparences sensibles mentre que la ciència busca el coneixement de les essències",
+        "L'opinió és més fiable que la ciència",
+        "No hi ha diferència entre opinió i ciència",
+        "La ciència es basa en les aparences i l'opinió en les essències"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Per a Plató, l'opinió (doxa) es basa en el coneixement del món sensible i les aparences, mentre que la ciència (episteme) busca el coneixement veritable de les essències i les Idees."
+    },
+    {
+      "id": "s72",
+      "categoria": "Filosofia",
+      "pregunta": "Quin paper juga la dialèctica en la teoria del coneixement de Plató?",
+      "opciones": [
+        "És el mètode per elevar-se des de les aparences fins a l'essència i la Idea del Bé",
+        "És només una tècnica de discussió",
+        "No té cap relació amb el coneixement",
+        "Serveix només per formar opinions"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La dialèctica és el mètode filosòfic que permet elevar-se gradualment des del coneixement de les aparences sensibles fins al coneixement de les essències i, finalment, de la Idea del Bé."
+    },
+    {
+      "id": "s73",
+      "categoria": "Filosofia",
+      "pregunta": "Per què la Idea del Bé és suprema en la filosofia de Plató?",
+      "opciones": [
+        "Perquè és el fonament últim de tot coneixement i de tota realitat",
+        "Perquè és la més fàcil de conèixer",
+        "Perquè pertany al món sensible",
+        "Perquè no requereix la dialèctica per ser coneguda"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Idea del Bé és suprema perquè és el fonament últim de tot coneixement i de tota realitat. Sense conèixer la Idea del Bé, no es pot tenir un coneixement complet de res."
+    },
+    {
+      "id": "s74",
+      "categoria": "Filosofia",
+      "pregunta": "Quina relació estableix Plató entre el coneixement del Bé i l'acció moral?",
+      "opciones": [
+        "Per obrar bé cal conèixer què és el Bé, ja que sense aquest coneixement no podem saber què és bo",
+        "No hi ha relació entre el coneixement del Bé i l'acció moral",
+        "Es pot obrar bé sense conèixer el Bé",
+        "El coneixement del Bé impedeix l'acció moral"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons Plató, per poder obrar bé és necessari conèixer la Idea del Bé. Sense aquest coneixement, no podem saber què és veritablement bo i, per tant, no podem actuar correctament."
+    },
+    {
+      "id": "s75",
+      "categoria": "Filosofia",
+      "pregunta": "Què defensa Locke sobre l'origen de les idees?",
+      "opciones": [
+        "La ment és una 'taula rasa' que s'omple mitjançant l'experiència sensorial",
+        "Totes les idees són innates",
+        "Les idees provenen de Déu",
+        "Només coneixem les idees matemàtiques"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Locke rebutja les idees innates i defensa que la ment és com un paper en blanc (tabula rasa) que s'omple mitjançant l'experiència sensorial."
+    },
+    {
+      "id": "s76",
+      "categoria": "Filosofia",
+      "pregunta": "Segons Locke, quina és la font principal del coneixement?",
+      "opciones": [
+        "L'experiència sensorial i la reflexió sobre aquesta",
+        "La raó pura sense experiència",
+        "Les idees innates",
+        "La revelació divina"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Per a Locke, tot el coneixement prové de l'experiència sensorial i la reflexió que fem sobre aquesta experiència, rebutjant l'existència d'idees innates."
+    },
+    {
+      "id": "s77",
+      "categoria": "Filosofia",
+      "pregunta": "Quina és la postura de Locke sobre el poder polític?",
+      "opciones": [
+        "Ha de basar-se en el consentiment dels governats i respectar els drets naturals",
+        "Ha de ser absolut i provenir directament de Déu",
+        "No ha d'existir cap tipus de govern",
+        "Ha de ser exercit només per l'aristocràcia"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Locke defensa que el poder polític ha de basar-se en el consentiment dels governats i ha de respectar els drets naturals (vida, llibertat i propietat), rebutjant l'absolutisme."
+    },
+    {
+      "id": "s78",
+      "categoria": "Filosofia",
+      "pregunta": "Com classifica Locke les idees segons el seu origen?",
+      "opciones": [
+        "En idees de sensació (experiència externa) i idees de reflexió (experiència interna)",
+        "En idees innates i idees adquirides",
+        "En idees simples i idees complexes només",
+        "En idees verdaderes i idees falses"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Locke distingeix entre idees de sensació, que provenen de l'experiència externa a través dels sentits, i idees de reflexió, que provenen de l'experiència interna de la nostra ment."
+    },
+    {
+      "id": "s79",
+      "categoria": "Filosofia",
+      "pregunta": "Quina és la teoria de Locke sobre la propietat?",
+      "opciones": [
+        "S'adquireix pel treball i té límits basats en l'ús i la necessitat",
+        "Ha de ser comuna i no pot ser privada",
+        "Només pot ser atorgada per l'Estat",
+        "És un dret diví sense límits"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Locke argumenta que la propietat s'adquireix quan barregem el nostre treball amb els recursos naturals, però amb límits: no podem acumular més del que podem utilitzar ni privar altres de recursos necessaris."
+    },
+    {
+      "id": "p80",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Segons Locke, quan entra el poder legislatiu en estat de guerra amb el poble?",
+      "opciones": [
+        "Quan actua d'una forma que no respecta ni la propietat ni la llibertat del poble",
+        "Quan estableix noves lleis",
+        "Quan augmenta els impostos",
+        "Quan declara la guerra a altres nacions"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons el text, quan els legisladors intenten arrabassar i destruir la propietat del poble o reduir els homes a la condició d'esclaus sota un poder arbitrari, entren en estat de guerra amb el poble."
+    },
+    {
+      "id": "p81",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Què defensa Locke sobre el dret de rebel·lió?",
+      "opciones": [
+        "És una doctrina que serveix per prevenir la rebel·lió mostrant els seus perills als governants",
+        "És un dret absolut que es pot exercir en qualsevol moment",
+        "És una doctrina que promou la violència contra l'autoritat",
+        "És un dret que només poden exercir els governants"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons el text, aquesta doctrina del poder en mans del poble per recuperar la seguretat serveix com a defensa contra la rebel·lió i és el mitjà més eficaç per evitar-la, ja que mostra els perills als governants que podrien estar temptats a abusar del poder."
+    },
+    {
+      "id": "p82",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Segons Locke, quan es pot considerar algú com a rebel?",
+      "opciones": [
+        "Quan usa la força per oposar-se a les lleis després d'haver-se unit a la societat civil",
+        "Quan s'oposa a qualsevol decisió del govern",
+        "Quan defensa els seus drets naturals",
+        "Quan critica les decisions dels governants"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El text explica que qui usa la força per oposar-se a les lleis després d'haver-se unit a la societat civil i haver acceptat les lleis per a la defensa de la propietat, pau i unitat, es converteix en un veritable rebel."
+    },
+    {
+      "id": "p83",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quina és la base del poder polític legítim segons Locke?",
+      "opciones": [
+        "El consentiment del poble i el respecte als drets naturals",
+        "La força militar i el control del territori",
+        "El dret diví dels governants",
+        "La tradició històrica"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons el text, el poder polític legítim es basa en el consentiment del poble i el respecte als seus drets (propietat, llibertat). Quan els governants violen aquests principis, perden la seva legitimitat."
+    },
+    {
+      "id": "p84",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Per què Locke considera que mostrar els perills de l'abús de poder als governants serveix per prevenir la rebel·lió?",
+      "opciones": [
+        "Perquè els fa conscients que si abusen del poder, el poble pot legítimament resistir-s'hi",
+        "Perquè els atemoreix amb càstigs divins",
+        "Perquè promou la violència contra ells",
+        "Perquè els obliga a dimitir"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El text indica que mostrar als governants que si actuen com a rebels contra el poble, aquest pot resistir-s'hi legítimament, serveix per dissuadir-los d'abusar del poder que se'ls ha concedit."
+    }
+  ],
+  "premium": [
+    {
+      "id": "p65",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Segons Plató, quina és la funció de la part irascible (fogosa) de l'ànima?",
+      "opciones": [
+        "Ajudar a la part racional a controlar els desitjos de la part concupiscible",
+        "Governar sobre les altres parts",
+        "Satisfer els desitjos i plaers",
+        "Actuar independentment de les altres parts"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La part irascible o fogosa té la funció d'ajudar a la part racional a controlar els desitjos de la part concupiscible, actuant com un aliat de la raó en el govern de l'ànima."
+    },
+    {
+      "id": "p32",
+      "categoria": "Filosofia",
+      "subTema": "Georg Wilhelm Friedrich Hegel",
+      "pregunta": "¿Qué es la 'dialéctica' según Hegel?",
+      "opciones": [
+        "Un método de debate político",
+        "Un proceso de tesis, antítesis y síntesis",
+        "Una forma de argumentación lógica",
+        "Un tipo de retórica antigua"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para Hegel, la dialéctica es el proceso por el cual una idea (tesis) genera su opuesto (antítesis), y de su conflicto surge una resolución superior (síntesis) que conserva elementos de ambas."
+    },
+    {
+      "id": "p75",
+      "categoria": "Filosofia",
+      "subTema": "John Locke",
+      "pregunta": "Què defensa Locke sobre l'origen de les idees?",
+      "opciones": [
+        "La ment és una 'taula rasa' que s'omple mitjançant l'experiència sensorial",
+        "Totes les idees són innates",
+        "Les idees provenen de Déu",
+        "Només coneixem les idees matemàtiques"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Locke rebutja les idees innates i defensa que la ment és com un paper en blanc (tabula rasa) que s'omple mitjançant l'experiència sensorial."
+    },
+    {
+      "id": "p76",
+      "categoria": "Filosofia",
+      "subTema": "John Locke",
+      "pregunta": "Segons Locke, quina és la font principal del coneixement?",
+      "opciones": [
+        "L'experiència sensorial i la reflexió sobre aquesta",
+        "La raó pura sense experiència",
+        "Les idees innates",
+        "La revelació divina"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Per a Locke, tot el coneixement prové de l'experiència sensorial i la reflexió que fem sobre aquesta experiència, rebutjant l'existència d'idees innates."
+    },
+    {
+      "id": "p70",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina és la distinció fonamental que fa Plató entre el món sensible i el món intel·ligible?",
+      "opciones": [
+        "El món sensible conté còpies imperfectes de les Formes o Idees que existeixen en el món intel·ligible",
+        "El món sensible és més real que el món intel·ligible",
+        "No hi ha connexió entre els dos mons",
+        "Els dos mons són idèntics en naturalesa"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Segons Plató, el món sensible conté objectes que són còpies imperfectes de les Formes o Idees perfectes que existeixen en el món intel·ligible. Aquesta distinció és fonamental en la seva teoria del coneixement."
+    }
+  ]
+}

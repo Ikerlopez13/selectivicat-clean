@@ -1,0 +1,143 @@
+{
+  "standard": [
+    {
+      "id": "s25",
+      "categoria": "Matemàtiques CCSS",
+      "pregunta": "En el mismo contexto de las tarifes de las companies A y B, ¿per a qué distancia las dos tarifes coinciden?",
+      "opciones": [
+        "20 km",
+        "50 km",
+        "15 km",
+        "30 km"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Resolent l'equació $0.4x + 20 = 0.01x^2 + 0.1x + 10$, s'obté $x = 50$ km (la solució negativa es descarta)."
+    },
+    {
+      "id": "s26",
+      "categoria": "Matemàtiques CCSS",
+      "pregunta": "En un sistema de producción de sofàs, si s'afegeix l'equació $0.1x + 0.3y + 0.2z = 284$ al sistema inicial, ¿quina és la producción de la tercera fàbrica (z)?",
+      "opciones": [
+        "310",
+        "630",
+        "320",
+        "284"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Resolent el sistema ampliat pel mètode de Gauss, s'obté $z = 320$ sofàs."
+    },
+    {
+      "id": "m03",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "Si $f(x) = x^3 - 3x^2 + 2$, ¿cuáles son los puntos críticos de $f$?",
+      "opciones": [
+        "$x = 0$ y $x = 2$",
+        "$x = 1$ y $x = 2$",
+        "$x = 0$ y $x = 1$",
+        "$x = 1$ y $x = 3$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para encontrar los puntos críticos, derivamos $f'(x) = 3x^2 - 6x = 3x(x-2)$. Igualando a cero: $3x(x-2) = 0 \\Rightarrow x = 0$ o $x = 2$. Por tanto, los puntos críticos son $x = 0$ y $x = 2$."
+    },
+    {
+      "id": "m05",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\mu = 20$ y desviación típica $\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
+      "opciones": [
+        "0.5",
+        "0.6827",
+        "0.75",
+        "0.9545"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para una variable normal, el intervalo $[\\mu - \\sigma, \\mu + \\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\leq X \\leq 25) = P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) = 0.6827$."
+    },
+    {
+      "id": "m06",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Una empresa determina que los ingresos por la venta de $x$ unidades de un producto vienen dados por $I(x) = 100x - 0.01x^2$. ¿Cuál es el número de unidades que maximiza los ingresos?",
+      "opciones": [
+        "4000",
+        "5000",
+        "8000",
+        "10000"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para maximizar los ingresos, derivamos la función e igualamos a cero: $I'(x) = 100 - 0.02x = 0 \\Rightarrow x = 5000$. Para confirmar que es un máximo, comprobamos que $I''(x) = -0.02 < 0$."
+    },
+    {
+      "id": "m1",
+      "categoria": "Matemàtiques CCSS",
+      "pregunta": "Una empresa fabrica dos tipos de productos, A y B. Cada unidad de A requiere 2 horas de mano de obra y 3 kg de materia prima, mientras que cada unidad de B requiere 3 horas de mano de obra y 2 kg de materia prima. La empresa dispone de 30 horas de mano de obra y 30 kg de materia prima diarios. Si cada unidad de A aporta un beneficio de 40€ y cada unidad de B aporta 50€, ¿cuántas unidades de cada producto debe fabricar para maximizar beneficios?",
+      "opciones": [
+        "6 unidades de A y 6 unidades de B",
+        "15 unidades de A y 0 unidades de B",
+        "0 unidades de A y 10 unidades de B",
+        "5 unidades de A y 10 unidades de B"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Planteemos el problema: Sea $x$ el número de unidades de A e $y$ el número de unidades de B. Tenemos las restricciones:\n\n$2x + 3y \\leq 30$ (horas de mano de obra)\n$3x + 2y \\leq 30$ (kg de materia prima)\n$x \\geq 0$, $y \\geq 0$\n\nLa función objetivo a maximizar es $Z = 40x + 50y$\n\nResolviendo el sistema formado por las dos restricciones como igualdades:\n$2x + 3y = 30$\n$3x + 2y = 30$\n\nObtenemos $x = 6$ e $y = 6$\n\nEl beneficio es $Z = 40 \\cdot 6 + 50 \\cdot 6 = 240 + 300 = 540€$"
+    }
+  ],
+  "premium": [
+    {
+      "id": "m03",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "Si $f(x) = x^3 - 3x^2 + 2$, ¿cuáles son los puntos críticos de $f$?",
+      "opciones": [
+        "$x = 0$ y $x = 2$",
+        "$x = 1$ y $x = 2$",
+        "$x = 0$ y $x = 1$",
+        "$x = 1$ y $x = 3$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para encontrar los puntos críticos, derivamos $f'(x) = 3x^2 - 6x = 3x(x-2)$. Igualando a cero: $3x(x-2) = 0 \\\\Rightarrow x = 0$ o $x = 2$. Por tanto, los puntos críticos son $x = 0$ y $x = 2$."
+    },
+    {
+      "id": "m05",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\\\mu = 20$ y desviación típica $\\\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
+      "opciones": [
+        "0.5",
+        "0.6827",
+        "0.75",
+        "0.9545"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para una variable normal, el intervalo $[\\\\mu - \\\\sigma, \\\\mu + \\\\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\\\leq X \\\\leq 25) = P(\\\\mu - \\\\sigma \\\\leq X \\\\leq \\\\mu + \\\\sigma) = 0.6827$."
+    },
+    {
+      "id": "m06",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Una empresa determina que los ingresos por la venta de $x$ unidades de un producto vienen dados por $I(x) = 100x - 0.01x^2$. ¿Cuál es el número de unidades que maximiza los ingresos?",
+      "opciones": [
+        "4000",
+        "5000",
+        "8000",
+        "10000"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para maximizar los ingresos, derivamos la función e igualamos a cero: $I'(x) = 100 - 0.02x = 0 \\\\Rightarrow x = 5000$. Para confirmar que es un máximo, comprobamos que $I''(x) = -0.02 < 0$."
+    },
+    {
+      "id": "m11",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "Una empresa fabrica dos tipos de productos, A y B. Cada unidad de A requiere 2 horas de mano de obra y 3 kg de materia prima, mientras que cada unidad de B requiere 3 horas de mano de obra y 2 kg de materia prima. La empresa dispone de 30 horas de mano de obra y 30 kg de materia prima diarios. Si cada unidad de A aporta un beneficio de 40€ y cada unidad de B aporta 50€, ¿cuántas unidades de cada producto debe fabricar para maximizar beneficios?",
+      "opciones": [
+        "6 unidades de A y 6 unidades de B",
+        "15 unidades de A y 0 unidades de B",
+        "0 unidades de A y 10 unidades de B",
+        "5 unidades de A y 10 unidades de B"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Plantemos el problema: Sea $x$ el número de unidades de A e $y$ el número de unidades de B. Tenemos las restricciones: $2x + 3y \\\\leq 30$ (horas de mano de obra), $3x + 2y \\\\leq 30$ (kg de materia prima), $x \\\\geq 0$, $y \\\\geq 0$. La función objetivo a maximizar es $Z = 40x + 50y. Resolviendo el sistema formado por las dos restricciones como igualdades: $2x + 3y = 30$ y $3x + 2y = 30$, obtenemos $x = 6$ e $y = 6$. El beneficio es $Z = 40 \\\\cdot 6 + 50 \\\\cdot 6 = 240 + 300 = 540€$."
+    }
+  ]
+}

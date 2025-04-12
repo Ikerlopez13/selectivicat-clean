@@ -4,18 +4,52 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
+interface CustomSession {
+  user?: {
+    hasPremiumStatus?: boolean;
+  };
+}
 
 export default function NavbarMain() {
-  const { data: session } = useSession();
+  const { data: session } = useSession() as { data: CustomSession | null };
   const pathname = usePathname();
   const isDashboard = pathname === '/dashboard';
+  const [mounted, setMounted] = useState(false);
+  const isPremium = session?.user?.hasPremiumStatus;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSignIn = () => {
-    signIn("google", { callbackUrl: "/dashboard" });
+    signIn("google", { 
+      callbackUrl: "/dashboard",
+      prompt: "select_account"
+    });
   };
 
-  const handleSignOut = () => {
-    signOut({ callbackUrl: "/" });
+  const handleSignOut = async () => {
+    try {
+      // Limpiar localStorage
+      if (typeof window !== 'undefined') {
+        localStorage.clear();
+      }
+      
+      // Limpiar cookies de sesión
+      document.cookie.split(";").forEach(function(c) { 
+        document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+      });
+      
+      // Cerrar sesión
+      await signOut({ 
+        callbackUrl: '/',
+        redirect: true
+      });
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+    }
   };
 
   const menuItems = [
@@ -23,10 +57,13 @@ export default function NavbarMain() {
     { href: "/notes-de-tall", text: "Notes de tall" },
     { href: "/examenes", text: "Exàmens" },
     { href: "/millors-videos", text: "Millors Videos" },
-    /*{ href: "/seletest", text: "SeleTest" },*/
     { href: "/blog", text: "Blog" },
-    { href: "/premium", text: "Fes-te Premium ✨" }
+    ...(!isPremium ? [{ href: "/premium", text: "Fes-te Premium ✨" }] : [])
   ];
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="navbar bg-white px-4 md:px-8 py-2 shadow-sm fixed top-0 left-0 right-0 z-50">

@@ -1,0 +1,152 @@
+{
+  "standard": [
+    {
+      "id": "s14",
+      "categoria": "Biologia",
+      "pregunta": "Quina és la diferència principal entre el sucre del DNA i el del RNA?",
+      "opciones": [
+        "El DNA té desoxiribosa i el RNA ribosa",
+        "El DNA té ribosa i el RNA desoxiribosa",
+        "Ambdós tenen glucosa però en configuracions diferents",
+        "El DNA té fructosa i el RNA sacarosa"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La pentosa en el DNA és desoxiribosa (falta un grup OH en el carboni 2'), mentre que en el RNA és ribosa. Aquesta diferència afecta l'estabilitat de les molècules."
+    },
+    {
+      "id": "s15",
+      "categoria": "Biologia",
+      "pregunta": "Si la seqüència de DNA transcrit és TAA-GCA-CTC, quina serà la seqüència de RNA resultant?",
+      "opciones": [
+        "TAA-GCA-CTC",
+        "UAA-GCA-CUC",
+        "ATT-CGT-GAG",
+        "AUU-CGU-GAG"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "En la transcripció, el DNA (TAA-GCA-CTC) es converteix en RNA substituint timina (T) per uracil (U). Per tant, T → A, A → U, G → C, C → G."
+    },
+    {
+      "id": "s40",
+      "categoria": "Biologia",
+      "pregunta": "Llegiu el text següent i responeu:\n\n'Cal admetre que pot semblar una mica exagerat fer de la figura del llop un emblema contra el canvi climàtic. El plantejament és molt senzill i evident. Els llops s'alimenten d'altres animals; de fet, principalment de grans herbívors. Els cérvols i cabirols, que constitueixen el 75% de les seves preses, tenen una dieta totalment vegetariana. Això vol dir que, en digerir la vegetació que ingereixen, aquests mamífers processen i descomponen gran part de la matèria consumida en CO₂ i aigua. La desaparició de grans depredadors com els llops causa canvis significatius en els ecosistemes. El nombre de depredadors de mida més petita, com ara guineus o coiots, augmenta. Aquest fet no és gens sorprenent, ja que en condicions normals serien preses dels llops i, ocasionalment, s'alimenten del mateix que ells.'\n\nBasant-vos en el text, quina de les següents afirmacions és correcta sobre la xarxa tròfica descrita?",
+      "opciones": [
+        "Els llops regulen les poblacions de cérvols i cabirols, que al seu torn controlen la vegetació, afectant així el cicle del carboni.",
+        "La presència de llops augmenta les poblacions de guineus i coiots, ja que comparteixen les mateixes preses.",
+        "Els cérvols i cabirols són els principals reguladors de l'ecosistema perquè processen la matèria vegetal en CO₂.",
+        "La desaparició dels llops no té efecte sobre les poblacions de depredadors més petits com guineus i coiots."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El text descriu una xarxa tròfica on els llops, com a depredadors superiors, regulen directament les poblacions d'herbívors (cérvols i cabirols) i indirectament les poblacions de depredadors més petits. Això té un efecte en cascada sobre la vegetació i el cicle del carboni, ja que els herbívors transformen la matèria vegetal en CO₂. A més, la desaparició dels llops permet l'augment de depredadors més petits que normalment serien les seves preses."
+    },
+    {
+      "id": "s41",
+      "categoria": "Biologia",
+      "pregunta": "En relació amb el text anterior sobre els llops i la xarxa tròfica, quin nivell tròfic no està representat explícitament en la xarxa però és fonamental per al funcionament de l'ecosistema descrit?",
+      "opciones": [
+        "Els descomponedors, que reciclen la matèria orgànica morta",
+        "Els productors primaris, que són la base de la cadena alimentària",
+        "Els consumidors terciaris, que s'alimenten dels depredadors",
+        "Els consumidors omnívors, que tenen una dieta mixta"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Tot i que el text menciona la descomposició de matèria en CO₂ i aigua, no es fa referència explícita als descomponedors, que són fonamentals en el reciclatge de la matèria orgànica morta i el tancament dels cicles biogeoquímics. Els productors primaris (vegetació) i els consumidors (herbívors i carnívors) sí que estan clarament representats en la xarxa tròfica descrita."
+    },
+    {
+      "id": "s42",
+      "categoria": "Biologia",
+      "pregunta": "Quines vies metabòliques intervenen en la descomposició completa de la glucosa en els cèrvols i cabirols?",
+      "opciones": [
+        "Glicòlisi, cicle de Krebs i cadena respiratòria",
+        "Només glicòlisi i cicle de Krebs",
+        "Fermentació làctica i cicle de Krebs",
+        "Glicòlisi i fermentació alcohòlica"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La descomposició completa de la glucosa en organismes aerobis com els cèrvols i cabirols requereix tres processos: la glicòlisi (que converteix glucosa en piruvat), el cicle de Krebs (que oxida l'acetil-CoA) i la cadena respiratòria (que genera la major part de l'ATP i l'aigua)."
+    },
+    {
+      "id": "s43",
+      "categoria": "Biologia",
+      "pregunta": "En quin procés metabòlic es genera principalment el CO₂ durant la respiració cel·lular?",
+      "opciones": [
+        "Al cicle de Krebs",
+        "A la glicòlisi",
+        "A la cadena respiratòria",
+        "A la fermentació"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El CO₂ es genera principalment al cicle de Krebs (també anomenat cicle dels àcids tricarboxílics o cicle de l'àcid cítric) mitjançant les reaccions de descarboxilació que oxiden completament l'acetil-CoA."
+    },
+    {
+      "id": "s44",
+      "categoria": "Biologia",
+      "pregunta": "On es genera l'aigua durant el procés de respiració cel·lular?",
+      "opciones": [
+        "A la cadena respiratòria, en la reducció de l'O₂",
+        "Al cicle de Krebs",
+        "A la glicòlisi",
+        "En totes les fases per igual"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'aigua es genera a la cadena respiratòria (també anomenada fosforilació oxidativa o transport electrònic) quan els electrons i protons són transferits a l'oxigen molecular (O₂) en l'últim complex de la cadena, formant H₂O."
+    },
+    {
+      "id": "s45",
+      "categoria": "Biologia",
+      "pregunta": "Quin és el balanç energètic aproximat en molècules d'ATP que s'obtenen de l'oxidació completa d'una molècula de glucosa?",
+      "opciones": [
+        "De 30 a 38 ATP",
+        "De 20 a 25 ATP",
+        "De 40 a 45 ATP",
+        "De 15 a 20 ATP"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El balanç energètic de l'oxidació completa d'una molècula de glucosa és d'entre 30 i 38 ATP. La variació depèn de l'eficiència del transport de protons i de l'ús de llançadores per transferir els electrons del NADH citosòlic al mitocondri."
+    }
+  ],
+  "premium": [
+    {
+      "id": "b1",
+      "categoria": "Biologia",
+      "subTema": "Àcids Nucleics",
+      "pregunta": "Quina és la pentosa que trobem a l'ARN i no al ADN?",
+      "opciones": [
+        "Desoxiribosa",
+        "Ribosa",
+        "Glucosa",
+        "Fructosa"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'ARN conté ribosa com a pentosa, mentre que l'ADN té desoxiribosa. La ribosa té un grup hidroxil addicional en el carboni 2."
+    },
+    {
+      "id": "b2",
+      "categoria": "Biologia",
+      "subTema": "Genètica",
+      "pregunta": "Quin patró d'herència presenta la malaltia de Stargardt segons el text?",
+      "opciones": [
+        "Dominant lligada al sexe",
+        "Recessiva autosòmica",
+        "Dominant autosòmica",
+        "Recessiva lligada al sexe"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La malaltia de Stargardt és recessiva autosòmica perquè cal heretar dues còpies de l'al·lel defectuós (gen ABCA4 al cromosoma 1) per manifestar-la."
+    },
+    {
+      "id": "b3",
+      "categoria": "Biologia",
+      "subTema": "Biologia Molecular",
+      "pregunta": "Quin enzim s'utilitza per tallar el DNA en seqüències específiques durant la teràpia gènica?",
+      "opciones": [
+        "ADN polimerasa",
+        "Lligasa",
+        "Enzims de restricció",
+        "ARN polimerasa"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Els enzims de restricció tallen el DNA en seqüències concretes, mentre que les lligases uneixen els fragments per formar DNA recombinant."
+    }
+  ]
+}

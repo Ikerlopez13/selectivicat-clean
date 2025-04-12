@@ -1,0 +1,89 @@
+{
+  "standard": [
+    {
+      "id": "b74",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "En un moviment harmònic simple (MHS), quina relació hi ha entre el període (T) i la freqüència angular (ω)?",
+      "opciones": [
+        "T = 2π/ω",
+        "T = ω/2π",
+        "T = ω²/2π",
+        "T = 2π·ω"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En el MHS, el període T és el temps que triga en completar una oscil·lació completa. La relació amb la freqüència angular és T = 2π/ω, ja que ω representa els radians per unitat de temps."
+    },
+    {
+      "id": "b75",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "Una massa de 0,5 kg oscil·la en MHS amb una amplitud de 10 cm i una freqüència de 2 Hz. Quina és la seva energia mecànica total?",
+      "opciones": [
+        "0,789 J",
+        "1,578 J",
+        "0,394 J",
+        "3,156 J"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'energia mecànica en un MHS és E = ½kA². Com k = mω² = m(2πf)² = 0,5·(2π·2)² = 79,0 N/m, tenim E = ½·79,0·(0,1)² = 0,789 J. L'energia es conserva durant el moviment."
+    },
+    {
+      "id": "b76",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "En un MHS, quan és màxima l'energia cinètica?",
+      "opciones": [
+        "Quan la partícula passa per la posició d'equilibri",
+        "Quan la partícula està en els extrems del recorregut",
+        "L'energia cinètica és constant durant tot el moviment",
+        "Quan l'acceleració és màxima"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'energia cinètica és màxima quan la partícula passa per la posició d'equilibri (x = 0), ja que en aquest punt la velocitat és màxima i l'energia potencial elàstica és zero."
+    },
+    {
+      "id": "b77",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "Una molla té una constant elàstica k = 200 N/m. Si hi pengem una massa de 2 kg, quina serà la freqüència d'oscil·lació?",
+      "opciones": [
+        "1,59 Hz",
+        "2,00 Hz",
+        "3,18 Hz",
+        "0,79 Hz"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La freqüència d'oscil·lació ve donada per f = (1/2π)·√(k/m) = (1/2π)·√(200/2) = 1,59 Hz. Aquesta és la freqüència natural del sistema massa-molla."
+    },
+    {
+      "id": "b78",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "En un MHS, si doblem l'amplitud, com canvia l'energia mecànica total?",
+      "opciones": [
+        "Es quadruplica",
+        "Es duplica",
+        "No canvia",
+        "Es redueix a la meitat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'energia mecànica total és E = ½kA². Si doblem l'amplitud (A), l'energia es quadruplica perquè depèn del quadrat de l'amplitud: E₂ = ½k(2A)² = 2kA² = 4(½kA²) = 4E₁."
+    },
+    {
+      "id": "b85",
+      "categoria": "Física",
+      "subTema": "MAS",
+      "pregunta": "En un experiment amb dues masses que fan MHS, si una massa està penjada d'una molla vertical i l'altra gira en un disc a 19 cm del centre amb $\\omega = 6,41$ rad/s, per què les seves ombres segueixen el mateix moviment?",
+      "opciones": [
+        "Perquè la projecció del MCU és un MHS amb la mateixa freqüència angular",
+        "Perquè tenen la mateixa massa",
+        "Perquè estan a la mateixa altura",
+        "Perquè tenen la mateixa energia"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La projecció d'un MCU sobre un eix és un MHS. Com ambdues masses tenen la mateixa $\\omega$, les seves ombres descriuen el mateix moviment harmònic simple."
+    }
+  ],
+  "premium": []
+}

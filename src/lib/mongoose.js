@@ -10,9 +10,7 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "selectivicat",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      dbName: "test"
     });
 
     isConnected = true;

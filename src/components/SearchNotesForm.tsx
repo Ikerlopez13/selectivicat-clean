@@ -10,19 +10,35 @@ interface SearchNotesFormProps {
 }
 
 export default function SearchNotesForm({ initialSearchTerm = '', initialUniversity = '' }: SearchNotesFormProps) {
+  const [mounted, setMounted] = useState(false);
   const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
-  const [university, setUniversity] = useState(initialUniversity);
-  const [results, setResults] = useState<Degree[]>([]);
+  const [selectedUniversity, setSelectedUniversity] = useState(initialUniversity);
+  const [searchResults, setSearchResults] = useState<Degree[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="animate-pulse">
+        <div className="h-12 bg-gray-200 rounded mb-4"></div>
+        <div className="h-12 bg-gray-200 rounded mb-4"></div>
+        <div className="h-64 bg-gray-200 rounded"></div>
+      </div>
+    );
+  }
+
   // Realizar búsqueda automática si hay términos iniciales
   useEffect(() => {
     if (initialSearchTerm || initialUniversity) {
       const searchResults = searchDegrees(initialSearchTerm, initialUniversity);
-      setResults(searchResults);
+      setSearchResults(searchResults);
       setHasSearched(true);
     }
   }, [initialSearchTerm, initialUniversity]);
@@ -63,8 +79,8 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const searchResults = searchDegrees(searchTerm, university);
-    setResults(searchResults);
+    const searchResults = searchDegrees(searchTerm, selectedUniversity);
+    setSearchResults(searchResults);
     setHasSearched(true);
     setShowSuggestions(false);
   };
@@ -73,8 +89,8 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
     setSearchTerm(suggestion);
     setShowSuggestions(false);
     // Realizar búsqueda automática al seleccionar una sugerencia
-    const searchResults = searchDegrees(suggestion, university);
-    setResults(searchResults);
+    const searchResults = searchDegrees(suggestion, selectedUniversity);
+    setSearchResults(searchResults);
     setHasSearched(true);
   };
 
@@ -130,8 +146,8 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
           <select
             id="university"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-selectivi-yellow focus:border-selectivi-yellow"
-            value={university}
-            onChange={(e) => setUniversity(e.target.value)}
+            value={selectedUniversity}
+            onChange={(e) => setSelectedUniversity(e.target.value)}
           >
             <option value="">Totes les universitats</option>
             {universities.map((uni) => (
@@ -155,14 +171,14 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
         <div className="mt-8">
           <h3 className="text-xl font-bold mb-4">Resultats de la cerca</h3>
           
-          {results.length === 0 ? (
+          {searchResults.length === 0 ? (
             <div className="text-center py-8">
               <p className="text-gray-500">No s'han trobat resultats per a la teva cerca.</p>
               <p className="text-gray-500 mt-2">Prova amb un altre terme o universitat.</p>
             </div>
           ) : (
             <div className="space-y-6">
-              {results.map((degree) => (
+              {searchResults.map((degree) => (
                 <div key={degree.id} className="bg-gray-50 p-4 rounded-lg">
                   <h4 className="text-lg font-bold mb-3">{degree.name}</h4>
                   
@@ -186,7 +202,7 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
                         {degree.scores
-                          .filter(score => !university || score.university === university)
+                          .filter(score => !selectedUniversity || score.university === selectedUniversity)
                           .sort((a, b) => (b.initialScore || b.score) - (a.initialScore || a.score))
                           .map((score, index) => (
                             <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>

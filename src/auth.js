@@ -29,6 +29,7 @@ const config = {
     async session({ session, token, user }) {
       if (session?.user) {
         session.user.id = user.id;
+        session.user.hasPremiumStatus = user.hasPremiumStatus || false;
       }
       return session;
     },
@@ -36,6 +37,7 @@ const config = {
       if (account && user) {
         token.accessToken = account.access_token;
         token.userId = user.id;
+        token.hasPremiumStatus = user.hasPremiumStatus;
       }
       return token;
     },

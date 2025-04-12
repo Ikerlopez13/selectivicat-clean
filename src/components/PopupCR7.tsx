@@ -5,10 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PopupCR7() {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const hasVisitedPremium = localStorage.getItem('hasVisitedPremium');
     
     if (!hasVisitedPremium) {
@@ -16,15 +18,20 @@ export default function PopupCR7() {
         setIsVisible(true);
       }, 1500);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, []);
 
   const handlePremiumClick = () => {
-    localStorage.setItem('hasVisitedPremium', 'true');
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('hasVisitedPremium', 'true');
+    }
     setIsVisible(false);
   };
 
+  if (!mounted) return null;
   if (!isVisible) return null;
 
   return (

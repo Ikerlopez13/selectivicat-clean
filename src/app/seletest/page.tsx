@@ -1,25 +1,34 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { InlineMath } from 'react-katex';
+import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
 import Image from 'next/image';
 import HeroSeleTest from '@/components/HeroSeleTest';
 import { useSession } from "next-auth/react";
-import { standardQuestions, premiumQuestions } from "@/data/questions";
+import { standardQuestions, premiumQuestions, premiumOnlyQuestions } from "@/data/questions";
+import type { Question } from "@/types/questions";
+import { matematiques } from '@/data/questions/matematiques';
+import { getMatematiquesList } from '@/utils/matematiques-utils';
+
+// At the top of the file, add this line after the imports
+const isProd = process.env.NODE_ENV === 'production';
+
+// Mapeo de categorías a archivos JSON
+const categoryToJsonFile: { [key: string]: string } = {
+  'Biologia': 'biologia.json',
+  'Química': 'quimica.json',
+  'Física': 'fisica.json',
+  'Geografia': 'geografia.json',
+  'Història': 'història.json',
+  'Matemàtiques': 'matematiques.json',
+  'Matemàtiques CCSS': 'matematiques_ccss.json',
+  'Filosofia': 'filosofia.json'
+};
 
 // Definición de interfaces y tipos
-interface Question {
-  id: number;
-  pregunta: string;
-  opciones: string[];
-  respuesta_correcta: string;
-  categoria: string;
-  explicacion?: string;
-}
-
 interface QuestionProps {
   question?: Question;
   selectedAnswer: string | null;
@@ -35,13 +44,34 @@ interface Subject {
 
 interface CustomUser {
   hasPremiumStatus?: boolean;
-  // ... otros campos del usuario si los hay
 }
 
 interface CustomSession {
   user?: CustomUser;
-  // ... otros campos de la sesión si los hay
 }
+
+interface SubjectPhases {
+  general: Record<string, string>;
+  scientific: Record<string, string>;
+  social: Record<string, string>;
+}
+
+const subjectsByPhase: SubjectPhases = {
+  general: {
+    'historia': 'Història',
+    'filosofia': 'Filosofia'
+  },
+  scientific: {
+    'matematiques': 'Matemàtiques',
+    'fisica': 'Física',
+    'quimica': 'Química',
+    'biologia': 'Biologia'
+  },
+  social: {
+    'matematiques-aplicades': 'Matemàtiques CCSS',
+    'geografia': 'Geografia'
+  }
+};
 
 // Lista de asignaturas disponibles (solo las que tienen preguntas)
 const availableSubjects: Subject[] = [
@@ -50,15 +80,30 @@ const availableSubjects: Subject[] = [
   { id: 'filosofia', name: 'Filosofia', category: 'Fase General' },
   
   // Fase Específica - Ciencias
-  { id: 'mates', name: 'Matemàtiques', category: 'Científic' },
+  { id: 'matematiques', name: 'Matemàtiques', category: 'Científic' },
   { id: 'fisica', name: 'Física', category: 'Científic' },
   { id: 'quimica', name: 'Química', category: 'Científic' },
   { id: 'biologia', name: 'Biologia', category: 'Científic' },
   
   // Fase Específica - Humanidades y Ciencias Sociales
-  { id: 'mates-aplicades', name: 'Matemàtiques Aplicades', category: 'Social' },
+  { id: 'matematiques-aplicades', name: 'Matemàtiques CCSS', category: 'Social' },
   { id: 'geografia', name: 'Geografia', category: 'Social' }
 ];
+
+// Mapeo de IDs a categorías
+const subjectIdToCategory: Record<string, string> = {
+  'matematiques': 'Matemàtiques',
+  'fisica': 'Física',
+  'filosofia': 'Filosofia',
+  'quimica': 'Química',
+  'biologia': 'Biologia',
+  'matematiques-aplicades': 'Matemàtiques CCSS',
+  'geografia': 'Geografia',
+  'historia': 'Història'
+};
+
+// Obtener la lista de matemáticas
+const matematiquesList = getMatematiquesList();
 
 // Componente para mostrar una pregunta individual
 const Question: React.FC<QuestionProps> = ({ 
@@ -67,84 +112,159 @@ const Question: React.FC<QuestionProps> = ({
   onSelectAnswer,
   hasAnswered 
 }) => {
+  const { data: session } = useSession() as { data: CustomSession | null };
+  const isPremium = !!session?.user?.hasPremiumStatus;
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    // Intentar cargar los anuncios cuando el componente se monta
+    if (!isPremium && isClient) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (error) {
+        console.error('Error loading ads:', error);
+      }
+    }
+  }, [isPremium, isClient]);
+
   if (!question) return null;
 
   const formatText = (text: string) => {
-    if (text.includes("$")) {
-      const parts = text.split(/(\$.*?\$)/g);
-      return parts.map((part: string, index: number) => {
-        if (part.startsWith("$") && part.endsWith("$")) {
-          const formula = part.slice(1, -1);
-          return <InlineMath key={index} math={formula} />;
+    if (!text) return '';
+    
+    // Función auxiliar para limpiar delimitadores
+    const cleanDelimiters = (formula: string) => {
+      return formula
+        .replace(/\\\[|\\\]/g, '')
+        .replace(/\\\(|\\\)/g, '')
+        .replace(/\$\$/g, '')
+        .replace(/\$/g, '')
+        .trim();
+    };
+
+    // Manejar todos los tipos de delimitadores LaTeX
+    const parts = text.split(/(\$\$.*?\$\$|\$.*?\$|\\\[.*?\\\]|\\\(.*?\\\))/gs);
+    
+    return parts.map((part: string, index: number) => {
+      // Detectar si es una fórmula matemática
+      const isDisplayMath = part.startsWith('$$') || part.startsWith('\\[');
+      const isInlineMath = part.startsWith('$') || part.startsWith('\\(');
+      
+      if (isDisplayMath || isInlineMath) {
+        const formula = cleanDelimiters(part);
+        try {
+          return (
+            <span key={index} className={`${isDisplayMath ? 'block my-4' : 'inline-block mx-1'}`}>
+              {isDisplayMath ? (
+                <BlockMath math={formula} errorColor="#FF0000" />
+              ) : (
+                <InlineMath math={formula} errorColor="#FF0000" />
+              )}
+            </span>
+          );
+        } catch (error) {
+          console.error('Error rendering LaTeX:', error, formula);
+          return <span key={index} className="text-red-500">{formula}</span>;
         }
-        return part;
-      });
-    }
-    return text;
+      }
+      
+      // Texto normal
+      return <span key={index}>{part}</span>;
+    });
   };
 
-  const isCorrect = hasAnswered && selectedAnswer === question.respuesta_correcta;
-  const isIncorrect = hasAnswered && selectedAnswer && selectedAnswer !== question.respuesta_correcta;
+  const isCorrect = hasAnswered && selectedAnswer === question.respuestaCorrecta.toString();
+  const isIncorrect = hasAnswered && selectedAnswer && selectedAnswer !== question.respuestaCorrecta.toString();
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-      <div className="flex items-center mb-4">
-        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-          question.categoria === "Historia" ? "bg-red-100 text-red-800" :
-          question.categoria === "Filosofía" ? "bg-purple-100 text-purple-800" :
-          question.categoria === "Física" ? "bg-blue-100 text-blue-800" :
-          "bg-green-100 text-green-800"
-        }`}>
-          {question.categoria}
-        </span>
-      </div>
-      
-      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">{formatText(question.pregunta)}</h3>
-      
-      <div className="space-y-3">
-        {question.opciones.map((option: string, index: number) => (
-          <button
-            key={index}
-            onClick={() => !hasAnswered && onSelectAnswer(option)}
-            disabled={hasAnswered}
-            className={`w-full text-left p-4 rounded-lg border transition-all ${
-              selectedAnswer === option && isCorrect ? "bg-green-100 border-green-500 text-green-800" :
-              selectedAnswer === option && isIncorrect ? "bg-red-100 border-red-500 text-red-800" :
-              selectedAnswer === option ? "bg-gray-100 border-gray-300" :
-              hasAnswered && option === question.respuesta_correcta ? "bg-green-50 border-green-300 text-green-800" :
-              "hover:bg-gray-50 border-gray-200"
-            }`}
-          >
-            <div className="flex items-center">
-              <span className={`flex-shrink-0 h-6 w-6 rounded-full flex items-center justify-center mr-3 ${
-                selectedAnswer === option && isCorrect ? "bg-green-500 text-white" :
-                selectedAnswer === option && isIncorrect ? "bg-red-500 text-white" :
-                selectedAnswer === option ? "bg-gray-300" :
-                hasAnswered && option === question.respuesta_correcta ? "bg-green-500 text-white" :
-                "bg-gray-200"
-              }`}>
-                {String.fromCharCode(65 + index)}
-              </span>
-              <span className="flex-grow text-gray-700">{formatText(option)}</span>
+    <div className="flex justify-between items-start gap-4">
+      {!isPremium && isClient && (
+        <div className="hidden lg:block w-[300px] h-[600px] bg-gray-100 rounded-lg flex-shrink-0">
+          <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-4829722017444918"
+            data-ad-slot="YYYYYYYY"
+            data-ad-format="vertical"
+            data-full-width-responsive="false">
+          </ins>
+        </div>
+      )}
+
+      <div className={`${isPremium ? 'w-full' : 'w-full lg:flex-1'}`}>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
+              question.categoria === "Història" ? "bg-red-100 text-red-800" :
+              question.categoria === "Filosofia" ? "bg-purple-100 text-purple-800" :
+              question.categoria === "Física" ? "bg-blue-100 text-blue-800" :
+              "bg-green-100 text-green-800"
+            }`}>
+              {question.categoria}
+            </span>
+          </div>
+          
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">{formatText(question.pregunta)}</h3>
+          
+          <div className="space-y-3">
+            {question.opciones.map((option: string, index: number) => (
+              <button
+                key={index}
+                onClick={() => !hasAnswered && onSelectAnswer(index.toString())}
+                disabled={hasAnswered}
+                className={`w-full text-left p-4 rounded-lg border transition-all ${
+                  selectedAnswer === index.toString() && isCorrect ? "bg-green-100 border-green-500 text-green-800" :
+                  selectedAnswer === index.toString() && isIncorrect ? "bg-red-100 border-red-500 text-red-800" :
+                  selectedAnswer === index.toString() ? "bg-gray-100 border-gray-300" :
+                  hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-50 border-green-300 text-green-800" :
+                  "hover:bg-gray-50 border-gray-200"
+                }`}
+              >
+                <div className="flex items-center">
+                  <span className={`flex-shrink-0 h-6 w-6 rounded-full flex items-center justify-center mr-3 ${
+                    selectedAnswer === index.toString() && isCorrect ? "bg-green-500 text-white" :
+                    selectedAnswer === index.toString() && isIncorrect ? "bg-red-500 text-white" :
+                    selectedAnswer === index.toString() ? "bg-gray-300" :
+                    hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-500 text-white" :
+                    "bg-gray-200"
+                  }`}>
+                    {String.fromCharCode(65 + index)}
+                  </span>
+                  <span className="flex-grow text-gray-700">{formatText(option)}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {hasAnswered && (
+            <div className="mt-6 space-y-4">
+              <div className={`p-4 rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'}`}>
+                <h4 className="font-semibold mb-2">Explicación:</h4>
+                <p className="text-gray-700">
+                  {formatText(question.explicacion)}
+                </p>
+              </div>
+              <button
+                onClick={() => onSelectAnswer('next')}
+                className="w-full bg-selectivi-yellow text-white py-3 rounded-lg hover:bg-selectivi-yellow/90 transition-colors"
+              >
+                Siguiente pregunta
+              </button>
             </div>
-          </button>
-        ))}
+          )}
+        </div>
       </div>
 
-      {hasAnswered && (
-        <div className="mt-6 space-y-4">
-          <div className={`p-4 rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'}`}>
-            <h4 className="font-semibold mb-2">Explicación:</h4>
-            <p className="text-gray-700">
-              {question.explicacion ? formatText(question.explicacion) : "La respuesta correcta es: " + formatText(question.respuesta_correcta)}
-            </p>
-          </div>
-          <button
-            onClick={() => onSelectAnswer('next')}
-            className="w-full bg-selectivi-yellow text-white py-3 rounded-lg hover:bg-selectivi-yellow/90 transition-colors"
-          >
-            Siguiente pregunta
-          </button>
+      {!isPremium && isClient && (
+        <div className="hidden lg:block w-[300px] h-[600px] bg-gray-100 rounded-lg flex-shrink-0">
+          <ins className="adsbygoogle"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-4829722017444918"
+            data-ad-slot="ZZZZZZZZ"
+            data-ad-format="vertical"
+            data-full-width-responsive="false">
+          </ins>
         </div>
       )}
     </div>
@@ -154,55 +274,47 @@ const Question: React.FC<QuestionProps> = ({
 // Componente de Onboarding
 const Onboarding: React.FC<{
   onComplete: (selectedSubjects: string[], totalQuestions: number) => void;
-}> = ({ onComplete }) => {
+  isPremium: boolean;
+}> = ({ onComplete, isPremium }) => {
+  const { data: session } = useSession() as { data: CustomSession | null };
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
-  const [totalQuestions, setTotalQuestions] = useState<number>(10);
-  const [maxQuestions, setMaxQuestions] = useState<number>(10);
+  const [totalQuestions, setTotalQuestions] = useState(1);
+  const [maxQuestions, setMaxQuestions] = useState(0);
+
+  // Calcular el número máximo de preguntas disponibles cuando cambian las asignaturas seleccionadas
+  useEffect(() => {
+    let availableQuestions = 0;
+    
+    selectedSubjects.forEach(subjectId => {
+      const category = subjectIdToCategory[subjectId];
+      const subjectQuestions = [...standardQuestions, ...(isPremium ? premiumQuestions : [])].filter(q => q.categoria === category);
+      availableQuestions += subjectQuestions.length;
+    });
+
+    setMaxQuestions(availableQuestions);
+    // Ajustar el número de preguntas seleccionadas si excede el nuevo máximo
+    setTotalQuestions(prev => Math.min(prev, availableQuestions));
+  }, [selectedSubjects, isPremium]);
 
   const handleSubjectToggle = (subjectId: string) => {
     setSelectedSubjects(prev => {
-      const newSelection = prev.includes(subjectId)
-        ? prev.filter(id => id !== subjectId)
-        : [...prev, subjectId];
-      
-      const categoryToSubjectId: Record<string, string> = {
-        'Matemáticas': 'mates',
-        'Física': 'fisica',
-        'Filosofía': 'filosofia',
-        'Química': 'quimica',
-        'Biología': 'biologia',
-        'Matemáticas CCSS': 'mates-aplicades',
-        'Geografia': 'geografia',
-        'Historia': 'historia'
-      };
-
-      const availableQuestions = availableSubjects.filter(subject => newSelection.includes(subject.id));
-
-      const newMaxQuestions = availableQuestions.length;
-      setMaxQuestions(newMaxQuestions);
-      setTotalQuestions(Math.min(totalQuestions, newMaxQuestions));
-      return newSelection;
+      if (prev.includes(subjectId)) {
+        return prev.filter(id => id !== subjectId);
+      } else {
+        return [...prev, subjectId];
+      }
     });
   };
 
   const handleComplete = () => {
-    if (selectedSubjects.length > 0) {
+    if (selectedSubjects.length > 0 && totalQuestions > 0) {
       onComplete(selectedSubjects, totalQuestions);
     }
   };
 
-  const groupedSubjects = availableSubjects.reduce((acc, subject) => {
-    if (!acc[subject.category]) {
-      acc[subject.category] = [];
-    }
-    acc[subject.category].push(subject);
-    return acc;
-  }, {} as Record<string, Subject[]>);
-
   return (
-    <div className="space-y-8">
-      {/* Selector de asignaturas */}
-      <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-3xl mx-auto">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6 space-y-8">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <h2 className="text-4xl font-bold">
@@ -215,69 +327,57 @@ const Onboarding: React.FC<{
         </div>
 
         <div className="space-y-6">
-          {Object.entries(groupedSubjects).map(([category, subjects]) => (
-            <div key={category} className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-3 text-gray-900">{category}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {subjects.map(subject => (
-                  <label
-                    key={subject.id}
-                    className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all ${
-                      selectedSubjects.includes(subject.id)
-                        ? 'border-selectivi-yellow bg-selectivi-yellow/10'
-                        : 'border-gray-200 hover:bg-gray-50'
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedSubjects.includes(subject.id)}
-                      onChange={() => handleSubjectToggle(subject.id)}
-                      className="w-4 h-4 rounded accent-selectivi-yellow focus:ring-selectivi-yellow focus:ring-2 focus:ring-offset-2"
-                    />
-                    <span className="ml-3 text-sm font-medium text-gray-700">
-                      {subject.name}
-                    </span>
-                  </label>
-                ))}
-              </div>
+          <div>
+            <h3 className="text-lg font-medium mb-4">Selecciona les assignatures</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {availableSubjects.map(subject => (
+                <button
+                  key={subject.id}
+                  onClick={() => handleSubjectToggle(subject.id)}
+                  className={`p-4 rounded-lg border transition-all ${
+                    selectedSubjects.includes(subject.id)
+                      ? 'bg-selectivi-yellow text-white border-selectivi-yellow'
+                      : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
+                  }`}
+                >
+                  {subject.name}
+                </button>
+              ))}
             </div>
-          ))}
+          </div>
 
-          {selectedSubjects.length > 0 && (
-            <div className="border rounded-lg p-4">
-              <h3 className="font-semibold text-lg mb-3 text-gray-900">Número de preguntes</h3>
-              <div className="flex items-center gap-4">
-                <input
-                  type="range"
-                  min="1"
-                  max={maxQuestions}
-                  value={totalQuestions}
-                  onChange={(e) => setTotalQuestions(parseInt(e.target.value))}
-                  className="flex-grow h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-selectivi-yellow [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:bg-selectivi-yellow [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:cursor-pointer [&::-ms-thumb]:bg-selectivi-yellow [&::-ms-thumb]:border-0 [&::-ms-thumb]:w-4 [&::-ms-thumb]:h-4 [&::-ms-thumb]:rounded-full [&::-ms-thumb]:cursor-pointer"
-                />
-                <span className="text-gray-700 font-medium">{totalQuestions}</span>
-              </div>
-              <p className="text-sm text-gray-500 mt-2">
-                Màxim disponible: {maxQuestions} preguntes
-              </p>
+          <div>
+            <h3 className="text-lg font-medium mb-4">Nombre de preguntes</h3>
+            <div className="flex items-center gap-4">
+              <input
+                type="range"
+                min={maxQuestions > 0 ? 1 : 0}
+                max={maxQuestions}
+                value={totalQuestions}
+                onChange={(e) => setTotalQuestions(Math.max(1, Number(e.target.value)))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-selectivi-yellow"
+                disabled={maxQuestions === 0}
+              />
+              <span className="text-gray-600 min-w-[4rem] text-right">
+                {maxQuestions > 0 ? `${totalQuestions} / ${maxQuestions}` : '0'}
+              </span>
             </div>
-          )}
-        </div>
+          </div>
 
-        <div className="mt-8 text-center">
           <button
             onClick={handleComplete}
-            disabled={selectedSubjects.length === 0}
-            className={`px-6 py-3 rounded-lg font-medium transition-all ${
-              selectedSubjects.length > 0
-                ? 'bg-selectivi-yellow hover:bg-selectivi-yellow/90 text-white'
+            disabled={selectedSubjects.length === 0 || maxQuestions === 0}
+            className={`w-full py-3 rounded-lg text-center transition-all ${
+              selectedSubjects.length > 0 && maxQuestions > 0
+                ? 'bg-selectivi-yellow text-white hover:bg-selectivi-yellow/90'
                 : 'bg-gray-100 text-gray-400 cursor-not-allowed'
             }`}
           >
-            Començar el test
+            Començar
           </button>
+
           {selectedSubjects.length === 0 && (
-            <p className="text-sm text-red-500 mt-2">
+            <p className="text-red-500 text-center text-sm">
               Selecciona almenys una assignatura per continuar
             </p>
           )}
@@ -290,129 +390,97 @@ const Onboarding: React.FC<{
 // Componente principal SeleTest
 export default function SeleTest() {
   const { data: session } = useSession() as { data: CustomSession | null };
-  const [questions, setQuestions] = useState<Question[]>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_questions');
-      return saved ? JSON.parse(saved) : [];
-    }
-    return [];
-  });
-  
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_currentIndex');
-      return saved ? parseInt(saved) : 0;
-    }
-    return 0;
-  });
-  
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_selectedAnswer');
-      return saved || null;
-    }
-    return null;
-  });
-  
-  const [hasAnswered, setHasAnswered] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_hasAnswered');
-      return saved === 'true';
-    }
-    return false;
-  });
-  
-  const [gameOver, setGameOver] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_gameOver');
-      return saved === 'true';
-    }
-    return false;
-  });
-  
-  const [score, setScore] = useState<number>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_score');
-      return saved ? parseInt(saved) : 0;
-    }
-    return 0;
-  });
-  
-  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_hasCompletedOnboarding');
-      return saved === 'true';
-    }
-    return false;
-  });
-  
-  const [selectedSubjectsFromOnboarding, setSelectedSubjectsFromOnboarding] = useState<string[]>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_selectedSubjects');
-      return saved ? JSON.parse(saved) : [];
-    }
-    return [];
-  });
-  
-  const [totalQuestionsRequested, setTotalQuestionsRequested] = useState<number>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('seletest_totalQuestions');
-      return saved ? parseInt(saved) : 10;
-    }
-    return 10;
-  });
+  const [isClient, setIsClient] = useState(false);
+  const [selectedSubtemas, setSelectedSubtemas] = useState<Record<string, string[]>>({});
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [hasAnswered, setHasAnswered] = useState<boolean>(false);
+  const [gameOver, setGameOver] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(0);
+  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState<boolean>(false);
+  const [selectedSubjectsFromOnboarding, setSelectedSubjectsFromOnboarding] = useState<string[]>([]);
+  const [totalQuestionsRequested, setTotalQuestionsRequested] = useState<number>(10);
 
-  // Guardar estados en localStorage cuando cambien
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('seletest_questions', JSON.stringify(questions));
-      localStorage.setItem('seletest_currentIndex', currentQuestionIndex.toString());
-      localStorage.setItem('seletest_selectedAnswer', selectedAnswer || '');
-      localStorage.setItem('seletest_hasAnswered', hasAnswered.toString());
-      localStorage.setItem('seletest_gameOver', gameOver.toString());
-      localStorage.setItem('seletest_score', score.toString());
-      localStorage.setItem('seletest_hasCompletedOnboarding', hasCompletedOnboarding.toString());
-      localStorage.setItem('seletest_selectedSubjects', JSON.stringify(selectedSubjectsFromOnboarding));
-      localStorage.setItem('seletest_totalQuestions', totalQuestionsRequested.toString());
-    }
-  }, [
-    questions,
-    currentQuestionIndex,
-    selectedAnswer,
-    hasAnswered,
-    gameOver,
-    score,
-    hasCompletedOnboarding,
-    selectedSubjectsFromOnboarding,
-    totalQuestionsRequested
-  ]);
+    setIsClient(true);
+  }, []);
 
-  // Efecto para cargar las preguntas iniciales solo si no hay preguntas guardadas
+  const loadInitialQuestions = async (subjects: string[], total: number) => {
+    try {
+      let availableQuestions: Question[] = [];
+      
+      // Para cada asignatura seleccionada
+      for (const subjectId of subjects) {
+        const category = subjectIdToCategory[subjectId];
+        const fileName = categoryToJsonFile[category];
+        
+        try {
+          // Cargar el archivo JSON correspondiente
+          const response = await fetch(`/data/questions/${fileName}`);
+          const data = await response.json();
+          
+          // Añadir las preguntas según el tipo de usuario
+          if (session?.user?.hasPremiumStatus) {
+            availableQuestions = [...availableQuestions, ...data.standard, ...data.premium];
+          } else {
+            availableQuestions = [...availableQuestions, ...data.standard];
+          }
+        } catch (error) {
+          console.error(`Error loading questions for ${category}:`, error);
+        }
+      }
+
+      // Eliminar duplicados
+      availableQuestions = Array.from(new Set(availableQuestions.map(q => JSON.stringify(q)))).map(str => JSON.parse(str));
+
+      if (availableQuestions.length === 0) {
+        console.warn('No se encontraron preguntas para los criterios seleccionados');
+        return;
+      }
+
+      // Mezclar y seleccionar preguntas
+      const shuffledQuestions = availableQuestions.sort(() => Math.random() - 0.5).slice(0, total);
+      setQuestions(shuffledQuestions);
+      setCurrentQuestionIndex(0);
+      setSelectedAnswer(null);
+      setHasAnswered(false);
+      setGameOver(false);
+      setScore(0);
+    } catch (error) {
+      console.error('Error loading questions:', error);
+      return [];
+    }
+  };
+
+  // Clean up effect
   useEffect(() => {
-    if (hasCompletedOnboarding && selectedSubjectsFromOnboarding.length > 0 && questions.length === 0) {
-      const categoryToSubjectId: Record<string, string> = {
-        'Matemáticas': 'mates',
-        'Física': 'fisica',
-        'Filosofía': 'filosofia',
-        'Química': 'quimica',
-        'Biología': 'biologia',
-        'Matemáticas CCSS': 'mates-aplicades',
-        'Geografia': 'geografia',
-        'Historia': 'historia'
-      };
+    if (!isClient) return;
+    
+    return () => {
+      localStorage.removeItem('seletest_questions');
+      localStorage.removeItem('seletest_currentIndex');
+      localStorage.removeItem('seletest_selectedAnswer');
+      localStorage.removeItem('seletest_hasAnswered');
+      localStorage.removeItem('seletest_gameOver');
+      localStorage.removeItem('seletest_score');
+      localStorage.removeItem('seletest_hasCompletedOnboarding');
+      localStorage.removeItem('seletest_selectedSubjects');
+      localStorage.removeItem('seletest_totalQuestions');
+    };
+  }, [isClient]);
 
-      // Usar el banco de preguntas según si el usuario es premium o no
-      const questionBank = session?.user?.hasPremiumStatus ? premiumQuestions : standardQuestions;
-
-      const filteredQuestions = questionBank.filter((question: Question) => {
-        const subjectId = categoryToSubjectId[question.categoria];
-        return selectedSubjectsFromOnboarding.includes(subjectId);
-      });
-
-      const shuffledQuestions = [...filteredQuestions].sort(() => Math.random() - 0.5);
-      setQuestions(shuffledQuestions.slice(0, totalQuestionsRequested));
-    }
-  }, [hasCompletedOnboarding, selectedSubjectsFromOnboarding, totalQuestionsRequested, questions.length, session?.user?.hasPremiumStatus]);
+  if (!isClient) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <NavbarMain />
+        <div className="flex-grow flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-selectivi-yellow"></div>
+        </div>
+        <FooterMain />
+      </div>
+    );
+  }
 
   const handleSelectAnswer = (answer: string) => {
     if (answer === 'next') {
@@ -420,10 +488,13 @@ export default function SeleTest() {
       return;
     }
 
-    setSelectedAnswer(answer);
-    setHasAnswered(true);
-    if (answer === questions[currentQuestionIndex].respuesta_correcta) {
-      setScore(prev => prev + 1);
+    if (!hasAnswered) {
+      const selectedIndex = parseInt(answer);
+      setSelectedAnswer(answer);
+      setHasAnswered(true);
+      if (selectedIndex === questions[currentQuestionIndex].respuestaCorrecta) {
+        setScore(prev => prev + 1);
+      }
     }
   };
 
@@ -472,7 +543,15 @@ export default function SeleTest() {
       <div className="min-h-screen flex flex-col bg-gray-50">
         <NavbarMain />
         <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-          <Onboarding onComplete={handleOnboardingComplete} />
+          <Onboarding
+            onComplete={(subjects, totalQuestions) => {
+              setSelectedSubjectsFromOnboarding(subjects);
+              setTotalQuestionsRequested(totalQuestions);
+              setHasCompletedOnboarding(true);
+              loadInitialQuestions(subjects, totalQuestions);
+            }}
+            isPremium={!!session?.user?.hasPremiumStatus}
+          />
         </div>
         <FooterMain />
       </div>
@@ -492,14 +571,14 @@ export default function SeleTest() {
                     Pregunta {currentQuestionIndex + 1} de {questions.length}
                   </h2>
                   <span className="text-gray-500">
-                    Puntuación: {score}/{currentQuestionIndex + (hasAnswered ? 1 : 0)}
+                    Puntuación: {score} / {questions.length}
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                   <div
                     className="bg-selectivi-yellow h-2 rounded-full transition-all duration-300"
                     style={{
-                      width: `${((currentQuestionIndex + (hasAnswered ? 1 : 0)) / questions.length) * 100}%`,
+                      width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
                     }}
                   ></div>
                 </div>

@@ -1,0 +1,198 @@
+{
+  "standard": [
+    {
+      "id": "s4",
+      "categoria": "Geografia",
+      "pregunta": "Quin dels següents problemes NO està directament associat a la pèrdua de cobertura vegetal?",
+      "opciones": [
+        "Erosió del sòl",
+        "Augment de la biodiversitat",
+        "Inundacions",
+        "Pèrdua d'hàbitats per a espècies animals"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La pèrdua de cobertura vegetal generalment redueix la biodiversitat en destruir hàbitats i alterar ecosistemes, no l'augment."
+    },
+    {
+      "id": "s5",
+      "categoria": "Geografia",
+      "pregunta": "Segons el document, què caracteritza el clima mediterrani semiàrid de Lleida?",
+      "opciones": [
+        "Precipitacions abundants tot l'any",
+        "Absència total de sequera estival",
+        "Hiverns humits i molt freds, estius càlids",
+        "Amplitud tèrmica molt baixa"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El clima de Lleida es descriu amb hiverns freds i humits, estius càlids, i una precipitació anual escassa (340 mm)."
+    },
+    {
+      "id": "s6",
+      "categoria": "Geografia",
+      "pregunta": "Quina d'aquestes províncies espanyoles es menciona com a exemple d'àrea amb escàs dinamisme econòmic i forta emigració?",
+      "opciones": [
+        "València",
+        "Barcelona",
+        "Madrid",
+        "Ourense"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Ourense, al nord-oest peninsular, és citada com a exemple de província amb baix dinamisme econòmic i històriques migracions."
+    },
+    {
+      "id": "s7",
+      "categoria": "Geografia",
+      "pregunta": "Quina conseqüència demogràfica es deriva de l'emigració juvenil en zones rurals?",
+      "opciones": [
+        "Augment de la natalitat",
+        "Accentuació de l'envelliment poblacional",
+        "Rejoveniment de la població",
+        "Equilibri entre grups d'edat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'emigració de joves agreuja l'envelliment demogràfic, ja que redueix la població en edat reproductiva i laboral."
+    }
+  ],
+  "premium": [
+    {
+      "id": "g01",
+      "categoria": "Geografia",
+      "subTema": "Clima",
+      "pregunta": "Quina característica NO correspon al clima mediterrani litoral de Barcelona?",
+      "opciones": [
+        "Estius càlids amb ambient xafogós",
+        "Precipitació mitjana anual d'uns 600 mm",
+        "Hiverns molt freds amb temperatures sota zero habitualment",
+        "Màxim pluviomètric a la tardor"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El clima mediterrani litoral de Barcelona es caracteritza per hiverns suaus (9-12°C) on pràcticament no gela mai al centre de la ciutat, no pas per hiverns molt freds."
+    },
+    {
+      "id": "g02",
+      "categoria": "Geografia",
+      "subTema": "Canvi climàtic",
+      "pregunta": "Quin dels següents NO és un efecte previst del canvi climàtic a Catalunya?",
+      "opciones": [
+        "Increment de les onades de calor",
+        "Augment d'episodis de precipitacions torrencials",
+        "Disminució del risc d'incendis forestals",
+        "Increment de nits tropicals i tòrrides"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El canvi climàtic provocarà estius més llargs i períodes més extensos de calor, augmentant el risc d'incendis forestals i les seves dimensions, no pas disminuint-lo."
+    },
+    {
+      "id": "g03",
+      "categoria": "Geografia",
+      "subTema": "Urbanisme i medi ambient",
+      "pregunta": "Quina conseqüència pot generar la pèrdua de coberta vegetal en zones costaneres?",
+      "opciones": [
+        "Millora en la preservació de la façana litoral",
+        "Increment de biodiversitat vegetal i animal",
+        "Risc d'erosió del sòl",
+        "Disminució del risc d'inundacions"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La pèrdua de coberta vegetal pot derivar en problemes d'erosió del sòl, ja que la vegetació ajuda a fixar-lo i a evitar que es perdi per acció del vent o l'aigua."
+    },
+    {
+      "id": "g04",
+      "categoria": "Geografia",
+      "subTema": "Vegetació",
+      "pregunta": "Quin tipus de vegetació trobem al pis o estatge alpí (entre 2.400 i 3.000 m) dels Pirineus?",
+      "opciones": [
+        "Pinedes de pi negre i avetoses",
+        "Boscos caducifolis",
+        "Prats alpins",
+        "Líquens i molses"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El pis o estatge alpí pot estar més de mig any cobert de neu, de manera que l'única vegetació que pot desenvolupar-s'hi és la que conformen els prats alpins."
+    },
+    {
+      "id": "g05",
+      "categoria": "Geografia",
+      "subTema": "Demografia",
+      "pregunta": "Quina conseqüència demogràfica principal ha generat l'emigració de població jove a les províncies del nord-oest peninsular?",
+      "opciones": [
+        "Augment de la natalitat",
+        "Accentuació de l'envelliment",
+        "Increment de la població total",
+        "Equilibri en la piràmide poblacional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'emigració de població jove accentua la tendència a l'envelliment, ja que és precisament aquest segment d'edat el que s'ha vist més afectat pels desplaçaments."
+    },
+    {
+      "id": "g06",
+      "categoria": "Geografia",
+      "subTema": "Paisatge cultural",
+      "pregunta": "Què entenem per paisatge cultural?",
+      "opciones": [
+        "Un espai natural protegit per llei",
+        "Un territori poc antropitzat amb riquesa biològica",
+        "El resultat de la interacció entre les activitats humanes i el medi natural",
+        "Un espai exclusivament urbà amb patrimoni artístic"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El paisatge cultural és el resultat de la interacció en el temps entre les activitats humanes i el medi natural, percebut i valorat per les seves qualitats culturals."
+    },
+    {
+      "id": "g07",
+      "categoria": "Geografia",
+      "subTema": "Clima",
+      "pregunta": "Quina característica defineix el clima mediterrani semiàrid de Lleida?",
+      "opciones": [
+        "Precipitacions abundants tot l'any",
+        "Baixa amplitud tèrmica entre estiu i hivern",
+        "Hiverns freds i humits, estius càlids",
+        "Absència total de sequera estival"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El clima mediterrani semiàrid de Lleida es caracteritza per hiverns freds i humits, estius càlids i una precipitació anual escassa (340 mm)."
+    },
+    {
+      "id": "g08",
+      "categoria": "Geografia",
+      "subTema": "Medi ambient",
+      "pregunta": "Quin valor tenen els últims espais naturalitzats de la costa Brava?",
+      "opciones": [
+        "Valor econòmic per permetre construir-hi habitatges",
+        "Valor ecològic per la seva diversitat biològica",
+        "Valor industrial per a la producció agrària",
+        "Valor energètic per la producció d'energia renovable"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els últims espais naturalitzats de la costa Brava tenen un important valor ecològic per la seva diversitat biològica i d'ecosistemes, amb una vegetació molt especialitzada adaptada a l'entorn."
+    },
+    {
+      "id": "g09",
+      "categoria": "Geografia",
+      "subTema": "Geografia econòmica",
+      "pregunta": "Per què les províncies del nord-oest peninsular han patit processos de despoblament?",
+      "opciones": [
+        "Per la seva gran industrialització",
+        "Per l'excés de turisme",
+        "Per l'escàs dinamisme econòmic i la reconversió de sectors tradicionals",
+        "Per les seves condicions climàtiques extremes"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Aquestes províncies han patit despoblament per tenir escàs dinamisme econòmic i haver patit durs processos de reconversió dels sectors econòmics com la indústria o la mineria."
+    },
+    {
+      "id": "g10",
+      "categoria": "Geografia",
+      "subTema": "Vegetació d'alta muntanya",
+      "pregunta": "Quin tipus de vegetació NO trobem al pis o estatge nival (per damunt dels 3.000 m)?",
+      "opciones": [
+        "Líquens",
+        "Molses",
+        "Plantes rupícoles",
+        "Pinedes de pi negre"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Al pis o estatge nival només creixen petites plantes rupícoles adaptades a les roques, com líquens i molses. Les pinedes de pi negre es troben al pis subalpí (1.200-2.400 m)."
+    }
+  ]
+}

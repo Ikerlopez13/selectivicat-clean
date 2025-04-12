@@ -1,0 +1,182 @@
+{
+  "standard": [
+    {
+      "id": "s21",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "En una urna con 2 bolas 'A', 2 bolas 'S' y 5 bolas con otras letras, ¿cuál es la probabilidad de sacar dos bolas con letras diferentes en dos extracciones sin reemplazo?",
+      "opciones": [
+        "$ \\frac{1}{36}$",
+        "$ \\frac{17}{18}$",
+        "$ \\frac{5}{9}$",
+        "$ \\frac{7}{8}$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La probabilidad de que ambas letras sean iguales es $2 \\times \\left(\\frac{2}{9} \\times \\frac{1}{8}\\right) = \\frac{1}{36}$. Por lo tanto, la probabilidad de que sean diferentes es $1 - \\frac{1}{36} = \\frac{35}{36}$."
+    },
+    {
+      "id": "s23",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\mu = 20$ y desviación típica $\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
+      "opciones": [
+        "0.5",
+        "0.6827",
+        "0.75",
+        "0.9545"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para una variable normal, el intervalo $[\\mu - \\sigma, \\mu + \\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\leq X \\leq 25) = P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) = 0.6827$."
+    },
+    {
+      "id": "s20",
+      "categoria": "Matemàtiques",
+      "subTema": "Derivades",
+      "pregunta": "En un sistema de ecuaciones lineales con matriz ampliada \\[\\begin{pmatrix} 4 & 2 & -1 & 4 \\\\ 1 & -1 & k & 3 \\\\ 3 & 3 & 0 & 1 \\end{pmatrix}\\], ¿para qué valor de $k$ el sistema es compatible indeterminado?",
+      "opciones": [
+        "0",
+        "-1",
+        "1",
+        "2"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El sistema es compatible indeterminado cuando el determinante de la matriz de coeficientes es cero. Resolviendo $\\det(M) = -6k - 6 = 0$, se obtiene $k = -1$."
+    },
+    {
+      "id": "s22",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Quines són les dimensions òptimes d'un tancat rectangular de 8m² que minimitza el cost de la tanca, sabent que el cost per metre de tanca és de 10€ per la base i 15€ per l'altura?",
+      "opciones": [
+        "Base = 4m, Altura = 2m",
+        "Base = 3m, Altura = 2.67m",
+        "Base = 2m, Altura = 4m",
+        "Base = 2.5m, Altura = 3.2m"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Sigui $x$ la base i $y$ l'altura. Tenim que $xy = 8$ i volem minimitzar $C = 10x + 15y$. Substituint $y = \\frac{8}{x}$ en la funció de cost: $C = 10x + 15\\frac{8}{x}$. Derivant i igualant a zero: $C' = 10 - \\frac{120}{x^2} = 0 \\Rightarrow x = \\sqrt{12} \\approx 3$m. Per tant, $y = \\frac{8}{3} \\approx 2.67$m."
+    },
+    {
+      "id": "s30",
+      "categoria": "Matemàtiques",
+      "subTema": "Càlcul Integral",
+      "pregunta": "Quin és el valor de $\\int_0^1 (3x^2 + 2x) dx$?",
+      "opciones": [
+        "1",
+        "1.5",
+        "2",
+        "2.5"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Integrant: $x^3 + x^2$ avaluat entre 0 i 1 dóna $(1 + 1) - (0 + 0) = 2$."
+    },
+    {
+      "id": "m13",
+      "categoria": "Matemàtiques",
+      "subTema": "Càlcul",
+      "pregunta": "Calculeu els coeficients $a$, $b$, $c$ i $d$ de la funció $f(x) = ax^3 + bx^2 + cx + d$ si sabem que l'equació de la recta tangent a la gràfica de la funció $f$ en el punt d'inflexió $(2, 0)$ és $y = -2x + 4$ i que la funció té un extrem relatiu en el punt de la gràfica d'abscissa $x = 1$.",
+      "opciones": [
+        "$a = 2, b = -6, c = 0, d = 4$",
+        "$a = 1, b = -3, c = 0, d = 2$",
+        "$a = 1, b = -2, c = 0, d = 1$",
+        "$a = 2, b = -4, c = 0, d = 2$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Seguim aquests passos:\\n1) Derivades successives: $f'(x) = 3ax^2 + 2bx + c$, $f''(x) = 6ax + 2b$\\n2) Com $(2,0)$ és punt d'inflexió: $f(2) = 0 \\rightarrow 8a + 4b + 2c + d = 0$ i $f''(2) = 0 \\rightarrow 12a + 2b = 0$\\n3) El pendent en $x = 2$ és $-2$, per tant: $f'(2) = -2 \\rightarrow 12a + 4b + c = -2$\\n4) Hi ha un extrem en $x = 1$, per tant: $f'(1) = 0 \\rightarrow 3a + 2b + c = 0$\\nResolent el sistema obtenim $a = 2$, $b = -6$, $c = 0$, $d = 4$"
+    },
+    {
+      "id": "m17",
+      "categoria": "Matemàtiques",
+      "subTema": "Càlcul",
+      "pregunta": "Considereu les funcions $f(x) = -x^2 + x + 6$ i $g(x) = -9x + 3x^2$. Trobeu l'equació de la recta tangent a la funció $f(x)$ en el punt $(-2, 0)$ i indiqueu per quins punts passa aquesta recta.",
+      "opciones": [
+        "$y = 5x + 10$, passa pels punts $(0,10)$ i $(-2,0)$",
+        "$y = -5x - 10$, passa pels punts $(0,-10)$ i $(-2,0)$",
+        "$y = 5x - 10$, passa pels punts $(2,0)$ i $(-2,0)$",
+        "$y = -5x + 10$, passa pels punts $(2,10)$ i $(-2,0)$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "1) Calculem la derivada: $f'(x) = -2x + 1$\\n2) Avaluem en $x = -2$: $f'(-2) = -2(-2) + 1 = 5$\\n3) Com que passa pel punt $(-2,0)$, l'equació és $y = 5(x-(-2)) + 0 = 5x + 10$\\n4) Per comprovar els punts, quan $x = 0$: $y = 10$, per tant passa per $(0,10)$ i $(-2,0)$."
+    }
+  ],
+  "premium": [
+    {
+      "id": "p1",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "En una fàbrica de components electrònics, el 5% dels productes són defectuosos. S'utilitza un sistema de control de qualitat que detecta el 98% dels components defectuosos, però també classifica erròniament el 3% dels components bons com a defectuosos.\n\na) Si s'escull un component a l'atzar, quina és la probabilitat que sigui classificat com a defectuós?\n\nb) Si un component ha estat classificat com a defectuós pel sistema, quina és la probabilitat que realment sigui defectuós?\n\nc) Si un component ha estat classificat com a bo pel sistema, quina és la probabilitat que realment sigui defectuós?",
+      "opciones": [
+        "a) 0,0785  b) 0,6242  c) 0,0010",
+        "a) 0,0785  b) 0,4235  c) 0,0012"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Sigui $D$ l'esdeveniment \"el component és defectuós\" i $C$ l'esdeveniment \"el component és classificat com a defectuós\".\n\nDe l'enunciat tenim: $P(D) = 0,05$, $P(C|D) = 0,98$ i $P(C|\\overline{D}) = 0,03$.\n\na) $P(C) = P(C|D) \\cdot P(D) + P(C|\\overline{D}) \\cdot P(\\overline{D}) = 0,98 \\cdot 0,05 + 0,03 \\cdot 0,95 = 0,049 + 0,0285 = 0,0785$.\n\nb) Apliquem la fórmula de Bayes: $P(D|C) = \\frac{P(C|D) \\cdot P(D)}{P(C)} = \\frac{0,98 \\cdot 0,05}{0,0785} = \\frac{0,049}{0,0785} = 0,6242$.\n\nc) Calculem $P(D|\\overline{C}) = \\frac{P(\\overline{C}|D) \\cdot P(D)}{P(\\overline{C})} = \\frac{0,02 \\cdot 0,05}{1-0,0785} = \\frac{0,001}{0,9215} = 0,0010$."
+    },
+    {
+      "id": "p2",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "En un problema d'optimització de cablejat, si la funció de cost és $P(x) = 125(12 - x) + 250\\sqrt{81 + x^2}$, on $x$ és la distància en metres, troba el valor de $x$ que minimitza el cost total.",
+      "opciones": [
+        "x = 6m",
+        "x = 8m",
+        "x = 9m",
+        "x = 12m"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Derivem la funció de cost: $P'(x) = -125 + \\frac{250x}{\\sqrt{81 + x^2}}$. Igualant a zero: $-125 + \\frac{250x}{\\sqrt{81 + x^2}} = 0 \\Rightarrow \\frac{250x}{\\sqrt{81 + x^2}} = 125 \\Rightarrow \\frac{250x}{125} = \\sqrt{81 + x^2} \\Rightarrow 2x = \\sqrt{81 + x^2} \\Rightarrow 4x^2 = 81 + x^2 \\Rightarrow 3x^2 = 81 \\Rightarrow x = 6$m."
+    },
+    {
+      "id": "p5",
+      "categoria": "Matemàtiques",
+      "subTema": "Càlcul",
+      "pregunta": "Considereu la funció \\( f(x) = \\frac{2 \\ln x}{x} \\), definida per a \\( x > 0 \\).\n\na) Estudieu-ne els màxims i els mínims, i les zones de creixement i de decreixement.\n\nb) Aquesta funció té asímptotes? Feu un esbós de la seva gràfica.\n\nc) Calculeu l'equació de la recta tangent a la gràfica de \\( y = f(x) \\) en el punt d'abscissa \\( x = 1 \\).",
+      "opciones": [
+        "\\( f(x) \\) té un màxim en \\( x = e \\) i és creixent en \\( (0, e) \\) i decreixent en \\( (e, +\\infty) \\).",
+        "\\( f(x) \\) té asímptotes verticals a \\( x = 0 \\) i horitzontals a \\( y = 0 \\).",
+        "L'equació de la recta tangent és \\( y = -2x + 2 \\)."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Derivant i igualant a zero, \\( f'(x) = \\frac{1 - \\ln x}{x^2} = 0 \\) ens dóna \\( x = e \\). La derivada segona és negativa, indicant un màxim. La funció és creixent en \\( (0, e) \\) i decreixent en \\( (e, +\\infty) \\)."
+    },
+    {
+      "id": "p6",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "L'Andreu posa les nou boles que es mostren a continuació dins d'una bossa: B, A, Y, E, S, F, A, N, S.\n\na) A continuació, treu de la bossa dues boles a l'atzar, una darrere l'altra i sense reemplaçament. Calculeu la probabilitat que la primera bola sigui una A o una E.\n\nb) L'Andreu torna a posar totes les boles a la bossa i en treu cinc a l'atzar, una darrere l'altra, però ara amb reemplaçament. Calculeu la probabilitat que no hagi tret cap A.",
+      "opciones": [
+        "\\( \\frac{1}{3} \\) i 0.284",
+        "\\( \\frac{2}{9} \\) i 0.5",
+        "\\( \\frac{1}{4} \\) i 0.308"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Per a la primera part, hi ha 3 casos favorables (2 A i 1 E) sobre 9 possibles, per tant, la probabilitat és \\( \\frac{3}{9} = \\frac{1}{3} \\). Per a la segona part, la probabilitat de no treure cap A en cinc extraccions amb reemplaçament és \\( \\left(\\frac{7}{9}\\right)^5 = 0.284 \\)."
+    },
+    {
+      "id": "p7",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "En una bossa hi ha 10 boles numerades de l'1 al 10. Es treuen tres boles a l'atzar, una darrere l'altra i sense reemplaçament. Calculeu la probabilitat que totes les boles siguin nombres parells.",
+      "opciones": [
+        "\\( \\frac{1}{12} \\)",
+        "\\( \\frac{1}{15} \\)",
+        "\\( \\frac{1}{20} \\)"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hi ha 5 boles parells (2, 4, 6, 8, 10). La probabilitat de treure tres boles parells és \\( \\frac{5}{10} \\times \\frac{4}{9} \\times \\frac{3}{8} = \\frac{1}{15} \\)."
+    },
+    {
+      "id": "p8",
+      "categoria": "Matemàtiques",
+      "subTema": "Geometria",
+      "pregunta": "Considereu els punts A = (1, 2, 3) i B = (-3, -2, 3).\n\na) Calculeu l'equació del pla π que és perpendicular a la recta AB i que passa pel punt mitjà entre A i B.\n\nb) Calculeu les distàncies de A i de B al pla π i comproveu que són iguals.\n\nc) Sigui C = (-7, 6, 3). El triangle ABC és isòsceles? Calculeu la seva àrea.",
+      "opciones": [
+        "El pla és x + y + 1 = 0, les distàncies són iguals, i l'àrea és 24 u².",
+        "El pla és x - y + 1 = 0, les distàncies són diferents, i l'àrea és 12 u².",
+        "El pla és x + y - 1 = 0, les distàncies són iguals, i l'àrea és 18 u²."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El pla buscat ha de ser perpendicular al vector AB = (-4, -4, 0), per tant, té equació de la forma x + y + 0z + D = 0. A més, ha de passar pel punt mitjà (1/2)(A + B) = (-1, 0, 3); per tant, -1 + D = 0 i es tracta del pla d'equació x + y + 1 = 0. Les distàncies de A i B al pla són iguals, i el triangle ABC és isòsceles amb àrea 24 u²."
+    }
+  ]
+}

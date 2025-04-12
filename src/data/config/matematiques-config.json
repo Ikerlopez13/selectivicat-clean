@@ -1,0 +1,24 @@
+{
+  "subTemas": [
+    {
+      "id": "probabilitat",
+      "name": "Probabilitat",
+      "subCategories": []
+    },
+    {
+      "id": "optimitzacio",
+      "name": "Optimització",
+      "subCategories": []
+    },
+    {
+      "id": "calcul",
+      "name": "Càlcul",
+      "subCategories": []
+    },
+    {
+      "id": "geometria",
+      "name": "Geometria",
+      "subCategories": []
+    }
+  ]
+} 
