@@ -1,15 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 interface AdSenseAdProps {
   slot: string;
-  style?: React.CSSProperties;
 }
 
-export default function AdSenseAd({ slot, style }: AdSenseAdProps) {
-  const adRef = useRef<HTMLModElement>(null);
-
+export default function AdSenseAd({ slot }: AdSenseAdProps) {
   useEffect(() => {
     try {
       const adsbygoogle = (window as any).adsbygoogle || [];
@@ -20,19 +17,14 @@ export default function AdSenseAd({ slot, style }: AdSenseAdProps) {
   }, []);
 
   return (
-    <div className="bg-gray-50 rounded-lg overflow-hidden">
+    <div className="w-full">
       <ins
         className="adsbygoogle"
-        style={{
-          display: 'block',
-          width: '160px',
-          height: '600px',
-          ...style
-        }}
+        style={{ display: 'block' }}
         data-ad-client="ca-pub-4829722017444918"
         data-ad-slot={slot}
-        data-ad-format="vertical"
-        data-full-width-responsive="false"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
       />
     </div>
   );

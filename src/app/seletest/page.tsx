@@ -543,7 +543,7 @@ export default function SeleTest() {
 
             <div className="flex justify-between items-start gap-4 max-w-[1600px] mx-auto">
               {!isPremium && isClient && (
-                <div className="hidden xl:block w-[160px] sticky top-24">
+                <div className="hidden xl:block w-full max-w-[300px]">
                   <AdSenseAd slot="1859826246" />
                 </div>
               )}
@@ -609,7 +609,7 @@ export default function SeleTest() {
               </div>
 
               {!isPremium && isClient && (
-                <div className="hidden xl:block w-[160px] sticky top-24">
+                <div className="hidden xl:block w-full max-w-[300px]">
                   <AdSenseAd slot="1859826246" />
                 </div>
               )}
