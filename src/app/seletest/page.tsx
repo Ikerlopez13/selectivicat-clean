@@ -407,28 +407,56 @@ const Onboarding: React.FC<{
 // Componente principal SeleTest
 export default function SeleTest() {
   const { data: session } = useSession() as { data: CustomSession | null };
+  const isPremium = !!session?.user?.hasPremiumStatus;
   const [isClient, setIsClient] = useState(false);
-  const [selectedSubtemas, setSelectedSubtemas] = useState<Record<string, string[]>>({});
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [hasAnswered, setHasAnswered] = useState<boolean>(false);
-  const [gameOver, setGameOver] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
-  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState<boolean>(false);
-  const [selectedSubjectsFromOnboarding, setSelectedSubjectsFromOnboarding] = useState<string[]>([]);
-  const [totalQuestionsRequested, setTotalQuestionsRequested] = useState<number>(10);
+  const [hasAnswered, setHasAnswered] = useState(false);
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const loadInitialQuestions = async (subjects: string[], total: number) => {
+  const handleSelectAnswer = (answer: string) => {
+    if (!hasAnswered) {
+      setSelectedAnswer(answer);
+      setHasAnswered(true);
+      if (parseInt(answer) === questions[currentQuestionIndex]?.respuestaCorrecta) {
+        setScore(prev => prev + 1);
+      }
+    }
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(prev => prev + 1);
+      setSelectedAnswer(null);
+      setHasAnswered(false);
+    } else {
+      setGameOver(true);
+    }
+  };
+
+  const handleRestart = () => {
+    setShowOnboarding(true);
+    setQuestions([]);
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setHasAnswered(false);
+    setGameOver(false);
+    setScore(0);
+  };
+
+  const loadInitialQuestions = async (selectedSubjects: string[], totalQuestions: number) => {
     try {
       let availableQuestions: Question[] = [];
       
       // Para cada asignatura seleccionada
-      for (const subjectId of subjects) {
+      for (const subjectId of selectedSubjects) {
         const category = subjectIdToCategory[subjectId];
         const fileName = categoryToJsonFile[category];
         
@@ -457,7 +485,7 @@ export default function SeleTest() {
       }
 
       // Mezclar y seleccionar preguntas
-      const shuffledQuestions = availableQuestions.sort(() => Math.random() - 0.5).slice(0, total);
+      const shuffledQuestions = availableQuestions.sort(() => Math.random() - 0.5).slice(0, totalQuestions);
       setQuestions(shuffledQuestions);
       setCurrentQuestionIndex(0);
       setSelectedAnswer(null);
@@ -470,244 +498,83 @@ export default function SeleTest() {
     }
   };
 
-  // Clean up effect
-  useEffect(() => {
-    if (!isClient) return;
-    
-    return () => {
-      localStorage.removeItem('seletest_questions');
-      localStorage.removeItem('seletest_currentIndex');
-      localStorage.removeItem('seletest_selectedAnswer');
-      localStorage.removeItem('seletest_hasAnswered');
-      localStorage.removeItem('seletest_gameOver');
-      localStorage.removeItem('seletest_score');
-      localStorage.removeItem('seletest_hasCompletedOnboarding');
-      localStorage.removeItem('seletest_selectedSubjects');
-      localStorage.removeItem('seletest_totalQuestions');
-    };
-  }, [isClient]);
-
-  if (!isClient) {
-    return (
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        <NavbarMain />
-        <div className="flex-grow flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-selectivi-yellow"></div>
-        </div>
-        <FooterMain />
-      </div>
-    );
-  }
-
-  const handleSelectAnswer = (answer: string) => {
-    if (answer === 'next') {
-      handleNextQuestion();
-      return;
-    }
-
-    if (!hasAnswered) {
-      const selectedIndex = parseInt(answer);
-      setSelectedAnswer(answer);
-      setHasAnswered(true);
-      if (selectedIndex === questions[currentQuestionIndex].respuestaCorrecta) {
-        setScore(prev => prev + 1);
-      }
-    }
-  };
-
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setHasAnswered(false);
-    } else {
-      setGameOver(true);
-    }
-  };
-
-  const handleRestart = () => {
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('seletest_questions');
-      localStorage.removeItem('seletest_currentIndex');
-      localStorage.removeItem('seletest_selectedAnswer');
-      localStorage.removeItem('seletest_hasAnswered');
-      localStorage.removeItem('seletest_gameOver');
-      localStorage.removeItem('seletest_score');
-      localStorage.removeItem('seletest_hasCompletedOnboarding');
-      localStorage.removeItem('seletest_selectedSubjects');
-      localStorage.removeItem('seletest_totalQuestions');
-    }
-
-    setHasCompletedOnboarding(false);
-    setSelectedSubjectsFromOnboarding([]);
-    setQuestions([]);
-    setCurrentQuestionIndex(0);
-    setSelectedAnswer(null);
-    setHasAnswered(false);
-    setGameOver(false);
-    setScore(0);
-    setTotalQuestionsRequested(10);
-  };
-
   const handleOnboardingComplete = (selectedSubjects: string[], totalQuestions: number) => {
-    setSelectedSubjectsFromOnboarding(selectedSubjects);
-    setTotalQuestionsRequested(totalQuestions);
-    setHasCompletedOnboarding(true);
+    setShowOnboarding(false);
+    loadInitialQuestions(selectedSubjects, totalQuestions);
   };
-
-  if (!hasCompletedOnboarding) {
-    return (
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        <NavbarMain />
-        <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-          <Onboarding
-            onComplete={(subjects, totalQuestions) => {
-              setSelectedSubjectsFromOnboarding(subjects);
-              setTotalQuestionsRequested(totalQuestions);
-              setHasCompletedOnboarding(true);
-              loadInitialQuestions(subjects, totalQuestions);
-            }}
-            isPremium={!!session?.user?.hasPremiumStatus}
-          />
-        </div>
-        <FooterMain />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-        <div className="container mx-auto">
-          {!gameOver ? (
-            <>
-              <div className="mb-6 max-w-3xl mx-auto">
-                <div className="flex justify-between items-center">
-                  <h2 className="text-xl font-bold">
-                    Pregunta {currentQuestionIndex + 1} de {questions.length}
-                  </h2>
-                  <span className="text-gray-500">
-                    Puntuación: {score} / {questions.length}
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                  <div
-                    className="bg-selectivi-yellow h-2 rounded-full transition-all duration-300"
-                    style={{
-                      width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
-                    }}
-                  ></div>
-                </div>
+        {showOnboarding ? (
+          <Onboarding onComplete={handleOnboardingComplete} isPremium={isPremium} />
+        ) : !gameOver ? (
+          <div className="container mx-auto">
+            <div className="mb-6 max-w-3xl mx-auto">
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-bold">
+                  Pregunta {currentQuestionIndex + 1} de {questions.length}
+                </h2>
+                <span className="text-gray-500">
+                  Puntuación: {score} / {questions.length}
+                </span>
               </div>
-
-              <Question
-                question={questions[currentQuestionIndex]}
-                selectedAnswer={selectedAnswer}
-                onSelectAnswer={handleSelectAnswer}
-                hasAnswered={hasAnswered}
-              />
-            </>
-          ) : (
-            <div className="text-center bg-white rounded-xl shadow-lg p-8 md:p-12">
-              <div className="inline-flex justify-center items-center p-4 bg-selectivi-yellow/20 rounded-full mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-selectivi-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
+              <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                <div
+                  className="bg-selectivi-yellow h-2 rounded-full transition-all duration-300"
+                  style={{
+                    width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
+                  }}
+                ></div>
               </div>
-              <h2 className="text-3xl font-bold mb-4">¡Test completado!</h2>
-              <div className="space-y-4 mb-8">
-                <p className="text-xl">
-                  Tu puntuación: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
-                </p>
-                {(() => {
-                  // Calcular la nota proyectada sobre 14 usando regla de tres
-                  const notaProyectada = (score / questions.length) * 14;
-                  const notaRedondeada = Math.round(notaProyectada * 100) / 100;
-                  
-                  let mensaje = '';
-                  let colorClase = '';
-                  let emoji = '';
-                  
-                  if (notaRedondeada >= 13) {
-                    mensaje = '¡Excelente! Vas muy bien preparado/a para la Selectividad. ¡Sigue así!';
-                    colorClase = 'text-green-600';
-                    emoji = '🏆';
-                  } else if (notaRedondeada >= 11) {
-                    mensaje = '¡Muy bien! Estás en buen camino. Sigue practicando para mejorar aún más.';
-                    colorClase = 'text-green-500';
-                    emoji = '🌟';
-                  } else if (notaRedondeada >= 9) {
-                    mensaje = 'Vas por buen camino, pero aún hay margen de mejora. ¡No dejes de practicar!';
-                    colorClase = 'text-yellow-600';
-                    emoji = '💪';
-                  } else if (notaRedondeada >= 7) {
-                    mensaje = 'Necesitas repasar un poco más. ¡Con práctica lo conseguirás!';
-                    colorClase = 'text-orange-500';
-                    emoji = '📚';
-                  } else {
-                    mensaje = 'Te recomendamos dedicar más tiempo al estudio. ¡No te desanimes, con esfuerzo lo lograrás!';
-                    colorClase = 'text-red-500';
-                    emoji = '✍️';
-                  }
-
-                  const handleShare = () => {
-                    const urgencyMessages = [
-                      "🔥 Més de 1000 estudiants ja han provat el seu nivell!",
-                      "⚡️ Falten menys de 100 dies per la Selectivitat!",
-                      "🎯 Descobreix el teu potencial ara!",
-                      "📊 Uneix-te als estudiants més preparats!"
-                    ];
-
-                    const ctaMessages = [
-                      "No esperis més! Descobreix la teva predicció 👇",
-                      "És el moment de preparar-te! Fes el test ara 👇",
-                      "Comprova el teu nivell abans que sigui tard! 👇",
-                      "La Selectivitat s'acosta! Prepara't ara 👇"
-                    ];
-
-                    const randomUrgency = urgencyMessages[Math.floor(Math.random() * urgencyMessages.length)];
-                    const randomCta = ctaMessages[Math.floor(Math.random() * ctaMessages.length)];
-
-                    const shareText = `${emoji} He aconseguit un ${notaRedondeada.toFixed(2)}/14 a SeleTest!\n\n${mensaje}\n\n${randomUrgency}\n${randomCta}\n\nhttps://selectivicat-clean.vercel.app/seletest`;
-                    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
-                    window.open(whatsappUrl, '_blank');
-                  };
-                  
-                  return (
-                    <>
-                      <p className="text-lg font-semibold">
-                        Proyección para Selectividad:{' '}
-                        <span className={colorClase}>{notaRedondeada.toFixed(2)}</span> / 14
-                      </p>
-                      <p className={`text-base ${colorClase}`}>
-                        {mensaje}
-                      </p>
-                      <div className="mt-6 space-y-4">
-                        <button 
-                          onClick={handleShare}
-                          className="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-                        >
-                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                          </svg>
-                          Compartir en WhatsApp
-                        </button>
-                      </div>
-                    </>
-                  );
-                })()}
-              </div>
-
-              <button 
-                onClick={handleRestart}
-                className="px-6 py-3 rounded-lg font-medium bg-selectivi-yellow hover:bg-selectivi-yellow/90 text-white transition-all"
-              >
-                Volver a intentar
-              </button>
             </div>
-          )}
-        </div>
+
+            <div className="flex justify-between items-start gap-4 max-w-[1600px] mx-auto">
+              {!isPremium && isClient && (
+                <div className="hidden xl:block w-[160px] sticky top-24">
+                  <AdSenseAd slot="1859826246" />
+                </div>
+              )}
+
+              <div className={`flex-1 max-w-3xl mx-auto`}>
+                <Question
+                  question={questions[currentQuestionIndex]}
+                  selectedAnswer={selectedAnswer}
+                  onSelectAnswer={handleSelectAnswer}
+                  hasAnswered={hasAnswered}
+                />
+                {hasAnswered && (
+                  <button
+                    onClick={handleNextQuestion}
+                    className="w-full mt-4 bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-4 rounded-md transition duration-300"
+                  >
+                    Siguiente pregunta
+                  </button>
+                )}
+              </div>
+
+              {!isPremium && isClient && (
+                <div className="hidden xl:block w-[160px] sticky top-24">
+                  <AdSenseAd slot="1859826246" />
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="text-center bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <h2 className="text-3xl font-bold mb-4">¡Test completado!</h2>
+            <p className="text-xl mb-8">
+              Tu puntuación: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
+            </p>
+            <button
+              onClick={handleRestart}
+              className="bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-md transition duration-300"
+            >
+              Volver a empezar
+            </button>
+          </div>
+        )}
       </div>
       <FooterMain />
     </div>
