@@ -455,37 +455,22 @@ export default function SeleTest() {
     try {
       let availableQuestions: Question[] = [];
       
-      // Para cada asignatura seleccionada
       for (const subjectId of selectedSubjects) {
         const category = subjectIdToCategory[subjectId];
-        const fileName = categoryToJsonFile[category];
-        
-        try {
-          // Cargar el archivo JSON correspondiente
-          const response = await fetch(`/data/questions/${fileName}`);
-          const data = await response.json();
-          
-          // Añadir las preguntas según el tipo de usuario
-          if (session?.user?.hasPremiumStatus) {
-            availableQuestions = [...availableQuestions, ...data.standard, ...data.premium];
-          } else {
-            availableQuestions = [...availableQuestions, ...data.standard];
+        if (category) {
+          const fileName = categoryToJsonFile[category];
+          if (fileName) {
+            const response = await fetch(`/data/questions/${fileName}`);
+            const data = await response.json();
+            availableQuestions = [...availableQuestions, ...data];
           }
-        } catch (error) {
-          console.error(`Error loading questions for ${category}:`, error);
         }
       }
 
-      // Eliminar duplicados
-      availableQuestions = Array.from(new Set(availableQuestions.map(q => JSON.stringify(q)))).map(str => JSON.parse(str));
+      const shuffledQuestions = availableQuestions
+        .sort(() => Math.random() - 0.5)
+        .slice(0, totalQuestions);
 
-      if (availableQuestions.length === 0) {
-        console.warn('No se encontraron preguntas para los criterios seleccionados');
-        return;
-      }
-
-      // Mezclar y seleccionar preguntas
-      const shuffledQuestions = availableQuestions.sort(() => Math.random() - 0.5).slice(0, totalQuestions);
       setQuestions(shuffledQuestions);
       setCurrentQuestionIndex(0);
       setSelectedAnswer(null);
@@ -494,7 +479,6 @@ export default function SeleTest() {
       setScore(0);
     } catch (error) {
       console.error('Error loading questions:', error);
-      return [];
     }
   };
 
@@ -537,20 +521,63 @@ export default function SeleTest() {
                 </div>
               )}
 
-              <div className={`flex-1 max-w-3xl mx-auto`}>
-                <Question
-                  question={questions[currentQuestionIndex]}
-                  selectedAnswer={selectedAnswer}
-                  onSelectAnswer={handleSelectAnswer}
-                  hasAnswered={hasAnswered}
-                />
+              <div className={`flex-1 max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6`}>
+                <div className="mb-4">
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                    questions[currentQuestionIndex]?.categoria === "Història" ? "bg-red-100 text-red-800" :
+                    questions[currentQuestionIndex]?.categoria === "Filosofia" ? "bg-purple-100 text-purple-800" :
+                    questions[currentQuestionIndex]?.categoria === "Física" ? "bg-blue-100 text-blue-800" :
+                    "bg-green-100 text-green-800"
+                  }`}>
+                    {questions[currentQuestionIndex]?.categoria}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-6">
+                  {formatText(questions[currentQuestionIndex]?.pregunta || '')}
+                </h3>
+
+                <div className="space-y-3">
+                  {questions[currentQuestionIndex]?.opciones.map((opcion, index) => {
+                    const letter = String.fromCharCode(65 + index);
+                    const isSelected = selectedAnswer === index.toString();
+                    const isCorrect = hasAnswered && index === questions[currentQuestionIndex].respuestaCorrecta;
+                    const isIncorrect = hasAnswered && isSelected && !isCorrect;
+
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => handleSelectAnswer(index.toString())}
+                        disabled={hasAnswered}
+                        className={`w-full text-left p-4 rounded-lg transition-all ${
+                          isSelected ? 'border-2 ' : 'border '
+                        }${
+                          isCorrect ? 'bg-green-50 border-green-500 text-green-700' :
+                          isIncorrect ? 'bg-red-50 border-red-500 text-red-700' :
+                          isSelected ? 'bg-blue-50 border-blue-500' :
+                          'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        <span className="font-semibold mr-2">{letter}.</span>
+                        {formatText(opcion)}
+                      </button>
+                    );
+                  })}
+                </div>
+
                 {hasAnswered && (
-                  <button
-                    onClick={handleNextQuestion}
-                    className="w-full mt-4 bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-4 rounded-md transition duration-300"
-                  >
-                    Siguiente pregunta
-                  </button>
+                  <div className="mt-6">
+                    <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                      <h4 className="font-semibold mb-2">Explicación:</h4>
+                      <p>{questions[currentQuestionIndex]?.explicacion}</p>
+                    </div>
+                    <button
+                      onClick={handleNextQuestion}
+                      className="w-full bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
+                    >
+                      Siguiente pregunta
+                    </button>
+                  </div>
                 )}
               </div>
 
@@ -562,14 +589,14 @@ export default function SeleTest() {
             </div>
           </div>
         ) : (
-          <div className="text-center bg-white rounded-xl shadow-lg p-8 md:p-12">
+          <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">¡Test completado!</h2>
             <p className="text-xl mb-8">
               Tu puntuación: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
             </p>
             <button
               onClick={handleRestart}
-              className="bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-md transition duration-300"
+              className="bg-selectivi-yellow hover:bg-yellow-500 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
             >
               Volver a empezar
             </button>
