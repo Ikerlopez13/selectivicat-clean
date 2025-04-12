@@ -106,6 +106,46 @@ const subjectIdToCategory: Record<string, string> = {
 // Obtener la lista de matemáticas
 const matematiquesList = getMatematiquesList();
 
+// Utility function for formatting text with LaTeX
+const formatText = (text: string) => {
+  if (!text) return '';
+  
+  const cleanDelimiters = (formula: string) => {
+    return formula
+      .replace(/\\\[|\\\]/g, '')
+      .replace(/\\\(|\\\)/g, '')
+      .replace(/\$\$/g, '')
+      .replace(/\$/g, '')
+      .trim();
+  };
+
+  const parts = text.split(/(\$\$.*?\$\$|\$.*?\$|\\\[.*?\\\]|\\\(.*?\\\))/gs);
+  
+  return parts.map((part: string, index: number) => {
+    const isDisplayMath = part.startsWith('$$') || part.startsWith('\\[');
+    const isInlineMath = part.startsWith('$') || part.startsWith('\\(');
+    
+    if (isDisplayMath || isInlineMath) {
+      const formula = cleanDelimiters(part);
+      try {
+        return (
+          <span key={index} className={`${isDisplayMath ? 'block my-4' : 'inline-block mx-1'}`}>
+            {isDisplayMath ? (
+              <BlockMath math={formula} errorColor="#FF0000" />
+            ) : (
+              <InlineMath math={formula} errorColor="#FF0000" />
+            )}
+          </span>
+        );
+      } catch (error) {
+        console.error('Error rendering LaTeX:', error, formula);
+        return <span key={index} className="text-red-500">{formula}</span>;
+      }
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
+
 // Componente para mostrar una pregunta individual
 const Question: React.FC<QuestionProps> = ({ 
   question,
@@ -147,50 +187,6 @@ const Question: React.FC<QuestionProps> = ({
   }, [isPremium, isClient]);
 
   if (!question) return null;
-
-  const formatText = (text: string) => {
-    if (!text) return '';
-    
-    // Función auxiliar para limpiar delimitadores
-    const cleanDelimiters = (formula: string) => {
-      return formula
-        .replace(/\\\[|\\\]/g, '')
-        .replace(/\\\(|\\\)/g, '')
-        .replace(/\$\$/g, '')
-        .replace(/\$/g, '')
-        .trim();
-    };
-
-    // Manejar todos los tipos de delimitadores LaTeX
-    const parts = text.split(/(\$\$.*?\$\$|\$.*?\$|\\\[.*?\\\]|\\\(.*?\\\))/gs);
-    
-    return parts.map((part: string, index: number) => {
-      // Detectar si es una fórmula matemática
-      const isDisplayMath = part.startsWith('$$') || part.startsWith('\\[');
-      const isInlineMath = part.startsWith('$') || part.startsWith('\\(');
-      
-      if (isDisplayMath || isInlineMath) {
-        const formula = cleanDelimiters(part);
-        try {
-          return (
-            <span key={index} className={`${isDisplayMath ? 'block my-4' : 'inline-block mx-1'}`}>
-              {isDisplayMath ? (
-                <BlockMath math={formula} errorColor="#FF0000" />
-              ) : (
-                <InlineMath math={formula} errorColor="#FF0000" />
-              )}
-            </span>
-          );
-        } catch (error) {
-          console.error('Error rendering LaTeX:', error, formula);
-          return <span key={index} className="text-red-500">{formula}</span>;
-        }
-      }
-      
-      // Texto normal
-      return <span key={index}>{part}</span>;
-    });
-  };
 
   const isCorrect = hasAnswered && selectedAnswer === question.respuestaCorrecta.toString();
   const isIncorrect = hasAnswered && selectedAnswer && selectedAnswer !== question.respuestaCorrecta.toString();
@@ -486,6 +482,18 @@ export default function SeleTest() {
     setShowOnboarding(false);
     loadInitialQuestions(selectedSubjects, totalQuestions);
   };
+
+  if (!isClient) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <NavbarMain />
+        <div className="flex-grow flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-selectivi-yellow"></div>
+        </div>
+        <FooterMain />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
