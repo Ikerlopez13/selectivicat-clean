@@ -12,6 +12,7 @@ import { standardQuestions, premiumQuestions, premiumOnlyQuestions } from "@/dat
 import type { Question } from "@/types/questions";
 import { matematiques } from '@/data/questions/matematiques';
 import { getMatematiquesList } from '@/utils/matematiques-utils';
+import AdSenseAd from '@/components/AdSenseAd';
 
 // At the top of the file, add this line after the imports
 const isProd = process.env.NODE_ENV === 'production';
@@ -121,8 +122,24 @@ const Question: React.FC<QuestionProps> = ({
     // Intentar cargar los anuncios cuando el componente se monta
     if (!isPremium && isClient) {
       try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        const adsbygoogle = (window as any).adsbygoogle || [];
+        const pushAd = () => {
+          try {
+            adsbygoogle.push({});
+          } catch (error) {
+            console.error('Error pushing ad:', error);
+          }
+        };
+
+        // Intentar cargar los anuncios varias veces
+        pushAd(); // Para el primer anuncio
+        pushAd(); // Para el segundo anuncio
+
+        // Backup: intentar cargar de nuevo después de un breve retraso
+        setTimeout(() => {
+          pushAd();
+          pushAd();
+        }, 2000);
       } catch (error) {
         console.error('Error loading ads:', error);
       }
@@ -181,18 +198,18 @@ const Question: React.FC<QuestionProps> = ({
   return (
     <div className="flex justify-between items-start gap-4">
       {!isPremium && isClient && (
-        <div className="hidden lg:block w-[300px] h-[600px] bg-gray-100 rounded-lg flex-shrink-0">
+        <div className="hidden xl:block w-[160px] sticky top-24">
           <ins className="adsbygoogle"
-            style={{ display: 'block' }}
+            style={{ display: 'block', width: '160px', height: '600px' }}
             data-ad-client="ca-pub-4829722017444918"
-            data-ad-slot="YYYYYYYY"
+            data-ad-slot="1859826246"
             data-ad-format="vertical"
             data-full-width-responsive="false">
           </ins>
         </div>
       )}
 
-      <div className={`${isPremium ? 'w-full' : 'w-full lg:flex-1'}`}>
+      <div className={`${isPremium ? 'w-full max-w-3xl mx-auto' : 'flex-1 max-w-3xl'}`}>
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <div className="flex items-center gap-2 mb-4">
             <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
@@ -257,11 +274,11 @@ const Question: React.FC<QuestionProps> = ({
       </div>
 
       {!isPremium && isClient && (
-        <div className="hidden lg:block w-[300px] h-[600px] bg-gray-100 rounded-lg flex-shrink-0">
+        <div className="hidden xl:block w-[160px] sticky top-24">
           <ins className="adsbygoogle"
-            style={{ display: 'block' }}
+            style={{ display: 'block', width: '160px', height: '600px' }}
             data-ad-client="ca-pub-4829722017444918"
-            data-ad-slot="ZZZZZZZZ"
+            data-ad-slot="1859826246"
             data-ad-format="vertical"
             data-full-width-responsive="false">
           </ins>
@@ -562,10 +579,10 @@ export default function SeleTest() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto">
           {!gameOver ? (
             <>
-              <div className="mb-6">
+              <div className="mb-6 max-w-3xl mx-auto">
                 <div className="flex justify-between items-center">
                   <h2 className="text-xl font-bold">
                     Pregunta {currentQuestionIndex + 1} de {questions.length}

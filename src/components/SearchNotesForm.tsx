@@ -20,30 +20,19 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
   const [showSuggestions, setShowSuggestions] = useState(false);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
+  // Effect for initialization and handling initial search
   useEffect(() => {
     setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="animate-pulse">
-        <div className="h-12 bg-gray-200 rounded mb-4"></div>
-        <div className="h-12 bg-gray-200 rounded mb-4"></div>
-        <div className="h-64 bg-gray-200 rounded"></div>
-      </div>
-    );
-  }
-
-  // Realizar búsqueda automática si hay términos iniciales
-  useEffect(() => {
+    
+    // Perform initial search if terms are provided
     if (initialSearchTerm || initialUniversity) {
-      const searchResults = searchDegrees(initialSearchTerm, initialUniversity);
-      setSearchResults(searchResults);
+      const results = searchDegrees(initialSearchTerm, initialUniversity);
+      setSearchResults(results);
       setHasSearched(true);
     }
   }, [initialSearchTerm, initialUniversity]);
 
-  // Manejar clics fuera del componente de sugerencias para cerrarlo
+  // Effect for handling clicks outside suggestions
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
@@ -57,17 +46,15 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
     };
   }, []);
 
-  // Actualizar sugerencias cuando cambia el término de búsqueda
+  // Effect for updating suggestions
   useEffect(() => {
     if (searchTerm.length > 1) {
-      // Obtener nombres únicos de grados que coincidan con el término de búsqueda
       const matchingDegrees = degrees
         .filter(degree => 
           degree.name.toLowerCase().includes(searchTerm.toLowerCase())
         )
         .map(degree => degree.name);
       
-      // Eliminar duplicados y limitar a 5 sugerencias
       const uniqueSuggestions = Array.from(new Set(matchingDegrees)).slice(0, 5);
       setSuggestions(uniqueSuggestions);
       setShowSuggestions(uniqueSuggestions.length > 0);
@@ -76,6 +63,16 @@ export default function SearchNotesForm({ initialSearchTerm = '', initialUnivers
       setShowSuggestions(false);
     }
   }, [searchTerm]);
+
+  if (!mounted) {
+    return (
+      <div className="animate-pulse">
+        <div className="h-12 bg-gray-200 rounded mb-4"></div>
+        <div className="h-12 bg-gray-200 rounded mb-4"></div>
+        <div className="h-64 bg-gray-200 rounded"></div>
+      </div>
+    );
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
