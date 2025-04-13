@@ -1,0 +1,734 @@
+{
+  "standard": [
+    {
+      "id": "cat-1",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Com es deu dir?",
+      "opciones": [
+        "CI",
+        "CN",
+        "CC",
+        "CD"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "És un Complement Directe (CD) perquè es pot substituir pel pronom 'ho': 'No ho sé'"
+    },
+    {
+      "id": "cat-2",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Es va fer passar per estranger.",
+      "opciones": [
+        "CD",
+        "CC",
+        "CPred",
+        "Atribut"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És un Complement Predicatiu (CPred) perquè complementa alhora al verb i al subjecte, indicant una qualitat o estat."
+    },
+    {
+      "id": "cat-3",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Ara mateix passa la teva amiga per davant de casa.",
+      "opciones": [
+        "Subjecte",
+        "CI",
+        "CD",
+        "CC"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En aquesta oració, 'la teva amiga' és el Subjecte perquè és qui realitza l'acció de passar."
+    },
+    {
+      "id": "cat-4",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Se'l van mirar de cap a peus.",
+      "opciones": [
+        "CI",
+        "CD",
+        "CN",
+        "CC"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "És un Complement Circumstancial (CC) de manera, ja que indica com es va realitzar l'acció de mirar."
+    },
+    {
+      "id": "cat-5",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Si estàs malalta no podràs pas venir.",
+      "opciones": [
+        "CC",
+        "CPred",
+        "Atribut",
+        "CD"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És un Atribut perquè acompanya al verb 'estar' i indica una qualitat del subjecte."
+    },
+    {
+      "id": "cat-6",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Tots em tenien per bona persona.",
+      "opciones": [
+        "CC",
+        "CD",
+        "CI",
+        "CPred"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "És un Complement Predicatiu (CPred) perquè complementa alhora al verb i al CD, indicant una qualitat."
+    },
+    {
+      "id": "cat-7",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Aquestes taques queden per sempre estampades a la roba.",
+      "opciones": [
+        "CN",
+        "CC",
+        "CPred",
+        "CD"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És un Complement Predicatiu (CPred) perquè complementa al verb 'quedar' i al subjecte 'taques', indicant el seu estat."
+    },
+    {
+      "id": "cat-8",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "La notícia que m'acabes de donar m'ha deixat astorada.",
+      "opciones": [
+        "CPred",
+        "CD",
+        "CN",
+        "CC"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "És un Complement Directe (CD) perquè es pot substituir pel pronom 'la': 'La m'acabes de donar'"
+    },
+    {
+      "id": "cat-9",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Es troba força malament.",
+      "opciones": [
+        "CD",
+        "CI",
+        "CC",
+        "Atribut"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És un Complement Circumstancial (CC) de manera, ja que indica com es troba."
+    },
+    {
+      "id": "cat-10",
+      "categoria": "Català",
+      "subTema": "Gramàtica",
+      "pregunta": "Em va ensenyar la màquina amb què treballava.",
+      "opciones": [
+        "CC",
+        "CN",
+        "CI",
+        "CD"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "És un Complement Circumstancial (CC) d'instrument, ja que indica amb quin objecte es realitza l'acció."
+    },
+    {
+      "id": "cat-fon-1",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'estipendi'?",
+      "opciones": [
+        "[ŋ] nasal velar",
+        "[m] nasal labiodental",
+        "[n] nasal palatal",
+        "[d] oclusiu dental sonor"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "A la paraula 'estipendi' trobem el so [d] que és un so oclusiu dental sonor."
+    },
+    {
+      "id": "cat-fon-2",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'emfitèutic'?",
+      "opciones": [
+        "[m] nasal labiodental",
+        "[ŋ] nasal velar",
+        "[n] nasal palatal",
+        "[β] aproximant bilabial"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "A la paraula 'emfitèutic' trobem el so [m] que és un so nasal labiodental."
+    },
+    {
+      "id": "cat-fon-3",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'sincrònic'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[ɲ] nasal velar",
+        "[n] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'sincrònic' trobem el so [ɲ] que és un so nasal velar."
+    },
+    {
+      "id": "cat-fon-4",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'granja'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[ŋ] nasal velar",
+        "[ɲ] nasal palatal",
+        "[n] nasal alveolar"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'granja' trobem el so [ɲ] que és un so nasal palatal."
+    },
+    {
+      "id": "cat-fon-5",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'esquadra'?",
+      "opciones": [
+        "[g] oclusiu velar sonor",
+        "[k] oclusiu velar sord",
+        "[d] oclusiu dental sonor",
+        "[t] oclusiu dental sord"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'esquadra' trobem el so [k] que és un so oclusiu velar sord."
+    },
+    {
+      "id": "cat-fon-6",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'netejavidres'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'netejavidres' trobem el so [ʒ] que és un so fricatiu palatal sonor."
+    },
+    {
+      "id": "cat-fon-7",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'benveure'?",
+      "opciones": [
+        "[n] nasal alveolar",
+        "[m] nasal bilabial",
+        "[ɲ] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'benveure' trobem el so [m] que és un so nasal bilabial."
+    },
+    {
+      "id": "cat-fon-8",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'acoblar'?",
+      "opciones": [
+        "[β] aproximant bilabial",
+        "[v] fricatiu labiodental",
+        "[f] fricatiu labiodental",
+        "[p] oclusiu bilabial"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "A la paraula 'acoblar' trobem el so [β] que és un so aproximant bilabial."
+    },
+    {
+      "id": "cat-fon-9",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'vindràs'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʃ] fricatiu palatal sord",
+        "[ʒ] fricatiu palatal sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'vindràs' trobem el so [z] que és un so fricatiu alveolar sonor."
+    },
+    {
+      "id": "cat-fon-10",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'marejol'?",
+      "opciones": [
+        "[ʃ] fricatiu palatal sord",
+        "[s] fricatiu alveolar sord",
+        "[ʒ] fricatiu palatal sonor",
+        "[z] fricatiu alveolar sonor"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'marejol' trobem el so [ʒ] que és un so fricatiu palatal sonor."
+    },
+    {
+      "id": "cat-fon-11",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'carranxa'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[ŋ] nasal velar",
+        "[ɲ] nasal palatal",
+        "[n] nasal alveolar"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'carranxa' trobem el so [ɲ] que és un so nasal palatal."
+    },
+    {
+      "id": "cat-fon-12",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'empostissat'?",
+      "opciones": [
+        "[z] fricatiu alveolar sonor",
+        "[s] fricatiu alveolar sord",
+        "[ʃ] fricatiu palatal sord",
+        "[ʒ] fricatiu palatal sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'empostissat' trobem el so [s] que és un so fricatiu alveolar sord."
+    },
+    {
+      "id": "cat-fon-13",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'convuls'?",
+      "opciones": [
+        "[n] nasal alveolar",
+        "[m] nasal bilabial",
+        "[ɲ] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'convuls' trobem el so [m] que és un so nasal bilabial."
+    },
+    {
+      "id": "cat-fon-14",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'objectivar'?",
+      "opciones": [
+        "[p] oclusiu bilabial sord",
+        "[b] oclusiu bilabial sonor",
+        "[t] oclusiu dental sord",
+        "[d] oclusiu dental sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'objectivar' trobem el so [b] que és un so oclusiu bilabial sonor."
+    },
+    {
+      "id": "cat-fon-15",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'orenga'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[ŋ] nasal velar",
+        "[ɲ] nasal palatal",
+        "[n] nasal alveolar"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'orenga' trobem el so [ŋ] que és un so nasal velar."
+    },
+    {
+      "id": "cat-fon-16",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'revenja'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'revenja' trobem el so [ʒ] que és un so fricatiu palatal sonor."
+    },
+    {
+      "id": "cat-fon-17",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'agressivitat'?",
+      "opciones": [
+        "[β] aproximant bilabial",
+        "[v] fricatiu labiodental",
+        "[f] fricatiu labiodental sord",
+        "[p] oclusiu bilabial sord"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "A la paraula 'agressivitat' trobem el so [β] que és un so aproximant bilabial."
+    },
+    {
+      "id": "cat-fon-18",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'faig menjar'?",
+      "opciones": [
+        "[ʃ] fricatiu palatal sord",
+        "[ʒ] fricatiu palatal sonor",
+        "[dʒ] africat palatal sonor",
+        "[tʃ] africat palatal sord"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'faig menjar' trobem el so [dʒ] que és un so africat palatal sonor."
+    },
+    {
+      "id": "cat-fon-19",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'mitjapunta'?",
+      "opciones": [
+        "[tʃ] africat palatal sord",
+        "[ʃ] fricatiu palatal sord",
+        "[ʒ] fricatiu palatal sonor",
+        "[dʒ] africat palatal sonor"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "A la paraula 'mitjapunta' trobem el so [dʒ] que és un so africat palatal sonor."
+    },
+    {
+      "id": "cat-fon-20",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'circumferència'?",
+      "opciones": [
+        "[m] nasal labiodental",
+        "[n] nasal alveolar",
+        "[ɲ] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "A la paraula 'circumferència' trobem el so [m] que és un so nasal labiodental."
+    },
+    {
+      "id": "cat-fon-21",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'joguinejar'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'joguinejar' trobem el so [ʒ] que és un so fricatiu palatal sonor."
+    },
+    {
+      "id": "cat-fon-22",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'garatgista'?",
+      "opciones": [
+        "[tʃ] africat palatal sord",
+        "[ʃ] fricatiu palatal sord",
+        "[dʒ] africat palatal sonor",
+        "[ʒ] fricatiu palatal sonor"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'garatgista' trobem el so [dʒ] que és un so africat palatal sonor."
+    },
+    {
+      "id": "cat-fon-23",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'metzina'?",
+      "opciones": [
+        "[ts] africat alveolar sord",
+        "[dz] africat alveolar sonor",
+        "[tʃ] africat palatal sord",
+        "[dʒ] africat palatal sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'metzina' trobem el so [dz] que és un so africat alveolar sonor."
+    },
+    {
+      "id": "cat-fon-24",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'gros'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʃ] fricatiu palatal sord",
+        "[ʒ] fricatiu palatal sonor"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "A la paraula 'gros' trobem el so [s] que és un so fricatiu alveolar sord."
+    },
+    {
+      "id": "cat-fon-25",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'fluix'?",
+      "opciones": [
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord",
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'fluix' trobem el so [ʃ] que és un so fricatiu palatal sord."
+    },
+    {
+      "id": "cat-fon-26",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'llegenda'?",
+      "opciones": [
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor",
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'llegenda' trobem el so [ʒ] que és un so fricatiu palatal sonor."
+    },
+    {
+      "id": "cat-fon-27",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'quètxup'?",
+      "opciones": [
+        "[t] oclusiu dental sord",
+        "[d] oclusiu dental sonor",
+        "[p] oclusiu bilabial sord",
+        "[b] oclusiu bilabial sonor"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'quètxup' trobem el so [p] que és un so oclusiu bilabial sord."
+    },
+    {
+      "id": "cat-fon-28",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'monolingüe'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[n] nasal alveolar",
+        "[ɲ] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "A la paraula 'monolingüe' trobem el so [ŋ] que és un so nasal velar."
+    },
+    {
+      "id": "cat-fon-29",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'baix'?",
+      "opciones": [
+        "[ʒ] fricatiu palatal sonor",
+        "[ʃ] fricatiu palatal sord",
+        "[s] fricatiu alveolar sord",
+        "[z] fricatiu alveolar sonor"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "A la paraula 'baix' trobem el so [ʃ] que és un so fricatiu palatal sord."
+    },
+    {
+      "id": "cat-fon-30",
+      "categoria": "Català",
+      "subTema": "Fonètica",
+      "pregunta": "Quin so consonàntic trobem a la paraula 'aranja'?",
+      "opciones": [
+        "[m] nasal bilabial",
+        "[n] nasal alveolar",
+        "[ɲ] nasal palatal",
+        "[ŋ] nasal velar"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "A la paraula 'aranja' trobem el so [ɲ] que és un so nasal palatal."
+    },
+    {
+      "id": "cat-sub-1",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Ja esteu tips, per tant, passarem als cafès'?",
+      "opciones": [
+        "Subordinada substantiva",
+        "Subordinada de relatiu",
+        "Subordinada consecutiva",
+        "Subordinada causal"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És una oració subordinada consecutiva perquè la locució 'per tant' expressa una conseqüència del que s'ha dit abans."
+    },
+    {
+      "id": "cat-sub-2",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Fa uns pastissos tan bons que tothom repeteix'?",
+      "opciones": [
+        "Subordinada causal",
+        "Subordinada final",
+        "Subordinada temporal",
+        "Subordinada consecutiva"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "És una oració subordinada consecutiva perquè la construcció 'tan... que' expressa una conseqüència de la qualitat dels pastissos."
+    },
+    {
+      "id": "cat-sub-3",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Penso, per tant, existeixo'?",
+      "opciones": [
+        "Subordinada temporal",
+        "Subordinada causal",
+        "Subordinada consecutiva",
+        "Subordinada condicional"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És una oració subordinada consecutiva perquè la locució 'per tant' expressa una conseqüència lògica del pensament."
+    },
+    {
+      "id": "cat-sub-4",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Vam anar on ens havíeu indicat'?",
+      "opciones": [
+        "Subordinada locativa",
+        "Subordinada temporal",
+        "Subordinada modal",
+        "Subordinada causal"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "És una oració subordinada locativa perquè 'on' introdueix una subordinada que indica el lloc on es va realitzar l'acció."
+    },
+    {
+      "id": "cat-sub-5",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Fins que no arribi l'estiu no podreu tornar'?",
+      "opciones": [
+        "Subordinada causal",
+        "Subordinada temporal",
+        "Subordinada condicional",
+        "Subordinada final"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una oració subordinada temporal perquè la locució 'fins que' indica el moment temporal fins al qual no es podrà realitzar l'acció."
+    },
+    {
+      "id": "cat-sub-6",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Treballen més que tots els altres junts'?",
+      "opciones": [
+        "Subordinada consecutiva",
+        "Subordinada comparativa",
+        "Subordinada modal",
+        "Subordinada causal"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una oració subordinada comparativa perquè estableix una comparació de superioritat mitjançant 'més que'."
+    },
+    {
+      "id": "cat-sub-7",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Ella sempre treballa més hores que la resta de companys'?",
+      "opciones": [
+        "Subordinada temporal",
+        "Subordinada consecutiva",
+        "Subordinada comparativa",
+        "Subordinada modal"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És una oració subordinada comparativa perquè estableix una comparació de superioritat mitjançant 'més... que'."
+    },
+    {
+      "id": "cat-sub-8",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Ho ha fet perquè ho poguessis充分利用'?",
+      "opciones": [
+        "Subordinada final",
+        "Subordinada causal",
+        "Subordinada temporal",
+        "Subordinada condicional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una oració subordinada final perquè 'perquè' introdueix la finalitat o el propòsit de l'acció principal."
+    },
+    {
+      "id": "cat-sub-9",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Com sigui que no canviaràs d'opinió, no cal que en parlem més'?",
+      "opciones": [
+        "Subordinada condicional",
+        "Subordinada temporal",
+        "Subordinada causal",
+        "Subordinada consecutiva"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "És una oració subordinada causal perquè 'com sigui que' introdueix la causa o el motiu pel qual no cal parlar-ne més."
+    },
+    {
+      "id": "cat-sub-10",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "Quin tipus d'oració subordinada trobem a 'Sortirem a caminar sempre que no plogui'?",
+      "opciones": [
+        "Subordinada temporal",
+        "Subordinada condicional",
+        "Subordinada causal",
+        "Subordinada final"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una oració subordinada condicional perquè 'sempre que' introdueix la condició necessària per realitzar l'acció principal."
+    }
+  ],
+  "premium": [
+    {
+      "id": "cat-p1",
+      "categoria": "Català",
+      "subTema": "Literatura",
+      "pregunta": "Quin és l'autor de 'La plaça del Diamant'?",
+      "opciones": [
+        "Salvador Espriu",
+        "Joan Maragall",
+        "Mercè Rodoreda",
+        "Josep Pla"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'La plaça del Diamant' és una novel·la escrita per Mercè Rodoreda, publicada l'any 1962. És considerada una de les obres més importants de la literatura catalana del segle XX."
+    },
+    {
+      "id": "cat-p2",
+      "categoria": "Català",
+      "subTema": "Literatura",
+      "pregunta": "Quin d'aquests autors pertany al Modernisme català?",
+      "opciones": [
+        "Ausiàs March",
+        "Salvador Espriu",
+        "Josep Carner",
+        "Joan Maragall"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Joan Maragall és un dels màxims representants del Modernisme català, moviment cultural de finals del segle XIX i principis del XX."
+    }
+  ]
+} 

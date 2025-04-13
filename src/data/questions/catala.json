@@ -1,0 +1,145 @@
+{
+  "standard": [
+    {
+      "id": "cat1",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "Identifica la funció sintàctica del sintagma subratllat: 'No sé com es deu dir.'",
+      "opciones": [
+        "Complement Directe",
+        "Complement Indirecte",
+        "Complement Predicatiu",
+        "Complement Circumstancial"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El sintagma 'com es deu dir' funciona com a Complement Directe (CD) del verb 'saber' en forma negativa."
+    },
+    {
+      "id": "cat2",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "En la frase 'Es va fer passar per estranger', quin tipus de Complement Predicatiu (CPred) hi ha?",
+      "opciones": [
+        "CPred del Subjecte",
+        "CPred del CD",
+        "CPred de l'Atribut",
+        "No hi ha CPred"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "'Per estranger' és un Complement Predicatiu del Subjecte que complementa al subjecte a través del verb pronominal 'fer-se passar'."
+    },
+    {
+      "id": "cat3",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "A la frase 'Ara mateix passa la teva amiga per davant de casa', quin tipus de Complement és 'per davant de casa'?",
+      "opciones": [
+        "Complement Directe",
+        "Complement de Règim",
+        "Complement Circumstancial de Lloc",
+        "Complement Predicatiu"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Per davant de casa' és un Complement Circumstancial de Lloc (CCL) que indica on passa l'acció."
+    },
+    {
+      "id": "cat4",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "En la frase 'Se'l van mirar de cap a peus', quina funció sintàctica realitza 'de cap a peus'?",
+      "opciones": [
+        "Complement de Règim",
+        "Complement Directe",
+        "Complement Circumstancial de Mode",
+        "Complement Predicatiu"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'De cap a peus' és un Complement Circumstancial de Mode (CCM) que indica com es realitza l'acció de mirar."
+    },
+    {
+      "id": "cat5",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "A la frase 'Si estàs malalta no podràs pas venir', quin tipus de subordinada hi ha?",
+      "opciones": [
+        "Subordinada Substantiva",
+        "Subordinada Adjectiva",
+        "Subordinada Adverbial Condicional",
+        "Subordinada Adverbial Causal"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Si estàs malalta' és una subordinada adverbial condicional que expressa una condició per a l'acció principal."
+    },
+    {
+      "id": "cat6",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "En la frase 'Tots em tenien per bona persona', quina funció sintàctica fa 'per bona persona'?",
+      "opciones": [
+        "Complement Directe",
+        "Complement Predicatiu",
+        "Atribut",
+        "Complement de Règim"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "'Per bona persona' funciona com a Complement Predicatiu (CPred) que complementa al CD 'em' a través del verb 'tenir'."
+    },
+    {
+      "id": "cat7",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "A la frase 'Aquestes taques queden per sempre estampades a la roba', quin tipus de complement és 'a la roba'?",
+      "opciones": [
+        "Complement Directe",
+        "Complement Circumstancial de Lloc",
+        "Complement de Règim",
+        "Complement Indirecte"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "'A la roba' és un Complement Circumstancial de Lloc (CCL) que indica on queden les taques estampades."
+    },
+    {
+      "id": "cat8",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "En la frase 'La notícia que m'acabes de donar m'ha deixat astorada', quin tipus de proposició és 'que m'acabes de donar'?",
+      "opciones": [
+        "Subordinada Substantiva",
+        "Subordinada Adverbial",
+        "Subordinada Adjectiva o de Relatiu",
+        "Coordinada Copulativa"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Que m'acabes de donar' és una subordinada adjectiva o de relatiu que complementa al substantiu 'notícia'."
+    },
+    {
+      "id": "cat9",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "A la frase 'Es troba força malament', quin tipus de complement és 'força malament'?",
+      "opciones": [
+        "Complement Predicatiu",
+        "Atribut",
+        "Complement Circumstancial de Mode",
+        "Complement Directe"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Força malament' és un Complement Circumstancial de Mode (CCM) que indica com es troba el subjecte."
+    },
+    {
+      "id": "cat10",
+      "categoria": "Català",
+      "subTema": "Anàlisi Sintàctica",
+      "pregunta": "En la frase 'Em va ensenyar la màquina amb què treballava', quin tipus de proposició introdueix 'amb què'?",
+      "opciones": [
+        "Subordinada Substantiva",
+        "Subordinada Adverbial",
+        "Subordinada Adjectiva o de Relatiu",
+        "Coordinada Adversativa"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Amb què treballava' és una subordinada adjectiva o de relatiu introduïda per la preposició 'amb' i el pronom relatiu 'què'."
+    }
+  ],
+  "premium": []
+} 

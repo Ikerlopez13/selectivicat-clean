@@ -1,0 +1,46 @@
+import { Question } from '@/types/questions';
+
+export const castella: Question[] = [
+  {
+    id: 'cast-1',
+    categoria: 'Castellà',
+    subTema: 'Comprensión lectora',
+    pregunta: '¿Qué es una metáfora?',
+    opciones: [
+      'Una comparación directa entre dos elementos',
+      'Una figura retórica que identifica un término real con uno imaginario',
+      'Una exageración de la realidad',
+      'Una repetición de sonidos'
+    ],
+    respuestaCorrecta: 1,
+    explicacion: 'La metáfora es una figura retórica que consiste en identificar un término real con uno imaginario entre los cuales existe una relación de semejanza. Por ejemplo: "Sus cabellos de oro" (el oro representa el color rubio del cabello).'
+  },
+  {
+    id: 'cast-2',
+    categoria: 'Castellà',
+    subTema: 'Gramática',
+    pregunta: 'En la oración "El libro fue devuelto por Juan", ¿qué tipo de voz se utiliza?',
+    opciones: [
+      'Voz activa',
+      'Voz pasiva',
+      'Voz media',
+      'Voz reflexiva'
+    ],
+    respuestaCorrecta: 1,
+    explicacion: 'Se utiliza la voz pasiva porque el sujeto (el libro) recibe la acción del verbo, y el agente que realiza la acción (Juan) se introduce mediante la preposición "por".'
+  },
+  {
+    id: 'cast-3',
+    categoria: 'Castellà',
+    subTema: 'Literatura',
+    pregunta: '¿Quién escribió "Don Quijote de la Mancha"?',
+    opciones: [
+      'Francisco de Quevedo',
+      'Lope de Vega',
+      'Miguel de Cervantes',
+      'Luis de Góngora'
+    ],
+    respuestaCorrecta: 2,
+    explicacion: '"Don Quijote de la Mancha" fue escrito por Miguel de Cervantes y publicado en dos partes (1605 y 1615). Es considerada la obra cumbre de la literatura española y una de las obras más importantes de la literatura universal.'
+  }
+]; 
