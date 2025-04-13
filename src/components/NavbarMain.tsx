@@ -90,11 +90,11 @@ export default function NavbarMain() {
             alt="SelectiviCat Logo"
             width={32}
             height={32}
-            className="w-8 h-8"
+            className="w-10 h-10 md:w-8 md:h-8"
             priority
             unoptimized
           />
-          <span className="text-2xl font-bold">selectivi<span className="text-selectivi-yellow">CAT</span></span>
+          <span className="text-2xl font-bold hidden md:inline-block">selectivi<span className="text-selectivi-yellow">CAT</span></span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

@@ -220,26 +220,50 @@ export default function CalculadoraForm() {
       </div>
 
       {notaFinal !== null && (
-        <div className="mt-8 p-6 bg-selectivi-yellow/10 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Resultats</h3>
-          
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">Nota de fase general:</p>
-              <p className="text-2xl font-bold">{notaFaseGeneral}</p>
-            </div>
+        <>
+          <div className="mt-8 p-6 bg-selectivi-yellow/10 rounded-lg">
+            <h3 className="text-xl font-bold mb-4">Resultats</h3>
             
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">Punts fase específica:</p>
-              <p className="text-2xl font-bold">{notaFaseEspecifica}</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="text-sm text-gray-600 mb-1">Nota final d'admissió:</p>
-              <p className="text-2xl font-bold">{notaFinal}</p>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="text-sm text-gray-600 mb-1">Nota de fase general:</p>
+                <p className="text-2xl font-bold">{notaFaseGeneral}</p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="text-sm text-gray-600 mb-1">Punts fase específica:</p>
+                <p className="text-2xl font-bold">{notaFaseEspecifica}</p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="text-sm text-gray-600 mb-1">Nota final d'admissió:</p>
+                <p className="text-2xl font-bold">{notaFinal}</p>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div className="mt-8 p-6 bg-white rounded-xl shadow-lg border-2 border-selectivi-yellow/20">
+            <div className="text-center space-y-6">
+              <div className="inline-block bg-selectivi-yellow/10 rounded-full px-4 py-2 mb-2">
+                <span className="text-sm font-semibold text-selectivi-yellow">🎓 DESCOBREIX</span>
+              </div>
+              <h3 className="text-2xl font-bold">Vols saber a quines carreres pots accedir?</h3>
+              <p className="text-lg text-gray-600">
+                Comprova si la teva nota d'admissió és suficient per entrar al grau que t'interessa.
+              </p>
+              
+              <a 
+                href="/notes-de-tall" 
+                className="inline-flex items-center px-8 py-4 bg-selectivi-yellow text-white font-semibold rounded-full hover:bg-yellow-500 transition-colors duration-300 shadow-md hover:shadow-lg"
+              >
+                Consulta les notes de tall
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

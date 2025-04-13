@@ -5,6 +5,47 @@ import PopularDegrees from '@/components/PopularDegrees';
 import SaasRecommendation from '@/components/SaasRecommendation';
 import Link from 'next/link';
 import ClientSearchComponent from './client-search';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Notes de Tall 2024 | Consulta Totes les Notes d\'Accés Universitari | SelectiviCAT',
+  description: 'Consulta les notes de tall actualitzades de tots els graus universitaris de Catalunya. Troba la informació més recent sobre els requisits d\'accés a la universitat.',
+  openGraph: {
+    title: 'Notes de Tall 2024 | SelectiviCAT',
+    description: 'Consulta les notes de tall actualitzades de tots els graus universitaris de Catalunya.',
+    images: ['/images/og-notes-tall.jpg'],
+    locale: 'ca_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Notes de Tall 2024 | SelectiviCAT',
+    description: 'Consulta les notes de tall actualitzades de tots els graus universitaris de Catalunya.',
+    images: ['/images/og-notes-tall.jpg'],
+  },
+  alternates: {
+    canonical: 'https://selectivi.cat/notes-de-tall',
+  },
+};
+
+// Schema.org JSON-LD
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Notes de Tall 2024 - SelectiviCAT",
+  "description": "Consulta les notes de tall actualitzades de tots els graus universitaris de Catalunya.",
+  "url": "https://selectivi.cat/notes-de-tall",
+  "provider": {
+    "@type": "Organization",
+    "name": "SelectiviCAT",
+    "url": "https://selectivi.cat"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Notes de tall universitàries",
+    "description": "Informació sobre els requisits d'accés als graus universitaris de Catalunya"
+  }
+};
 
 export default function NotesPage() {
   const popularSearches = [
@@ -17,6 +58,11 @@ export default function NotesPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <NavbarMain />
       <div className="pt-16">
         {/* Hero Section */}
@@ -26,7 +72,7 @@ export default function NotesPage() {
               <div className="w-full">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Cercador de notes de Tall</h1>
                 <p className="text-xl mb-6">Cerca qualsevol grau universitari.</p>
-                <p className="mb-8">Nosaltres et proporcionem la dada oficial de <strong>totes les universitats</strong> de Catalunya.</p>
+                <p className="mb-8">Nosaltres et proporcionem la dada oficial de <strong>totes les universities</strong> de Catalunya.</p>
                 
                 {/* Tags populares */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -101,6 +147,63 @@ export default function NotesPage() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* FAQ Section */}
+        <div className="py-16 px-4 md:px-8 bg-white">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold mb-8 text-center">Preguntes freqüents sobre notes de tall</h2>
+            <div className="space-y-6">
+              <details className="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 group cursor-pointer">
+                <summary className="text-lg font-semibold">Quan es publiquen les notes de tall?</summary>
+                <div className="mt-4 text-gray-600">
+                  <p>Les notes de tall es publiquen en dos moments:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>Notes provisionals: Durant el procés d'assignació de places (juliol)</li>
+                    <li>Notes definitives: Després del procés de matriculació universitària (finals de juliol)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details className="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 group cursor-pointer">
+                <summary className="text-lg font-semibold">Les notes de tall són les mateixes cada any?</summary>
+                <div className="mt-4 text-gray-600">
+                  <p>No, les notes de tall poden variar cada any segons:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>El nombre de places disponibles</li>
+                    <li>La quantitat d'estudiants que sol·liciten plaça</li>
+                    <li>Les notes mitjanes dels estudiants que s'hi presenten</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details className="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 group cursor-pointer">
+                <summary className="text-lg font-semibold">Com puc millorar la meva nota per arribar a la nota de tall?</summary>
+                <div className="mt-4 text-gray-600">
+                  <p>Hi ha diverses maneres de millorar la teva nota:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>Presentar-te a la fase específica amb assignatures que ponderen 0.2 pel grau que t'interessa</li>
+                    <li>Mantenir una bona mitjana de batxillerat</li>
+                    <li>Preparar bé les assignatures obligatòries de la fase general</li>
+                    <li>Considerar fer la prova d'una segona llengua estrangera si pondera pel grau desitjat</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details className="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 group cursor-pointer">
+                <summary className="text-lg font-semibold">Què passa si no arribo a la nota de tall?</summary>
+                <div className="mt-4 text-gray-600">
+                  <p>Si no arribes a la nota de tall tens diverses opcions:</p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>Considerar altres universities que ofereixen el mateix grau</li>
+                    <li>Explorar graus similars amb notes de tall més baixes</li>
+                    <li>Matricular-te en un CFGS relacionat i accedir a la universitat per aquesta via</li>
+                    <li>Preparar-te per tornar a fer la selectivitat l'any següent</li>
+                  </ul>
+                </div>
+              </details>
             </div>
           </div>
         </div>

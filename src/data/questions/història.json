@@ -6,11 +6,11 @@
       "pregunta": "Durant la Segona República espanyola (1931-1936), quin dret fonamental es va reconèixer per primera vegada a les dones?",
       "opciones": [
         "Dret a la propietat privada",
-        "Dret al vot",
         "Dret a l'educació superior",
-        "Dret al divorci"
+        "Dret al divorci",
+        "Dret al vot"
       ],
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 3,
       "explicacion": "La Constitució de 1931 va reconèixer el sufragi universal femení, permetent a les dones votar per primera vegada a les eleccions de 1933."
     },
     {
@@ -71,11 +71,11 @@
       "pregunta": "Què va ser la vaga de La Canadenca de 1919?",
       "opciones": [
         "Una vaga de minaires asturians",
-        "Una vaga que va deixar Barcelona sense electricitat i va aconseguir la jornada de 8 hores",
         "Una vaga del sector tèxtil",
-        "Una vaga dels treballadors del port"
+        "Una vaga dels treballadors del port",
+        "Una vaga que va deixar Barcelona sense electricitat i va aconseguir la jornada de 8 hores"
       ],
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 3,
       "explicacion": "La vaga de La Canadenca va ser una vaga a l'empresa d'electricitat de Barcelona que va paralitzar la ciutat i va aconseguir la implantació de la jornada laboral de 8 hores a Espanya."
     },
     {
@@ -196,12 +196,12 @@
       "subTema": "Guerra Civil",
       "pregunta": "Com va evolucionar la situació política a Catalunya després dels Fets de Maig de 1937?",
       "opciones": [
-        "El govern central va recuperar competències de la Generalitat",
         "Es va intensificar el procés revolucionari",
         "La Generalitat va obtenir més autonomia",
-        "Es va mantenir l'statu quo anterior"
+        "Es va mantenir l'statu quo anterior",
+        "El govern central va recuperar competències de la Generalitat"
       ],
-      "respuestaCorrecta": 0,
+      "respuestaCorrecta": 3,
       "explicacion": "Després dels Fets de Maig, el govern central va recuperar competències que havia perdut, especialment en ordre públic i defensa, debilitant l'autonomia de la Generalitat."
     },
     {

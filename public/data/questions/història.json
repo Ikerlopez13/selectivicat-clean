@@ -6,11 +6,11 @@
       "pregunta": "Durant la Segona República espanyola (1931-1936), quin dret fonamental es va reconèixer per primera vegada a les dones?",
       "opciones": [
         "Dret a la propietat privada",
+        "Dret al divorci",
         "Dret al vot",
-        "Dret a l'educació superior",
-        "Dret al divorci"
+        "Dret a l'educació superior"
       ],
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 2,
       "explicacion": "La Constitució de 1931 va reconèixer el sufragi universal femení, permetent a les dones votar per primera vegada a les eleccions de 1933."
     },
     {
@@ -18,10 +18,10 @@
       "categoria": "Història",
       "pregunta": "Què va caracteritzar el paper de la dona durant el franquisme (1939-1975)?",
       "opciones": [
-        "Igualtat legal i participació política activa",
+        "Accés prioritari a l'educació universitària",
         "Llibertat per exercir qualsevol professió",
         "Rol domèstic i submissió al gènere masculí",
-        "Accés prioritari a l'educació universitària"
+        "Igualtat legal i participació política activa"
       ],
       "respuestaCorrecta": 2,
       "explicacion": "El franquisme va promoure un model de dona centrat en la família i la submissió a l'home, eliminant drets com el divorci i restringint la seva participació pública."
@@ -31,9 +31,9 @@
       "categoria": "Història",
       "pregunta": "Quin dels següents esdeveniments NO forma part de l'evolució de l'obrerisme a Espanya entre els processos de Montjuïc i la fundació de la CNT?",
       "opciones": [
-        "La vaga general de 1902",
-        "La formació de Solidaritat Obrera el 1907",
         "La Setmana Tràgica de juliol de 1909",
+        "La formació de Solidaritat Obrera el 1907",
+        "La vaga general de 1902",
         "La Revolució de 1868"
       ],
       "respuestaCorrecta": 3,
@@ -44,9 +44,9 @@
       "categoria": "Història",
       "pregunta": "Quin va ser l'impacte principal de la Primera Guerra Mundial en la conflictivitat social a Espanya?",
       "opciones": [
-        "La reducció de les tensions socials",
-        "L'enduriment de les condicions de vida i l'augment de la conflictivitat",
         "La millora dels salaris dels treballadors",
+        "L'enduriment de les condicions de vida i l'augment de la conflictivitat",
+        "La reducció de les tensions socials",
         "La disminució de l'atur"
       ],
       "respuestaCorrecta": 1,
@@ -57,12 +57,12 @@
       "categoria": "Història",
       "pregunta": "Quin fenomen va caracteritzar la lluita obrera durant el trienni bolxevic (1918-1920)?",
       "opciones": [
-        "El pistolerisme i l'enfrontament entre la CNT i la patronal",
         "La col·laboració entre patrons i obrers",
         "La desaparició dels sindicats",
+        "El pistolerisme i l'enfrontament entre la CNT i la patronal",
         "La fi de les vagues obreres"
       ],
-      "respuestaCorrecta": 0,
+      "respuestaCorrecta": 2,
       "explicacion": "El trienni bolxevic es va caracteritzar per l'augment de la violència social, especialment el pistolerisme, amb enfrontaments entre la CNT i la patronal, i entre la CNT i els Sindicats Lliures."
     },
     {
@@ -71,11 +71,11 @@
       "pregunta": "Què va ser la vaga de La Canadenca de 1919?",
       "opciones": [
         "Una vaga de minaires asturians",
-        "Una vaga que va deixar Barcelona sense electricitat i va aconseguir la jornada de 8 hores",
         "Una vaga del sector tèxtil",
+        "Una vaga que va deixar Barcelona sense electricitat i va aconseguir la jornada de 8 hores",
         "Una vaga dels treballadors del port"
       ],
-      "respuestaCorrecta": 1,
+      "respuestaCorrecta": 2,
       "explicacion": "La vaga de La Canadenca va ser una vaga a l'empresa d'electricitat de Barcelona que va paralitzar la ciutat i va aconseguir la implantació de la jornada laboral de 8 hores a Espanya."
     },
     {
@@ -84,12 +84,12 @@
       "subTema": "Restauració Borbònica",
       "pregunta": "Quina va ser la causa immediata de l'arribada al poder de Primo de Rivera el 1923?",
       "opciones": [
-        "L'Expedient Picasso i el problema del Marroc",
         "La crisi econòmica de postguerra",
+        "La crisi del sistema parlamentari",
         "L'agitació social a Catalunya",
-        "La crisi del sistema parlamentari"
+        "L'Expedient Picasso i el problema del Marroc"
       ],
-      "respuestaCorrecta": 0,
+      "respuestaCorrecta": 3,
       "explicacion": "L'Expedient Picasso, que investigava les responsabilitats del desastre d'Annual al Marroc, va ser la causa immediata que va precipitar el cop d'estat de Primo de Rivera el 1923."
     },
     {
@@ -98,12 +98,12 @@
       "subTema": "Restauració Borbònica",
       "pregunta": "Quina va ser una de les primeres mesures repressives de la dictadura de Primo de Rivera?",
       "opciones": [
-        "La supressió de la Mancomunitat de Catalunya",
-        "La creació de la Unión Patriótica",
         "El Directori Civil",
-        "La reforma agrària"
+        "La reforma agrària",
+        "La supressió de la Mancomunitat de Catalunya",
+        "La creació de la Unión Patriótica"
       ],
-      "respuestaCorrecta": 0,
+      "respuestaCorrecta": 2,
       "explicacion": "Una de les primeres mesures repressives va ser la supressió de la Mancomunitat de Catalunya, com a part de la seva política contra el catalanisme i les institucions d'autogovern."
     },
     {

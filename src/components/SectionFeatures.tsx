@@ -13,7 +13,9 @@ export default function SectionFeatures() {
               <h3 className="card-title">Tots els exàmens</h3>
               <p>Accedeix a tots els exàmens de selectivitat dels últims anys organitzats per matèria i convocatòria.</p>
               <div className="card-actions mt-4">
-                <button className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">Veure exàmens</button>
+                <Link href="/examens" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
+                  Veure exàmens
+                </Link>
               </div>
             </div>
           </div>
@@ -24,7 +26,9 @@ export default function SectionFeatures() {
               <h3 className="card-title">Solucions detallades</h3>
               <p>Consulta les solucions oficials i explicacions detallades per entendre millor cada problema.</p>
               <div className="card-actions mt-4">
-                <button className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">Veure solucions</button>
+                <Link href="/examens" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
+                  Veure solucions
+                </Link>
               </div>
             </div>
           </div>
@@ -35,7 +39,7 @@ export default function SectionFeatures() {
               <h3 className="card-title">Millors vídeos educatius</h3>
               <p>Accedeix a una selecció dels millors vídeos explicatius per preparar-te per a la selectivitat.</p>
               <div className="card-actions mt-4">
-                <Link href="/millors-videos" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
+                <Link href="/examens" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
                   Veure vídeos
                 </Link>
               </div>
@@ -48,7 +52,7 @@ export default function SectionFeatures() {
               <h3 className="card-title">Notes de Tall</h3>
               <p>Consulta les notes de tall de totes les universitats catalanes i planifica el teu futur acadèmic.</p>
               <div className="card-actions mt-4">
-                <Link href="/notes-de-tall" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
+                <Link href="/examens" className="btn btn-sm bg-selectivi-yellow text-white border-none hover:bg-selectivi-yellow/90">
                   Consultar notes
                 </Link>
               </div>
