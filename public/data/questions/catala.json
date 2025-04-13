@@ -659,20 +659,6 @@
       "explicacion": "És una oració subordinada comparativa perquè estableix una comparació de superioritat mitjançant 'més... que'."
     },
     {
-      "id": "cat-sub-8",
-      "categoria": "Català",
-      "subTema": "Subordinades",
-      "pregunta": "Quin tipus d'oració subordinada trobem a 'Ho ha fet perquè ho poguessis充分利用'?",
-      "opciones": [
-        "Subordinada final",
-        "Subordinada causal",
-        "Subordinada temporal",
-        "Subordinada condicional"
-      ],
-      "respuestaCorrecta": 1,
-      "explicacion": "És una oració subordinada final perquè 'perquè' introdueix la finalitat o el propòsit de l'acció principal."
-    },
-    {
       "id": "cat-sub-9",
       "categoria": "Català",
       "subTema": "Subordinades",
