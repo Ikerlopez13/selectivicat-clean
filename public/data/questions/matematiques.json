@@ -15,20 +15,6 @@
       "explicacion": "La probabilidad de que ambas letras sean iguales es $2 \\times \\left(\\frac{2}{9} \\times \\frac{1}{8}\\right) = \\frac{1}{36}$. Por lo tanto, la probabilidad de que sean diferentes es $1 - \\frac{1}{36} = \\frac{35}{36}$."
     },
     {
-      "id": "s23",
-      "categoria": "Matemàtiques",
-      "subTema": "Probabilitat",
-      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\mu = 20$ y desviación típica $\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
-      "opciones": [
-        "0.5",
-        "0.6827",
-        "0.75",
-        "0.9545"
-      ],
-      "respuestaCorrecta": 1,
-      "explicacion": "Para una variable normal, el intervalo $[\\mu - \\sigma, \\mu + \\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\leq X \\leq 25) = P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) = 0.6827$."
-    },
-    {
       "id": "s20",
       "categoria": "Matemàtiques",
       "subTema": "Derivades",
@@ -59,16 +45,41 @@
     {
       "id": "s30",
       "categoria": "Matemàtiques",
-      "subTema": "Càlcul Integral",
-      "pregunta": "Quin és el valor de $\\int_0^1 (3x^2 + 2x) dx$?",
+      "subTema": "Vectors",
+      "pregunta": "De dos vectores $\\vec{u}$, $\\vec{v}$ en el espacio, se sabe que $\\|\\vec{u}\\| = 1$ y que $\\|\\vec{v}\\| = 3$. Entonces:",
       "opciones": [
-        "1",
-        "1.5",
-        "2",
-        "2.5"
+        "Su producto escalar puede valer 5",
+        "Pueden ser ortogonales",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El producto escalar $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\cdot \\|\\vec{v}\\| \\cdot \\cos \\theta = 3 \\cdot \\cos \\theta$. Como $\\cos \\theta$ puede valer 0 (cuando los vectores son perpendiculares), los vectores pueden ser ortogonales. Además, el producto escalar no puede valer 5 ya que $|\\vec{u} \\cdot \\vec{v}| \\leq \\|\\vec{u}\\| \\cdot \\|\\vec{v}\\| = 3$."
+    },
+    {
+      "id": "s31",
+      "categoria": "Matemàtiques",
+      "subTema": "Funcions",
+      "pregunta": "El dominio natural de la función $f(x) = \\sqrt{x^2 - x - 2}$ es:",
+      "opciones": [
+        "Todos los números reales positivos",
+        "La unión de intervalos $(-\\infty, -1] \\cup [2, \\infty)$",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Para que la función esté definida, necesitamos que $x^2 - x - 2 \\geq 0$ (ya que la raíz cuadrada solo está definida para números no negativos). Resolviendo la inecuación: $x^2 - x - 2 = (x+1)(x-2) \\geq 0$. Los puntos críticos son $x = -1$ y $x = 2$. Por el método de los intervalos, obtenemos que la solución es $x \\in (-\\infty, -1] \\cup [2, \\infty)$."
+    },
+    {
+      "id": "s32",
+      "categoria": "Matemàtiques",
+      "subTema": "Funcions",
+      "pregunta": "Si $f(x) = \\frac{x + 1}{x - 2}$ y $g(x) = \\frac{x - 2}{x + 1}$, entonces el valor de la composición de funciones $(g \\circ f)(\\frac{1}{2})$ cumple:",
+      "opciones": [
+        "Es mayor que 3",
+        "Es menor que 2",
+        "Ninguna de las anteriores"
       ],
       "respuestaCorrecta": 2,
-      "explicacion": "Integrant: $x^3 + x^2$ avaluat entre 0 i 1 dóna $(1 + 1) - (0 + 0) = 2$."
+      "explicacion": "Calculemos paso a paso:\\n1) Primero $f(\\frac{1}{2}) = \\frac{\\frac{1}{2} + 1}{\\frac{1}{2} - 2} = \\frac{\\frac{3}{2}}{-\\frac{3}{2}} = -1$\\n2) Luego $g(-1) = \\frac{-1 - 2}{-1 + 1} = \\frac{-3}{0}$ que no está definido.\\nPor tanto, $(g \\circ f)(\\frac{1}{2})$ no existe, ya que lleva a una indeterminación (división por cero)."
     },
     {
       "id": "m13",
@@ -97,6 +108,162 @@
       ],
       "respuestaCorrecta": 0,
       "explicacion": "1) Calculem la derivada: $f'(x) = -2x + 1$\\n2) Avaluem en $x = -2$: $f'(-2) = -2(-2) + 1 = 5$\\n3) Com que passa pel punt $(-2,0)$, l'equació és $y = 5(x-(-2)) + 0 = 5x + 10$\\n4) Per comprovar els punts, quan $x = 0$: $y = 10$, per tant passa per $(0,10)$ i $(-2,0)$."
+    },
+    {
+      "id": "s24",
+      "categoria": "Matemàtiques",
+      "subTema": "Matrius",
+      "pregunta": "Sean A, B matrices cuadradas regulares, del mismo tamaño. La relación $(AB)^{-1}=B^{-1}A^{-1}$:",
+      "opciones": [
+        "Siempre cierta",
+        "Solo es cierta si A y B son simétricas",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Esta propiedad es siempre cierta para matrices invertibles y es conocida como la propiedad de la inversa del producto. Se puede demostrar ya que $(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} = AA^{-1} = I$, donde I es la matriz identidad."
+    },
+    {
+      "id": "s25",
+      "categoria": "Matemàtiques",
+      "subTema": "Matrius",
+      "pregunta": "Para toda matriz real A con 2 filas y 4 columnas, se cumple que:",
+      "opciones": [
+        "El rango(A) puede ser 3",
+        "El rango(A) no cambia si se suprime una columna",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El rango máximo de una matriz con 2 filas es 2, ya que el rango no puede ser mayor que el mínimo entre el número de filas y columnas. Por tanto, el rango(A) no puede ser 3. Además, al suprimir una columna, el rango sí puede cambiar, por ejemplo, si la columna eliminada es linealmente independiente de las demás."
+    },
+    {
+      "id": "s26",
+      "categoria": "Matemàtiques",
+      "subTema": "Matrius",
+      "pregunta": "Dos matrices cuadradas, A y B, son inversas una de la otra y sus coeficientes son todos números enteros. Entonces:",
+      "opciones": [
+        "Uno de los determinantes det(A) o det(B), es un número racional no entero",
+        "det(A) y det(B) solo pueden tomar los valores -1 o 1",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Cuando dos matrices A y B son inversas, se cumple que $det(A \\cdot B) = det(A) \\cdot det(B) = det(I) = 1$. Como todos los coeficientes son enteros y el producto de sus determinantes debe ser 1, los únicos valores posibles para $det(A)$ y $det(B)$ son 1 y -1, ya que son los únicos números enteros cuyo producto puede dar 1."
+    },
+    {
+      "id": "s27",
+      "categoria": "Matemàtiques",
+      "subTema": "Vectors",
+      "pregunta": "Sean los vectores en el plano $\\vec{u}=(a, 2)$ y $\\vec{v}=(2a,-4)$. Entonces:",
+      "opciones": [
+        "Existen dos valores de $a\\in\\mathbb{R}$ para los cuales $\\vec{u}$ y $\\vec{v}$ son perpendiculares",
+        "Existen dos valores de $a\\in\\mathbb{R}$ para los cuales $\\vec{u}$ y $\\vec{v}$ son paralelos",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Para que sean perpendiculares: $\\vec{u} \\cdot \\vec{v} = 0$. Es decir, $a\\cdot(2a) + 2\\cdot(-4) = 0$. Simplificando: $2a^2 - 8 = 0 \\rightarrow 2a^2 = 8 \\rightarrow a^2 = 4 \\rightarrow a = \\pm 2$. Por tanto, existen dos valores de $a$ ($+2$ y $-2$) para los cuales los vectores son perpendiculares."
+    },
+    {
+      "id": "s28",
+      "categoria": "Matemàtiques",
+      "subTema": "Vectors",
+      "pregunta": "Consideremos dos vectores en el plano $\\vec{u}$ y $\\vec{v}$, tales que $\\|\\vec{u}\\| = 3$ y $\\vec{u}= -2\\vec{v}$. Entonces, el producto escalar $\\vec{u}\\cdot\\vec{v}$ vale:",
+      "opciones": [
+        "-6",
+        "-9/2",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Si $\\vec{u} = -2\\vec{v}$, entonces $\\|\\vec{u}\\| = |-2|\\cdot\\|\\vec{v}\\| = 2\\|\\vec{v}\\|$. Como $\\|\\vec{u}\\| = 3$, tenemos que $2\\|\\vec{v}\\| = 3 \\rightarrow \\|\\vec{v}\\| = \\frac{3}{2}$. El producto escalar será: $\\vec{u}\\cdot\\vec{v} = (-2\\vec{v})\\cdot\\vec{v} = -2(\\|\\vec{v}\\|^2) = -2(\\frac{3}{2})^2 = -\\frac{9}{2}$."
+    },
+    {
+      "id": "s29",
+      "categoria": "Matemàtiques",
+      "subTema": "Geometria",
+      "pregunta": "El plano que contiene a la recta $\\frac{x}{3} = \\frac{y-3}{-2} = \\frac{z-4}{1}$ y es perpendicular al plano $5x - y + 4z = 2$ es:",
+      "opciones": [
+        "Es el $x + y - z + 1 = 0$",
+        "Es el $2x - y + z - 1 = 0$",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El vector director de la recta es $\\vec{v_1} = (3,-2,1)$. El vector normal del plano dado es $\\vec{n_2} = (5,-1,4)$. El vector normal del plano buscado debe ser perpendicular a ambos, por tanto será $\\vec{n_1} = \\vec{v_1} \\times \\vec{n_2} = ((-2)(4)-1(-1), 1(5)-3(4), 3(-1)-(-2)(5)) = (-7,-7,1)$. Simplificando y usando un punto de la recta $(0,3,4)$, obtenemos la ecuación $x + y - z + 1 = 0$."
+    },
+    {
+      "id": "s33",
+      "categoria": "Matemàtiques",
+      "subTema": "Funcions",
+      "pregunta": "La función $f(x) = -(x - 3)^4$:",
+      "opciones": [
+        "Es siempre decreciente",
+        "Tiene un mínimo en x = 3",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Calculemos la derivada: $f'(x) = -4(x-3)^3$. Igualando a cero: $-4(x-3)^3 = 0 \\Rightarrow x = 3$ (raíz triple). Estudiando el signo de la derivada:\\n- Para $x < 3$: $f'(x) > 0$ (creciente)\\n- Para $x > 3$: $f'(x) < 0$ (decreciente)\\nPor tanto, en $x = 3$ hay un máximo, no un mínimo, y la función no es siempre decreciente."
+    },
+    {
+      "id": "s34",
+      "categoria": "Matemàtiques",
+      "subTema": "Funcions",
+      "pregunta": "Dada la función $f(x) = 2x^2 - x - 1$:",
+      "opciones": [
+        "Existe algún valor $c \\in (1, 3)$ tal que $f(c) = 1/2$",
+        "Es creciente en todo su dominio",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La función es continua en todo $\\mathbb{R}$. Evaluemos:\\n- $f(1) = 2(1)^2 - 1 - 1 = 0$\\n- $f(3) = 2(3)^2 - 3 - 1 = 18 - 3 - 1 = 14$\\nPor el teorema de Bolzano, como $f$ es continua en $[1,3]$ y $f(1) = 0 < \\frac{1}{2} < 14 = f(3)$, existe $c \\in (1,3)$ tal que $f(c) = \\frac{1}{2}$."
+    },
+    {
+      "id": "s35",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "La probabilidad de obtener dos caras (o sellos) cuando se lanzan dos monedas no trucadas es:",
+      "opciones": [
+        "1/2",
+        "1/4",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "En cada lanzamiento independiente, la probabilidad de obtener cara es $\\frac{1}{2}$. Como queremos dos caras y los lanzamientos son independientes, aplicamos la regla del producto: $P(\\text{dos caras}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$."
+    },
+    {
+      "id": "s36",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "La probabilidad de que la suma de los resultados obtenidos al lanzar dos dados no trucados sea un número primo, es:",
+      "opciones": [
+        "5/12",
+        "5/11",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Los números primos posibles al sumar dos dados (del 1 al 6) son: 2, 3, 5, 7, 11. Contemos los casos favorables:\\n- Para obtener 2: solo (1,1)\\n- Para obtener 3: (1,2), (2,1)\\n- Para obtener 5: (1,4), (4,1), (2,3), (3,2)\\n- Para obtener 7: (1,6), (6,1), (2,5), (5,2), (3,4), (4,3)\\n- Para obtener 11: (5,6), (6,5)\\nTotal de casos favorables: 15\\nTotal de casos posibles: 36 (6×6)\\nProbabilidad = $\\frac{15}{36} = \\frac{5}{12}$"
+    },
+    {
+      "id": "s37",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "En el experimento aleatorio consistente en lanzar cuatro monedas al aire, la probabilidad de obtener exactamente dos caras:",
+      "opciones": [
+        "Es mayor o igual a 0.5",
+        "Está comprendida entre 0.35 y 0.4",
+        "Ninguna de las anteriores"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Usando la distribución binomial con $p=0.5$ (probabilidad de cara), $q=0.5$ (probabilidad de cruz), $n=4$ (número de lanzamientos) y $k=2$ (éxitos deseados):\\n$P(X=2) = \\binom{4}{2} \\cdot (0.5)^2 \\cdot (0.5)^2 = 6 \\cdot 0.0625 = 0.375$\\nEste valor está entre 0.35 y 0.4."
+    },
+    {
+      "id": "s38",
+      "categoria": "Matemàtiques",
+      "subTema": "Matrius",
+      "pregunta": "Encontrar unas matrices reales 2×2, X, Y, que verifiquen el sistema:\\n$5X + 3Y = \\begin{pmatrix} 2 & 0 \\\\ -4 & 15 \\end{pmatrix}$\\n$3X + 2Y = \\begin{pmatrix} 1 & -1 \\\\ -2 & 9 \\end{pmatrix}$",
+      "opciones": [
+        "X = $\\begin{pmatrix} 1 & 2 \\\\ -2 & 3 \\end{pmatrix}$, Y = $\\begin{pmatrix} -1 & -5 \\\\ 2 & 0 \\end{pmatrix}$",
+        "X = $\\begin{pmatrix} 2 & 1 \\\\ -2 & 3 \\end{pmatrix}$, Y = $\\begin{pmatrix} -1 & -5 \\\\ 2 & 0 \\end{pmatrix}$",
+        "X = $\\begin{pmatrix} 1 & 2 \\\\ -2 & 3 \\end{pmatrix}$, Y = $\\begin{pmatrix} -1 & -5 \\\\ 0 & 2 \\end{pmatrix}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Resolvemos el sistema de ecuaciones matriciales:\\n1) De la primera ecuación: $5X = \\begin{pmatrix} 2 & 0 \\\\ -4 & 15 \\end{pmatrix} - 3Y$\\n2) De la segunda ecuación: $3X = \\begin{pmatrix} 1 & -1 \\\\ -2 & 9 \\end{pmatrix} - 2Y$\\n3) Igualando: $\\frac{\\begin{pmatrix} 2 & 0 \\\\ -4 & 15 \\end{pmatrix} - 3Y}{5} = \\frac{\\begin{pmatrix} 1 & -1 \\\\ -2 & 9 \\end{pmatrix} - 2Y}{3}$\\n4) Resolviendo el sistema resultante elemento a elemento, obtenemos $Y = \\begin{pmatrix} -1 & -5 \\\\ 2 & 0 \\end{pmatrix}$\\n5) Sustituyendo en cualquiera de las ecuaciones originales, obtenemos $X = \\begin{pmatrix} 1 & 2 \\\\ -2 & 3 \\end{pmatrix}$"
     }
   ],
   "premium": [
@@ -177,6 +344,33 @@
       ],
       "respuestaCorrecta": 0,
       "explicacion": "El pla buscat ha de ser perpendicular al vector AB = (-4, -4, 0), per tant, té equació de la forma x + y + 0z + D = 0. A més, ha de passar pel punt mitjà (1/2)(A + B) = (-1, 0, 3); per tant, -1 + D = 0 i es tracta del pla d'equació x + y + 1 = 0. Les distàncies de A i B al pla són iguals, i el triangle ABC és isòsceles amb àrea 24 u²."
+    },
+    {
+      "id": "p9",
+      "categoria": "Matemàtiques",
+      "subTema": "Vectors",
+      "pregunta": "Determinar un vector $v\\in\\mathbb{R}^3$ que cumpla las tres condiciones siguientes:\\n\\na) La suma de sus coordenadas, expresadas en la base canónica, es 3.\\nb) Es combinación lineal de $(2,2,2)$ y $(-1,1,0)$.\\nc) Los vectores $v$, $(1,0,1)$ y $(0,1,0)$ son linealmente dependientes.",
+      "opciones": [
+        "El vector solución es $(1,1,1)$",
+        "El vector solución es $(2,0,1)$",
+        "El vector solución es $(1,2,0)$",
+        "No existe ningún vector que cumpla todas las condiciones"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Resolvamos paso a paso:\\n1) De la condición a): $x + y + z = 3$\\n2) De la condición b): $v(x,y,z) = \\alpha(2,2,2) + \\beta(-1,1,0)$\\n3) De la condición c): Los vectores son LD si su determinante es 0:\\n$\\begin{vmatrix} x & y & z \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{vmatrix} = 0 \\rightarrow z = x$\\n4) Sustituyendo en la combinación lineal y usando que $z = x$:\\n$x = 2\\alpha - \\beta$\\n$y = 2\\alpha + \\beta$\\n$x = 2\\alpha$\\n5) De aquí: $\\beta = 0$ y $\\alpha = \\frac{1}{2}$\\n6) Por tanto: $x = 1$, $y = 1$, $z = 1$\\nEl vector solución es $v = (1,1,1)$"
+    },
+    {
+      "id": "p10",
+      "categoria": "Matemàtiques",
+      "subTema": "Probabilitat",
+      "pregunta": "Un hombre y una mujer de la misma edad se casan a los 20 años. La probabilidad que tiene el hombre de llegar a los 70 años es de 3/4, mientras que la de su esposa es 5/6. Determinar la probabilidad de que, al cabo de 50 años de la boda:\\n\\na) Ambos estén vivos.\\nb) No viva ninguno.\\nc) Viva solamente la mujer.\\nd) Viva al menos uno de los dos.",
+      "opciones": [
+        "$\\frac{5}{8}, \\frac{1}{24}, \\frac{5}{24}, \\frac{23}{24}$",
+        "$\\frac{5}{8}, \\frac{1}{12}, \\frac{5}{24}, \\frac{11}{12}$",
+        "$\\frac{5}{8}, \\frac{1}{24}, \\frac{1}{8}, \\frac{23}{24}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Sean los sucesos:\\nH = \"hombre vive hasta los 70\" con $P(H) = \\frac{3}{4}$\\nM = \"mujer vive hasta los 70\" con $P(M) = \\frac{5}{6}$\\n\\na) $P(H\\cap M) = P(H)\\cdot P(M) = \\frac{3}{4}\\cdot\\frac{5}{6} = \\frac{5}{8}$ (son independientes)\\n\\nb) $P(\\overline{H}\\cap\\overline{M}) = P(\\overline{H})\\cdot P(\\overline{M}) = \\frac{1}{4}\\cdot\\frac{1}{6} = \\frac{1}{24}$\\n\\nc) $P(\\overline{H}\\cap M) = P(\\overline{H})\\cdot P(M) = \\frac{1}{4}\\cdot\\frac{5}{6} = \\frac{5}{24}$\\n\\nd) $P(H\\cup M) = 1 - P(\\overline{H}\\cap\\overline{M}) = 1 - \\frac{1}{24} = \\frac{23}{24}$"
     }
   ]
 }
