@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "categoria": "Dibuix Tècnic",
+    "subTema": "Geometria Plana",
+    "pregunta": "En un triangle rectangle, si un catet mesura 6 cm i la hipotenusa 10 cm, quant mesura l'altre catet?",
+    "opciones": [
+      "8 cm",
+      "7 cm",
+      "9 cm",
+      "5 cm"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Utilitzant el teorema de Pitàgores: \\(a^2 + b^2 = c^2\\)\nOn \\(c\\) és la hipotenusa (10 cm) i \\(a\\) és el catet conegut (6 cm):\n\\(6^2 + b^2 = 10^2\\)\n\\(36 + b^2 = 100\\)\n\\(b^2 = 64\\)\n\\(b = 8\\) cm"
+  },
+  {
+    "id": 2,
+    "categoria": "Dibuix Tècnic",
+    "subTema": "Sistema Dièdric",
+    "pregunta": "Com es representa un punt en el sistema dièdric?",
+    "opciones": [
+      "Amb una única projecció",
+      "Amb dues projeccions (planta i alçat)",
+      "Amb tres projeccions (planta, alçat i perfil)",
+      "Amb una línia recta"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "En el sistema dièdric, un punt es representa mitjançant dues projeccions ortogonals:\n- Projecció horitzontal o planta (sobre el pla horitzontal)\n- Projecció vertical o alçat (sobre el pla vertical)\nAquestes dues projeccions estan relacionades per una línia de referència."
+  },
+  {
+    "id": 3,
+    "categoria": "Dibuix Tècnic",
+    "subTema": "Normalització",
+    "pregunta": "Quina escala de reducció és més adequada per representar una casa sencera en un full A3?",
+    "opciones": [
+      "1:1",
+      "1:50",
+      "1:500",
+      "1:5"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "L'escala 1:50 és la més adequada per representar una casa sencera en un full A3 perquè:\n- Permet mostrar tots els detalls necessaris\n- És una escala estandarditzada en arquitectura\n- Manté una bona relació entre el tamany del dibuix i el del paper\n- Permet incloure les cotes necessàries de forma llegible"
+  },
+  {
+    "id": 4,
+    "categoria": "Dibuix Tècnic",
+    "subTema": "Perspectiva Axonomètrica",
+    "pregunta": "En una perspectiva isomètrica, quin és l'angle entre els eixos?",
+    "opciones": [
+      "90°",
+      "120°",
+      "45°",
+      "60°"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "En una perspectiva isomètrica:\n- Els tres eixos (X, Y, Z) formen angles iguals entre si\n- Com que la suma dels angles ha de ser 360°, cada angle és de 120°\n- Això proporciona una visualització equilibrada de les tres dimensions"
+  },
+  {
+    "id": 5,
+    "categoria": "Dibuix Tècnic",
+    "subTema": "Vistes",
+    "pregunta": "Quantes vistes principals existeixen en el sistema europeu de representació?",
+    "opciones": [
+      "4 vistes",
+      "6 vistes",
+      "3 vistes",
+      "5 vistes"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "En el sistema europeu existeixen 6 vistes principals:\n1. Alçat (vista frontal)\n2. Planta (vista superior)\n3. Perfil esquerre\n4. Perfil dret\n5. Vista inferior\n6. Vista posterior\nNormalment, amb les tres primeres vistes és suficient per definir un objecte."
+  }
+] 

@@ -1,32 +1,6 @@
 {
   "standard": [
     {
-      "id": "s25",
-      "categoria": "Matemàtiques CCSS",
-      "pregunta": "En el mismo contexto de las tarifes de las companies A y B, ¿per a qué distancia las dos tarifes coinciden?",
-      "opciones": [
-        "20 km",
-        "50 km",
-        "15 km",
-        "30 km"
-      ],
-      "respuestaCorrecta": 1,
-      "explicacion": "Resolent l'equació $0.4x + 20 = 0.01x^2 + 0.1x + 10$, s'obté $x = 50$ km (la solució negativa es descarta)."
-    },
-    {
-      "id": "s26",
-      "categoria": "Matemàtiques CCSS",
-      "pregunta": "En un sistema de producción de sofàs, si s'afegeix l'equació $0.1x + 0.3y + 0.2z = 284$ al sistema inicial, ¿quina és la producción de la tercera fàbrica (z)?",
-      "opciones": [
-        "310",
-        "630",
-        "320",
-        "284"
-      ],
-      "respuestaCorrecta": 2,
-      "explicacion": "Resolent el sistema ampliat pel mètode de Gauss, s'obté $z = 320$ sofàs."
-    },
-    {
       "id": "m03",
       "categoria": "Matemàtiques CCSS",
       "subTema": "Càlcul",

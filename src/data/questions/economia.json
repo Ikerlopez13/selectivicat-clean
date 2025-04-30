@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "categoria": "Economia",
+    "subTema": "Microeconomia",
+    "pregunta": "Si la demanda d'un bé augmenta i l'oferta es manté constant, què passarà amb el preu d'equilibri?",
+    "opciones": [
+      "Augmentarà",
+      "Disminuirà",
+      "Es mantindrà igual",
+      "No es pot determinar"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Quan la demanda augmenta i l'oferta es manté constant:\n- La corba de demanda es desplaça cap a la dreta\n- El nou punt d'equilibri es troba a un preu més alt\n- La quantitat d'equilibri també augmenta\nAquest és un exemple bàsic de com funcionen les lleis de l'oferta i la demanda."
+  },
+  {
+    "id": 2,
+    "categoria": "Economia",
+    "subTema": "Macroeconomia",
+    "pregunta": "Quin dels següents NO és un component del PIB?",
+    "opciones": [
+      "Consum privat",
+      "Inversió empresarial",
+      "Transferències socials",
+      "Exportacions netes"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El PIB (Producte Interior Brut) inclou:\n- Consum privat (C)\n- Inversió empresarial (I)\n- Despesa pública (G)\n- Exportacions netes (X-M)\nLes transferències socials són pagaments del govern als ciutadans que no representen una producció nova i per tant no s'inclouen en el PIB."
+  },
+  {
+    "id": 3,
+    "categoria": "Economia",
+    "subTema": "Empresa",
+    "pregunta": "Què és el fons de maniobra d'una empresa?",
+    "opciones": [
+      "Actiu Corrent - Passiu Corrent",
+      "Actiu No Corrent - Passiu No Corrent",
+      "Actiu Total - Passiu Total",
+      "Passiu Corrent - Actiu Corrent"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "El fons de maniobra o capital circulant és:\n- La diferència entre l'Actiu Corrent i el Passiu Corrent\n- Indica la capacitat de l'empresa per fer front als seus deutes a curt termini\n- Un fons de maniobra positiu és generalment un bon indicador de solvència"
+  },
+  {
+    "id": 4,
+    "categoria": "Economia",
+    "subTema": "Sistema Financer",
+    "pregunta": "Quina és la principal funció del Banc Central Europeu?",
+    "opciones": [
+      "Maximitzar el creixement econòmic",
+      "Mantenir l'estabilitat de preus",
+      "Reduir l'atur",
+      "Augmentar les exportacions"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El Banc Central Europeu (BCE):\n- Té com a objectiu principal mantenir l'estabilitat de preus\n- Busca una inflació propera però inferior al 2%\n- Utilitza la política monetària com a principal instrument\n- És independent dels governs nacionals"
+  },
+  {
+    "id": 5,
+    "categoria": "Economia",
+    "subTema": "Comptabilitat",
+    "pregunta": "Si una empresa té un ROE del 15%, què significa?",
+    "opciones": [
+      "Que els seus actius rendeixen un 15%",
+      "Que guanya 15€ per cada 100€ de fons propis",
+      "Que el seu marge de benefici és del 15%",
+      "Que el seu endeutament és del 15%"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El ROE (Return On Equity o Rendibilitat Financera):\n- Mesura el benefici obtingut en relació als fons propis\n- Es calcula: (Benefici Net / Fons Propis) × 100\n- Un ROE del 15% significa que l'empresa guanya 15€ per cada 100€ de capital propi invertit\n- És un indicador important per als accionistes"
+  }
+] 

@@ -20,13 +20,13 @@ const categoryToJsonFile: { [key: string]: string } = {
   'Biologia': 'biologia.json',
   'Química': 'quimica.json',
   'Física': 'fisica.json',
-  'Geografia': 'geografia.json',
-  'Història': 'història.json',
   'Matemàtiques': 'matematiques.json',
   'Matemàtiques CCSS': 'matematiques_ccss.json',
-  'Filosofia': 'filosofia.json',
+  'Geografia': 'geografia.json',
+  'Història': 'història.json',
   'Català': 'catala.json',
-  'Castellà': 'castella.json'
+  'Castellano': 'castellano.json',
+  'Filosofia': 'filosofia.json'
 };
 
 // Definición de interfaces y tipos
@@ -62,7 +62,7 @@ const subjectsByPhase: SubjectPhases = {
     'historia': 'Història',
     'filosofia': 'Filosofia',
     'catala': 'Català',
-    'castella': 'Castellà'
+    'castella': 'Castellano'
   },
   scientific: {
     'matematiques': 'Matemàtiques',
@@ -76,13 +76,13 @@ const subjectsByPhase: SubjectPhases = {
   }
 };
 
-// Lista de asignaturas disponibles (solo las que tienen preguntas)
+// Lista de asignaturas disponibles
 const availableSubjects: Subject[] = [
   // Fase General
   { id: 'historia', name: 'Història', category: 'Fase General' },
   { id: 'filosofia', name: 'Filosofia', category: 'Fase General' },
   { id: 'catala', name: 'Català', category: 'Fase General' },
-  { id: 'castella', name: 'Castellà', category: 'Fase General' },
+  { id: 'castella', name: 'Castellano', category: 'Fase General' },
   
   // Fase Específica - Ciencias
   { id: 'matematiques', name: 'Matemàtiques', category: 'Científic' },
@@ -106,7 +106,7 @@ const subjectIdToCategory: Record<string, string> = {
   'geografia': 'Geografia',
   'historia': 'Història',
   'catala': 'Català',
-  'castella': 'Castellà'
+  'castella': 'Castellano'
 };
 
 // Obtener la lista de matemáticas
@@ -307,18 +307,27 @@ const Onboarding: React.FC<{
 
       for (const subject of selectedSubjects) {
         try {
-          const response = await fetch(`/data/questions/${categoryToJsonFile[subject]}`);
+          console.log('Calculating max questions for subject:', subject);
+          const fileName = categoryToJsonFile[subject];
+          console.log('Using file:', fileName);
+          
+          const response = await fetch(`/data/questions/${fileName}`);
           if (!response.ok) {
             console.error(`Error loading questions for ${subject}: HTTP ${response.status}`);
             continue;
           }
           const data = await response.json();
-          totalAvailableQuestions += (data.standard?.length || 0) + (isPremium ? (data.premium?.length || 0) : 0);
+          if (Array.isArray(data)) {
+            totalAvailableQuestions += data.length;
+          } else {
+            totalAvailableQuestions += (data.standard?.length || 0) + (isPremium ? (data.premium?.length || 0) : 0);
+          }
         } catch (error) {
           console.error(`Error loading questions for ${subject}:`, error);
         }
       }
 
+      console.log('Total available questions calculated:', totalAvailableQuestions);
       setMaxQuestions(totalAvailableQuestions);
       setTotalQuestions(prev => Math.min(prev, totalAvailableQuestions || 1));
       setIsLoading(false);
@@ -333,6 +342,7 @@ const Onboarding: React.FC<{
   }, [selectedSubjects, isPremium]);
 
   const handleSubjectToggle = (subject: string) => {
+    console.log('Toggling subject:', subject);
     setSelectedSubjects(prev => {
       if (prev.includes(subject)) {
         return prev.filter(s => s !== subject);
@@ -344,6 +354,7 @@ const Onboarding: React.FC<{
 
   const handleComplete = () => {
     if (selectedSubjects.length > 0 && totalQuestions > 0) {
+      console.log('Completing onboarding with subjects:', selectedSubjects);
       onComplete(selectedSubjects, totalQuestions);
     }
   };
@@ -506,19 +517,29 @@ export default function SeleTest() {
         const category = subject;
         const fileName = categoryToJsonFile[category];
         
+        console.log('Loading questions for:', category, 'from file:', fileName);
+        
         if (fileName) {
           try {
             const response = await fetch(`/data/questions/${fileName}`);
             if (!response.ok) {
+              console.error(`HTTP error loading ${fileName}:`, response.status);
               throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
+            console.log(`Loaded data for ${category}:`, data);
             
-            // Añadir preguntas según el tipo de usuario
-            if (data.standard) {
-              availableQuestions = [...availableQuestions, ...data.standard];
-              if (isPremium && data.premium) {
-                availableQuestions = [...availableQuestions, ...data.premium];
+            // Comprobar si las preguntas están en formato standard/premium o en array directo
+            if (Array.isArray(data)) {
+              console.log(`${category}: Found direct array with ${data.length} questions`);
+              availableQuestions = [...availableQuestions, ...data];
+            } else {
+              console.log(`${category}: Found standard/premium format`);
+              if (data.standard) {
+                availableQuestions = [...availableQuestions, ...data.standard];
+                if (isPremium && data.premium) {
+                  availableQuestions = [...availableQuestions, ...data.premium];
+                }
               }
             }
           } catch (error) {
@@ -526,6 +547,8 @@ export default function SeleTest() {
           }
         }
       }
+
+      console.log('Total available questions:', availableQuestions.length);
 
       if (availableQuestions.length === 0) {
         console.warn('No se encontraron preguntas para los criterios seleccionados');
@@ -537,7 +560,7 @@ export default function SeleTest() {
         .sort(() => Math.random() - 0.5)
         .slice(0, Math.min(totalQuestions, availableQuestions.length));
 
-      console.log('Preguntas cargadas:', shuffledQuestions.length);
+      console.log('Final selected questions:', shuffledQuestions.length);
       
       setQuestions(shuffledQuestions);
       setCurrentQuestionIndex(0);

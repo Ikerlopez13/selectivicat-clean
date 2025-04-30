@@ -1,0 +1,352 @@
+[
+  {
+    "id": "cast_verb_1",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'reproducir' en la frase: 'Nadie ___ la escena ayer, de manera que no hubo nada que lamentar.'?",
+    "opciones": [
+      "reprodució",
+      "reprodujo",
+      "reproducía",
+      "reproduciera"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La forma correcta es 'reprodujo', pretérito perfecto simple (indefinido) del verbo reproducir. Es un verbo irregular que sigue el patrón de 'conducir'. Al ser una acción puntual en el pasado, se usa este tiempo verbal."
+  },
+  {
+    "id": "cast_verb_2",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'distraer' en la frase: 'Cuando algo le ___ más de la cuenta, avisadnos.'?",
+    "opciones": [
+      "distraiga",
+      "distraera",
+      "distrae",
+      "distraería"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "La forma correcta es 'distraiga', presente de subjuntivo del verbo distraer. Se usa el subjuntivo porque expresa una posibilidad futura y va introducido por 'cuando' con valor de hipótesis."
+  },
+  {
+    "id": "cast_verb_3",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'balbucir' en la frase: 'Al entrar, su amiga ___ unas palabras y se puso a llorar.'?",
+    "opciones": [
+      "balbució",
+      "balbuceó",
+      "balbucía",
+      "balbuciría"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La forma correcta es 'balbuceó', pretérito perfecto simple (indefinido) del verbo balbucir. Es un verbo irregular que cambia la 'i' por 'e' en este tiempo verbal para mantener el sonido."
+  },
+  {
+    "id": "cast_verb_4",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'oler' en la frase: 'Dejo el frasco en el suelo y me pongo a limpiar. No quiero que el suelo ___ mal.'?",
+    "opciones": [
+      "olería",
+      "oliera",
+      "huela",
+      "olerá"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La forma correcta es 'huela', presente de subjuntivo del verbo oler. Se usa el subjuntivo porque va introducido por 'no quiero que' y es un verbo irregular que diptonga la 'o' en 'ue' y añade 'h' inicial."
+  },
+  {
+    "id": "cast_verb_5",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "Identifica el tiempo verbal de 'reprodujo' en la oración 'Nadie reprodujo la escena ayer':",
+    "opciones": [
+      "Pretérito imperfecto",
+      "Pretérito perfecto simple",
+      "Pretérito perfecto compuesto",
+      "Presente"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Es el pretérito perfecto simple (o indefinido), que se usa para acciones puntuales y acabadas en el pasado, como indica el adverbio 'ayer'."
+  },
+  {
+    "id": "cast_verb_6",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Por qué se usa el subjuntivo en 'distraiga' en la frase 'Cuando algo le distraiga más de la cuenta'?",
+    "opciones": [
+      "Porque expresa un deseo",
+      "Porque indica una acción pasada",
+      "Porque expresa una hipótesis futura",
+      "Porque es una orden"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Se usa el subjuntivo porque la conjunción 'cuando' está expresando una hipótesis o posibilidad futura, no un hecho real en el presente."
+  },
+  {
+    "id": "cast_verb_7",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Qué tipo de irregularidad presenta el verbo 'huela' en la frase 'No quiero que el suelo huela mal'?",
+    "opciones": [
+      "Solo diptongación (o > ue)",
+      "Solo añade h inicial",
+      "Diptongación y añade h inicial",
+      "Cambio de vocal"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "El verbo 'oler' presenta dos irregularidades en el presente de subjuntivo: diptonga la 'o' en 'ue' y añade una 'h' inicial, resultando en 'huela'."
+  },
+  {
+    "id": "cast_verb_8",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Por qué se usa 'balbuceó' y no 'balbució' en la frase 'su amiga balbuceó unas palabras'?",
+    "opciones": [
+      "Porque es un error común",
+      "Porque cambia la i por e para mantener el sonido",
+      "Porque es un verbo regular",
+      "Porque es un préstamo de otro idioma"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El verbo 'balbucir' cambia la 'i' por 'e' en el pretérito perfecto simple para mantener el sonido /θ/ (en español peninsular) o /s/ (en español americano) antes de la terminación -ió."
+  },
+  {
+    "id": "cast_verb_9",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la frase 'No quiero que el suelo huela mal', ¿por qué se usa el presente de subjuntivo?",
+    "opciones": [
+      "Porque es una orden directa",
+      "Porque va después de 'no quiero que'",
+      "Porque expresa una acción pasada",
+      "Porque es una pregunta indirecta"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Se usa el presente de subjuntivo porque va introducido por la expresión de deseo negativo 'no quiero que', que siempre requiere subjuntivo en la oración subordinada."
+  },
+  {
+    "id": "cast_verb_10",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Qué tienen en común los verbos 'reproducir' y 'conducir'?",
+    "opciones": [
+      "Son regulares en todos los tiempos",
+      "Cambian la c en j en el pretérito",
+      "No tienen participio",
+      "Son siempre pronominales"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Ambos verbos son irregulares y siguen el mismo patrón: cambian la 'c' por 'j' en el pretérito perfecto simple (conduje, reproduje) y en los tiempos derivados de este."
+  },
+  {
+    "id": "cast_verb_11",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'introducir' en la frase: 'En primer lugar, Julia ___ la contraseña, así que pudo entrar.'?",
+    "opciones": [
+      "introdució",
+      "introdujo",
+      "introducía",
+      "introdujera"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La forma correcta es 'introdujo', pretérito perfecto simple del verbo introducir. Es un verbo irregular que sigue el patrón de 'conducir', cambiando la 'c' por 'j' en este tiempo verbal."
+  },
+  {
+    "id": "cast_verb_12",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la frase 'Espero que, al menos vosotros, después de todo lo sucedido, ___ que no podemos continuar así', ¿cuál es la forma correcta del verbo 'comprender'?",
+    "opciones": [
+      "comprendáis",
+      "comprenderéis",
+      "comprendierais",
+      "comprendéis"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "La forma correcta es 'comprendáis', presente de subjuntivo, porque va introducido por 'espero que', que requiere subjuntivo al expresar un deseo o expectativa."
+  },
+  {
+    "id": "cast_verb_13",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Cuál es la forma correcta del verbo 'rehuir' en: 'No me imaginaba que vosotros ___ ese tipo de responsabilidades.'?",
+    "opciones": [
+      "rehuíais",
+      "rehuirías",
+      "rehuyerais",
+      "rehuyeseis"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La forma correcta es 'rehuyerais', pretérito imperfecto de subjuntivo, porque va introducido por 'no me imaginaba que', que requiere concordancia temporal en subjuntivo."
+  },
+  {
+    "id": "cast_verb_14",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la oración 'La meteoróloga anunció que ___ tormentas, pero lo cierto es que luce un sol estupendo', ¿cuál es la forma correcta del verbo 'haber'?",
+    "opciones": [
+      "habrá",
+      "habría",
+      "hubiese",
+      "hubiera"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La forma correcta es 'habría', condicional simple, porque expresa una predicción en el pasado (futuro del pasado) que no se ha cumplido, como se deduce por el contraste con 'pero lo cierto es que...'."
+  },
+  {
+    "id": "cast_verb_15",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Por qué el verbo 'introducir' forma 'introdujo' y no 'introdució' en pretérito perfecto simple?",
+    "opciones": [
+      "Porque es un error común de conjugación",
+      "Porque sigue el patrón irregular de los verbos terminados en -ucir",
+      "Porque es un préstamo de otro idioma",
+      "Porque es una forma arcaica que se ha mantenido"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Los verbos terminados en -ucir (conducir, introducir, producir, etc.) siguen un patrón irregular en el pretérito perfecto simple, cambiando la 'c' por 'j': conduje, introduje, produje."
+  },
+  {
+    "id": "cast_verb_16",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la frase 'Espero que comprendáis', ¿por qué se usa el presente de subjuntivo y no el futuro de indicativo?",
+    "opciones": [
+      "Porque es una orden indirecta",
+      "Porque 'espero que' siempre exige subjuntivo",
+      "Porque es una acción pasada",
+      "Porque es más formal"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "El verbo 'esperar que' siempre exige subjuntivo en la subordinada porque expresa un deseo o expectativa, no un hecho real o confirmado."
+  },
+  {
+    "id": "cast_verb_17",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Qué tiempo verbal es 'rehuyerais/rehuyeseis' y por qué se usa en la frase dada?",
+    "opciones": [
+      "Presente de subjuntivo para expresar deseo",
+      "Futuro de subjuntivo para expresar posibilidad",
+      "Pretérito imperfecto de subjuntivo para concordar con el pasado",
+      "Condicional simple para expresar hipótesis"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "Es el pretérito imperfecto de subjuntivo y se usa para mantener la concordancia temporal con el verbo principal en pasado 'no me imaginaba que'. Esta correlación temporal es obligatoria en español."
+  },
+  {
+    "id": "cast_verb_18",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la frase con el verbo 'haber', ¿por qué se usa el condicional 'habría' en lugar del futuro 'habrá'?",
+    "opciones": [
+      "Porque es una predicción que no se cumplió",
+      "Porque es más formal",
+      "Porque es una orden indirecta",
+      "Porque es una pregunta retórica"
+    ],
+    "respuestaCorrecta": 0,
+    "explicacion": "Se usa 'habría' (condicional) porque es una predicción hecha en el pasado que no se cumplió, como se evidencia por el contraste con 'pero lo cierto es que luce un sol estupendo'."
+  },
+  {
+    "id": "cast_verb_19",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "¿Qué tienen en común los verbos 'rehuir' y 'huir'?",
+    "opciones": [
+      "Son completamente regulares",
+      "Cambian la i por y ante vocal",
+      "No tienen participio",
+      "Son siempre pronominales"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "Ambos verbos son irregulares y cambian la i por y cuando va seguida de una vocal para mantener el hiato: huir → huyendo, rehuir → rehuyendo."
+  },
+  {
+    "id": "cast_verb_20",
+    "categoria": "Castellano",
+    "subTema": "Morfología verbal",
+    "pregunta": "En la conjugación de 'comprender', ¿por qué son posibles tanto 'comprendáis' como 'comprendierais'?",
+    "opciones": [
+      "Porque son el mismo tiempo verbal",
+      "Porque ambas son formas irregulares",
+      "Porque depende del registro formal o informal",
+      "Porque expresan diferentes matices temporales"
+    ],
+    "respuestaCorrecta": 3,
+    "explicacion": "Aunque ambas formas son de subjuntivo, expresan diferentes matices temporales: 'comprendáis' (presente) expresa actualidad o futuro, mientras que 'comprendierais' (imperfecto) expresa pasado o mayor distanciamiento de la realidad."
+  },
+  {
+    "id": "cast_sint_1",
+    "categoria": "Castellano",
+    "subTema": "Análisis sintáctico",
+    "pregunta": "Lea la siguiente lista de secuencias y elija la única que identifica de manera correcta y ordenada el tipo de oración subordinada que aparece en cada una:\n\n1. Al final dijiste eso porque tenías miedo.\n2. Releyó el libro para encontrar un pasaje concreto.\n3. Es tan difícil que no lo sabemos ni nosotros.\n4. Como no vengas, tendrás problemas.",
+    "opciones": [
+      "1) concesiva, 2) final, 3) causal, 4) ilativa",
+      "1) causal, 2) final, 3) consecutiva, 4) condicional",
+      "1) causal, 2) condicional, 3) ilativa, 4) final",
+      "1) final, 2) concesiva, 3) condicional, 4) causal"
+    ],
+    "respuestaCorrecta": 1,
+    "explicacion": "La opción correcta es '1) causal, 2) final, 3) consecutiva, 4) condicional' porque:\n1. 'porque tenías miedo' es una oración subordinada causal\n2. 'para encontrar un pasaje concreto' es una oración subordinada final\n3. 'que no lo sabemos ni nosotros' es una oración subordinada consecutiva (resultado de 'tan difícil')\n4. 'Como no vengas' es una oración subordinada condicional"
+  },
+  {
+    "id": "cast_sint_2",
+    "categoria": "Castellano",
+    "subTema": "Análisis sintáctico",
+    "pregunta": "De las siguientes opciones, elija la única que identifica de manera correcta y ordenada la función sintáctica que desempeñan las oraciones subordinadas sustantivas en cada una de las secuencias:\n\n1. Me gusta leer libros por la noche.\n2. No sabemos cuál de sus problemas tiene solución.\n3. Os informaron de que no vendría nadie a sustituirme.\n4. La idea de que te quedes me pone nerviosa.",
+    "opciones": [
+      "1) complemento indirecto, 2) complemento predicativo, 3) complemento de régimen, 4) complemento de régimen",
+      "1) sujeto, 2) sujeto, 3) complemento directo, 4) complemento de régimen",
+      "1) complemento directo, 2) complemento del nombre, 3) complemento de régimen, 4) complemento de régimen",
+      "1) sujeto, 2) complemento directo, 3) complemento de régimen, 4) complemento del nombre"
+    ],
+    "respuestaCorrecta": 3,
+    "explicacion": "La opción correcta es '1) sujeto, 2) complemento directo, 3) complemento de régimen, 4) complemento del nombre' porque:\n1. 'leer libros' funciona como sujeto de 'me gusta'\n2. 'cuál de sus problemas tiene solución' es el complemento directo de 'no sabemos'\n3. 'de que no vendría nadie' es complemento de régimen del verbo 'informar'\n4. 'de que te quedes' es complemento del nombre 'idea'"
+  },
+  {
+    "id": "cast_sint_3",
+    "categoria": "Castellano",
+    "subTema": "Análisis sintáctico",
+    "pregunta": "LISTA 1\nLea las siguientes secuencias y elija la única que identifica de manera correcta y ordenada el tipo de oración subordinada que aparece en cada una:\n\n1. Se puso el gorro de navidad para llamar la atención.\n2. Ahora publica más fotos, pero no gana más dinero.\n3. Causa problemas allá donde va.\n4. Los profesores que dicen eso no se enteran de nada.",
+    "opciones": [
+      "1) sustantiva, 2) adversativa, 3) adverbial, 4) de relativo",
+      "1) causal, 2) consecutiva, 3) de relativo, 4) sustantiva",
+      "1) final, 2) adversativa, 3) de relativo, 4) de relativo",
+      "1) final, 2) adversativa, 3) adverbial, 4) sustantiva"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "La opción correcta es '1) final, 2) adversativa, 3) de relativo, 4) de relativo' porque:\n1. 'para llamar la atención' es una oración subordinada final\n2. 'pero no gana más dinero' es una oración coordinada adversativa\n3. 'donde va' es una oración subordinada de relativo\n4. 'que dicen eso' es una oración subordinada de relativo"
+  },
+  {
+    "id": "cast_sint_4",
+    "categoria": "Castellano",
+    "subTema": "Análisis sintáctico",
+    "pregunta": "LISTA 2\nDe las siguientes opciones, elija la única que identifica de manera correcta y ordenada la función sintáctica que desempeñan las oraciones subordinadas en cada una de las secuencias:\n\n1. María propuso ir al cine.\n2. La asignatura de la que te has matriculado te está costando más de lo previsto.\n3. Las alumnas que no pueden venir están sentadas al fondo.\n4. Leer un libro cada semana será obligatorio.",
+    "opciones": [
+      "1) complemento indirecto, 2) aposición, 3) complemento del adjetivo, 4) sujeto",
+      "1) complemento del adverbio, 2) sujeto, 3) complemento directo, 4) complemento del nombre",
+      "1) complemento directo, 2) complemento del nombre, 3) sujeto, 4) aposición",
+      "1) complemento directo, 2) complemento del nombre, 3) complemento del nombre, 4) sujeto"
+    ],
+    "respuestaCorrecta": 3,
+    "explicacion": "La opción correcta es '1) complemento directo, 2) complemento del nombre, 3) complemento del nombre, 4) sujeto' porque:\n1. 'ir al cine' es el complemento directo del verbo 'propuso'\n2. 'de la que te has matriculado' es complemento del nombre 'asignatura'\n3. 'que no pueden venir' es complemento del nombre 'alumnas'\n4. 'Leer un libro cada semana' funciona como sujeto de 'será obligatorio'"
+  },
+  {
+    "id": "cast_lit_1",
+    "categoria": "Castellano",
+    "subTema": "Literatura",
+    "pregunta": "¿Quién escribió \"Don Quijote de la Mancha\"?",
+    "opciones": [
+      "Francisco de Quevedo",
+      "Lope de Vega",
+      "Miguel de Cervantes",
+      "Luis de Góngora"
+    ],
+    "respuestaCorrecta": 2,
+    "explicacion": "\"Don Quijote de la Mancha\" fue escrito por Miguel de Cervantes y publicado en dos partes (1605 y 1615). Es considerada la obra cumbre de la literatura española y una de las obras más importantes de la literatura universal."
+  }
+] 
