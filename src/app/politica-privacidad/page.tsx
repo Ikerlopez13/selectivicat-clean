@@ -1,48 +1,56 @@
+import React from "react";
 import FooterMain from '@/components/FooterMain';
 import NavbarMain from '@/components/NavbarMain';
 
-export default function PrivacyPolicy() {
+export default function PoliticaPrivacidadPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
       
       <main className="flex-grow container mx-auto px-4 py-8 mt-16">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold mb-8">Política de Privacitat</h1>
+          <h1 className="text-3xl font-bold mb-8">Política de Privacidad</h1>
           
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">1. Introducció</h2>
-            <p className="mb-4">
-              Aquesta Política de Privacitat explica com SelectiviCAT ("nosaltres", "el nostre", "la nostra") recull, utilitza i protegeix la informació que vostè proporciona quan utiliza el nostre lloc web selectivicat.com.
-            </p>
+            <h2 className="text-2xl font-semibold mb-4">1. Responsable del tratamiento</h2>
+            <p className="mb-4">Responsable: selectivi.cat<br/>Email: catselectivi@gmail.com</p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">2. Informació que recollim</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Datos que recopilamos</h2>
             <p className="mb-4">Podem recollir la següent informació:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Nom i cognoms</li>
-              <li>Adreça de correu electrònic</li>
-              <li>Informació del perfil de Google quan s'inicia sessió amb Google</li>
-              <li>Informació sobre l'ús del lloc web i preferències</li>
+              <li>Datos de navegación (cookies, dirección IP, tipo de dispositivo, etc.)</li>
+              <li>Datos proporcionados voluntariamente (por ejemplo, al contactar por email)</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">3. Com utilitzem la informació</h2>
-            <p className="mb-4">Utilitzem aquesta informació per:</p>
+            <h2 className="text-2xl font-semibold mb-4">3. Finalidad del tratamiento</h2>
+            <p className="mb-4">Utilitzem aquesta información per:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Proporcionar i millorar els nostres serveis</li>
-              <li>Personalitzar l'experiència d'usuari</li>
-              <li>Enviar informació sobre actualitzacions i novetats</li>
-              <li>Analitzar i millorar el rendiment del lloc web</li>
+              <li>Mejorar la experiència d'usuari</li>
+              <li>Responder a consultas i solicituds</li>
+              <li>Cumplir amb obligacions legals</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">4. Seguretat</h2>
+            <h2 className="text-2xl font-semibold mb-4">4. Drets dels usuaris</h2>
             <p className="mb-4">
-              Ens comprometem a garantir que la seva informació estigui segura. Per evitar l'accés o la divulgació no autoritzats, hem implementat procediments físics, electrònics i administratius adequats per salvaguardar i protegir la informació que recollim en línia.
+              Vostè té dret a:
+              <br />
+              Accedir a la seva informació personal
+              <br />
+              Corregir la seva informació personal
+              <br />
+              Sol·licitar l'eliminació de la seva informació personal
+              <br />
+              Oposar-se al processament de la seva informació personal
+              <br />
+              Sol·licitar la portabilitat de les seves dades
+              <br />
+              Pot exercir aquests drets escrivint a <a href="mailto:catselectivi@gmail.com" className="text-blue-600 underline">catselectivi@gmail.com</a>.
             </p>
           </section>
 
@@ -54,37 +62,18 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">6. Els seus drets</h2>
-            <p className="mb-4">Vostè té dret a:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Accedir a la seva informació personal</li>
-              <li>Corregir la seva informació personal</li>
-              <li>Sol·licitar l'eliminació de la seva informació personal</li>
-              <li>Oposar-se al processament de la seva informació personal</li>
-              <li>Sol·licitar la portabilitat de les seves dades</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">7. Compartir informació</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Cambios en la política</h2>
             <p className="mb-4">
-              No vendrem, distribuirem ni llogarem la seva informació personal a tercers llevat que tinguem el seu permís o ho requereixi la llei. Utilitzem Google Analytics i altres serveis de tercers per analitzar l'ús del lloc web.
+              Nos reservamos el derecho de modificar esta política para adaptarla a novedades legislativas o mejoras del sitio.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">8. Canvis en aquesta política</h2>
-            <p className="mb-4">
-              Podem actualitzar aquesta política de privacitat periòdicament. Li recomanem que revisi aquesta pàgina regularment per estar informat de qualsevol canvi.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">9. Contacte</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Contacte</h2>
             <p className="mb-4">
               Si té alguna pregunta sobre aquesta política de privacitat, pot contactar-nos a:
               <br />
-              Correu electrònic: info@selectivicat.com
+              Correu electrònic: <a href="mailto:catselectivi@gmail.com" className="text-blue-600 underline">catselectivi@gmail.com</a>
             </p>
           </section>
 

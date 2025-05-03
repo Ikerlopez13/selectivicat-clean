@@ -203,26 +203,32 @@ export default function SeleTestPage() {
   }
 
   if (gameState.isGameOver) {
+    const notaSobre14 = ((gameState.score / questions.length) * 14).toFixed(2);
     return (
       <div className="min-h-screen bg-gray-50 py-12 px-4">
         <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
-          <h2 className="text-3xl font-bold mb-6">Test Completat!</h2>
-          <p className="text-2xl mb-4">
-            Has encertat {gameState.score} de {questions.length} preguntes
+          <span className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-100 mb-6">
+            <svg className="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 17.75V17.75M12 6.25V6.25M6.25 12H6.25M17.75 12H17.75M8.5 8.5L8.5 8.5M15.5 15.5L15.5 15.5M8.5 15.5L8.5 15.5M15.5 8.5L15.5 8.5" /></svg>
+          </span>
+          <h2 className="text-3xl font-bold mb-6">Test completat!</h2>
+          <p className="text-2xl mb-2">
+            La teva puntuació: <span className="font-bold text-yellow-600">{gameState.score}</span> de {questions.length}
           </p>
+          <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block">
+            <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
+            <span className="text-3xl font-bold text-yellow-600">{notaSobre14} / 14</span>
+          </div>
           <p className="text-xl mb-8 text-gray-600">{getSupportMessage(gameState.score, questions.length)}</p>
-          
-          <div className="space-y-6">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
             <button
               onClick={handleShare}
-              className="w-full py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-medium"
+              className="flex-1 py-4 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-medium"
             >
               Compartir per WhatsApp
             </button>
-            
             <button
               onClick={handleRestart}
-              className="w-full py-4 bg-selectivi-yellow text-white rounded-lg hover:bg-selectivi-yellow/90 transition-colors text-lg font-medium"
+              className="flex-1 py-4 bg-selectivi-yellow text-white rounded-lg hover:bg-selectivi-yellow/90 transition-colors text-lg font-medium"
             >
               Tornar a començar
             </button>
