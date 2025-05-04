@@ -630,10 +630,26 @@ export default function SeleTest() {
               </svg>
             </div>
             <h2 className="text-3xl font-bold mb-4">Test completat!</h2>
+            <div className="flex justify-center mb-4">
+              <a
+                href="/premium"
+                className="inline-flex items-center gap-2 px-4 py-2 border-2 border-yellow-400 rounded-lg bg-yellow-50 text-yellow-700 font-semibold hover:bg-yellow-100 transition-all duration-150 shadow-sm"
+                style={{ fontSize: '1rem' }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
+                </svg>
+                Prova SeleTest Premium
+              </a>
+            </div>
             <div className="space-y-4 mb-8">
               <p className="text-xl">
                 La teva puntuació: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
               </p>
+              <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block">
+                <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
+                <span className="text-3xl font-bold text-yellow-600">{((score / questions.length) * 14).toFixed(2)} / 14</span>
+              </div>
               <p className="text-lg text-gray-600">
                 {getSupportMessage(score / questions.length)}
               </p>
@@ -652,7 +668,6 @@ export default function SeleTest() {
                 </svg>
                 Compartir per WhatsApp
               </button>
-
               <button 
                 onClick={() => {
                   setShowResults(false);
@@ -668,6 +683,7 @@ export default function SeleTest() {
                 Tornar a començar
               </button>
             </div>
+            
           </div>
         )}
       </div>
