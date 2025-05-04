@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
+import ShareButton from '@/components/ShareButton';
 
 export default function ArticlePage() {
   return (
@@ -85,7 +86,7 @@ export default function ArticlePage() {
             <div className="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
               <p className="flex items-center text-yellow-800">
                 <span className="text-xl mr-2">⚠️</span>
-                <strong>Atenció:</strong> Aquestes dates poden variar lleugerament. Et recomanem consultar regularment el portal oficial d'Universitats i Recerca de la Generalitat.
+                <strong>Atenció:</strong> Aquestes dates poden variar lleugerament. Et recomanem consultar habitualment el portal oficial d'Universitats i Recerca de la Generalitat.
               </p>
             </div>
           </div>
@@ -186,16 +187,10 @@ export default function ArticlePage() {
             Comparteix aquest article
           </h3>
           <div className="flex gap-4">
-            <button
-              onClick={() => {
-                const url = encodeURIComponent(window.location.href);
-                const text = encodeURIComponent('Dates oficials i informació important sobre la Selectivitat 2025 a Catalunya!');
-                window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
-              }}
-              className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
-            >
-              Compartir per WhatsApp
-            </button>
+            <ShareButton 
+              url="https://selectivi.cat/blog/ultims-canvis-selectivitat"
+              text="Últims canvis i informació important sobre la Selectivitat!"
+            />
           </div>
         </div>
       </article>

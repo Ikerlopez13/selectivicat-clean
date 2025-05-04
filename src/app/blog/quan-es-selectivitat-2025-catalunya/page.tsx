@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavbarMain from '@/components/NavbarMain';
 import FooterMain from '@/components/FooterMain';
+import ShareButton from '@/components/ShareButton';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -203,16 +204,10 @@ export default function ArticlePage() {
             Comparteix aquest article
           </h3>
           <div className="flex gap-4">
-            <button
-              onClick={() => {
-                const url = encodeURIComponent(window.location.href);
-                const text = encodeURIComponent('Dates oficials i informació important sobre la Selectivitat 2025 a Catalunya!');
-                window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
-              }}
-              className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
-            >
-              Compartir per WhatsApp
-            </button>
+            <ShareButton 
+              url="https://selectivi.cat/blog/quan-es-selectivitat-2025-catalunya"
+              text="Dates oficials i informació important sobre la Selectivitat 2025 a Catalunya!"
+            />
           </div>
         </div>
       </article>
