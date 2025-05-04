@@ -69,6 +69,7 @@ function getSupportMessage(score: number, total: number): string {
 }
 
 export default function SeleTestPage() {
+  console.log("DEBUG: ENTRANDO EN SELETEStPAGE");
   const { data: session } = useSession() as { data: CustomSession | null };
   const router = useRouter();
   
@@ -191,12 +192,13 @@ export default function SeleTestPage() {
   };
 
   if (!isOnboardingComplete) {
+    console.log("DEBUG: RETURN ONBOARDING");
     return (
       <div className="min-h-screen bg-gray-50 py-12 px-4">
         <OnboardingSeleTest
-          onSubjectSelect={handleSubjectSelect}
-          subjectConfig={subjectConfig}
-          subjectsByCategory={subjectsByCategory}
+          onComplete={(selectedSubjects, totalQuestions) => {
+            handleSubjectSelect(selectedSubjects[0] || 'mates');
+          }}
         />
       </div>
     );
@@ -204,6 +206,7 @@ export default function SeleTestPage() {
 
   if (gameState.isGameOver) {
     const notaSobre14 = ((gameState.score / questions.length) * 14).toFixed(2);
+    console.log('DEBUG: RETURN GAME OVER', { score: gameState.score, total: questions.length, notaSobre14 });
     return (
       <div className="min-h-screen bg-gray-50 py-12 px-4">
         <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg text-center">
@@ -233,11 +236,20 @@ export default function SeleTestPage() {
               Tornar a començar
             </button>
           </div>
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/premium"
+              className="py-4 px-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-lg font-medium shadow-md"
+            >
+              ¿Quieres usar SeleTest de forma ilimitada? Hazte premium
+            </a>
+          </div>
         </div>
       </div>
     );
   }
 
+  console.log("DEBUG: RETURN MAIN FLOW");
   return (
     <div className="min-h-screen bg-gray-50">
       <NavbarMain />
@@ -269,14 +281,16 @@ export default function SeleTestPage() {
             </div>
           </div>
 
-          <QuestionSeleTest
-            question={currentQuestion}
-            selectedAnswer={gameState.selectedAnswer}
-            showExplanation={gameState.showExplanation}
-            isAnswerCorrect={gameState.isAnswerCorrect}
-            onAnswerSubmit={handleAnswerSubmit}
-            onNextQuestion={handleNextQuestion}
-          />
+          {currentQuestion && (
+            <QuestionSeleTest
+              question={currentQuestion}
+              selectedAnswer={gameState.selectedAnswer}
+              showExplanation={gameState.showExplanation}
+              isAnswerCorrect={gameState.isAnswerCorrect}
+              onAnswerSubmit={handleAnswerSubmit}
+              onNextQuestion={handleNextQuestion}
+            />
+          )}
         </div>
       </main>
 

@@ -643,13 +643,15 @@ export default function SeleTest() {
               </svg>
             </div>
             <h2 className="text-3xl font-bold mb-4">Test completat!</h2>
-            <div className="flex justify-center mb-4">
+            <div className="my-6 flex justify-center">
               <a
-                href="/premium"
-                className="inline-flex items-center gap-2 px-4 py-2 border-2 border-yellow-400 rounded-lg bg-yellow-50 text-yellow-700 font-semibold hover:bg-yellow-100 transition-all duration-150 shadow-sm"
-                style={{ fontSize: '1rem' }}
+                href="https://buy.stripe.com/eVa6pN3N55I7dY4bIJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-50 border-2 border-yellow-300 rounded-lg text-yellow-700 font-bold text-lg hover:bg-yellow-100 transition"
+                style={{ boxShadow: '0 2px 8px 0 #fef3c7' }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
                 </svg>
                 Prova SeleTest Premium
