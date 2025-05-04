@@ -371,6 +371,19 @@ const Onboarding: React.FC<{
           </div>
           <p className="text-gray-600 mb-2">Descobreix com et podria anar a la Selectivitat amb la nostra predicció personalitzada</p>
           <p className="text-sm text-gray-500">Selecciona les assignatures que cursaràs per obtenir una predicció més precisa de la teva nota</p>
+          <div className="flex justify-center mt-4">
+            <a
+              href="/premium"
+              className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-700 text-sm font-medium hover:bg-yellow-100 transition"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
+              </svg>
+              <span>
+                Accedeix a <span className="font-semibold">preguntes il·limitades</span> i tria per <span className="font-semibold">subtemes</span> amb <span className="underline ml-1">SeleTest Premium</span>
+              </span>
+            </a>
+          </div>
         </div>
 
         <div className="space-y-6">
