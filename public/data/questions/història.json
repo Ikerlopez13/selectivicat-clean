@@ -567,20 +567,6 @@
       ],
       "respuestaCorrecta": 0,
       "explicacion": "El Partit Socialista Unificat de Catalunya (PSUC) es va fundar el juliol de 1936 per la unificació de quatre partits marxistes catalans: Unió Socialista de Catalunya, Partit Comunista de Catalunya, Partit Català Proletari i la Federació Catalana del PSOE."
-    },
-    {
-      "id": "h10",
-      "categoria": "Història",
-      "subTema": "Història de l'Art",
-      "pregunta": "On es troben les pintures rupestres d'Altamira?",
-      "opciones": [
-        "Andalusia",
-        "Cantàbria",
-        "Castella i Lleó",
-        "Aragó"
-      ],
-      "respuestaCorrecta": 1,
-      "explicacion": "Descobertes el 1879 a Santillana del Mar (Cantàbria), són considerades la 'Capella Sixtina' de l'art paleolític."
     }
   ],
   "premium": []

@@ -9,7 +9,7 @@ import Image from 'next/image';
 import HeroSeleTest from '@/components/HeroSeleTest';
 import { useSession } from "next-auth/react";
 import type { Question } from "@/types/questions";
-import { getMatematiquesList } from '@/utils/matematiques-utils';
+import { getMatematiquesList, getSubTemasForCategory, filterQuestionsBySubTemas } from '@/utils/matematiques-utils';
 import AdSenseAd from '@/components/AdSenseAd';
 
 // At the top of the file, add this line after the imports
@@ -291,55 +291,69 @@ const Question: React.FC<QuestionProps> = ({
 
 // Componente de Onboarding
 const Onboarding: React.FC<{
-  onComplete: (selectedSubjects: string[], totalQuestions: number) => void;
+  onComplete: (selectedSubjects: string[], totalQuestions: number, selectedSubtemes?: Record<string, string[]>) => void;
   isPremium: boolean;
 }> = ({ onComplete, isPremium }) => {
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
   const [totalQuestions, setTotalQuestions] = useState(10);
   const [maxQuestions, setMaxQuestions] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [subtemesBySubject, setSubtemesBySubject] = useState<Record<string, string[]>>({});
+  const [selectedSubtemes, setSelectedSubtemes] = useState<Record<string, string[]>>({});
 
-  // Calcular el número máximo de preguntas cuando cambian las asignaturas seleccionadas
+  // Cargar subtemas únicos para cada asignatura seleccionada (solo premium)
+  useEffect(() => {
+    if (!isPremium) return;
+    const fetchSubtemes = async () => {
+      const newSubtemes: Record<string, string[]> = {};
+      for (const subject of selectedSubjects) {
+        try {
+          const fileName = categoryToJsonFile[subject];
+          const response = await fetch(`/data/questions/${fileName}`);
+          if (!response.ok) continue;
+          const data = await response.json();
+          let questions = Array.isArray(data) ? data : [...(data.standard || []), ...(data.premium || [])];
+          const subtemes = Array.from(new Set(questions.map((q: any) => q.subTema).filter(Boolean)));
+          newSubtemes[subject] = subtemes;
+        } catch {}
+      }
+      setSubtemesBySubject(newSubtemes);
+    };
+    if (selectedSubjects.length > 0) fetchSubtemes();
+  }, [selectedSubjects, isPremium]);
+
+  // useEffect para calcular maxQuestions
   useEffect(() => {
     async function calculateMaxQuestions() {
       setIsLoading(true);
       let totalAvailableQuestions = 0;
-
       for (const subject of selectedSubjects) {
         try {
-          console.log('Calculating max questions for subject:', subject);
           const fileName = categoryToJsonFile[subject];
-          console.log('Using file:', fileName);
-          
           const response = await fetch(`/data/questions/${fileName}`);
-          if (!response.ok) {
-            console.error(`Error loading questions for ${subject}: HTTP ${response.status}`);
-            continue;
-          }
+          if (!response.ok) continue;
           const data = await response.json();
-          if (Array.isArray(data)) {
-            totalAvailableQuestions += data.length;
-          } else {
-            totalAvailableQuestions += (data.standard?.length || 0) + (isPremium ? (data.premium?.length || 0) : 0);
+          let questions = Array.isArray(data)
+            ? data
+            : [...(data.standard || []), ...(isPremium ? (data.premium || []) : [])];
+          // Si hay subtemas seleccionados para esta asignatura, filtrar
+          if (isPremium && selectedSubtemes[subject]?.length) {
+            questions = questions.filter((q: any) => selectedSubtemes[subject].includes(q.subTema));
           }
-        } catch (error) {
-          console.error(`Error loading questions for ${subject}:`, error);
-        }
+          totalAvailableQuestions += questions.length;
+        } catch {}
       }
-
-      console.log('Total available questions calculated:', totalAvailableQuestions);
       setMaxQuestions(totalAvailableQuestions);
       setTotalQuestions(prev => Math.min(prev, totalAvailableQuestions || 1));
       setIsLoading(false);
     }
-
     if (selectedSubjects.length > 0) {
       calculateMaxQuestions();
     } else {
       setMaxQuestions(0);
       setTotalQuestions(10);
     }
-  }, [selectedSubjects, isPremium]);
+  }, [selectedSubjects, isPremium, selectedSubtemes]);
 
   const handleSubjectToggle = (subject: string) => {
     console.log('Toggling subject:', subject);
@@ -352,10 +366,22 @@ const Onboarding: React.FC<{
     });
   };
 
+  const handleSubtemaToggle = (subject: string, subtema: string) => {
+    setSelectedSubtemes(prev => {
+      const prevList = prev[subject] || [];
+      return {
+        ...prev,
+        [subject]: prevList.includes(subtema)
+          ? prevList.filter(s => s !== subtema)
+          : [...prevList, subtema]
+      };
+    });
+  };
+
   const handleComplete = () => {
     if (selectedSubjects.length > 0 && totalQuestions > 0) {
       console.log('Completing onboarding with subjects:', selectedSubjects);
-      onComplete(selectedSubjects, totalQuestions);
+      onComplete(selectedSubjects, totalQuestions, isPremium ? selectedSubtemes : undefined);
     }
   };
 
@@ -371,36 +397,64 @@ const Onboarding: React.FC<{
           </div>
           <p className="text-gray-600 mb-2">Descobreix com et podria anar a la Selectivitat amb la nostra predicció personalitzada</p>
           <p className="text-sm text-gray-500">Selecciona les assignatures que cursaràs per obtenir una predicció més precisa de la teva nota</p>
-          <div className="flex justify-center mt-4">
-            <a
-              href="/premium"
-              className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-700 text-sm font-medium hover:bg-yellow-100 transition"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
-              </svg>
-              <span>
-                Accedeix a <span className="font-semibold">preguntes il·limitades</span> i tria per <span className="font-semibold">subtemes</span> amb <span className="underline ml-1">SeleTest Premium</span>
-              </span>
-            </a>
-          </div>
+          {!isPremium && (
+            <div className="flex justify-center mt-4">
+              <a
+                href="/premium"
+                className="flex items-center gap-2 px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-700 text-sm font-medium hover:bg-yellow-100 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
+                </svg>
+                <span>
+                  Accedeix a <span className="font-semibold">preguntes il·limitades</span> i tria per <span className="font-semibold">subtemes</span> amb <span className="underline ml-1">SeleTest Premium</span>
+                </span>
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-medium mb-4">Selecciona les assignatures</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {Object.entries(subjectIdToCategory).map(([id, name]) => (
-                <button
-                  key={id}
-                  onClick={() => handleSubjectToggle(name)}
-                  className={`p-6 rounded-lg text-center transition-all duration-300 ${
-                    selectedSubjects.includes(name) ? 'bg-selectivi-yellow text-white' : 'bg-white hover:bg-gray-50 border border-gray-200'
-                  }`}
-                >
-                  {name}
-                </button>
-              ))}
+              {Object.entries(subjectIdToCategory).map(([id, name]) => {
+                const isSelected = selectedSubjects.includes(name);
+                const hasSubtemes = isPremium && subtemesBySubject[name]?.length > 0;
+                return (
+                  <div key={id} className="relative">
+                    <button
+                      onClick={() => handleSubjectToggle(name)}
+                      className={`p-6 rounded-lg text-center transition-all duration-300 w-full ${
+                        isSelected ? 'bg-selectivi-yellow text-white' : 'bg-white hover:bg-gray-50 border border-gray-200'
+                      }`}
+                    >
+                      {name}
+                    </button>
+                    {/* Desplegable de subtemas con lista de checkboxes */}
+                    {isSelected && hasSubtemes && (
+                      <details className="mt-2 w-full">
+                        <summary className="cursor-pointer text-sm font-semibold text-yellow-700 bg-yellow-50 border border-yellow-200 rounded px-3 py-2 mb-2">
+                          Selecciona subtemes
+                        </summary>
+                        <div className="flex flex-col gap-2 p-2">
+                          {subtemesBySubject[name].map(subtema => (
+                            <label key={subtema} className="flex items-center gap-2 text-sm">
+                              <input
+                                type="checkbox"
+                                checked={selectedSubtemes[name]?.includes(subtema) || false}
+                                onChange={() => handleSubtemaToggle(name, subtema)}
+                                className="accent-selectivi-yellow"
+                              />
+                              {subtema}
+                            </label>
+                          ))}
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -464,8 +518,7 @@ function getSupportMessage(score: number): string {
 
 // Componente principal SeleTest
 export default function SeleTest() {
-  const { data: session } = useSession() as { data: CustomSession | null };
-  const isPremium = !!session?.user?.hasPremiumStatus;
+  const { data: session, status } = useSession();
   const [isClient, setIsClient] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -476,9 +529,31 @@ export default function SeleTest() {
   const [showOnboarding, setShowOnboarding] = useState(true);
   const [showResults, setShowResults] = useState(false);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
+  const [loadingPremium, setLoadingPremium] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    const fetchPremiumStatus = async () => {
+      setLoadingPremium(true);
+      try {
+        const res = await fetch("/api/premium-status");
+        if (res.ok) {
+          const data = await res.json();
+          setIsPremium(!!data.hasPremiumStatus);
+        } else {
+          setIsPremium(false);
+        }
+      } catch (e) {
+        setIsPremium(false);
+      } finally {
+        setLoadingPremium(false);
+      }
+    };
+    fetchPremiumStatus();
   }, []);
 
   const handleSelectAnswer = (answer: string) => {
@@ -520,7 +595,7 @@ export default function SeleTest() {
     setCorrectAnswers(0);
   };
 
-  const handleOnboardingComplete = async (selectedSubjects: string[], totalQuestions: number) => {
+  const handleOnboardingComplete = async (selectedSubjects: string[], totalQuestions: number, selectedSubtemes?: Record<string, string[]>) => {
     setShowOnboarding(false);
     try {
       let availableQuestions: Question[] = [];
@@ -568,6 +643,20 @@ export default function SeleTest() {
         return;
       }
 
+      // Filtrar por subtemas si es premium y hay selección
+      if (isPremium && selectedSubtemes) {
+        availableQuestions = availableQuestions.filter((q: any) => {
+          const subject = q.categoria;
+          // Buscar la key de asignatura que coincida con la categoría
+          const subjectKey = Object.values(subjectIdToCategory).find(cat => cat === subject);
+          if (subjectKey && selectedSubtemes[subjectKey]?.length) {
+            return selectedSubtemes[subjectKey].includes(q.subTema);
+          }
+          // Si no hay subtemas seleccionados para esta asignatura, incluir todas
+          return true;
+        });
+      }
+
       // Mezclar y seleccionar el número de preguntas especificado
       const shuffledQuestions = availableQuestions
         .sort(() => Math.random() - 0.5)
@@ -587,7 +676,7 @@ export default function SeleTest() {
     }
   };
 
-  if (!isClient) {
+  if (!isClient || loadingPremium || isPremium === null) {
     return (
       <div className="min-h-screen flex flex-col bg-gray-50">
         <NavbarMain />
@@ -604,7 +693,7 @@ export default function SeleTest() {
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
         {showOnboarding ? (
-          <Onboarding onComplete={handleOnboardingComplete} isPremium={isPremium} />
+          <Onboarding onComplete={handleOnboardingComplete} isPremium={!!isPremium} />
         ) : !gameOver ? (
           <div className="container mx-auto">
             <div className="mb-6 max-w-3xl mx-auto">
@@ -643,20 +732,6 @@ export default function SeleTest() {
               </svg>
             </div>
             <h2 className="text-3xl font-bold mb-4">Test completat!</h2>
-            <div className="my-6 flex justify-center">
-              <a
-                href="https://buy.stripe.com/eVa6pN3N55I7dY4bIJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-50 border-2 border-yellow-300 rounded-lg text-yellow-700 font-bold text-lg hover:bg-yellow-100 transition"
-                style={{ boxShadow: '0 2px 8px 0 #fef3c7' }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.01z"/>
-                </svg>
-                Prova SeleTest Premium
-              </a>
-            </div>
             <div className="space-y-4 mb-8">
               <p className="text-xl">
                 La teva puntuació: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}

@@ -30,6 +30,28 @@ export default function HeroMain() {
   ];
 
   const { data: session } = useSession();
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
+  const [loadingPremium, setLoadingPremium] = useState(true);
+
+  useEffect(() => {
+    const fetchPremiumStatus = async () => {
+      setLoadingPremium(true);
+      try {
+        const res = await fetch("/api/premium-status");
+        if (res.ok) {
+          const data = await res.json();
+          setIsPremium(!!data.hasPremiumStatus);
+        } else {
+          setIsPremium(false);
+        }
+      } catch (e) {
+        setIsPremium(false);
+      } finally {
+        setLoadingPremium(false);
+      }
+    };
+    fetchPremiumStatus();
+  }, []);
 
   // Cargar búsquedas populares y asignaturas al inicio
   useEffect(() => {
@@ -143,7 +165,7 @@ export default function HeroMain() {
                       strokeWidth="1.5"
                     />
                   </svg>
-                  Prova SeleTest Gratis
+                  {isPremium ? 'Accedeix a SeleTest' : 'Prova SeleTest Gratis'}
                 </span>
                 <span className="ml-3 bg-selectivi-yellow text-white px-3 py-1 rounded-full text-sm border border-white/20">
                   Nou!

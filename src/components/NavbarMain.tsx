@@ -17,10 +17,31 @@ export default function NavbarMain() {
   const pathname = usePathname();
   const isDashboard = pathname === '/dashboard';
   const [mounted, setMounted] = useState(false);
-  const isPremium = session?.user?.hasPremiumStatus;
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
+  const [loadingPremium, setLoadingPremium] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const fetchPremiumStatus = async () => {
+      setLoadingPremium(true);
+      try {
+        const res = await fetch("/api/premium-status");
+        if (res.ok) {
+          const data = await res.json();
+          setIsPremium(!!data.hasPremiumStatus);
+        } else {
+          setIsPremium(false);
+        }
+      } catch (e) {
+        setIsPremium(false);
+      } finally {
+        setLoadingPremium(false);
+      }
+    };
+    fetchPremiumStatus();
   }, []);
 
   const handleSignIn = () => {
@@ -61,7 +82,7 @@ export default function NavbarMain() {
     ...(!isPremium ? [{ href: "/premium", text: "Fes-te Premium ✨" }] : [])
   ];
 
-  if (!mounted) {
+  if (!mounted || loadingPremium || isPremium === null) {
     return null;
   }
 
