@@ -13,7 +13,13 @@ export default function PremiumCheckoutInfo() {
             <FaRegClock size={56} color="#facc15" />
           </div>
           <h1 className="text-3xl font-bold mb-4 text-yellow-700">Quasi ho tens! 🚀</h1>
-          <p className="text-lg font-semibold text-yellow-600 mb-4">24,99€ un sol pagament &rarr; <span className="italic">entrar a la carrera dels teus somnis</span></p>
+          <div className="flex flex-col items-center mb-4">
+            <div className="flex items-end gap-2">
+              <span className="text-sm text-gray-400 line-through">24,99 €</span>
+              <span className="text-3xl font-extrabold text-selectivi-yellow">9,99 €</span>
+            </div>
+            <span className="text-base text-yellow-700 font-semibold mt-1">un sol pagament &rarr; <span className="italic">entrar a la carrera dels teus somnis</span></span>
+          </div>
           <p className="text-lg text-gray-700 mb-4">
             Un cop realitzis el pagament, el teu accés Premium pot trigar <span className="font-semibold text-yellow-700">de 5 minuts a 1 hora</span> en activar-se.
           </p>
@@ -25,7 +31,7 @@ export default function PremiumCheckoutInfo() {
             Així podrem activar el teu compte Premium sense problemes. Si tens qualsevol dubte, escriu-nos i t'ajudarem encantats!
           </p>
           <Link
-            href="https://buy.stripe.com/eVa6pN3N55I7dY4bIJ"
+            href="https://buy.stripe.com/00g15tcjB1rR8DK3ce"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-400 text-white font-bold rounded-lg text-lg shadow-lg hover:bg-yellow-500 transition mb-2"
