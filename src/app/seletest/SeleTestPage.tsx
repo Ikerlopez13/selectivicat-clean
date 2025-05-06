@@ -61,11 +61,12 @@ interface GameState {
 }
 
 function getSupportMessage(score: number, total: number): string {
-  const percentage = (score / total) * 100;
-  if (percentage >= 90) return "Impressionant! Estàs més que preparat/da per a la Selectivitat! 🌟";
-  if (percentage >= 70) return "Molt bé! Vas pel bon camí, segueix així! 💪";
-  if (percentage >= 50) return "Vas bé, però encara pots millorar. Segueix practicant! 📚";
-  return "No et desanimis! Amb més pràctica ho conseguiràs! 💪";
+  const notaSobre14 = (score / total) * 14;
+  if (notaSobre14 >= 12) return "Brutal! Tens una nota d'excel·lent, pots aconseguir qualsevol grau! 🏆";
+  if (notaSobre14 >= 10) return "Molt bona nota! Estàs preparat/da per la Selectivitat, segueix així! 🌟";
+  if (notaSobre14 >= 7) return "Bona feina! Vas pel bon camí, però encara pots millorar una mica més. 💪";
+  if (notaSobre14 >= 5) return "No està malament, però pots treure més nota amb una mica més de pràctica! 📚";
+  return "No et desanimis! Amb més pràctica i esforç segur que milloraràs! 💪";
 }
 
 export default function SeleTestPage() {
