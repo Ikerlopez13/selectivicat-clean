@@ -188,7 +188,13 @@ export default function SeleTestPage() {
 
   // Compartir resultados
   const handleShare = () => {
-    const text = `He fet el SeleTest i he encertat ${gameState.score} de ${questions.length} preguntes! 🎓 Prova-ho tu també a selectivicat.com`;
+    const notaSobre14 = parseFloat(((gameState.score / questions.length) * 14).toFixed(2));
+    let emoji = '🎓';
+    if (notaSobre14 >= 12) emoji = '🏆';
+    else if (notaSobre14 >= 10) emoji = '🌟';
+    else if (notaSobre14 >= 7) emoji = '📚';
+    else emoji = '💪';
+    const text = `He obtingut un ${notaSobre14.toFixed(2)}/14 a SelectiviCat! ${emoji}\nPosa't a prova tu també a https://selectivi.cat`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
   };
 

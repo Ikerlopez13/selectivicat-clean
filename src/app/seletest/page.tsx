@@ -747,8 +747,13 @@ export default function SeleTest() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => {
-                  const calculatedScore = ((correctAnswers / questions.length) * 10).toFixed(2);
-                  const text = `He obtingut un ${calculatedScore}/10 a SelectiviCat! 📚✨\nPractica tu també a https://selectivicat.cat`;
+                  const notaSobre14 = parseFloat(((correctAnswers / questions.length) * 14).toFixed(2));
+                  let emoji = '🎓';
+                  if (notaSobre14 >= 12) emoji = '🏆';
+                  else if (notaSobre14 >= 10) emoji = '🌟';
+                  else if (notaSobre14 >= 7) emoji = '📚';
+                  else emoji = '💪';
+                  const text = `He obtingut un ${notaSobre14.toFixed(2)}/14 a SelectiviCat! ${emoji}\nPosa't a prova tu també a https://selectivi.cat`;
                   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
                 }}
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
