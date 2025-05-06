@@ -4,6 +4,25 @@ import { useEffect, useState } from 'react';
 
 export default function LaunchDiscountBanner() {
   const [timeLeft, setTimeLeft] = useState('');
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // Comprobar si el usuario es premium
+    const checkPremium = async () => {
+      try {
+        const res = await fetch('/api/premium-status');
+        if (res.ok) {
+          const data = await res.json();
+          setIsPremium(!!data.hasPremiumStatus);
+        } else {
+          setIsPremium(false);
+        }
+      } catch {
+        setIsPremium(false);
+      }
+    };
+    checkPremium();
+  }, []);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -27,6 +46,8 @@ export default function LaunchDiscountBanner() {
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  if (isPremium) return null;
 
   return (
     <div className="w-full bg-selectivi-yellow text-white py-3 px-4 flex flex-col md:flex-row items-center justify-center gap-2 text-center font-semibold text-base md:text-lg shadow-md z-40 mt-16">
