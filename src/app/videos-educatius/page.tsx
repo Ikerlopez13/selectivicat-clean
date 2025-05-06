@@ -119,7 +119,7 @@ export default function VideosEducatiusPage() {
       <NavbarMain />
       
       {/* Hero Section - Ahora directamente después del navbar */}
-      <div className="bg-selectivi-yellow py-12 px-4 md:px-8 mt-16">
+      <div className="bg-selectivi-yellow py-12 px-4 md:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-3/5">

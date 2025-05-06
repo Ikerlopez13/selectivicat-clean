@@ -256,7 +256,7 @@ export default function ExamenesPage() {
       </Script>
       
       {/* Hero Section - Banner general */}
-      <section className="bg-selectivi-yellow py-12 px-4 md:px-8 mt-16" aria-labelledby="hero-heading">
+      <section className="bg-selectivi-yellow py-12 px-4 md:px-8" aria-labelledby="hero-heading">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-3/5">

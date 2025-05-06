@@ -27,7 +27,7 @@ export default function SubjectPageTemplate({ subject, itinerario, videos, exame
       <NavbarMain />
       
       {/* Hero Section */}
-      <div className={`bg-[${itinerario.color}] py-16 px-4 md:px-8 mt-16`} style={{ backgroundColor: itinerario.color }}>
+      <div className={`bg-[${itinerario.color}] py-16 px-4 md:px-8`} style={{ backgroundColor: itinerario.color }}>
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-3/5">
