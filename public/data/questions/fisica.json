@@ -225,6 +225,118 @@
       ],
       "respuestaCorrecta": 2,
       "explicacion": "L'opció C és correcta: $q = 1{,}82\\ \\mu\\text{C}$, $E = 0$, $V = -1{,}20\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}92\\times 10^{-14}\\ \\text{J}$. S'han aplicat les fórmules de la força elèctrica, el camp elèctric i el treball de forces externes en camps elèctrics."
+    },
+    {
+      "id": "p11-dipol-electric-premium",
+      "categoria": "Física",
+      "subTema": "Camp elèctric",
+      "pregunta": "Un dípol elèctric està format per dues càrregues puntuals de magnitud $|Q| = 1,50\\mu\\text{C}$, separades $10\\text{cm}$ sobre l'eix $x$. La càrrega positiva es troba a $x = -5\\text{cm}$ i la negativa a $x = +5\\text{cm}$.\n\n a) Sense dibuix, explica com serien les línies de camp elèctric i les superfícies equipotencials generades per aquest dípol en el pla $xy$.\n\n b) Calcula el camp elèctric i el potencial elèctric creat pel dípol a l'origen de coordenades ($x=0$, $y=0$). Dona el mòdul, la direcció i el sentit del camp, i el valor del potencial.\n\n Dades: $k = 8,99 \\times 10^9\\text{N}\\cdot\\text{m}^2/\\text{C}^2$.",
+      "opciones": [
+        "a) Les línies de camp surten de la càrrega positiva i entren a la negativa, són simètriques respecte l'eix $x$ i les equipotencials són corbes perpendiculars a les línies de camp.\n b) $\\vec{E} = 1,08 \\times 10^7\\hat{i}\\text{N/C}$, $V = 0$",
+        "a) Les línies de camp surten de la càrrega negativa i entren a la positiva, i les equipotencials són paral·leles a l'eix $y$.\n b) $\\vec{E} = 5,39 \\times 10^6\\hat{i}\\text{N/C}$, $V = 2,70 \\times 10^5\\text{V}$",
+        "a) Les línies de camp són circulars al voltant de cada càrrega i les equipotencials són radials.\n b) $\\vec{E} = 0$, $V = 0$",
+        "a) Les línies de camp són paral·leles a l'eix $x$ i les equipotencials són paral·leles a l'eix $y$.\n b) $\\vec{E} = 1,08 \\times 10^7\\hat{j}\\text{N/C}$, $V = 0$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) Les línies de camp elèctric surten de la càrrega positiva i entren a la negativa, són simètriques respecte l'eix $x$ i les equipotencials són corbes perpendiculars a les línies de camp.\n b) El camp elèctric a l'origen és la suma vectorial dels camps de cada càrrega: $E = 2 \\cdot k \\cdot \\frac{|Q|}{(0,05)^2} = 1,08 \\times 10^7\\text{N/C}$, en direcció positiva de l'eix $x$. El potencial a l'origen és $V = k \\cdot \\frac{Q}{0,05} + k \\cdot \\frac{-Q}{0,05} = 0$."
+    },
+    {
+      "id": "p12-parallamps-camp-magnetic-premium",
+      "categoria": "Física",
+      "subTema": "Camp magnètic, electromagnetisme i inducció",
+      "pregunta": "Un parallamps és una barra metàl·lica vertical que pot assumir un corrent màxim de $I = 10^5\\ \text{A}$ durant una descàrrega de llamp. \n\n a) Calcula el camp magnètic màxim que pot crear el parallamps a una distància de $10\\ \text{cm}$ del seu eix. \n\n b) Suposa que un electró es troba a $10\\ \text{cm}$ del parallamps i es mou amb una velocitat de $10^3\\ \text{m/s}$ paral·lela al parallamps i cap a terra. Calcula el mòdul de la força magnètica que actua sobre l'electró i indica la seva direcció respecte al parallamps. \n\n Dades: $\\mu_0 = 4\\pi \\times 10^{-7}\\ \text{T}\\cdot\\text{m}/\\text{A}$, $|e| = 1,602 \\times 10^{-19}\\ \text{C}$.",
+      "opciones": [
+        "a) $B = 0,2\\ \text{T}$; b) $F = 3,2 \\times 10^{-17}\\ \text{N}$, dirigida cap al parallamps segons la regla de la mà dreta.",
+        "a) $B = 2\\ \text{T}$; b) $F = 3,2 \\times 10^{-16}\\ \text{N}$, dirigida cap enfora del parallamps.",
+        "a) $B = 0,02\\ \text{T}$; b) $F = 3,2 \\times 10^{-18}\\ \text{N}$, dirigida perpendicularment al parallamps i cap amunt.",
+        "a) $B = 0,2\\ \text{T}$; b) $F = 1,6 \\times 10^{-17}\\ \text{N}$, dirigida cap avall segons la regla de la mà esquerra."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) El camp magnètic a $r = 0,1\\ \text{m}$ és $B = \\frac{\\mu_0 I}{2\\pi r} = \\frac{4\\pi \\times 10^{-7} \\cdot 10^5}{2\\pi \\cdot 0,1} = 0,2\\ \text{T}$. \n b) La força magnètica sobre l'electró és $F = |e| v B = 1,602 \\times 10^{-19} \\cdot 10^3 \\cdot 0,2 = 3,2 \\times 10^{-17}\\ \text{N}$. La direcció de la força és cap al parallamps, segons la regla de la mà dreta (o equivalent)."
+    },
+    {
+      "id": "p14-espectrometre-masses-premium",
+      "categoria": "Física",
+      "subTema": "Camp magnètic, electromagnetisme i inducció",
+      "pregunta": "Un selector de velocitats d'un espectròmetre de masses està format per dues plaques paral·leles separades 1,5 cm, entre les quals hi ha un camp elèctric i un camp magnètic perpendiculars. El camp magnètic té un mòdul de $0,50\\ \text{T}$ i el selector només deixa passar ions que es mouen a $2,00 \\times 10^5\\ \text{m/s}$.\n\na) Calcula la diferència de potencial que cal aplicar entre les plaques perquè els ions que es mouen a aquesta velocitat no es desviïn. Indica quina placa ha d'estar a potencial alt i quina a baix, i si el selector funcionaria igual per ions positius.\n\nb) A la sortida del selector, els ions entren en una regió amb un camp magnètic uniforme de $0,20\\ \text{T}$ perpendicular a la velocitat. Calcula a quina distància de la sortida del selector impactarà un ió de neó $^{20}\\text{Ne}^-$ (massa $3,32 \\times 10^{-26}\\ \text{kg}$, càrrega $-e$) sobre la pantalla lateral.\n\nDades: $|e| = 1,602 \\times 10^{-19}\\ \text{C}$.",
+      "opciones": [
+        "a) $\\Delta V = 1500\\ \text{V}$, la placa superior a potencial alt i la inferior a baix; el selector funciona igual per ions positius. b) $d = 0,414\\ \text{m}$.",
+        "a) $\\Delta V = 750\\ \text{V}$, la placa inferior a potencial alt i la superior a baix; el selector només funciona per ions negatius. b) $d = 0,207\\ \text{m}$.",
+        "a) $\\Delta V = 1500\\ \text{V}$, la placa inferior a potencial alt i la superior a baix; el selector només funciona per ions negatius. b) $d = 0,828\\ \text{m}$.",
+        "a) $\\Delta V = 3000\\ \text{V}$, la placa superior a potencial alt i la inferior a baix; el selector funciona igual per ions positius. b) $d = 0,207\\ \text{m}$."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) Perquè els ions no es desviïn, $E = vB = 2,00 \\times 10^5 \\cdot 0,5 = 1,0 \\times 10^5\\ \text{V/m}$. La diferència de potencial és $\\Delta V = Ed = 1,0 \\times 10^5 \\cdot 0,015 = 1500\\ \text{V}$. La placa superior ha d'estar a potencial alt i la inferior a baix. El selector funciona igual per ions positius, ja que el sentit de les forces canvia però la suma segueix sent zero. b) El radi de la trajectòria és $r = \\frac{mv}{eB} = \\frac{3,32 \\times 10^{-26} \\cdot 2,00 \\times 10^5}{1,602 \\times 10^{-19} \\cdot 0,2} = 0,207\\ \text{m}$. La distància a la pantalla és $d = 2r = 0,414\\ \text{m}$."
+    },
+    {
+      "id": "p15-moviment-harmonic-molla-premium",
+      "categoria": "Física",
+      "subTema": "Moviment harmònic simple, ones i so",
+      "pregunta": "En un laboratori, una massa de $0,5\\ \text{kg}$ penja d'una molla vertical i oscil·la amb una amplitud de $0,19\\ \text{m}$ i una velocitat angular de $6,41\\ \text{rad/s}$. \n\na) Escriu l'equació de la posició vertical $y(t)$ de la massa respecte al temps, si a $t=0$ la massa es troba al punt més baix. Calcula la constant elàstica de la molla i l'energia mecànica del moviment. \n\nb) Calcula l'equació de la velocitat $v(t)$ i l'energia cinètica $E_c(t)$ respecte al temps. Quina és l'energia potencial elàstica $E_p$ en funció de la posició $y$? \n\nDades: $k = ?$, $m = 0,5\\ \text{kg}$, $A = 0,19\\ \text{m}$, $\\omega = 6,41\\ \text{rad/s}$.",
+      "opciones": [
+        "a) $y(t) = 0,19 \\cos(6,41 t + \\pi)$, $k = 20,54\\ \text{N/m}$, $E_m = 0,371\\ \text{J}$. b) $v(t) = -1,218 \\sin(6,41 t + \\pi)$, $E_c = 0,371 \\sin^2(6,41 t + \\pi)$, $E_p = 10,27 y^2$",
+        "a) $y(t) = 0,19 \\sin(6,41 t)$, $k = 10,27\\ \text{N/m}$, $E_m = 0,185\\ \text{J}$. b) $v(t) = 1,218 \\cos(6,41 t)$, $E_c = 0,185 \\cos^2(6,41 t)$, $E_p = 5,13 y^2$",
+        "a) $y(t) = 0,19 \\cos(6,41 t)$, $k = 20,54\\ \text{N/m}$, $E_m = 0,371\\ \text{J}$. b) $v(t) = 1,218 \\sin(6,41 t)$, $E_c = 0,371 \\sin^2(6,41 t)$, $E_p = 10,27 y^2$",
+        "a) $y(t) = 0,19 \\sin(6,41 t + \\pi)$, $k = 40,00\\ \text{N/m}$, $E_m = 0,500\\ \text{J}$. b) $v(t) = 2,436 \\cos(6,41 t + \\pi)$, $E_c = 0,500 \\cos^2(6,41 t + \\pi)$, $E_p = 20,00 y^2$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) $y(t) = 0,19 \\cos(6,41 t + \\pi)$ perquè a $t=0$ la massa està al punt més baix. $k = m\\omega^2 = 0,5 \\cdot (6,41)^2 = 20,54\\ \text{N/m}$. $E_m = \\frac{1}{2}kA^2 = 0,5 \\cdot 20,54 \\cdot 0,19^2 = 0,371\\ \text{J}$. b) $v(t) = -A\\omega \\sin(\\omega t + \\pi) = -1,218 \\sin(6,41 t + \\pi)$. $E_c = \\frac{1}{2}mv^2 = 0,371 \\sin^2(6,41 t + \\pi)$. $E_p = \\frac{1}{2}ky^2 = 10,27 y^2$."
+    },
+    {
+      "id": "p16-intensitat-sonora-coets-premium",
+      "categoria": "Física",
+      "subTema": "Moviment harmònic simple, ones i so",
+      "pregunta": "L'Ainhoa està a 50\\ \text{m} d'on s'explota un coet i mesura 100 dB d'intensitat sonora en l'explosió. a) Quina potència sonora emet el coet en el moment de l'explosió? Si l'explosió ha durat 0,03 s, quina energia sonora s'ha alliberat?\n\nb) Si un coet igual explota a una certa altura i l'Ainhoa mesura 90 dB d'intensitat sonora, a quina altura ha explotat el coet? Si dos coets exploten simultàniament a la mateixa altura, quin nivell d'intensitat sonora percebrà l'Ainhoa?\n\nDades: $I_0 = 10^{-12}\\ \text{W/m}^2$, velocitat del so $v = 340\\ \text{m/s}$, superfície esfèrica $4\\pi r^2$.",
+      "opciones": [
+        "a) $P = 314,16\\ \text{W}$, $E = 9,42\\ \text{J}$. b) $h = 150\\ \text{m}$, $\\beta = 93\\ \text{dB}$",
+        "a) $P = 31,4\\ \text{W}$, $E = 0,94\\ \text{J}$. b) $h = 50\\ \text{m}$, $\\beta = 90\\ \text{dB}$",
+        "a) $P = 3141,6\\ \text{W}$, $E = 94,2\\ \text{J}$. b) $h = 100\\ \text{m}$, $\\beta = 96\\ \text{dB}$",
+        "a) $P = 314,16\\ \text{W}$, $E = 9,42\\ \text{J}$. b) $h = 100\\ \text{m}$, $\\beta = 100\\ \text{dB}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) $I = 10^{-2}\\ \text{W/m}^2$ (100 dB), $P = I \\cdot 4\\pi r^2 = 314,16\\ \text{W}$, $E = P \\cdot t = 9,42\\ \text{J}$. b) $I = 10^{-3}\\ \text{W/m}^2$ (90 dB), $r = 158,11\\ \text{m}$, $h = \\sqrt{158,11^2 - 50^2} = 150\\ \text{m}$. Si exploten dos coets, la intensitat es dobla: $\\beta = 10\\log(2 \\cdot 10^{-3}/10^{-12}) = 93\\ \text{dB}$."
+    },
+    {
+      "id": "p17-efecte-fotoelectric-premium",
+      "categoria": "Física",
+      "subTema": "Física quàntica i estructura de la matèria", 
+      "pregunta": "En una mostra metàl·lica apareix l'efecte fotoelèctric quan la il·luminem amb llum monocromàtica de longituds d'ona més petites o iguals a 650 nm.\n\na) Calcula el treball d'extracció del metall. Determina el potencial de frenada si il·luminem el metall amb llum de 300 nm.\n\nb) Troba l'expressió de la velocitat dels electrons en funció de la longitud d'ona incident. Calcula la velocitat dels electrons per a una longitud d'ona de 500 nm i la longitud d'ona de De Broglie associada a aquests electrons.\n\nDades: $c = 3,00 \\times 10^8\\ \\text{m/s}$, $|e| = 1,602 \\times 10^{-19}\\ \\text{C}$, $m_e = 9,11 \\times 10^{-31}\\ \\text{kg}$, $h = 6,626 \\times 10^{-34}\\ \\text{J}\\cdot\\text{s}$.",
+      "opciones": [
+        "a) $W_0 = 3,06 \\times 10^{-19}\\ \\text{J} = 1,91\\ \\text{eV}$, $\\Delta V = 2,23\\ \\text{V}$. b) $v(500\\ \\text{nm}) = 4,47 \\times 10^5\\ \\text{m/s}$, $\\lambda_{dB} = 1,67\\ \\text{nm}$",
+        "a) $W_0 = 6,63 \\times 10^{-34}\\ \\text{J}$, $\\Delta V = 1,00\\ \\text{V}$. b) $v(500\\ \\text{nm}) = 3,00 \\times 10^8\\ \\text{m/s}$, $\\lambda_{dB} = 0,50\\ \\text{nm}$",
+        "a) $W_0 = 1,91 \\times 10^{-19}\\ \\text{J}$, $\\Delta V = 3,06\\ \\text{V}$. b) $v(500\\ \\text{nm}) = 6,72 \\times 10^{11}\\ \\text{m/s}$, $\\lambda_{dB} = 2,00\\ \\text{nm}$",
+        "a) $W_0 = 3,06 \\times 10^{-19}\\ \\text{J} = 1,91\\ \\text{eV}$, $\\Delta V = 1,00\\ \\text{V}$. b) $v(500\\ \\text{nm}) = 1,67 \\times 10^{-9}\\ \\text{m/s}$, $\\lambda_{dB} = 4,47 \\times 10^5\\ \\text{nm}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) La longitud d'ona llindar és $\\lambda_0 = 650\\ \\text{nm}$, $f_0 = c/\\lambda_0 = 4,62 \\times 10^{14}\\ \\text{Hz}$, $W_0 = h f_0 = 3,06 \\times 10^{-19}\\ \\text{J} = 1,91\\ \\text{eV}$. Amb llum de 300 nm: $f = 1,00 \\times 10^{15}\\ \\text{Hz}$, $E_c = h f - W_0 = 3,57 \\times 10^{-19}\\ \\text{J}$, $\\Delta V = E_c/|e| = 2,23\\ \\text{V}$.\n\nb) $v(\\lambda) = \\sqrt{\\frac{2}{m_e}(\\frac{h c}{\\lambda} - W_0)}$. Per 500 nm: $v = 4,47 \\times 10^5\\ \\text{m/s}$. Longitud d'ona de De Broglie: $\\lambda_{dB} = h/(m_e v) = 1,67\\ \\text{nm}$."
+    },
+    {
+      "id": "p18-interferencia-altaveus-premium",
+      "categoria": "Física",
+      "subTema": "Moviment harmònic simple, ones i so",
+      "pregunta": "Dos altaveus estan separats una distància $2d$ i emeten un senyal harmònic en fase. La persona A està situada a $d_1 = 5,00\\ \text{m}$ de l'altaveu 1 i a $d_2 = 8,68\\ \text{m}$ de l'altaveu 2. Una persona B està situada a $d_1' = 8,14\\ \text{m}$ de l'altaveu 1 i a $d_2' = 4,00\\ \text{m}$ de l'altaveu 2. El generador de senyals pot ajustar la freqüència entre 200 i 400 Hz.\n\na) Calcula totes les freqüències que podem escollir perquè la persona A senti el senyal amb intensitat màxima. Quina freqüència d'aquestes hem d'escollir perquè la persona B no pugui sentir el senyal (intensitat mínima)?\n\nb) Si cada altaveu emet una potència de $2,36 \\times 10^{-3}\\ \text{W}$, calcula la intensitat sonora generada per cada altaveu a la posició de la persona A i el nivell d'intensitat sonora total que percep.\n\nDades: $I_0 = 10^{-12}\\ \text{W/m}^2$, velocitat del so $v = 340\\ \text{m/s}$, superfície esfèrica $4\\pi r^2$.",
+      "opciones": [
+        "a) Freqüències per a màxim a A: 277,17 Hz, 369,56 Hz. Perquè B no senti: 369,56 Hz. b) $I_1 = 7,51 \\times 10^{-6}\\ \text{W/m}^2$, $I_2 = 2,49 \\times 10^{-6}\\ \text{W/m}^2$, $I = 10^{-5}\\ \text{W/m}^2$, $\\beta = 70\\ \text{dB}$",
+        "a) Freqüències per a màxim a A: 205,31 Hz, 287,44 Hz. Perquè B no senti: 205,31 Hz. b) $I_1 = 2,49 \\times 10^{-6}\\ \text{W/m}^2$, $I_2 = 7,51 \\times 10^{-6}\\ \text{W/m}^2$, $I = 10^{-5}\\ \text{W/m}^2$, $\\beta = 60\\ \text{dB}$",
+        "a) Freqüències per a màxim a A: 277,17 Hz, 369,56 Hz. Perquè B no senti: 287,44 Hz. b) $I_1 = 7,51 \\times 10^{-6}\\ \text{W/m}^2$, $I_2 = 2,49 \\times 10^{-6}\\ \text{W/m}^2$, $I = 10^{-5}\\ \text{W/m}^2$, $\\beta = 80\\ \text{dB}$",
+        "a) Freqüències per a màxim a A: 205,31 Hz, 287,44 Hz. Perquè B no senti: 369,56 Hz. b) $I_1 = 2,49 \\times 10^{-6}\\ \text{W/m}^2$, $I_2 = 7,51 \\times 10^{-6}\\ \text{W/m}^2$, $I = 10^{-5}\\ \text{W/m}^2$, $\\beta = 70\\ \text{dB}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) Les freqüències per a màxim a A són $f = n \\frac{340}{3,68}$, dins el rang: 277,17 Hz, 369,56 Hz. Perquè B no senti, cal interferència destructiva: $f = (n + 1/2) \\frac{340}{4,14}$, dins el rang: 205,31 Hz, 287,44 Hz, 369,56 Hz. La freqüència que compleix ambdues condicions és 369,56 Hz. b) $I_1 = \\frac{2,36 \\times 10^{-3}}{4\\pi \\cdot 5^2} = 7,51 \\times 10^{-6}\\ \text{W/m}^2$, $I_2 = \\frac{2,36 \\times 10^{-3}}{4\\pi \\cdot 8,68^2} = 2,49 \\times 10^{-6}\\ \text{W/m}^2$, $I = I_1 + I_2 = 10^{-5}\\ \text{W/m}^2$, $\\beta = 10\\log(10^{-5}/10^{-12}) = 70\\ \text{dB}$."
+    },
+    {
+      "id": "p19-optica-lents-premium",
+      "categoria": "Física",
+      "subTema": "Moviment harmònic simple, ones i so",
+      "pregunta": "Una persona hipermetrope no pot enfocar objectes propers i necessita ulleres amb lents convergents. a) Si normalment situa el llibre a 35 cm i la imatge creada per la lent ha de ser a 70 cm per poder enfocar, calcula la distància focal de la lent correctora i la seva potència.\n\nb) Un objecte de 10 cm d'alçada es troba a 25 cm davant d'una lent convergent de 20 cm de distància focal. Calcula on es formarà la imatge, la seva mida i característiques (més gran o més petita, real o virtual, dreta o invertida).\n\nDades: $P = 1/f$ (en m), $f$ en m, $P$ en diòptries.",
+      "opciones": [
+        "a) $f = 0,7\\ \text{m}$, $P = 1,43\\ \text{D}$. b) $s' = 100\\ \text{cm}$, $y' = -40\\ \text{cm}$, imatge més gran, real, invertida.",
+        "a) $f = 0,35\\ \text{m}$, $P = 2,86\\ \text{D}$. b) $s' = 20\\ \text{cm}$, $y' = 10\\ \text{cm}$, imatge igual, real, dreta.",
+        "a) $f = 0,7\\ \text{m}$, $P = 1,43\\ \text{D}$. b) $s' = -40\\ \text{cm}$, $y' = 100\\ \text{cm}$, imatge més gran, virtual, dreta.",
+        "a) $f = 1,4\\ \text{m}$, $P = 0,71\\ \text{D}$. b) $s' = 100\\ \text{cm}$, $y' = 40\\ \text{cm}$, imatge més gran, real, dreta."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "a) L'objecte està a $s = -35\\ \text{cm}$, la imatge a $s' = 70\\ \text{cm}$. Amb l'equació de la lent: $1/s' + 1/s = 1/f$, $1/70 - 1/35 = 1/f$, $f = 0,7\\ \text{m}$, $P = 1/f = 1,43\\ \text{D}$. b) $s = -25\\ \text{cm}$, $f = 20\\ \text{cm}$, $1/s' + 1/s = 1/f$, $1/s' = 1/20 + 1/25 = 9/100$, $s' = 100\\ \text{cm}$. Mida: $y' = y s'/s = 10 \\cdot 100 / -25 = -40\\ \text{cm}$. Imatge més gran, real, invertida."
     }
   ]
 }
