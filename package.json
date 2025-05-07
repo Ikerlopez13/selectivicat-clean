@@ -25,7 +25,7 @@
     "axios": "^1.8.4",
     "daisyui": "latest",
     "framer-motion": "^12.5.0",
-    "katex": "^0.16.21",
+    "katex": "^0.16.22",
     "mongodb": "^6.15.0",
     "mongoose": "latest",
     "next": "^15.2.3",

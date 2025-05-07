@@ -74,7 +74,7 @@
       "id": "b85",
       "categoria": "Física",
       "subTema": "MAS",
-      "pregunta": "En un experiment amb dues masses que fan MHS, si una massa està penjada d'una molla vertical i l'altra gira en un disc a 19 cm del centre amb $\\omega = 6,41$ rad/s, per què les seves ombres segueixen el mateix moviment?",
+      "pregunta": "En un experiment amb dues masses que fan MHS, si una massa està penjada d'una molla vertical i l'altra gira en un disc a 19 cm del centre amb ω = 6,41 rad/s, per què les seves ombres segueixen el mateix moviment?",
       "opciones": [
         "Perquè la projecció del MCU és un MHS amb la mateixa freqüència angular",
         "Perquè tenen la mateixa massa",
@@ -82,8 +82,149 @@
         "Perquè tenen la mateixa energia"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "La projecció d'un MCU sobre un eix és un MHS. Com ambdues masses tenen la mateixa $\\omega$, les seves ombres descriuen el mateix moviment harmònic simple."
+      "explicacion": "La projecció d'un MCU sobre un eix és un MHS. Com ambdues masses tenen la mateixa ω, les seves ombres descriuen el mateix moviment harmònic simple."
     }
   ],
-  "premium": []
+  "premium": [
+    {
+      "id": "p1-bepicolombo-premium",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "La sonda BepiColombo orbita Mercuri a un radi mitjà de $3{,}360 \\text{km}$.\n\na) Calcula la velocitat orbital de la sonda i quantes voltes fa al voltant de Mercuri en un any terrestre.\nb) Sabent que l'energia màxima que pot proporcionar el combustible és de $4{,}5 \\times 10^9 \\text{J}$, determina la massa màxima que podria tenir la sonda per poder escapar del camp gravitatori de Mercuri.\n\nDades:\n$G = 6{,}67 \\times 10^{-11} \\text{N}\\cdot\\text{m}^2/\\text{kg}^2$\nMassa de Mercuri: $M_M = 3{,}285 \\times 10^{23} \\text{kg}$\nAny terrestre: $365{,}25$ dies\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $v = 2{,}55 \\times 10^3 \\text{m/s}$, $n_{voltes/any} = 3816$, $M_{max} = 1{,}38 \\times 10^3 \\text{kg}$",
+        "B) $v = 3{,}10 \\times 10^3 \\text{m/s}$, $n_{voltes/any} = 2500$, $M_{max} = 2{,}00 \\times 10^3 \\text{kg}$",
+        "C) $v = 1{,}80 \\times 10^3 \\text{m/s}$, $n_{voltes/any} = 5000$, $M_{max} = 1{,}00 \\times 10^3 \\text{kg}$",
+        "D) $v = 2{,}55 \\times 10^3 \\text{m/s}$, $n_{voltes/any} = 2500$, $M_{max} = 1{,}38 \\times 10^3 \\text{kg}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'opció A és correcta: la velocitat orbital és $2{,}55 \\times 10^3\\ \\text{m/s}$, la sonda fa $3816$ voltes a l'any i la massa màxima per escapar és $1{,}38 \\times 10^3\\ \\text{kg}$. Tots els resultats s'han obtingut aplicant les fórmules d'òrbita circular i energia mecànica en el camp gravitatori."
+    },
+    {
+      "id": "p2-resonancia-premium",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Sis planetes orbiten una estrella de la massa del Sol en òrbites circulars. El sisè planeta, el més exterior, té un període de $54{,}7$ dies.\na) Calcula la distància entre el sisè planeta i l'estrella, i el mòdul de l'acceleració normal del planeta.\nb) El cinquè planeta completa $4$ òrbites en el mateix temps que el sisè completa $3$ (relació $4:3$). Calcula el radi de l'òrbita del cinquè planeta i la seva energia mecànica, suposant que la seva massa és $2{,}5$ vegades la terrestre.\n\nDades:\n$G = 6{,}67 \\times 10^{-11}\\ \\text{N}\\cdot\\text{m}^2/\\text{kg}^2$\nMassa de la Terra: $M_T = 5{,}98 \\times 10^{24}\\ \\text{kg}$\nMassa del Sol: $M_S = 1{,}98 \\times 10^{30}\\ \\text{kg}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $r_6 = 4{,}21 \\times 10^{10}\\ \\text{m}$, $a_n = 7{,}44 \\times 10^{-2}\\ \\text{m/s}^2$, $r_5 = 3{,}48 \\times 10^{10}\\ \\text{m}$, $E_{m,5} = -2{,}84 \\times 10^{34}\\ \\text{J}$",
+        "B) $r_6 = 3{,}00 \\times 10^{10}\\ \\text{m}$, $a_n = 1{,}00 \\times 10^{-2}\\ \\text{m/s}^2$, $r_5 = 2{,}50 \\times 10^{10}\\ \\text{m}$, $E_{m,5} = -1{,}50 \\times 10^{34}\\ \\text{J}$",
+        "C) $r_6 = 4{,}21 \\times 10^{10}\\ \\text{m}$, $a_n = 1{,}00 \\times 10^{-2}\\ \\text{m/s}^2$, $r_5 = 3{,}48 \\times 10^{10}\\ \\text{m}$, $E_{m,5} = -1{,}50 \\times 10^{34}\\ \\text{J}$",
+        "D) $r_6 = 3{,}00 \\times 10^{10}\\ \\text{m}$, $a_n = 7{,}44 \\times 10^{-2}\\ \\text{m/s}^2$, $r_5 = 2{,}50 \\times 10^{10}\\ \\text{m}$, $E_{m,5} = -2{,}84 \\times 10^{34}\\ \\text{J}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'opció A és correcta: $r_6 = 4{,}21 \\times 10^{10}\\ \\text{m}$, $a_n = 7{,}44 \\times 10^{-2}\\ \\text{m/s}^2$, $r_5 = 3{,}48 \\times 10^{10}\\ \\text{m}$, $E_{m,5} = -2{,}84 \\times 10^{34}\\ \\text{J}$. Tots els resultats s'han obtingut aplicant les lleis de la gravitació i l'energia orbital."
+    },
+    {
+      "id": "p3-jameswebb-premium",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "El telescopi espacial James Webb descriu una òrbita circular al voltant del Sol en el punt de Lagrange 2 ($L_2$) del sistema Sol-Terra, a una distància de $1{,}511 \\times 10^{11}\\ \\text{m}$ del Sol i $1{,}50 \\times 10^9\\ \\text{m}$ de la Terra.\na) Calcula la força gravitatòria exercida pel Sol, la exercida per la Terra i la força total sobre el telescopi. Calcula també el període orbital del telescopi en segons i en dies terrestres.\nb) Calcula la constant de Kepler per al sistema Sol-Terra i per al telescopi, considerant la presència de la Terra.\n\nDades:\n$G = 6{,}67 \\times 10^{-11}\\ \\text{N}\\cdot\\text{m}^2/\\text{kg}^2$\n$M_{\\text{Sol}} = 1{,}99 \\times 10^{30}\\ \\text{kg}$\n$M_{\\text{Terra}} = 5{,}98 \\times 10^{24}\\ \\text{kg}$\nMassa del telescopi James Webb: $M_{\\text{JW}} = 6{,}161\\ \\text{kg}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $F_{\\text{Sol}} = 35{,}82\\ \\text{N}$, $F_{\\text{Terra}} = 1{,}092\\ \\text{N}$, $F_{\\text{total}} = 36{,}91\\ \\text{N}$, $T = 3{,}16 \\times 10^7\\ \\text{s}$, $T = 365{,}2\\ \\text{dies}$, $C_K = 3{,}35 \\times 10^{18}\\ \\text{m}^3/\\text{s}^2$",
+        "B) $F_{\\text{Sol}} = 40{,}00\\ \\text{N}$, $F_{\\text{Terra}} = 2{,}00\\ \\text{N}$, $F_{\\text{total}} = 42{,}00\\ \\text{N}$, $T = 2{,}00 \\times 10^7\\ \\text{s}$, $T = 200{,}0\\ \\text{dies}$, $C_K = 2{,}00 \\times 10^{18}\\ \\text{m}^3/\\text{s}^2$",
+        "C) $F_{\\text{Sol}} = 35{,}82\\ \\text{N}$, $F_{\\text{Terra}} = 1{,}092\\ \\text{N}$, $F_{\\text{total}} = 36{,}91\\ \\text{N}$, $T = 2{,}00 \\times 10^7\\ \\text{s}$, $T = 200{,}0\\ \\text{dies}$, $C_K = 2{,}00 \\times 10^{18}\\ \\text{m}^3/\\text{s}^2$",
+        "D) $F_{\\text{Sol}} = 40{,}00\\ \\text{N}$, $F_{\\text{Terra}} = 2{,}00\\ \\text{N}$, $F_{\\text{total}} = 42{,}00\\ \\text{N}$, $T = 3{,}16 \\times 10^7\\ \\text{s}$, $T = 365{,}2\\ \\text{dies}$, $C_K = 3{,}35 \\times 10^{18}\\ \\text{m}^3/\\text{s}^2$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'opció A és correcta: $F_{\\text{Sol}} = 35{,}82\\ \\text{N}$, $F_{\\text{Terra}} = 1{,}092\\ \\text{N}$, $F_{\\text{total}} = 36{,}91\\ \\text{N}$, $T = 3{,}16 \\times 10^7\\ \\text{s}$, $T = 365{,}2\\ \\text{dies}$, $C_K = 3{,}35 \\times 10^{18}\\ \\text{m}^3/\\text{s}^2$. Tots els resultats s'han obtingut aplicant la llei de la gravitació universal, la segona llei de Newton i la tercera llei de Kepler."
+    },
+    {
+      "id": "p4-fobosdeimos-premium",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Els satèl·lits de Mart, Fobos i Deimos, descriuen òrbites circulars al voltant de Mart. El radi orbital mitjà de Fobos és de $9{,}377\\ \\text{km}$ i el seu període de revolució és de $7\\ \\text{h}$, $39\\ \\text{min}$ i $14\\ \\text{s}$. El radi orbital mitjà de Deimos és de $23{,}460\\ \\text{km}$.\n\na) Calcula la massa de Mart i la intensitat del camp gravitatori que Mart crea a la seva superfície.\n\nb) Calcula el període de revolució de Deimos al voltant de Mart i la seva energia mecànica.\n\nDades: $G = 6{,}67 \\times 10^{-11}\\ \\text{N}\\cdot\\text{m}^2/\\text{kg}^2$\n$M_{\\text{Fobos}} = 1{,}10 \\times 10^{16}\\ \\text{kg}$\n$M_{\\text{Deimos}} = 2{,}00 \\times 10^{15}\\ \\text{kg}$\n$R_{\\text{Marte}} = 3{,}390\\ \\text{km}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $M_M = 6{,}43 \\times 10^{23}\\ \\text{kg}$, $g = 3{,}73\\ \\text{m/s}^2$, $T_{\\text{Deimos}} = 1{,}09 \\times 10^5\\ \\text{s}$, $E_{m,\\text{Deimos}} = -1{,}83 \\times 10^{21}\\ \\text{J}$",
+        "B) $M_M = 5{,}00 \\times 10^{23}\\ \\text{kg}$, $g = 2{,}00\\ \\text{m/s}^2$, $T_{\\text{Deimos}} = 2{,}00 \\times 10^5\\ \\text{s}$, $E_{m,\\text{Deimos}} = -1{,}00 \\times 10^{21}\\ \\text{J}$",
+        "C) $M_M = 6{,}43 \\times 10^{23}\\ \\text{kg}$, $g = 2{,}00\\ \\text{m/s}^2$, $T_{\\text{Deimos}} = 1{,}09 \\times 10^5\\ \\text{s}$, $E_{m,\\text{Deimos}} = -1{,}00 \\times 10^{21}\\ \\text{J}$",
+        "D) $M_M = 5{,}00 \\times 10^{23}\\ \\text{kg}$, $g = 3{,}73\\ \\text{m/s}^2$, $T_{\\text{Deimos}} = 2{,}00 \\times 10^5\\ \\text{s}$, $E_{m,\\text{Deimos}} = -1{,}83 \\times 10^{21}\\ \\text{J}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'opció A és correcta: $M_M = 6{,}43 \\times 10^{23}\\ \\text{kg}$, $g = 3{,}73\\ \\text{m/s}^2$, $T_{\\text{Deimos}} = 1{,}09 \\times 10^5\\ \\text{s}$, $E_{m,\\text{Deimos}} = -1{,}83 \\times 10^{21}\\ \\text{J}$. Tots els resultats s'han obtingut aplicant la llei de la gravitació universal, la segona llei de Newton i la tercera llei de Kepler."
+    },
+    {
+      "id": "p5-satelit-lluna-terra-premium",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Un satèl·lit descriu una trajectòria circular de radi $R$ al voltant d'una massa central. El temps que triga a donar-hi una volta sencera és $T$.\na) Deduïu l'expressió per calcular la intensitat del camp gravitatori, $g$, creat per la massa central en els punts de l'òrbita del satèl·lit en funció dels paràmetres $R$ i $T$. Considereu que la Lluna descriu una òrbita circular al voltant de la Terra amb una distància entre centres de $384 \\times 10^6\\ \\text{m}$ i amb un període de $27{,}3$ dies. Feu ús només d'aquestes dues dades i de l'expressió trobada anteriorment, calculeu la intensitat del camp gravitatori als punts de l'òrbita de la Lluna.\nb) Deduïu l'expressió de l'energia cinètica mínima necessària perquè un coet de massa $m$ pugui escapar d'un objecte astronòmic de massa $M$ i radi $R$. Quantes vegades més gran és l'energia cinètica mínima perquè el coet pugui escapar de la Terra respecte de l'energia mínima que necessita per escapar de la Lluna?\n\nDades:\n$M_{\\text{Terra}} = 81{,}3\\ M_{\\text{Lluna}}$\n$R_{\\text{Terra}} = 3{,}67\\ R_{\\text{Lluna}}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "B) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$",
+        "C) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "D) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'opció B és correcta: $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$. S'han aplicat les fórmules del camp gravitatori i de l'energia cinètica mínima d'escapament."
+    },
+    {
+      "id": "p6-satelit-lluna-terra-premium-2",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Un satèl·lit descriu una trajectòria circular de radi $R$ al voltant d'una massa central. El temps que triga a donar-hi una volta sencera és $T$.\na) Deduïu l'expressió per calcular la intensitat del camp gravitatori, $g$, creat per la massa central en els punts de l'òrbita del satèl·lit en funció dels paràmetres $R$ i $T$. Considereu que la Lluna descriu una òrbita circular al voltant de la Terra amb una distància entre centres de $384 \\times 10^6\\ \\text{m}$ i amb un període de $27{,}3$ dies. Feu ús només d'aquestes dues dades i de l'expressió trobada anteriorment, calculeu la intensitat del camp gravitatori als punts de l'òrbita de la Lluna.\nb) Deduïu l'expressió de l'energia cinètica mínima necessària perquè un coet de massa $m$ pugui escapar d'un objecte astronòmic de massa $M$ i radi $R$. Quantes vegades més gran és l'energia cinètica mínima perquè el coet pugui escapar de la Terra respecte de l'energia mínima que necessita per escapar de la Lluna?\n\nDades:\n$M_{\\text{Terra}} = 81{,}3\\ M_{\\text{Lluna}}$\n$R_{\\text{Terra}} = 3{,}67\\ R_{\\text{Lluna}}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "B) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "C) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$",
+        "D) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'opció C és correcta: $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$. S'han aplicat les fórmules del camp gravitatori i de l'energia cinètica mínima d'escapament."
+    },
+    {
+      "id": "p7-satelit-lluna-terra-premium-3",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Un satèl·lit descriu una trajectòria circular de radi $R$ al voltant d'una massa central. El temps que triga a donar-hi una volta sencera és $T$.\na) Deduïu l'expressió per calcular la intensitat del camp gravitatori, $g$, creat per la massa central en els punts de l'òrbita del satèl·lit en funció dels paràmetres $R$ i $T$. Considereu que la Lluna descriu una òrbita circular al voltant de la Terra amb una distància entre centres de $384 \\times 10^6\\ \\text{m}$ i amb un període de $27{,}3$ dies. Feu ús només d'aquestes dues dades i de l'expressió trobada anteriorment, calculeu la intensitat del camp gravitatori als punts de l'òrbita de la Lluna.\nb) Deduïu l'expressió de l'energia cinètica mínima necessària perquè un coet de massa $m$ pugui escapar d'un objecte astronòmic de massa $M$ i radi $R$. Quantes vegades més gran és l'energia cinètica mínima perquè el coet pugui escapar de la Terra respecte de l'energia mínima que necessita per escapar de la Lluna?\n\nDades:\n$M_{\\text{Terra}} = 81{,}3\\ M_{\\text{Lluna}}$\n$R_{\\text{Terra}} = 3{,}67\\ R_{\\text{Lluna}}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "B) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "C) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$",
+        "D) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'opció C és correcta: $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$. S'han aplicat les fórmules del camp gravitatori i de l'energia cinètica mínima d'escapament."
+    },
+    {
+      "id": "p8-satelit-lluna-terra-premium-4",
+      "categoria": "Física",
+      "subTema": "Camp gravitatori, planetes i satèl·lits",
+      "pregunta": "Un satèl·lit descriu una trajectòria circular de radi $R$ al voltant d'una massa central. El temps que triga a donar-hi una volta sencera és $T$.\na) Deduïu l'expressió per calcular la intensitat del camp gravitatori, $g$, creat per la massa central en els punts de l'òrbita del satèl·lit en funció dels paràmetres $R$ i $T$. Considereu que la Lluna descriu una òrbita circular al voltant de la Terra amb una distància entre centres de $384 \\times 10^6\\ \\text{m}$ i amb un període de $27{,}3$ dies. Feu ús només d'aquestes dues dades i de l'expressió trobada anteriorment, calculeu la intensitat del camp gravitatori als punts de l'òrbita de la Lluna.\nb) Deduïu l'expressió de l'energia cinètica mínima necessària perquè un coet de massa $m$ pugui escapar d'un objecte astronòmic de massa $M$ i radi $R$. Quantes vegades més gran és l'energia cinètica mínima perquè el coet pugui escapar de la Terra respecte de l'energia mínima que necessita per escapar de la Lluna?\n\nDades:\n$M_{\\text{Terra}} = 81{,}3\\ M_{\\text{Lluna}}$\n$R_{\\text{Terra}} = 3{,}67\\ R_{\\text{Lluna}}$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "B) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$",
+        "C) $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 10{,}0$",
+        "D) $g = 2{,}72 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'opció B és correcta: $g = 1{,}00 \\times 10^{-3}\\ \\text{m/s}^2$, $E_{c,\\text{TERRA}}/E_{c,\\text{LLUNA}} = 22{,}1$. S'han aplicat les fórmules del camp gravitatori i de l'energia cinètica mínima d'escapament."
+    },
+    {
+      "id": "p9-camp-electric-terra-premium",
+      "categoria": "Física",
+      "subTema": "Camp elèctric",
+      "pregunta": "La superfície de la Terra és principalment aigua que conté ions en dissolució i que li fan adquirir una càrrega neta negativa. Es pot considerar que la Terra té un camp elèctric en punts propers a la seva superfície amb un mòdul constant de $150\\ \\text{N}/\\text{C}$.\n\na) Dibuixeu l'esfera terrestre i representeu-hi el camp elèctric al voltant de la superfície. Calculeu el valor de la càrrega total que produeix aquest camp elèctric. Per fer-ho, considereu que el camp elèctric creat per una superfície esfèrica carregada uniformement és igual al generat per tota la càrrega situada al centre de l'esfera.\n\nb) Calculeu el mòdul de la força elèctrica que produirà el camp elèctric sobre un electró lliure situat a la vora de la superfície de la Terra. Calculeu la massa que ha de tenir una gota esfèrica d'aigua amb una càrrega extra d'un sol electró perquè el seu pes es compensi amb la força elèctrica. Feu un esquema en què es mostrin les forces que actuen sobre la gota. Calculeu el diàmetre d'aquesta gota d'aigua.\n\nDades:\nRadi de la Terra, $R_T = 6{,}37 \\times 10^6\\ \\text{m}$\nDensitat de l'aigua, $\\rho = 10^3\\ \\text{kg}/\\text{m}^3$\nMassa de l'electró, $M_e = 9{,}11 \\times 10^{-31}\\ \\text{kg}$\nSuperfície esfèrica: $4\\pi r^2$\nVolum d'una esfera: $\\frac{4}{3}\\pi r^3$\n$|e| = 1{,}602 \\times 10^{-19}\\ \\text{C}$\n$k = \\frac{1}{4\\pi\\varepsilon_0} = 8{,}99 \\times 10^9\\ \\text{N}\\cdot\\text{m}^2/\\text{C}^2$\n$g = 9{,}81\\ \\text{m}/\\text{s}^2$\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "A) $q = -6{,}77 \\times 10^5\\ \\text{C}$, $F_e = 2{,}40 \\times 10^{-17}\\ \\text{N}$, $m = 2{,}45 \\times 10^{-18}\\ \\text{kg}$, $d = 167\\ \\text{nm}$",
+        "B) $q = -1{,}00 \\times 10^5\\ \\text{C}$, $F_e = 1{,}00 \\times 10^{-17}\\ \\text{N}$, $m = 1{,}00 \\times 10^{-18}\\ \\text{kg}$, $d = 100\\ \\text{nm}$",
+        "C) $q = -6{,}77 \\times 10^5\\ \\text{C}$, $F_e = 1{,}00 \\times 10^{-17}\\ \\text{N}$, $m = 2{,}45 \\times 10^{-18}\\ \\text{kg}$, $d = 100\\ \\text{nm}$",
+        "D) $q = -1{,}00 \\times 10^5\\ \\text{C}$, $F_e = 2{,}40 \\times 10^{-17}\\ \\text{N}$, $m = 1{,}00 \\times 10^{-18}\\ \\text{kg}$, $d = 167\\ \\text{nm}$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'opció A és correcta: $q = -6{,}77 \\times 10^5\\ \\text{C}$, $F_e = 2{,}40 \\times 10^{-17}\\ \\text{N}$, $m = 2{,}45 \\times 10^{-18}\\ \\text{kg}$, $d = 167\\ \\text{nm}$. S'han aplicat les fórmules del camp elèctric, la força elèctrica i l'equilibri de forces."
+    },
+    {
+      "id": "p10-funflystick-camp-electric-premium",
+      "categoria": "Física",
+      "subTema": "Camp elèctric",
+      "pregunta": "El Fun-Fly-Stick és un enginyós generador d'electricitat estàtica que funciona amb piles i que permet fer levitar objectes metàl·lics lleugers. Quan es prem el botó es genera una càrrega estàtica negativa a la vareta. Tocant l'objecte amb la vareta, part d'aquesta càrrega es transfereix a l'objecte de manera que tots dos queden carregats i l'objecte levita per sobre la vareta. (En fer els càlculs, considereu la vareta i l'objecte metàl·lic com si fossin càrregues puntuals.)\n\na) Suposem que, després de tocar l'objecte, la vareta i l'objecte tenen la mateixa càrrega. Feu un dibuix de la situació de la vareta i l'objecte metàl·lic levitant i dibuixeu les forces sobre l'objecte. Calculeu quina és la càrrega electrostàtica de l'objecte metàl·lic si aquest té una massa de $10\\ \\text{g}$ i es troba a una distància de $55\\ \\text{cm}$ de la vareta.\n\nb) Considereu ara una altra situació, en què tant la vareta com l'objecte metàl·lic estan carregats amb una càrrega $q = -2\\ \\mu\\text{C}$ i separats a una distància de $60\\ \\text{cm}$. Calculeu el mòdul del camp elèctric al punt central de la línia que els uneix i el potencial elèctric en aquest punt. Determineu quin és el treball que haurà de fer una força externa per a portar un electró des de l'infinit fins a aquest punt central.\n\nDades:\nGravetat a la superfície de la Terra, $g = 9{,}8\\ \\text{m}/\text{s}^2$.\n$|e| = 1{,}602\\times 10^{-19}\\ \\text{C}$.\n$k = \\frac{1}{4\\pi\\varepsilon_0} = 8{,}99\\times 10^9\\ \\text{N}\\cdot\\text{m}^2/\\text{C}^2$.\n\nQuina de les següents opcions és correcta?",
+      "opciones": [
+        "$q = 1{,}00\\ \\mu\\text{C}$, $E = 0$, $V = -1{,}20\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}00\\times 10^{-14}\\ \\text{J}$",
+        "$q = 1{,}82\\ \\mu\\text{C}$, $E = 1{,}00\\times 10^5\\ \\text{N}/\\text{C}$, $V = -1{,}00\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}00\\times 10^{-14}\\ \\text{J}$",
+        "$q = 1{,}82\\ \\mu\\text{C}$, $E = 0$, $V = -1{,}20\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}92\\times 10^{-14}\\ \\text{J}$",
+        "$q = 1{,}00\\ \\mu\\text{C}$, $E = 1{,}00\\times 10^5\\ \\text{N}/\\text{C}$, $V = -1{,}00\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}92\\times 10^{-14}\\ \\text{J}$"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'opció C és correcta: $q = 1{,}82\\ \\mu\\text{C}$, $E = 0$, $V = -1{,}20\\times 10^5\\ \\text{V}$, $W_{\\text{ext}} = 1{,}92\\times 10^{-14}\\ \\text{J}$. S'han aplicat les fórmules de la força elèctrica, el camp elèctric i el treball de forces externes en camps elèctrics."
+    }
+  ]
 }

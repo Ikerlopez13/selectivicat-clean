@@ -9,6 +9,8 @@ export default function PremiumPopup() {
   const [loading, setLoading] = useState(true);
   const [timeLeft, setTimeLeft] = useState('');
   const pathname = usePathname();
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
+  const [isPremium, setIsPremium] = useState<boolean | null>(null);
 
   // No mostrar en estas páginas
   const excludedPaths = [
@@ -20,21 +22,47 @@ export default function PremiumPopup() {
   ];
 
   useEffect(() => {
-    const checkPremium = async () => {
+    // Comprobar si el usuario está logueado y si es premium
+    const checkStatus = async () => {
       try {
         const res = await fetch('/api/premium-status');
         if (res.ok) {
           const data = await res.json();
-          if (!data.hasPremiumStatus && !excludedPaths.includes(pathname)) {
-            setTimeout(() => setShow(true), 5000); // Mostrar a los 5 segundos
+          if (data && typeof data.hasPremiumStatus !== 'undefined') {
+            setIsLoggedIn(true);
+            setIsPremium(!!data.hasPremiumStatus);
+          } else {
+            setIsLoggedIn(false);
+            setIsPremium(false);
           }
+        } else if (res.status === 401) {
+          setIsLoggedIn(false);
+          setIsPremium(false);
+        } else {
+          setIsLoggedIn(false);
+          setIsPremium(false);
         }
-      } catch {}
-      setLoading(false);
+      } catch {
+        setIsLoggedIn(false);
+        setIsPremium(false);
+      }
     };
-    checkPremium();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    checkStatus();
   }, [pathname]);
+
+  useEffect(() => {
+    if (isPremium === null || isLoggedIn === null) return;
+    if (!isLoggedIn || isPremium) {
+      setLoading(false);
+      return;
+    }
+    // Solo mostrar a estándar logueado y si no lo ha cerrado antes
+    const popupClosed = typeof window !== 'undefined' && localStorage.getItem('premiumPopupClosed') === 'true';
+    if (!popupClosed && !excludedPaths.includes(pathname)) {
+      setTimeout(() => setShow(true), 5000); // Mostrar a los 5 segundos
+    }
+    setLoading(false);
+  }, [isPremium, isLoggedIn, pathname]);
 
   useEffect(() => {
     // Calcular el tiempo restante hasta el domingo a las 23:59
@@ -60,12 +88,19 @@ export default function PremiumPopup() {
     return () => clearInterval(timer);
   }, []);
 
+  const handleClose = () => {
+    setShow(false);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('premiumPopupClosed', 'true');
+    }
+  };
+
   if (loading || !show) return null;
 
   return (
     <div className="fixed bottom-4 right-4 bg-white p-4 rounded-xl border-2 border-selectivi-yellow max-w-xs w-[320px] z-[9999]">
       <button 
-        onClick={() => setShow(false)}
+        onClick={handleClose}
         className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-xl font-bold"
       >
         ✕
