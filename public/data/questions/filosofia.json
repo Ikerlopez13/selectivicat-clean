@@ -447,7 +447,7 @@
         "És un dret que només poden exercir els governants"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Segons el text, aquesta doctrina del poder en mans del poble per recuperar la seguretat serveix com a defensa contra la rebel·lió i és el mitjà més eficaç per evitar-la, ja que mostra els perills als governants que podrien estar temptats a abusar del poder."
+      "explicacion": "Segons el text, aquesta doctrina del poder en mans del poble per recuperar la seguretat serveix como defensa contra la rebel·lió i és el mitjà més eficaç per evitar-la, ja que mostra els perills als governants que podrien estar temptats a abusar del poder."
     },
     {
       "id": "p82",
@@ -461,7 +461,7 @@
         "Quan critica les decisions dels governants"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El text explica que qui usa la força per oposar-se a les lleis després d'haver-se unit a la societat civil i haver acceptat les lleis per a la defensa de la propietat, pau i unitat, es converteix en un veritable rebel."
+      "explicacion": "El text explica que qui usa la força per oposar-se a les lleis després d'haver-se unit a la societat civil i haber aceptat las leyes per a la defensa de la propiedad, paz y unidad, se convierte en un verdadero rebel."
     },
     {
       "id": "p83",
@@ -469,27 +469,27 @@
       "subTema": "Locke",
       "pregunta": "Quina és la base del poder polític legítim segons Locke?",
       "opciones": [
-        "El consentiment del poble i el respecte als drets naturals",
-        "La força militar i el control del territori",
-        "El dret diví dels governants",
-        "La tradició històrica"
+        "El consentiment del poble i el respecte als drets naturales",
+        "La fuerza militar y el control del territorio",
+        "El derecho diví de los gobernantes",
+        "La tradición histórica"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Segons el text, el poder polític legítim es basa en el consentiment del poble i el respecte als seus drets (propietat, llibertat). Quan els governants violen aquests principis, perden la seva legitimitat."
+      "explicacion": "Según el texto, el poder político legítimo se basa en el consentimiento del pueblo y el respeto a sus derechos (propiedad, libertad). Cuando los gobernantes violan estos principios, pierden su legitimidad."
     },
     {
       "id": "p84",
       "categoria": "Filosofia",
       "subTema": "Locke",
-      "pregunta": "Per què Locke considera que mostrar els perills de l'abús de poder als governants serveix per prevenir la rebel·lió?",
+      "pregunta": "Per què Locke considera que mostrar los perills de l'abús de poder a los gobernantes sirve para prevenir la rebelión?",
       "opciones": [
-        "Perquè els fa conscients que si abusen del poder, el poble pot legítimament resistir-s'hi",
-        "Perquè els atemoreix amb càstigs divins",
-        "Perquè promou la violència contra ells",
-        "Perquè els obliga a dimitir"
+        "Porque los hace conscientes de que si abusan del poder, el pueblo puede legítimamente resistirse a ello",
+        "Porque los atemoriza con castigos divinos",
+        "Porque promueve la violencia contra ellos",
+        "Porque los obliga a dimitir"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "El text indica que mostrar als governants que si actuen com a rebels contra el poble, aquest pot resistir-s'hi legítimament, serveix per dissuadir-los d'abusar del poder que se'ls ha concedit."
+      "explicacion": "El texto indica que mostrar a los gobernantes que si actúan como rebeldes contra el pueblo, este puede resistirse a ello legítimamente, sirve para dissuadirlos de abusar del poder que se les ha concedido."
     }
   ],
   "premium": [
@@ -562,6 +562,972 @@
       ],
       "respuestaCorrecta": 0,
       "explicacion": "Segons Plató, el món sensible conté objectes que són còpies imperfectes de les Formes o Idees perfectes que existeixen en el món intel·ligible. Aquesta distinció és fonamental en la seva teoria del coneixement."
+    },
+    {
+      "id": "pf3",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina és la funció dels guardians dins la República?",
+      "opciones": [
+        "Establir les lleis religioses",
+        "Protegir l'ordre i defender la ciutat segons la raó",
+        "Supervisar els artesans",
+        "Debatre les decisions polítiques"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Segons Plató, la funció principal dels guardians ésProtegir l'ordre i defender la ciutat, actuant segons la raó i sota la direcció dels filòsofs governants."
+    },
+    {
+      "id": "pf4",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Què implica l'anamnesi en la teoria del coneixement platònic?",
+      "opciones": [
+        "Imaginar nous coneixements",
+        "Observar amb precisió la realitat",
+        "Recordar les idees contemplades abans de néixer",
+        "Aplicar la dialèctica formal"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'anamnesi, segons Plató, és el procés pel qual l'ànima recorda les idees perfectes que va contemplar abans de néixer, essent la base del coneixement veritable."
+    },
+    {
+      "id": "pf5",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina concepció té Plató sobre la relació entre cos i ànima?",
+      "opciones": [
+        "L'ànima i el cos formen una sola substància",
+        "El cos és l'expressió de l'ànima",
+        "L'ànima és immortal i està empresonada en el cos",
+        "L'ànima desapareix en morir el cos"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Segons Plató, l'ànima és immortal i preexisteix al cos, però queda empresonada en ell durant la vida física. Aquesta dualitat cos-ànima és fonamental en la seva antropologia."
+    },
+    {
+      "id": "pf6",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Per què Plató rebutja la doxa com a font de coneixement?",
+      "opciones": [
+        "Perquè és canviant i prové del món sensible",
+        "Perquè és massa teòrica",
+        "Perquè no és democràtica",
+        "Perquè contradiu els mites"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Plató rebutja la doxa (opinió) perquè es basa en el món sensible, que és canviant i imperfecte, i no pot conduir al coneixement veritable de les idees."
+    },
+    {
+      "id": "pf7",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Com defineix Plató el món físic o sensible?",
+      "opciones": [
+        "Com una còpia exacta del món de les idees",
+        "Com un reflex imperfecte i canviant de la realitat veritable",
+        "Com l'origen de la saviesa",
+        "Com una realitat autònoma"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Plató defineix el món físic o sensible com un reflex imperfecte i canviant del món de les idees, que és la realitat veritable i immutable."
+    },
+    {
+      "id": "pf8",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quin és el paper fonamental del filòsof dins la polis platònica?",
+      "opciones": [
+        "Imposar les seves idees",
+        "Accedir al coneixement del Bé i guiar la societat segons aquest",
+        "Controlar els desitjos dels ciutadans",
+        "Fer lleis a partir de l'experiència"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El filòsof, segons Plató, ha d'accedir al coneixement del Bé i, gràcies a aquest coneixement, guiar la societat cap a la justícia i l'harmonia."
+    },
+    {
+      "id": "pf9",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Quina obra exposa el model de l'Estat ideal segons Plató?",
+      "opciones": [
+        "El Sofista",
+        "Fedó",
+        "La República",
+        "L'Apologia"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'obra on Plató exposa el model de l'Estat ideal, la justícia i la societat jerarquitzada segons la virtut i el coneixement és 'La República'."
+    },
+    {
+      "id": "pf10",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "En el mite de la caverna, el sol simbolitza…",
+      "opciones": [
+        "L'ànima racional",
+        "La idea del Bé com a veritat última",
+        "L'alliberament social",
+        "El coneixement sensible"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "En el mite de la caverna, el sol representa la Idea del Bé, la veritat última i font de tot coneixement segons Plató."
+    },
+    {
+      "id": "pf11",
+      "categoria": "Filosofia",
+      "subTema": "Plató",
+      "pregunta": "Segons Plató, quin tipus de coneixement ens condueix a la veritat autèntica?",
+      "opciones": [
+        "L'experiència sensible",
+        "L'opinió col·lectiva",
+        "El coneixement intel·ligible de les Idees",
+        "L'observació empírica"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Per a Plató, només el coneixement intel·ligible de les Idees, que transcendeix el món sensible, ens condueix a la veritat autèntica."
+    },
+    {
+      "id": "pd1",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Quina és la primera veritat indubtable que descobreix Descartes en el seu mètode?",
+      "opciones": [
+        "Déu existeix",
+        "Tot coneixement prové dels sentits",
+        "Penso, per tant existeixo (cogito ergo sum)",
+        "El món exterior és real"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La primera veritat indubtable per a Descartes és el 'cogito ergo sum': el fet de pensar implica necessàriament l'existència del pensador."
+    },
+    {
+      "id": "pd2",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Quin objectiu persegueix Descartes amb el dubte metòdic?",
+      "opciones": [
+        "Rebutjar la religió",
+        "Justificar l'experiència sensible",
+        "Trobar una veritat indubtable sobre la qual construir el coneixement",
+        "Elaborar un sistema moral"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Descartes utilitza el dubte metòdic per trobar una veritat indubtable que serveixi de fonament segur per a tot el coneixement."
+    },
+    {
+      "id": "pd3",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Segons Descartes, què es pot dubtar legítimament dins el procés filosòfic?",
+      "opciones": [
+        "La matemàtica i la raó",
+        "L'existència de l'ànima",
+        "Els sentits, els somnis i l'existència del món extern",
+        "L'existència del jo"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Descartes sosté que es pot dubtar legítimament dels sentits, dels somnis i fins i tot de l'existència del món extern, però no del fet de pensar."
+    },
+    {
+      "id": "pd4",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Per Descartes, com es demostra l'existència de Déu?",
+      "opciones": [
+        "Amb l'observació natural",
+        "A partir de la idea de perfecció dins de la pròpia ment",
+        "Per la fe",
+        "Mitjançant l'autoritat de l'Església"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Descartes argumenta que la idea de perfecció i infinitud que trobem en la nostra ment només pot provenir d'un ésser realment perfecte: Déu."
+    },
+    {
+      "id": "pd5",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Què vol dir que Descartes és racionalista?",
+      "opciones": [
+        "Que rebutja el coneixement",
+        "Que només confia en la ciència empírica",
+        "Que defensa que el coneixement veritable prové de la raó",
+        "Que valora més la fe que la raó"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Descartes és racionalista perquè defensa que la raó és la font principal i més segura del coneixement veritable."
+    },
+    {
+      "id": "pd6",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Quina relació estableix Descartes entre ment i cos?",
+      "opciones": [
+        "Són la mateixa substància",
+        "El cos és una il·lusió de la ment",
+        "Són dues substàncies diferents que interactuen",
+        "La ment és part del cos"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Descartes defensa el dualisme: ment i cos són dues substàncies diferents però poden interactuar entre si."
+    },
+    {
+      "id": "pd7",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Quina obra conté la formulació del mètode cartesià?",
+      "opciones": [
+        "Meditacions metafísiques",
+        "Discurs del mètode",
+        "Principis de la filosofia",
+        "Tractat de l'ànima"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La formulació del mètode cartesià es troba a l'obra 'Discurs del mètode', on Descartes exposa les regles fonamentals per a la recerca de la veritat."
+    },
+    {
+      "id": "pd8",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Quines són les regles fonamentals del mètode cartesià?",
+      "opciones": [
+        "Observació, hipòtesi, experimentació, conclusió",
+        "Fe, intuïció, deducció i emoció",
+        "Evidència, anàlisi, síntesi i enumeració",
+        "Dubte, fe, moral i prudència"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Les quatre regles fonamentals del mètode cartesià són: evidència, anàlisi, síntesi i enumeració."
+    },
+    {
+      "id": "pd9",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Com interpreta Descartes el coneixement dels sentits?",
+      "opciones": [
+        "Com a font de possibles errors",
+        "Com a base de la veritat",
+        "Com a font segura de coneixement",
+        "Com a reflex directe de la realitat"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Descartes considera que els sentits poden enganyar-nos i, per tant, no són una font segura de coneixement."
+    },
+    {
+      "id": "pd10",
+      "categoria": "Filosofia",
+      "subTema": "Descartes",
+      "pregunta": "Segons Descartes, què caracteritza les idees innates?",
+      "opciones": [
+        "Provenen de l'experiència",
+        "Es troben dins la ment des del naixement i no depenen dels sentits",
+        "Són adquirides per observació",
+        "Són sempre falses"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Les idees innates, segons Descartes, són aquelles que es troben a la ment des del naixement i no depenen de l'experiència ni dels sentits."
+    },
+    {
+      "id": "pl1",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quina és la font de tot coneixement segons Locke?",
+      "opciones": [
+        "La intuïció innata",
+        "L'experiència",
+        "La revelació divina",
+        "La raó pura"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Per a Locke, tot coneixement prové de l'experiència, ja sigui externa (sensació) o interna (reflexió)."
+    },
+    {
+      "id": "pl2",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quin paper tenen les idees innates en la teoria de Locke?",
+      "opciones": [
+        "Són essencials per entendre el món",
+        "Existeixen a nivell inconscient",
+        "No existeixen; tot ve de l'experiència",
+        "Només s'apliquen en matemàtiques"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Locke rebutja l'existència d'idees innates i defensa que tot el coneixement i les idees provenen de l'experiència."
+    },
+    {
+      "id": "pl3",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Què és la ment per a Locke en néixer?",
+      "opciones": [
+        "Una consciència divina",
+        "Una taula rasa",
+        "Un conjunt d'idees confuses",
+        "Un reflex de Déu"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Segons Locke, la ment en néixer és una taula rasa (tabula rasa), sense idees prèvies, i s'omple a través de l'experiència."
+    },
+    {
+      "id": "pl4",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quina diferència fa Locke entre tipus d'idees?",
+      "opciones": [
+        "Innates i culturals",
+        "Simples i complexes",
+        "Actives i passives",
+        "Pures i contaminades"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Locke distingeix entre idees simples (procedents de l'experiència directa) i idees complexes (formades per combinació d'idees simples)."
+    },
+    {
+      "id": "pl5",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Segons Locke, com es formen les idees complexes?",
+      "opciones": [
+        "Per revelació",
+        "A partir de la combinació d'idees simples",
+        "Gràcies a la memòria ancestral",
+        "Per l'ús de la fe"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Les idees complexes es formen combinant idees simples que provenen de l'experiència."
+    },
+    {
+      "id": "pl6",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Què és una qualitat primària segons Locke?",
+      "opciones": [
+        "Una propietat objectiva com la forma o el moviment",
+        "Una impressió sensorial subjectiva",
+        "Una emoció",
+        "Una idea innata"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Les qualitats primàries són propietats objectives de les coses, com la forma, el moviment o la grandària, que existeixen independentment del subjecte."
+    },
+    {
+      "id": "pl7",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quines són qualitats secundàries per a Locke?",
+      "opciones": [
+        "L'existència, l'essència i el moviment",
+        "La idea, l'experiència i la raó",
+        "Propietats com el color, el gust o l'olor, que depenen del subjecte",
+        "Les idees complexes"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Les qualitats secundàries són aquelles que depenen de la percepció del subjecte, com el color, el gust o l'olor."
+    },
+    {
+      "id": "pl8",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Com defineix Locke el coneixement?",
+      "opciones": [
+        "Coneixement absolut i universal",
+        "Percepció de la connexió i acord entre idees",
+        "Opinió recolzada en fe",
+        "Una activitat només racional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Locke defineix el coneixement com la percepció de la connexió i acord entre idees."
+    },
+    {
+      "id": "pl9",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Segons Locke, quin és el límit del coneixement humà?",
+      "opciones": [
+        "No hi ha límits",
+        "L'ànima no pot ser coneguda",
+        "No podem conèixer l'essència última de les coses",
+        "Tot és coneixible si es raona bé"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Locke sosté que el coneixement humà no pot arribar a conèixer l'essència última de les coses, només les seves qualitats."
+    },
+    {
+      "id": "pl10",
+      "categoria": "Filosofia",
+      "subTema": "Locke",
+      "pregunta": "Quin és un dels objectius principals de l'empirisme de Locke?",
+      "opciones": [
+        "Delimitar què pot ser conegut per evitar errors i dogmes",
+        "Justificar les idees innates",
+        "Demostrar la infal·libilitat de la raó",
+        "Aplicar la teologia natural"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Un dels objectius de Locke és delimitar el que pot ser conegut per evitar errors, dogmes i especulacions infundades."
+    },
+    {
+      "id": "h1",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Segons Hume, quin és l'origen de tot el coneixement humà?",
+      "opciones": [
+        "Les idees innates",
+        "Les impressions de l'experiència",
+        "L'instint natural",
+        "L'autoritat racional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hume sosté que tot el coneixement humà té el seu origen en les impressions sensibles, és a dir, en l'experiència directa. Aquesta és una de les tesis fonamentals del seu empirisme."
+    },
+    {
+      "id": "h2",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Quina distinció fonamental fa Hume entre els continguts de la ment?",
+      "opciones": [
+        "Fets i opinions",
+        "Idees complexes i pures",
+        "Impressions i idees",
+        "Racionalisme i empirisme"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Hume distingeix entre impressions (percepcions immediates i vives) i idees (còpies menys intenses de les impressions). Aquesta distinció és central en la seva teoria del coneixement."
+    },
+    {
+      "id": "h3",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Com defineix Hume les impressions?",
+      "opciones": [
+        "Còpies d'idees simples",
+        "Pensaments interns",
+        "Percepcions vives i directes de la realitat",
+        "Records del passat"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Per Hume, les impressions són les percepcions immediates i vives que tenim de la realitat, com les sensacions, passions i emocions. Són la font original de tot coneixement."
+    },
+    {
+      "id": "h4",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Què caracteritza les idees, segons Hume?",
+      "opciones": [
+        "Són independents de l'experiència",
+        "Són eternes i immutables",
+        "Són còpies menys intenses de les impressions",
+        "Són innates i clares"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Hume sosté que les idees són còpies menys intenses de les impressions originals. Aquesta relació de dependència és fonamental en la seva teoria del coneixement."
+    },
+    {
+      "id": "h5",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Quina postura adopta Hume respecte la idea de causalitat?",
+      "opciones": [
+        "És una creença basada en l'hàbit, no una certesa racional",
+        "És demostrable per deducció",
+        "És una idea innata",
+        "És una veritat eterna"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Hume nega que la causalitat sigui una relació necessària i racional. En el seu lloc, sosté que és una creença basada en l'hàbit i la repetició d'experiències similars."
+    },
+    {
+      "id": "h6",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Segons Hume, per què no podem conèixer el 'jo' com una substància estable?",
+      "opciones": [
+        "Perquè és una il·lusió òptica",
+        "Perquè només percebem un flux de percepcions canviants",
+        "Perquè el jo està fora del temps",
+        "Perquè només Déu pot conèixer el jo"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hume sosté que no podem trobar cap impressió constant que correspongui a la idea d'un 'jo' substancial. Només experimentem un flux continu de percepcions canviants."
+    },
+    {
+      "id": "h7",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Quin tipus de coneixement accepta Hume com a vàlid?",
+      "opciones": [
+        "El coneixement revelat",
+        "Les relacions entre idees i els fets de l'experiència",
+        "El coneixement matemàtic i diví",
+        "L'intuïció racional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hume accepta dos tipus de coneixement vàlid: les relacions entre idees (com les matemàtiques) i els fets de l'experiència (basats en la causalitat i l'observació)."
+    },
+    {
+      "id": "h8",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Segons Hume, com s'origina la nostra creença en la continuïtat de la realitat?",
+      "opciones": [
+        "Per deducció lògica",
+        "Per l'hàbit i la repetició d'experiències similars",
+        "Per un principi universal",
+        "Per la revelació moral"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hume sosté que la creença en la continuïtat de la realitat s'origina en l'hàbit i la repetició d'experiències similars, no en una demostració racional."
+    },
+    {
+      "id": "h9",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Quina crítica fa Hume a la metafísica tradicional?",
+      "opciones": [
+        "Que no és moralment útil",
+        "Que parla de conceptes que no tenen cap impressió corresponent",
+        "Que no serveix per explicar la religió",
+        "Que es basa massa en l'experiència"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Hume critica la metafísica tradicional perquè utilitza conceptes que no tenen cap impressió sensible corresponent, com 'substància', 'ànima' o 'Déu'."
+    },
+    {
+      "id": "h10",
+      "categoria": "Filosofia",
+      "subTema": "Hume",
+      "pregunta": "Segons Hume, com podem evitar errors en el coneixement?",
+      "opciones": [
+        "Limitant-nos a parlar només del que prové de l'experiència",
+        "Refusant tota emoció",
+        "Acceptant només idees innates",
+        "Usant únicament la raó"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Hume sosté que per evitar errors en el coneixement hem de limitar-nos a parlar només d'aquell que prové de l'experiència sensible, seguint el principi empirista."
+    },
+    {
+      "id": "k1",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Quin és l'objectiu principal de la \"Crítica de la raó pura\"?",
+      "opciones": [
+        "Rebutjar el coneixement empíric",
+        "Delimitar què podem conèixer i com",
+        "Justificar la fe religiosa",
+        "Negar la ciència"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Crítica de la raó pura té com a objectiu principal delimitar els límits i possibilitats del coneixement humà, establint què podem conèixer i com ho podem conèixer. Això implica una anàlisi crítica de les facultats cognitives humanes."
+    },
+    {
+      "id": "k2",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Quina síntesi proposa Kant entre el racionalisme i l'empirisme?",
+      "opciones": [
+        "Defensa només el racionalisme pur",
+        "El coneixement comença amb l'experiència, però no tot prové d'ella",
+        "L'experiència no és fiable",
+        "La raó pura ho pot tot"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Kant proposa una síntesi entre racionalisme i empirisme: tot coneixement comença amb l'experiència (empirisme), però no tot prové d'ella (racionalisme), ja que hi ha elements a priori que condicionen la nostra experiència."
+    },
+    {
+      "id": "k3",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Segons Kant, com coneixem els fenòmens?",
+      "opciones": [
+        "Per revelació o fe",
+        "A través de les formes a priori de l'espai i el temps",
+        "Només mitjançant els sentits",
+        "Amb idees innates"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Kant sosté que coneixem els fenòmens a través de les formes a priori de la sensibilitat (espai i temps) i de l'enteniment (categories). Aquestes formes són condicions necessàries per a qualsevol experiència possible."
+    },
+    {
+      "id": "k4",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Què vol dir Kant amb el concepte de \"a priori\"?",
+      "opciones": [
+        "Coneixement derivat de l'experiència",
+        "Coneixement cultural",
+        "Coneixement anterior a qualsevol experiència",
+        "Coneixement fals"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El coneixement a priori és aquell que és necessari i universal, i que no depèn de l'experiència. És anterior a qualsevol experiència i la condiciona."
+    },
+    {
+      "id": "k5",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Quina diferència fa Kant entre fenomen i noümen?",
+      "opciones": [
+        "Fenomen és allò visible; noümen, allò invisible",
+        "Fenomen és el que podem conèixer; noümen, el que està més enllà del coneixement possible",
+        "Noümen és el món sensible",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Kant distingeix entre fenomen (allò que podem conèixer a través de les nostres facultats cognitives) i noümen (la cosa en si mateixa, que està més enllà del coneixement possible)."
+    },
+    {
+      "id": "k6",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Segons Kant, què cal per produir coneixement?",
+      "opciones": [
+        "Només experiència",
+        "Només intuïció sensible",
+        "Una síntesi entre intuïció sensible i concepte racional",
+        "Fe i revelació"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Per Kant, el coneixement requereix tant intuïció sensible (que ens dona els objectes) com conceptes racionals (que els pensen). Sense aquesta síntesi no hi ha coneixement possible."
+    },
+    {
+      "id": "k7",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Què significa l'imperatiu categòric de Kant en moral?",
+      "opciones": [
+        "Actua segons el que et convingui",
+        "Actua per agradar a Déu",
+        "Actua només segons aquella màxima que puguis voler que esdevingui llei universal",
+        "Actua per evitar el càstig"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'imperatiu categòric és el principi fonamental de la moral kantiana, que exigeix actuar segons màximes que puguin ser universalitzades, és a dir, que puguin ser acceptades com a lleis universals."
+    },
+    {
+      "id": "k8",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Quina és la base de l'autonomia moral segons Kant?",
+      "opciones": [
+        "La tradició cultural",
+        "La raó que es dóna les pròpies lleis",
+        "L'obediència a la religió",
+        "Els sentiments"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Per Kant, l'autonomia moral es basa en la capacitat de la raó per donar-se a si mateixa les lleis morals. És l'oposat a l'heteronomia, que seria actuar segons lleis externes."
+    },
+    {
+      "id": "k9",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Segons Kant, per què no podem conèixer el noümen?",
+      "opciones": [
+        "Perquè no existeix",
+        "Perquè només es mostra als sentits",
+        "Perquè és més enllà de l'experiència i de les formes a priori",
+        "Perquè no ho explica la ciència"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El noümen no pot ser conegut perquè està més enllà de les nostres facultats cognitives. Només podem conèixer els fenòmens, que són les coses tal com apareixen a nosaltres."
+    },
+    {
+      "id": "k10",
+      "categoria": "Filosofia",
+      "subTema": "Kant",
+      "pregunta": "Quin tipus de judici és clau per a la ciència segons Kant?",
+      "opciones": [
+        "A posteriori i analític",
+        "A priori i analític",
+        "A priori i sintètic",
+        "A posteriori i intuïtiu"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Els judicis a priori sintètics són clau per a la ciència segons Kant perquè són universals i necessaris (a priori) però a més afegeixen nova informació (sintètics). Exemples són els principis de la matemàtica i la física."
+    },
+    {
+      "id": "n1",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Segons Nussbaum, quin ha de ser l'objectiu principal de la política i l'economia?",
+      "opciones": [
+        "Maximitzar la riquesa nacional",
+        "Garantir que totes les persones puguin desenvolupar les seves capacitats bàsiques",
+        "Mantenir l'ordre social tradicional",
+        "Reduir impostos"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum sosté que l'objectiu principal de la política i l'economia ha de ser garantir que totes les persones puguin desenvolupar les seves capacitats bàsiques, prioritzant el desenvolupament humà sobre altres objectius."
+    },
+    {
+      "id": "n2",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Quina crítica fa Nussbaum a la teoria utilitarista clàssica?",
+      "opciones": [
+        "Que no és prou racional",
+        "Que ignora les diferències individuals i la dignitat personal",
+        "Que no funciona amb els nens",
+        "Que valora massa l'educació"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum critica l'utilitarisme clàssic per ignorar les diferències individuals i la dignitat personal, ja que es centra en maximitzar la felicitat general sense tenir en compte les necessitats específiques de cada persona."
+    },
+    {
+      "id": "n3",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Segons Nussbaum, què són les \"capacitats\"?",
+      "opciones": [
+        "Habilitats innates de cada individu",
+        "Oportunitats reals per fer i ser el que és fonamental per a una vida digna",
+        "Qualitats econòmiques",
+        "Drets legals"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Per a Nussbaum, les capacitats són oportunitats reals que tenen les persones per fer i ser allò que és fonamental per a una vida digna, incloent-hi llibertats i possibilitats concretes."
+    },
+    {
+      "id": "n4",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Quina disciplina considera Nussbaum imprescindible per a una democràcia saludable?",
+      "opciones": [
+        "Tecnologia",
+        "Economia aplicada",
+        "Filosofia i humanitats",
+        "Ciències naturals"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Nussbaum considera que la filosofia i les humanitats són essencials per a una democràcia saludable, ja que ajuden a desenvolupar el pensament crític i la comprensió de la condició humana."
+    },
+    {
+      "id": "n5",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Per què Nussbaum defensa l'educació emocional?",
+      "opciones": [
+        "Per controlar millor els ciutadans",
+        "Perquè ens ajuda a entendre els altres i actuar amb justícia",
+        "Per substituir la raó",
+        "Perquè les emocions són superiors a la lògica"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum defensa l'educació emocional perquè ens ajuda a entendre els altres i actuar amb justícia, considerant que les emocions són fonamentals per a la vida moral i política."
+    },
+    {
+      "id": "n6",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Quina relació estableix Nussbaum entre filosofia i política?",
+      "opciones": [
+        "Són àmbits separats",
+        "La filosofia pot guiar la política cap a una societat més justa",
+        "La política ha de controlar la filosofia",
+        "Cap de les dues és útil avui dia"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum sosté que la filosofia pot i ha de guiar la política cap a una societat més justa, proporcionant un marc conceptual per a la reflexió sobre la justícia i el desenvolupament humà."
+    },
+    {
+      "id": "n7",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Segons Nussbaum, què implica una educació centrada en les capacitats?",
+      "opciones": [
+        "Aprendre a competir millor",
+        "Prioritzar coneixements útils per al mercat laboral",
+        "Desenvolupar pensament crític, empatia i sensibilitat moral",
+        "Memoritzar dades jurídiques"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Una educació centrada en les capacitats implica desenvolupar el pensament crític, l'empatia i la sensibilitat moral, preparant als estudiants per a una participació activa en la vida democràtica."
+    },
+    {
+      "id": "n8",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Quina de les següents és una capacitat fonamental segons Nussbaum?",
+      "opciones": [
+        "Tenir èxit financer",
+        "Viure una vida digna amb integritat corporal",
+        "Obtenir fama",
+        "Guanyar discussions"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Entre les capacitats fonamentals que Nussbaum identifica es troba la capacitat de viure una vida digna amb integritat corporal, que inclou la seguretat física i l'autonomia sobre el propi cos."
+    },
+    {
+      "id": "n9",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Com defineix Nussbaum una societat justa?",
+      "opciones": [
+        "Aquella amb llibertat total de mercat",
+        "Aquella on tothom té les condicions materials i socials per desenvolupar les seves capacitats",
+        "Aquella amb igualtat absoluta de resultats",
+        "Aquella sense interferència estatal"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum defineix una societat justa com aquella on totes les persones tenen les condicions materials i socials necessàries per desenvolupar les seves capacitats bàsiques."
+    },
+    {
+      "id": "n10",
+      "categoria": "Filosofia",
+      "subTema": "Nussbaum",
+      "pregunta": "Quin paper tenen les emocions com la compassió o la indignació en el pensament de Nussbaum?",
+      "opciones": [
+        "Són obstacles per a la justícia",
+        "Són fonamentals per motivar accions polítiques justes",
+        "No tenen lloc en la vida pública",
+        "Només importen en la vida privada"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Nussbaum considera que emocions com la compassió i la indignació són fonamentals per motivar accions polítiques justes, ja que ens connecten amb el sofriment dels altres i ens mouen a actuar."
+    },
+    {
+      "id": "m1",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Quin és el principi fonamental de la llibertat segons Mill?",
+      "opciones": [
+        "La llibertat ha d'estar al servei de la moral tradicional",
+        "La llibertat només és per a les elits cultes",
+        "Cadascú ha de ser lliure mentre no faci mal als altres",
+        "L'Estat pot limitar la llibertat per protegir la majoria"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Mill estableix com a principi fonamental de la llibertat que cada individu ha de ser lliure mentre les seves accions no facin mal a altres. Aquest principi és conegut com el 'principi del dany'."
+    },
+    {
+      "id": "m2",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Quina teoria ètica defensa Mill?",
+      "opciones": [
+        "Deontologia kantiana",
+        "Utilitarisme: el màxim de felicitat per al màxim de persones",
+        "Contractualisme social",
+        "Hedonisme radical"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill és un dels principals exponents de l'utilitarisme, que busca maximitzar la felicitat per al major nombre possible de persones, tot i que amb una concepció més refinada que la de Bentham."
+    },
+    {
+      "id": "m3",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Com millora Mill l'utilitarisme clàssic de Bentham?",
+      "opciones": [
+        "Rebutjant-lo del tot",
+        "Substituint-lo per la religió",
+        "Introduint una distinció entre plaers superiors i inferiors",
+        "Donant més valor als diners"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Mill millora l'utilitarisme de Bentham introduint una distinció qualitativa entre plaers superiors (intel·lectuals, morals) i inferiors (físics), considerant que 'més val ser un Sòcrates insatisfet que un porc satisfet'."
+    },
+    {
+      "id": "m4",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Segons Mill, per què cal protegir la llibertat d'expressió, fins i tot d'idees impopulars?",
+      "opciones": [
+        "Perquè totes les opinions tenen el mateix valor",
+        "Per evitar revoltes",
+        "Perquè el debat obert ajuda a trobar la veritat",
+        "Per respectar la tradició"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Mill defensa la llibertat d'expressió perquè considera que el debat obert i la confrontació d'idees són essencials per descobrir la veritat i millorar la comprensió de les qüestions importants."
+    },
+    {
+      "id": "m5",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Quin paper juga l'individu en la societat, segons Mill?",
+      "opciones": [
+        "L'individu ha de sotmetre's al grup",
+        "Ha de poder desenvolupar-se lliurement sense coacció",
+        "No té valor propi",
+        "Només existeix per a produir"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill defensa que l'individu ha de tenir la llibertat de desenvolupar-se sense coacció, ja que la diversitat i l'experimentació individual són essencials per al progrés social."
+    },
+    {
+      "id": "m6",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Segons Mill, què justifica la intervenció de l'Estat en la vida d'un ciutadà?",
+      "opciones": [
+        "L'ordre religiós",
+        "Evitar danys a tercers",
+        "La moral tradicional",
+        "La voluntat de la majoria"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill sosté que l'única justificació per a la intervenció de l'Estat en la llibertat d'un individu és evitar que aquest faci mal a altres persones."
+    },
+    {
+      "id": "m7",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Quin és un dels perills de la democràcia que Mill adverteix?",
+      "opciones": [
+        "L'excés de llibertat",
+        "La tirania de la majoria",
+        "La manca de religió",
+        "El poder judicial"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill adverteix sobre el perill de la 'tirania de la majoria', on la voluntat de la majoria pot oprimir les minories i limitar la llibertat individual."
+    },
+    {
+      "id": "m8",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Quina importància dona Mill a l'educació?",
+      "opciones": [
+        "Ha de transmetre dogmes religiosos",
+        "És clau per al desenvolupament de la llibertat i l'autonomia crítica",
+        "Només serveix per formar treballadors",
+        "No cal si hi ha llibertat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill considera l'educació com a fonamental per desenvolupar la llibertat i l'autonomia crítica dels individus, necessàries per a una societat democràtica saludable."
+    },
+    {
+      "id": "m9",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Com defineix Mill la felicitat?",
+      "opciones": [
+        "L'absència de dolor",
+        "L'acumulació de béns materials",
+        "El plaer equilibrat amb el desenvolupament intel·lectual i moral",
+        "El compliment del deure"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Mill defineix la felicitat com una combinació de plaer i desenvolupament intel·lectual i moral, donant més valor als plaers superiors que als inferiors."
+    },
+    {
+      "id": "m10",
+      "categoria": "Filosofia",
+      "subTema": "Mill",
+      "pregunta": "Per què Mill defensa els drets de les dones?",
+      "opciones": [
+        "Per evitar revolucions",
+        "Per coherència amb el seu principi d'igualtat i llibertat individual",
+        "Per motius religiosos",
+        "Per conveniència política"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mill defensa els drets de les dones per coherència amb els seus principis d'igualtat i llibertat individual, considerant que la subordinació de les dones és una forma d'opressió injustificable."
     }
   ]
 }
