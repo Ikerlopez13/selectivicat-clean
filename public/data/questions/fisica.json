@@ -330,13 +330,13 @@
       "subTema": "Moviment harmònic simple, ones i so",
       "pregunta": "Una persona hipermetrope no pot enfocar objectes propers i necessita ulleres amb lents convergents. a) Si normalment situa el llibre a 35 cm i la imatge creada per la lent ha de ser a 70 cm per poder enfocar, calcula la distància focal de la lent correctora i la seva potència.\n\nb) Un objecte de 10 cm d'alçada es troba a 25 cm davant d'una lent convergent de 20 cm de distància focal. Calcula on es formarà la imatge, la seva mida i característiques (més gran o més petita, real o virtual, dreta o invertida).\n\nDades: $P = 1/f$ (en m), $f$ en m, $P$ en diòptries.",
       "opciones": [
-        "a) $f = 0,7\\ \text{m}$, $P = 1,43\\ \text{D}$. b) $s' = 100\\ \text{cm}$, $y' = -40\\ \text{cm}$, imatge més gran, real, invertida.",
-        "a) $f = 0,35\\ \text{m}$, $P = 2,86\\ \text{D}$. b) $s' = 20\\ \text{cm}$, $y' = 10\\ \text{cm}$, imatge igual, real, dreta.",
-        "a) $f = 0,7\\ \text{m}$, $P = 1,43\\ \text{D}$. b) $s' = -40\\ \text{cm}$, $y' = 100\\ \text{cm}$, imatge més gran, virtual, dreta.",
-        "a) $f = 1,4\\ \text{m}$, $P = 0,71\\ \text{D}$. b) $s' = 100\\ \text{cm}$, $y' = 40\\ \text{cm}$, imatge més gran, real, dreta."
+        "a) $f = 0,7\\ \\text{m}$, $P = 1,43\\ \\text{D}$. b) $s' = 100\\ \\text{cm}$, $y' = -40\\ \\text{cm}$, imatge més gran, real, invertida.",
+        "a) $f = 0,35\\ \\text{m}$, $P = 2,86\\ \\text{D}$. b) $s' = 20\\ \\text{cm}$, $y' = 10\\ \\text{cm}$, imatge igual, real, dreta.",
+        "a) $f = 0,7\\ \\text{m}$, $P = 1,43\\ \\text{D}$. b) $s' = -40\\ \\text{cm}$, $y' = 100\\ \\text{cm}$, imatge més gran, virtual, dreta.",
+        "a) $f = 1,4\\ \\text{m}$, $P = 0,71\\ \\text{D}$. b) $s' = 100\\ \\text{cm}$, $y' = 40\\ \\text{cm}$, imatge més gran, real, dreta."
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "a) L'objecte està a $s = -35\\ \text{cm}$, la imatge a $s' = 70\\ \text{cm}$. Amb l'equació de la lent: $1/s' + 1/s = 1/f$, $1/70 - 1/35 = 1/f$, $f = 0,7\\ \text{m}$, $P = 1/f = 1,43\\ \text{D}$. b) $s = -25\\ \text{cm}$, $f = 20\\ \text{cm}$, $1/s' + 1/s = 1/f$, $1/s' = 1/20 + 1/25 = 9/100$, $s' = 100\\ \text{cm}$. Mida: $y' = y s'/s = 10 \\cdot 100 / -25 = -40\\ \text{cm}$. Imatge més gran, real, invertida."
+      "explicacion": "a) L'objecte està a $s = -35\\ \\text{cm}$, la imatge a $s' = 70\\ \\text{cm}$. Amb l'equació de la lent: $1/s' + 1/s = 1/f$, $1/70 - 1/35 = 1/f$, $f = 0,7\\ \\text{m}$, $P = 1/f = 1,43\\ \\text{D}$. b) $s = -25\\ \\text{cm}$, $f = 20\\ \\text{cm}$, $1/s' + 1/s = 1/f$, $1/s' = 1/20 + 1/25 = 9/100$, $s' = 100\\ \text{cm}$. Mida: $y' = y s'/s = 10 \\cdot 100 / -25 = -40\\ \text{cm}$. Imatge més gran, real, invertida."
     }
   ]
 }

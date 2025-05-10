@@ -13,9 +13,9 @@ export default function PremiumPage() {
       <NavbarMain />
       
       {/* Hero Section */}
-      <main className="flex-grow pt-16">
+      <main className="flex-grow pt-0">
         <div className="bg-gradient-to-b from-selectivi-yellow/20 to-white">
-          <div className="container mx-auto px-4 py-16 max-w-6xl">
+          <div className="container mx-auto px-4 py-6 max-w-6xl">
             <div className="text-center mb-12">
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function PremiumPage() {
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    Estadístiques detallades del teu progrés
+                    Estadístiques detallades del teu progrés (próximament)
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

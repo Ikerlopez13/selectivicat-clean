@@ -70,13 +70,13 @@
         "$x = 1$ y $x = 3$"
       ],
       "respuestaCorrecta": 1,
-      "explicacion": "Para encontrar los puntos críticos, derivamos $f'(x) = 3x^2 - 6x = 3x(x-2)$. Igualando a cero: $3x(x-2) = 0 \\\\Rightarrow x = 0$ o $x = 2$. Por tanto, los puntos críticos son $x = 0$ y $x = 2$."
+      "explicacion": "Para encontrar los puntos críticos, derivamos $f'(x) = 3x^2 - 6x = 3x(x-2)$. Igualando a cero: $3x(x-2) = 0 \\Rightarrow x = 0$ o $x = 2$. Por tanto, los puntos críticos son $x = 0$ y $x = 2$."
     },
     {
       "id": "m05",
       "categoria": "Matemàtiques CCSS",
       "subTema": "Estadística",
-      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\\\mu = 20$ y desviación típica $\\\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
+      "pregunta": "Si $X$ es una variable aleatoria normal con media $\\mu = 20$ y desviación típica $\\sigma = 5$, ¿cuál es la probabilidad de que $X$ tome un valor entre 15 y 25?",
       "opciones": [
         "0.5",
         "0.6827",
@@ -84,7 +84,7 @@
         "0.9545"
       ],
       "respuestaCorrecta": 1,
-      "explicacion": "Para una variable normal, el intervalo $[\\\\mu - \\\\sigma, \\\\mu + \\\\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\\\leq X \\\\leq 25) = P(\\\\mu - \\\\sigma \\\\leq X \\\\leq \\\\mu + \\\\sigma) = 0.6827$."
+      "explicacion": "Para una variable normal, el intervalo $[\\mu - \\sigma, \\mu + \\sigma] = [15, 25]$ contiene aproximadamente el 68.27% de las observaciones. Por tanto, $P(15 \\leq X \\leq 25) = P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) = 0.6827$."
     },
     {
       "id": "m06",
@@ -98,7 +98,7 @@
         "10000"
       ],
       "respuestaCorrecta": 1,
-      "explicacion": "Para maximizar los ingresos, derivamos la función e igualamos a cero: $I'(x) = 100 - 0.02x = 0 \\\\Rightarrow x = 5000$. Para confirmar que es un máximo, comprobamos que $I''(x) = -0.02 < 0$."
+      "explicacion": "Para maximizar los ingresos, derivamos la función e igualamos a cero: $I'(x) = 100 - 0.02x = 0 \\Rightarrow x = 5000$. Para confirmar que es un máximo, comprobamos que $I''(x) = -0.02 < 0$."
     },
     {
       "id": "m11",
@@ -112,7 +112,287 @@
         "5 unidades de A y 10 unidades de B"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Plantemos el problema: Sea $x$ el número de unidades de A e $y$ el número de unidades de B. Tenemos las restricciones: $2x + 3y \\\\leq 30$ (horas de mano de obra), $3x + 2y \\\\leq 30$ (kg de materia prima), $x \\\\geq 0$, $y \\\\geq 0$. La función objetivo a maximizar es $Z = 40x + 50y. Resolviendo el sistema formado por las dos restricciones como igualdades: $2x + 3y = 30$ y $3x + 2y = 30$, obtenemos $x = 6$ e $y = 6$. El beneficio es $Z = 40 \\\\cdot 6 + 50 \\\\cdot 6 = 240 + 300 = 540€$."
+      "explicacion": "Plantemos el problema: Sea $x$ el número de unidades de A e $y$ el número de unidades de B. Tenemos las restricciones: $2x + 3y \\leq 30$ (horas de mano de obra), $3x + 2y \\leq 30$ (kg de materia prima), $x \\geq 0$, $y \\geq 0$. La función objetivo a maximizar es $Z = 40x + 50y. Resolviendo el sistema formado por las dos restricciones como igualdades: $2x + 3y = 30$ y $3x + 2y = 30$, obtenemos $x = 6$ e $y = 6$. El beneficio es $Z = 40 \\cdot 6 + 50 \\cdot 6 = 240 + 300 = 540€$."
+    },
+    {
+      "id": "mccss1",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "Si $f(x) = x^2 e^x$, quina és la derivada?",
+      "opciones": [
+        "$2x e^x$",
+        "$x^2 e^x + 2x e^x$",
+        "$e^x$",
+        "$2x + e^x$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La derivada de $f(x) = x^2 e^x$ és $f'(x) = 2x e^x + x^2 e^x = e^x (x^2 + 2x)$."
+    },
+    {
+      "id": "mccss2",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "El límit $\\lim_{x \\to 0} \\frac{\\sin(3x)}{x}$ és:",
+      "opciones": [
+        "$3$",
+        "$1$",
+        "$0$",
+        "$\\infty$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El límit és $3$, ja que $\\lim_{x \\to 0} \\frac{\\sin(3x)}{x} = 3$."
+    },
+    {
+      "id": "mccss3",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "Siguin $f(x) = \\sqrt{x}$ i $g(x) = x^2$. La derivada de $f(g(x))$ és:",
+      "opciones": [
+        "$2x \\sqrt{x^2}$",
+        "$\\frac{1}{2\\sqrt{x^2}} \\cdot 2x$",
+        "$x \\cdot x$",
+        "$2x \\cdot \\frac{1}{2}$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La derivada de $f(g(x)) = \\sqrt{x^2}$ és $\\frac{1}{2\\sqrt{x^2}} \\cdot 2x = \\frac{x}{|x|}$."
+    },
+    {
+      "id": "mccss4",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "Sigui $f(x) = \\ln(x^2 + 1)$. Troba $f'(x)$:",
+      "opciones": [
+        "$1/(x^2+1)$",
+        "$2x/(x^2+1)$",
+        "$2x \\ln(x^2 + 1)$",
+        "$1/(2x + 1)$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La derivada és $f'(x) = 2x/(x^2+1)$."
+    },
+    {
+      "id": "mccss5",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Càlcul",
+      "pregunta": "La integral $\\int (3x^2 - 4x + 2)\\,dx$ és:",
+      "opciones": [
+        "$x^3 - 2x^2 + 2x + C$",
+        "$x^3 - x^2 + x + C$",
+        "$3x^3 - 4x^2 + 2x + C$",
+        "$x^2 - 2x + C$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La integral és $x^3 - 2x^2 + 2x + C$."
+    },
+    {
+      "id": "mccss6",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "Si $P(A) = 0.4$, $P(B) = 0.5$ i $P(A \\cap B) = 0.2$, llavors $P(A \\cup B)$ és:",
+      "opciones": [
+        "$0.9$",
+        "$0.7$",
+        "$0.6$",
+        "$1.1$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La probabilitat és $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.4 + 0.5 - 0.2 = 0.7$."
+    },
+    {
+      "id": "mccss7",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "La mitjana d'una variable aleatòria $X$ amb valors 1, 2, 3 i probabilitats 0.2, 0.5, 0.3 és:",
+      "opciones": [
+        "$2.0$",
+        "$1.9$",
+        "$2.1$",
+        "$2.3$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La mitjana és $1 \times 0.2 + 2 \times 0.5 + 3 \times 0.3 = 2.0$."
+    },
+    {
+      "id": "mccss8",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "El percentatge de dades dins d'un interval de confiança del 95 % és:",
+      "opciones": [
+        "Entre el 2.5 % i el 97.5 %",
+        "Entre el 5 % i el 95 %",
+        "Entre el 0 % i el 95 %",
+        "Exactament el 95 % a l'esquerra"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En un interval de confiança del 95%, el 95% de les dades es troben entre el percentil 2.5 i el 97.5." 
+    },
+    {
+      "id": "mccss9",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "Sigui una mostra de mida 400 amb una proporció favorable de 0,6. El marge d'error amb un nivell de confiança del 95% és (aprox.):",
+      "opciones": [
+        "±0,05",
+        "±0,1",
+        "±0,049",
+        "±0,15"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El marge d'error és aproximadament $1.96 \\sqrt{\\frac{0.6 \\times 0.4}{400}} \\approx 0.049$."
+    },
+    {
+      "id": "mccss10",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Estadística",
+      "pregunta": "Si $X$ és una variable aleatòria binomial amb $n = 10$ i $p = 0.4$, llavors $E(X) =$:",
+      "opciones": [
+        "$4$",
+        "$0.4$",
+        "$6$",
+        "$10$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'esperança d'una binomial és $E(X) = n \\cdot p = 10 \\cdot 0.4 = 4$."
+    },
+    {
+      "id": "mccss11",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "La funció $f(x) = x^3 - 3x^2 + 2$ té un mínim relatiu a:",
+      "opciones": [
+        "$x = 1$",
+        "$x = 0$",
+        "$x = 2$",
+        "Cap"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El mínim relatiu es troba a $x = 1$."
+    },
+    {
+      "id": "mccss12",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Sigui $f(x) = \\frac{1}{x-2}$, quina és la seva assimptota vertical?",
+      "opciones": [
+        "$x = 0$",
+        "$x = 2$",
+        "$y = 2$",
+        "$x = 1$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'assimptota vertical és $x = 2$."
+    },
+    {
+      "id": "mccss13",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Si $f(x) = -x^2 + 4x - 1$, el seu màxim és a:",
+      "opciones": [
+        "$x = 2$",
+        "$x = -2$",
+        "$x = 4$",
+        "$x = 1$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El màxim d'una paràbola $ax^2 + bx + c$ amb $a < 0$ és a $x = -b/(2a) = -4/(2 \\cdot -1) = 2$."
+    },
+    {
+      "id": "mccss14",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Una funció exponencial del tipus $f(x) = a^x$ és:",
+      "opciones": [
+        "Simètrica respecte a l'eix y",
+        "Disminuent si $a > 1$",
+        "Creixent si $0 < a < 1$",
+        "Creixent si $a > 1$"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "La funció exponencial $f(x) = a^x$ és creixent si $a > 1$."
+    },
+    {
+      "id": "mccss15",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Funcions",
+      "pregunta": "Quina és la derivada de $f(x) = \\ln(x^2 + 1) \\cdot e^x$?",
+      "opciones": [
+        "$2x/(x^2+1) \\cdot e^x + \\ln(x^2+1) \\cdot e^x$",
+        "$2x \\cdot \\ln(x^2 + 1) \\cdot e^x$",
+        "$\\ln(x^2 + 1) + e^x$",
+        "$e^x \\cdot (x^2 + 1)$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "S'aplica la regla del producte: $f'(x) = 2x/(x^2+1) e^x + \\ln(x^2+1) e^x$."
+    },
+    {
+      "id": "mccss16",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "Quin és el valor de $x$ que minimitza el cost $C(x) = \\frac{300}{x} + 4x$?",
+      "opciones": [
+        "$x = 5$",
+        "$x = \\sqrt{75}$",
+        "$x = 10$",
+        "$x = 3$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El valor òptim és $x = \\sqrt{75}$."
+    },
+    {
+      "id": "mccss17",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "Un tanc cilíndric ha de tenir un volum de $1000 \\text{cm}^3$. Quin és el radi que minimitza la superfície total?",
+      "opciones": [
+        "$r = \\sqrt[3]{1000}$",
+        "$r = \\sqrt[3]{\\frac{1000}{2\\pi}}$",
+        "$r = \\sqrt[3]{500}$",
+        "$r = 10$"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El radi òptim és $r = \\sqrt[3]{\\frac{1000}{2\\pi}}$."
+    },
+    {
+      "id": "mccss18",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "Quin és el màxim valor de $f(x) = x(10 - x)$?",
+      "opciones": [
+        "$25$",
+        "$10$",
+        "$5$",
+        "$50$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El màxim és $f(5) = 5 \\cdot 5 = 25$."
+    },
+    {
+      "id": "mccss19",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "Si un rectangle ha de tenir una àrea màxima i un perímetre fix de $20 \\text{cm}$, quina és la forma òptima?",
+      "opciones": [
+        "Rectangular amb base 8 i altura 2",
+        "Quadrat de costat 5",
+        "Rectangle de base 10 i altura 1",
+        "Triangle rectangle"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La forma òptima és un quadrat de costat 5."
+    },
+    {
+      "id": "mccss20",
+      "categoria": "Matemàtiques CCSS",
+      "subTema": "Optimització",
+      "pregunta": "El cost $C(x) = 10x + \\frac{1000}{x}$ és mínim quan:",
+      "opciones": [
+        "$x = 10$",
+        "$x = \\sqrt{100}$",
+        "$x = \\sqrt{100} = 10$",
+        "$x = 5$"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El cost és mínim quan $x = \\sqrt{100} = 10$."
     }
   ]
 }

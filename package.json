@@ -38,6 +38,7 @@
     "react-icons": "^5.5.0",
     "react-katex": "^3.0.1",
     "react-pdf": "^9.2.1",
+    "stripe": "^18.1.0",
     "swr": "latest",
     "tailwindcss": "^3.3.0",
     "typescript": "latest"

@@ -56,9 +56,18 @@ export default function PremiumPopup() {
       setLoading(false);
       return;
     }
-    // Solo mostrar a estándar logueado y si no lo ha cerrado antes
-    const popupClosed = typeof window !== 'undefined' && localStorage.getItem('premiumPopupClosed') === 'true';
-    if (!popupClosed && !excludedPaths.includes(pathname)) {
+    // Solo mostrar a estándar logueado y si no lo ha cerrado antes (o han pasado 10 minutos)
+    let canShow = true;
+    if (typeof window !== 'undefined') {
+      const closedUntil = localStorage.getItem('premiumPopupClosedUntil');
+      if (closedUntil) {
+        const closedUntilTime = parseInt(closedUntil, 10);
+        if (!isNaN(closedUntilTime) && Date.now() < closedUntilTime) {
+          canShow = false;
+        }
+      }
+    }
+    if (canShow && !excludedPaths.includes(pathname)) {
       setTimeout(() => setShow(true), 5000); // Mostrar a los 5 segundos
     }
     setLoading(false);
@@ -91,7 +100,9 @@ export default function PremiumPopup() {
   const handleClose = () => {
     setShow(false);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('premiumPopupClosed', 'true');
+      // Guardar el tiempo hasta el que no se debe mostrar el popup (10 minutos)
+      const closedUntil = Date.now() + 10 * 60 * 1000;
+      localStorage.setItem('premiumPopupClosedUntil', closedUntil.toString());
     }
   };
 

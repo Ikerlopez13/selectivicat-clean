@@ -170,7 +170,6 @@ const Question: React.FC<QuestionProps> = ({
   useEffect(() => {
     if (!isPremium && isClient) {
       try {
-        // Check if adsbygoogle is defined
         if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
           const ads = document.querySelectorAll('.adsbygoogle');
           ads.forEach(ad => {
@@ -187,7 +186,7 @@ const Question: React.FC<QuestionProps> = ({
     }
   }, [isPremium, isClient]);
 
-  if (!question) return null;
+  if (!question || !question.opciones) return null;
 
   const isCorrect = hasAnswered && selectedAnswer === question.respuestaCorrecta.toString();
   const isIncorrect = hasAnswered && selectedAnswer && selectedAnswer !== question.respuestaCorrecta.toString();
@@ -715,7 +714,7 @@ export default function SeleTest() {
               </div>
             </div>
 
-            {questions.length > 0 && currentQuestionIndex < questions.length && (
+            {questions.length > 0 && currentQuestionIndex < questions.length && questions[currentQuestionIndex] && (
               <Question
                 question={questions[currentQuestionIndex]}
                 selectedAnswer={selectedAnswer}

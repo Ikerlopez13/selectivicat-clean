@@ -137,7 +137,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
-      <div className="mt-4">
+      <div className="mt-2">
         <HeroMain />
         <MainTools />
         <SectionWhySelectiviCat />

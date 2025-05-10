@@ -101,10 +101,10 @@
       "subTema": "Càlcul",
       "pregunta": "Considereu les funcions $f(x) = -x^2 + x + 6$ i $g(x) = -9x + 3x^2$. Trobeu l'equació de la recta tangent a la funció $f(x)$ en el punt $(-2, 0)$ i indiqueu per quins punts passa aquesta recta.",
       "opciones": [
-        "$y = 5x + 10$, passa pels punts $(0,10)$ i $(-2,0)$",
-        "$y = -5x - 10$, passa pels punts $(0,-10)$ i $(-2,0)$",
-        "$y = 5x - 10$, passa pels punts $(2,0)$ i $(-2,0)$",
-        "$y = -5x + 10$, passa pels punts $(2,10)$ i $(-2,0)$"
+        "$y = 5x + 10$, pasa pels punts $(0,10)$ i $(-2,0)$",
+        "$y = -5x - 10$, pasa pels punts $(0,-10)$ i $(-2,0)$",
+        "$y = 5x - 10$, pasa pels punts $(2,0)$ i $(-2,0)$",
+        "$y = -5x + 10$, pasa pels punts $(2,10)$ i $(-2,0)$"
       ],
       "respuestaCorrecta": 0,
       "explicacion": "1) Calculem la derivada: $f'(x) = -2x + 1$\\n2) Avaluem en $x = -2$: $f'(-2) = -2(-2) + 1 = 5$\\n3) Com que passa pel punt $(-2,0)$, l'equació és $y = 5(x-(-2)) + 0 = 5x + 10$\\n4) Per comprovar els punts, quan $x = 0$: $y = 10$, per tant passa per $(0,10)$ i $(-2,0)$."
@@ -277,7 +277,7 @@
         "a) 0,0785  b) 0,4235  c) 0,0012"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Sigui $D$ l'esdeveniment \"el component és defectuós\" i $C$ l'esdeveniment \"el component és classificat com a defectuós\".\n\nDe l'enunciat tenim: $P(D) = 0,05$, $P(C|D) = 0,98$ i $P(C|\\overline{D}) = 0,03$.\n\na) $P(C) = P(C|D) \\cdot P(D) + P(C|\\overline{D}) \\cdot P(\\overline{D}) = 0,98 \\cdot 0,05 + 0,03 \\cdot 0,95 = 0,049 + 0,0285 = 0,0785$.\n\nb) Apliquem la fórmula de Bayes: $P(D|C) = \\frac{P(C|D) \\cdot P(D)}{P(C)} = \\frac{0,98 \\cdot 0,05}{0,0785} = \\frac{0,049}{0,0785} = 0,6242$.\n\nc) Calculem $P(D|\\overline{C}) = \\frac{P(\\overline{C}|D) \\cdot P(D)}{P(\\overline{C})} = \\frac{0,02 \\cdot 0,05}{1-0,0785} = \\frac{0,001}{0,9215} = 0,0010$."
+      "explicacion": "Sigui $D$ l'esdeveniment 'el component és defectuós' i $C$ l'esdeveniment 'el component és classificat com a defectuós'.\n\nDe l'enunciat tenim: $P(D) = 0,05$, $P(C|D) = 0,98$ i $P(C|\\overline{D}) = 0,03$.\n\na) $P(C) = P(C|D) \\cdot P(D) + P(C|\\overline{D}) \\cdot P(\\overline{D}) = 0,98 \\cdot 0,05 + 0,03 \\cdot 0,95 = 0,049 + 0,0285 = 0,0785$.\n\nb) Apliquem la fórmula de Bayes: $P(D|C) = \\frac{P(C|D) \\cdot P(D)}{P(C)} = \\frac{0,98 \\cdot 0,05}{0,0785} = \\frac{0,049}{0,0785} = 0,6242$.\n\nc) Calculem $P(D|\\overline{C}) = \\frac{P(\\overline{C}|D) \\cdot P(D)}{P(\\overline{C})} = \\frac{0,02 \\cdot 0,05}{1-0,0785} = \\frac{0,001}{0,9215} = 0,0010$."
     },
     {
       "id": "p2",
@@ -296,28 +296,28 @@
     {
       "id": "p5",
       "categoria": "Matemàtiques",
-      "subTema": "Càlcul",
-      "pregunta": "Considereu la funció \\( f(x) = \\frac{2 \\ln x}{x} \\), definida per a \\( x > 0 \\).\n\na) Estudieu-ne els màxims i els mínims, i les zones de creixement i de decreixement.\n\nb) Aquesta funció té asímptotes? Feu un esbós de la seva gràfica.\n\nc) Calculeu l'equació de la recta tangent a la gràfica de \\( y = f(x) \\) en el punt d'abscissa \\( x = 1 \\).",
+      "subTema": "Anàlisi de funcions",
+      "pregunta": "Considereu la funció $f(x) = \\frac{2 \\ln x}{x}$, definida per a $x > 0$.\na) Estudieu-ne els màxims i els mínims, i les zones de creixement i de decreixement.\nb) Aquesta funció té asímptotes? Feu un esbós de la seva gràfica.\nc) Calculeu l'equació de la recta tangent a la gràfica de $y = f(x)$ en el punt d'abscissa $x = 1$.",
       "opciones": [
-        "\\( f(x) \\) té un màxim en \\( x = e \\) i és creixent en \\( (0, e) \\) i decreixent en \\( (e, +\\infty) \\).",
-        "\\( f(x) \\) té asímptotes verticals a \\( x = 0 \\) i horitzontals a \\( y = 0 \\).",
-        "L'equació de la recta tangent és \\( y = -2x + 2 \\)."
+        "$f(x)$ té un màxim en $x = e$ i és creixent en $(0, e)$ i decreixent en $(e, +\\infty)$.",
+        "$f(x)$ té asímptotes verticals a $x = 0$ i horitzontals a $y = 0$.",
+        "L'equació de la recta tangent és $y = -2x + 2$."
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Derivant i igualant a zero, \\( f'(x) = \\frac{1 - \\ln x}{x^2} = 0 \\) ens dóna \\( x = e \\). La derivada segona és negativa, indicant un màxim. La funció és creixent en \\( (0, e) \\) i decreixent en \\( (e, +\\infty) \\)."
+      "explicacion": "Derivant i igualant a zero, $f'(x) = \\frac{1 - \\ln x}{x^2} = 0$ ens dóna $x = e$. La derivada segona és negativa, indicant un màxim. La funció és creixent en $(0, e)$ i decreixent en $(e, +\\infty)$."
     },
     {
       "id": "p6",
       "categoria": "Matemàtiques",
       "subTema": "Probabilitat",
-      "pregunta": "L'Andreu posa les nou boles que es mostren a continuació dins d'una bossa: B, A, Y, E, S, F, A, N, S.\n\na) A continuació, treu de la bossa dues boles a l'atzar, una darrere l'altra i sense reemplaçament. Calculeu la probabilitat que la primera bola sigui una A o una E.\n\nb) L'Andreu torna a posar totes les boles a la bossa i en treu cinc a l'atzar, una darrere l'altra, però ara amb reemplaçament. Calculeu la probabilitat que no hagi tret cap A.",
+      "pregunta": "L'Andreu posa les nou boles que es mostren a continuació dins d'una bossa: B, A, Y, E, S, F, A, N, S.\na) A continuació, treu de la bossa dues boles a l'atzar, una darrere l'altra i sense reemplaçament. Calculeu la probabilitat que la primera bola sigui una A o una E.\nb) L'Andreu torna a posar totes les boles a la bossa i en treu cinc a l'atzar, una darrere l'altra, però ara amb reemplaçament. Calculeu la probabilitat que no hagi tret cap A.",
       "opciones": [
-        "\\( \\frac{1}{3} \\) i 0.284",
-        "\\( \\frac{2}{9} \\) i 0.5",
-        "\\( \\frac{1}{4} \\) i 0.308"
+        "$\\frac{1}{3}$ i 0.284",
+        "$\\frac{2}{9}$ i 0.5",
+        "$\\frac{1}{4}$ i 0.308"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Per a la primera part, hi ha 3 casos favorables (2 A i 1 E) sobre 9 possibles, per tant, la probabilitat és \\( \\frac{3}{9} = \\frac{1}{3} \\). Per a la segona part, la probabilitat de no treure cap A en cinc extraccions amb reemplaçament és \\( \\left(\\frac{7}{9}\\right)^5 = 0.284 \\)."
+      "explicacion": "Per a la primera part, hi ha 3 casos favorables (2 A i 1 E) sobre 9 possibles, per tant, la probabilitat és $\\frac{3}{9} = \\frac{1}{3}$. Per a la segona part, la probabilitat de no treure cap A en cinc extraccions amb reemplaçament és $\\left(\\frac{7}{9}\\right)^5 = 0.284$."
     },
     {
       "id": "p7",
@@ -325,18 +325,18 @@
       "subTema": "Probabilitat",
       "pregunta": "En una bossa hi ha 10 boles numerades de l'1 al 10. Es treuen tres boles a l'atzar, una darrere l'altra i sense reemplaçament. Calculeu la probabilitat que totes les boles siguin nombres parells.",
       "opciones": [
-        "\\( \\frac{1}{12} \\)",
-        "\\( \\frac{1}{15} \\)",
-        "\\( \\frac{1}{20} \\)"
+        "$\\frac{1}{12}$",
+        "$\\frac{1}{15}$",
+        "$\\frac{1}{20}$"
       ],
       "respuestaCorrecta": 1,
-      "explicacion": "Hi ha 5 boles parells (2, 4, 6, 8, 10). La probabilitat de treure tres boles parells és \\( \\frac{5}{10} \\times \\frac{4}{9} \\times \\frac{3}{8} = \\frac{1}{15} \\)."
+      "explicacion": "Hi ha 5 boles parells (2, 4, 6, 8, 10). La probabilitat de treure tres boles parells és $\\frac{5}{10} \\times \\frac{4}{9} \\times \\frac{3}{8} = \\frac{1}{15}$."
     },
     {
       "id": "p8",
       "categoria": "Matemàtiques",
       "subTema": "Geometria",
-      "pregunta": "Considereu els punts A = (1, 2, 3) i B = (-3, -2, 3).\n\na) Calculeu l'equació del pla π que és perpendicular a la recta AB i que passa pel punt mitjà entre A i B.\n\nb) Calculeu les distàncies de A i de B al pla π i comproveu que són iguals.\n\nc) Sigui C = (-7, 6, 3). El triangle ABC és isòsceles? Calculeu la seva àrea.",
+      "pregunta": "Considereu els punts A = (1, 2, 3) i B = (-3, -2, 3).\n\na) Calculeu l'equació del pla $\\pi$ que és perpendicular a la recta AB i que passa pel punt mitjà entre A i B.\n\nb) Calculeu les distàncies de A i de B al pla $\\pi$ i comproveu que són iguals.\n\nc) Sigui C = (-7, 6, 3). El triangle ABC és isòsceles? Calculeu la seva àrea.",
       "opciones": [
         "El pla és x + y + 1 = 0, les distàncies són iguals, i l'àrea és 24 u².",
         "El pla és x - y + 1 = 0, les distàncies són diferents, i l'àrea és 12 u².",
@@ -349,28 +349,151 @@
       "id": "p9",
       "categoria": "Matemàtiques",
       "subTema": "Vectors",
-      "pregunta": "Determinar un vector $v\\in\\mathbb{R}^3$ que cumpla las tres condiciones siguientes:\\n\\na) La suma de sus coordenadas, expresadas en la base canónica, es 3.\\nb) Es combinación lineal de $(2,2,2)$ y $(-1,1,0)$.\\nc) Los vectores $v$, $(1,0,1)$ y $(0,1,0)$ son linealmente dependientes.",
+      "pregunta": "Determina un vector $v\\in\\mathbb{R}^3$ que compleixi les tres condicions següents:\n\na) La suma de les seves coordenades, expressades en la base canònica, és 3.\nb) És combinació lineal de $(2,2,2)$ i $(-1,1,0)$.\nc) Els vectors $v$, $(1,0,1)$ i $(0,1,0)$ són linealment dependents.",
       "opciones": [
-        "El vector solución es $(1,1,1)$",
-        "El vector solución es $(2,0,1)$",
-        "El vector solución es $(1,2,0)$",
-        "No existe ningún vector que cumpla todas las condiciones"
+        "El vector solució és $(1,1,1)$",
+        "El vector solució és $(2,0,1)$",
+        "El vector solució és $(1,2,0)$",
+        "No existeix cap vector que compleixi totes les condicions"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Resolvamos paso a paso:\\n1) De la condición a): $x + y + z = 3$\\n2) De la condición b): $v(x,y,z) = \\alpha(2,2,2) + \\beta(-1,1,0)$\\n3) De la condición c): Los vectores son LD si su determinante es 0:\\n$\\begin{vmatrix} x & y & z \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{vmatrix} = 0 \\rightarrow z = x$\\n4) Sustituyendo en la combinación lineal y usando que $z = x$:\\n$x = 2\\alpha - \\beta$\\n$y = 2\\alpha + \\beta$\\n$x = 2\\alpha$\\n5) De aquí: $\\beta = 0$ y $\\alpha = \\frac{1}{2}$\\n6) Por tanto: $x = 1$, $y = 1$, $z = 1$\\nEl vector solución es $v = (1,1,1)$"
+      "explicacion": "Resolem pas a pas:\n1) De la condició a): $x + y + z = 3$\n2) De la condició b): $v(x,y,z) = \\alpha(2,2,2) + \\beta(-1,1,0)$\n3) De la condició c): Els vectors són LD si el seu determinant és 0:\n$\\begin{vmatrix} x & y & z \\ 1 & 0 & 1 \\ 0 & 1 & 0 \\end{vmatrix} = 0 \\rightarrow z = x$\n4) Substituint en la combinació lineal i usant que $z = x$:\n$x = 2\\alpha - \\beta$\n$y = 2\\alpha + \\beta$\n$x = 2\\alpha$\n5) D'aquí: $\\beta = 0$ i $\\alpha = \\frac{1}{2}$\n6) Per tant: $x = 1$, $y = 1$, $z = 1$\nEl vector solució és $v = (1,1,1)$"
     },
     {
       "id": "p10",
       "categoria": "Matemàtiques",
       "subTema": "Probabilitat",
-      "pregunta": "Un hombre y una mujer de la misma edad se casan a los 20 años. La probabilidad que tiene el hombre de llegar a los 70 años es de 3/4, mientras que la de su esposa es 5/6. Determinar la probabilidad de que, al cabo de 50 años de la boda:\\n\\na) Ambos estén vivos.\\nb) No viva ninguno.\\nc) Viva solamente la mujer.\\nd) Viva al menos uno de los dos.",
+      "pregunta": "Un home i una dona de la mateixa edat es casen als 20 anys. La probabilitat que té l'home d'arribar als 70 anys és de 3/4, mentre que la de la seva esposa és 5/6. Determina la probabilitat que, al cap de 50 anys del casament:\n\na) Ambdós estiguin vius.\nb) No visqui cap dels dos.\nc) Només visqui la dona.\nd) Visqui almenys un dels dos.",
       "opciones": [
         "$\\frac{5}{8}, \\frac{1}{24}, \\frac{5}{24}, \\frac{23}{24}$",
         "$\\frac{5}{8}, \\frac{1}{12}, \\frac{5}{24}, \\frac{11}{12}$",
         "$\\frac{5}{8}, \\frac{1}{24}, \\frac{1}{8}, \\frac{23}{24}$"
       ],
       "respuestaCorrecta": 0,
-      "explicacion": "Sean los sucesos:\\nH = \"hombre vive hasta los 70\" con $P(H) = \\frac{3}{4}$\\nM = \"mujer vive hasta los 70\" con $P(M) = \\frac{5}{6}$\\n\\na) $P(H\\cap M) = P(H)\\cdot P(M) = \\frac{3}{4}\\cdot\\frac{5}{6} = \\frac{5}{8}$ (son independientes)\\n\\nb) $P(\\overline{H}\\cap\\overline{M}) = P(\\overline{H})\\cdot P(\\overline{M}) = \\frac{1}{4}\\cdot\\frac{1}{6} = \\frac{1}{24}$\\n\\nc) $P(\\overline{H}\\cap M) = P(\\overline{H})\\cdot P(M) = \\frac{1}{4}\\cdot\\frac{5}{6} = \\frac{5}{24}$\\n\\nd) $P(H\\cup M) = 1 - P(\\overline{H}\\cap\\overline{M}) = 1 - \\frac{1}{24} = \\frac{23}{24}$"
+      "explicacion": "Siguin els successos:\nH = 'home viu fins als 70' amb $P(H) = \\frac{3}{4}$\nM = 'dona viu fins als 70' amb $P(M) = \\frac{5}{6}$\n\na) $P(H\\cap M) = P(H)\\cdot P(M) = \\frac{3}{4}\\cdot\\frac{5}{6} = \\frac{5}{8}$ (són independents)\n\nb) $P(\\overline{H}\\cap\\overline{M}) = P(\\overline{H})\\cdot P(\\overline{M}) = \\frac{1}{4}\\cdot\\frac{1}{6} = \\frac{1}{24}$\n\nc) $P(\\overline{H}\\cap M) = P(\\overline{H})\\cdot P(M) = \\frac{1}{4}\\cdot\\frac{5}{6} = \\frac{5}{24}$\n\nd) $P(H\\cup M) = 1 - P(\\overline{H}\\cap\\overline{M}) = 1 - \\frac{1}{24} = \\frac{23}{24}$"
+    },
+    {
+      "id": "p11",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Es vol construir una capsa sense tapa a partir d'una cartolina de 20x10 cm. Es retalla un quadrat de costat $L$ a cada cantonada i es plega la cartolina aixecant els quatre laterals de la capsa.\n\nDetermina les dimensions de la capsa perquè el seu volum sigui màxim si el costat $L$ ha de mesurar entre 2 i 3 cm ($2 \\leq L \\leq 3$).",
+      "opciones": [
+        "Les dimensions òptimes són 15,78 x 5,78 x 2,11 cm i el volum màxim és 192,45 cm³.",
+        "Les dimensions òptimes són 16 x 6 x 2 cm i el volum màxim és 192 cm³.",
+        "Les dimensions òptimes són 15 x 5 x 3 cm i el volum màxim és 180 cm³."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Si $a$ és l'amplada de la capsa, $h$ la seva alçada i $p$ la seva profunditat, el volum és $V = a \\cdot h \\cdot p$. Després de retallar els quatre quadrats de costat $L$, l'amplada és $a = 20 - 2L$, la profunditat $p = 10 - 2L$ i l'alçada $h = L$. El volum en funció de $L$ és $V(L) = (20 - 2L)(10 - 2L)L = 200L - 60L^2 + 4L^3$. Derivem: $V'(L) = 200 - 120L + 12L^2$. Igualem a zero i trobem els punts crítics: $200 - 120L + 12L^2 = 0 \\Rightarrow L = \\frac{15 \\pm 5\\sqrt{3}}{3} \\approx 2,11$ i $7,89$. Com que $L$ ha d'estar entre 2 i 3, el màxim és per $L = 2,11$. Les dimensions són $a = 15,78$ cm, $p = 5,78$ cm, $h = 2,11$ cm i el volum $192,45$ cm³."
+    },
+    {
+      "id": "p12",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Una empresa de fabricació de portes de fusta utilitza un tauler rectangular per a la fulla i tres llistons de 10 cm d'ample per al marc (costats laterals i costat superior). El preu del tauler és de 128 € per metre quadrat i el dels llistons és de 87 € per metre lineal.\n\na) Quines són les dimensions d'una porta de 2 m² de superfície de fulla perquè el cost sigui mínim? Quin serà el seu preu?\n\nb) Si la porta fa 2,5 metres d'ample i 0,8 metres d'alt, quin serà el seu preu?",
+      "opciones": [
+        "Les dimensions òptimes són 2 m d'ample i 1 m d'alt. El cost mínim és 621,4 €.",
+        "Les dimensions òptimes són 1,5 m d'ample i 1,33 m d'alt. El cost mínim és 650 €.",
+        "Les dimensions òptimes són 2,5 m d'ample i 0,8 m d'alt. El cost és 630,1 €."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Sigui $x$ l'ample i $y$ l'alt de la fulla de la porta. Tenim $x \\cdot y = 2$. El cost del tauler és $2 \\cdot 128 = 256$. El llistó superior fa $x + 0,2$ metres i els dos laterals $2y$. El cost total és $C(x) = 256 + 87(x + 0,2) + 174y = 273,4 + 87x + 174y$. Substituïm $y = 2/x$ i minimitzem: $C(x) = 273,4 + 87x + 348/x$. Derivant i igualant a zero: $87 - 348/x^2 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. Així, $y = 1$. El cost és $C(2) = 273,4 + 174 + 174 = 621,4$ €. Per $x = 2,5$ i $y = 0,8$, el cost és $C(2,5) = 273,4 + 87 \\cdot 2,5 + 174 \\cdot 0,8 = 630,1$ €."
+    },
+    {
+      "id": "p13",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Troba parelles de nombres $x$ i $y$ tals que $y$ sigui el doble del quadrat de $x$ i que la diferència dels seus quadrats ($x^2 - y^2$) sigui màxima.",
+      "opciones": [
+        "$x = \\frac{\\sqrt{2}}{4},\\ y = \\frac{1}{4}$ i $x = -\\frac{\\sqrt{2}}{4},\\ y = \\frac{1}{4}$",
+        "$x = 1,\\ y = 2$",
+        "$x = 0,\\ y = 0$"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Com $y = 2x^2$, la diferència és $f(x) = x^2 - (2x^2)^2 = x^2 - 4x^4$. Derivant: $f'(x) = 2x - 16x^3$. Igualant a zero: $2x - 16x^3 = 0 \\Rightarrow x(1 - 8x^2) = 0 \\Rightarrow x = 0$ o $x = \\pm \\frac{\\sqrt{2}}{4}$. Els màxims són per $x = \\pm \\frac{\\sqrt{2}}{4}$, i $y = 2x^2 = \\frac{1}{4}$. Les parelles són $\\left(\\frac{\\sqrt{2}}{4}, \\frac{1}{4}\\right)$ i $\\left(-\\frac{\\sqrt{2}}{4}, \\frac{1}{4}\\right)$."
+    },
+    {
+      "id": "p14",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Les guanys diaris (en milers d'euros) d'una empresa petroliera són:\n\n$f_1(x) = 32x - 2x^2$ si $0 \\leq x < 15$\\n$f_2(x) = -(30 - x)^3 + 15(30 - x)^2 + 30$ si $x \\geq 15$, sent $x$ el nombre de barrils de 1000L que es produeixen.\n\nCalculeu quants barrils s'han de produir per maximitzar els guanys, sabent que no es poden extreure més de 35.000L diaris.",
+      "opciones": [
+        "Els guanys màxims s'obtenen amb 8 barrils.",
+        "Els guanys màxims s'obtenen amb 15 barrils.",
+        "Els guanys màxims s'obtenen amb 20 o 35 barrils.",
+        "Els guanys màxims s'obtenen amb 30 barrils."
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Calculem les derivades: $f_1'(x) = 32 - 4x$, $f_2'(x) = 3x^2 - 150x + 1800$. Els punts crítics són $x = 8$ (màxim per $f_1$), $x = 20$ i $x = 30$ (màxims per $f_2$). Com la funció és creixent per $x \\geq 30$, també cal considerar $x = 35$. Avaluant: $f_1(8) = 128$, $f_2(20) = 530$, $f_2(35) = 530$. Per tant, el màxim s'obté amb 20 o 35 barrils."
+    },
+    {
+      "id": "p15",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Una empresa traça parcel·les iguals i rectangulars sobre un terreny per construir xalets de $200 m^2$ de superfície. Segons la legislació, entre el xalet i la tanca de la parcel·la hi ha d'haver un marge de 3 metres als costats verticals i de 10 metres als costats horitzontals.\n\nCalculeu les dimensions que han de tenir les parcel·les perquè la seva àrea sigui mínima. Quina serà l'àrea d'una parcel·la?",
+      "opciones": [
+        "Les dimensions òptimes són 20 x 20 m i l'àrea total és 400 m².",
+        "Les dimensions òptimes són 10 x 30 m i l'àrea total és 300 m².",
+        "Les dimensions òptimes són 45,8 x 13,75 m i l'àrea total és 629,75 m².",
+        "Les dimensions òptimes són 25 x 25 m i l'àrea total és 625 m²."
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Sigui $x$ el costat horitzontal i $y$ el vertical (sense marges). $x \\cdot y = 200$. L'àrea de la parcel·la (amb marges) és $A(x) = (x + 6)(y + 20)$. Substituïm $y = 200/x$ i minimitzem: $A(x) = (x + 6)(200/x + 20) = 320 + 1200/x + 20x$. Derivant i igualant a zero: $A'(x) = -1200/x^2 + 20 = 0 \\Rightarrow x^2 = 60 \\Rightarrow x = 2\\sqrt{15} \\approx 7,75$. Així, $y = 200/7,75 \\approx 25,8$. Les dimensions totals són $x + 6 = 13,75$ m i $y + 20 = 45,8$ m. L'àrea total és $629,75$ m²."
+    },
+    {
+      "id": "p16",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "D'entre tots els rectangles amb el mateix perímetre, quin té l'àrea màxima?",
+      "opciones": [
+        "El rectangle amb una base molt gran i una altura petita.",
+        "El rectangle amb una base petita i una altura molt gran.",
+        "Qualsevol rectangle amb el mateix perímetre té la mateixa àrea màxima.",
+        "El quadrat, és a dir, quan base i altura són iguals."
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Si el perímetre és $P$, els costats són $x$ i $y$ amb $P = 2x + 2y$. L'àrea és $A = x \\cdot y = x \\cdot \\frac{P - 2x}{2} = \\frac{Px}{2} - x^2$. Derivant i igualant a zero: $A'(x) = \\frac{P}{2} - 2x = 0 \\Rightarrow x = \\frac{P}{4}$. Així, $y = \\frac{P}{4}$, per tant $x = y$ i el rectangle de màxima àrea és el quadrat." 
+    },
+    {
+      "id": "p17",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "S'inscriu un triangle en una circumferència de radi $r = 1$ i centre a l'origen. Si els vèrtexs són $(0,1)$, $(x,y)$ i $(-x,y)$, calcula els vèrtexs del triangle d'àrea màxima. Quina és la seva àrea? És equilàter o isòsceles?",
+      "opciones": [
+        "Els vèrtexs són $(0,1)$, $(1,0)$ i $(-1,0)$; l'àrea és 1 i el triangle és isòsceles.",
+        "Els vèrtexs són $(0,1)$, $(0,0)$ i $(1,0)$; l'àrea és 0,5 i el triangle és isòsceles.",
+        "Els vèrtexs són $(0,1)$, $(\\frac{1}{2},\\frac{\\sqrt{3}}{2})$ i $(-\\frac{1}{2},\\frac{\\sqrt{3}}{2})$; l'àrea és $\\frac{\\sqrt{3}}{4}$ i el triangle és isòsceles.",
+        "Els vèrtexs són $(0,1)$, $(\\frac{\\sqrt{3}}{2},-\\frac{1}{2})$ i $(-\\frac{\\sqrt{3}}{2},-\\frac{1}{2})$; l'àrea és $\\frac{3\\sqrt{3}}{4}$ i el triangle és equilàter."
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Els vèrtexs del triangle d'àrea màxima són $(0,1)$, $(\\frac{\\sqrt{3}}{2},-\\frac{1}{2})$ i $(-\\frac{\\sqrt{3}}{2},-\\frac{1}{2})$. L'àrea és $\\frac{3\\sqrt{3}}{4}$ i el triangle és equilàter, ja que tots els costats mesuren $\\sqrt{3}$." 
+    },
+    {
+      "id": "p18",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Troba els extrems relatius i absoluts (si n'hi ha) de la funció $f(x) = \\frac{x}{1 + x^2}$ i obtén una funció $F(x)$ primitiva de $f$ tal que $F(2) = f(2)$.",
+      "opciones": [
+        "Té un màxim relatiu a $x = 0$ i una primitiva $F(x) = \\ln(1 + x^2) + K$.",
+        "Té un mínim absolut a $x = -1$ i un màxim absolut a $x = 1$. La primitiva és $F(x) = \\frac{1}{2} \\ln(1 + x^2) + K$ amb $K = \\frac{2}{5} - \\frac{1}{2} \\ln(5)$.",
+        "Té un màxim relatiu a $x = 1$ i un mínim relatiu a $x = -1$. La primitiva és $F(x) = \\frac{1}{2} \\ln(1 + x^2) + K$ amb $K = \\frac{2}{5} - \\frac{1}{2} \\ln(5)$.",
+        "No té extrems relatius ni absoluts i la primitiva és $F(x) = \\arctan(x) + K$"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La derivada és $f'(x) = \\frac{1 - x^2}{(1 + x^2)^2}$, que s'anul·la a $x = 1$ (màxim relatiu) i $x = -1$ (mínim relatiu i absolut). La primitiva és $F(x) = \\frac{1}{2} \\ln(1 + x^2) + K$, i $K = \\frac{2}{5} - \\frac{1}{2} \\ln(5)$ per a $F(2) = f(2)$."
+    },
+    {
+      "id": "p19",
+      "categoria": "Matemàtiques",
+      "subTema": "Optimització",
+      "pregunta": "Troba dos nombres diferents $a$ i $b$ tals que un sigui el cub de l'altre ($b = a^3$) i la diferència dels seus quadrats ($a^2 - b^2$) sigui màxima. Raona tots els passos i enuncia els teoremes o resultats emprats.",
+      "opciones": [
+        "$a = 1$, $b = 1$.",
+        "$a = 0.756$, $b = 0.432$ i $a = -0.756$, $b = -0.432$.",
+        "$a = 2$, $b = 8$.",
+        "$a = \\pm \\sqrt[4]{1/3}$, $b = a^3$ (màxims absoluts)."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Com $b = a^3$, la diferència és $f(a) = a^2 - (a^3)^2 = a^2 - a^6$. Derivant: $f'(a) = 2a - 6a^5$. Igualant a zero: $2a - 6a^5 = 0 \\Rightarrow a(1 - 3a^4) = 0 \\Rightarrow a = 0$ o $a = \\pm \\sqrt[4]{1/3} \\approx \\pm 0.756$. Els màxims absoluts són per $a = \\pm 0.756$, $b = a^3 \\approx \\pm 0.432$." 
     }
   ]
 }

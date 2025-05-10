@@ -1003,6 +1003,286 @@
       ],
       "respuestaCorrecta": 2,
       "explicacion": "La monarquia, sota el lideratge de Joan Carles I, va ser clau per garantir l'èxit de la democràcia i les reformes, actuant com a motor del canvi i garant de la transició pacífica."
+    },
+    {
+      "id": "gc13",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quina de les següents batalles es considera un punt d'inflexió clau en favor del bàndol franquista?",
+      "opciones": [
+        "Batalla de Guadalajara",
+        "Batalla de Brunete",
+        "Batalla de Belchite",
+        "Batalla de l'Ebre"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "La Batalla de l'Ebre (juliol-novembre 1938) va ser el punt d'inflexió clau que va decantar la guerra a favor del bàndol franquista."
+    },
+    {
+      "id": "gc14",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quin general va dirigir l'exèrcit del Nord durant l'ofensiva final franquista a Catalunya?",
+      "opciones": [
+        "Emilio Mola",
+        "Fidel Dávila",
+        "Gonzalo Queipo de Llano",
+        "Juan Yagüe"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Fidel Dávila va ser el general encarregat de l'ofensiva final franquista a Catalunya, dirigint l'exèrcit del Nord."
+    },
+    {
+      "id": "gc15",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quin objectiu tenia l'aviació alemanya a Guernica el 1937?",
+      "opciones": [
+        "Tallar la retirada republicana",
+        "Provar armament químic",
+        "Intimidar la població i provar tècniques de bombardeig massiu",
+        "Destruir infraestructures industrials"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'objectiu principal era intimidar la població civil i provar tècniques de bombardeig massiu, com a experiment per a la Luftwaffe."
+    },
+    {
+      "id": "gc16",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quin paper va tenir Largo Caballero durant la guerra?",
+      "opciones": [
+        "Cap del Partit Comunista",
+        "President del Govern de la República (1936–1937)",
+        "Líder de l'exili",
+        "Cap del SIM"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Largo Caballero va ser president del Govern de la República entre 1936 i 1937."
+    },
+    {
+      "id": "gc17",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quina d'aquestes organitzacions no formava part del bàndol sublevat?",
+      "opciones": [
+        "Falange Española",
+        "UGT",
+        "Requetès",
+        "CEDA"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La UGT era un sindicat socialista i formava part del bàndol republicà, no del sublevat."
+    },
+    {
+      "id": "gc18",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quina era la funció del Comité de Milícies Antifeixistes (1936)?",
+      "opciones": [
+        "Coordinar la defensa armada popular de les ciutats republicanes",
+        "Dirigir la política agrària del Front Popular",
+        "Organitzar l'evacuació de Madrid",
+        "Pactar amb els militars rebels"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El Comité de Milícies Antifeixistes coordinava la defensa armada popular a les ciutats republicanes."
+    },
+    {
+      "id": "gc19",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "En quin any es va publicar el Decret d'Unificació que imposava la fusió de Falange i carlins?",
+      "opciones": [
+        "1936",
+        "1937",
+        "1938",
+        "1939"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El Decret d'Unificació es va publicar el 1937, imposant la fusió de Falange i carlins en un únic partit."
+    },
+    {
+      "id": "gc20",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quina ajuda va rebre la República per part de la Unió Soviètica?",
+      "opciones": [
+        "Només suport diplomàtic",
+        "Armament, assessors i Brigades Internacionals",
+        "Cap ajuda directa",
+        "Bombardejos aeri"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Unió Soviètica va proporcionar armament, assessors i va facilitar l'arribada de les Brigades Internacionals."
+    },
+    {
+      "id": "gc21",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quin dels següents dirigents era responsable de la repressió a Sevilla pel bàndol franquista?",
+      "opciones": [
+        "Juan Negrín",
+        "Emilio Mola",
+        "Queipo de Llano",
+        "José Miaja"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Queipo de Llano va ser el responsable de la repressió franquista a Sevilla."
+    },
+    {
+      "id": "gc22",
+      "categoria": "Història",
+      "subTema": "La Guerra Civil (1936–1939)",
+      "pregunta": "Quin fet va desencadenar la intervenció de les Brigades Internacionals a Espanya?",
+      "opciones": [
+        "La presa de Bilbao",
+        "L'avanç feixista sobre Madrid",
+        "El cop d'estat del 18 de juliol",
+        "L'entrada d'Itàlia en la guerra"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'avanç feixista sobre Madrid va motivar la intervenció de les Brigades Internacionals en suport de la República."
+    },
+    {
+      "id": "f12",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quina era la funció de la Ley de Principios del Movimiento Nacional (1958)?",
+      "opciones": [
+        "Establir el dret de sufragi universal",
+        "Reafirmar el caràcter totalitari del règim",
+        "Legalitzar els partits polítics",
+        "Proclamar una monarquia constitucional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Ley de Principios del Movimiento Nacional reafirmava el caràcter totalitari i autoritari del règim franquista."
+    },
+    {
+      "id": "f13",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin organisme dirigia l'educació durant el franquisme?",
+      "opciones": [
+        "L'Instituto Cervantes",
+        "El Ministeri d'Educació Nacional i l'Església Catòlica",
+        "El Frente de Juventudes",
+        "El Movimiento Nacional"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'educació estava sota el control del Ministeri d'Educació Nacional i l'Església Catòlica."
+    },
+    {
+      "id": "f14",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quina funció tenia el TOP (Tribunal de Orden Público)?",
+      "opciones": [
+        "Registre de propietats rurals",
+        "Repressió de delictes polítics i oposició al règim",
+        "Fiscalització de la premsa",
+        "Control de la natalitat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El TOP era un tribunal especialitzat en la repressió de delictes polítics i oposició al règim."
+    },
+    {
+      "id": "f15",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quina d'aquestes lleis es considera una 'constitució encoberta' del franquisme?",
+      "opciones": [
+        "Ley de Sucesión en la Jefatura del Estado (1947)",
+        "Ley de Cortes (1942)",
+        "Fuero del Trabajo",
+        "Ley de Principios del Movimiento Nacional"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Ley de Sucesión de 1947 és considerada una 'constitució encoberta' perquè regulava la successió i l'estructura de l'Estat."
+    },
+    {
+      "id": "f16",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin acord internacional va permetre la instal·lació de bases nord-americanes a Espanya?",
+      "opciones": [
+        "Tractat de Lisboa",
+        "Acords bilaterals amb els EUA de 1953",
+        "Pla Marshall",
+        "Pacte de Varsòvia"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els acords bilaterals amb els EUA de 1953 van permetre la instal·lació de bases militars nord-americanes a Espanya."
+    },
+    {
+      "id": "f17",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin moviment estudiantil va oposar-se al règim a la dècada del 60?",
+      "opciones": [
+        "CNT",
+        "UGT",
+        "Sindicato Democrático d'Estudiants de Barcelona (SDEUB)",
+        "Falange Universitaria"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El SDEUB va ser el principal moviment estudiantil opositor al franquisme a la dècada del 60."
+    },
+    {
+      "id": "f18",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin ministre va liderar el Pla d'Estabilització de 1959?",
+      "opciones": [
+        "Manuel Fraga",
+        "Mariano Navarro Rubio",
+        "Carrero Blanco",
+        "Arias Navarro"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Mariano Navarro Rubio va ser el ministre d'Economia que va liderar el Pla d'Estabilització de 1959."
+    },
+    {
+      "id": "f19",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin era el paper del Movimiento Nacional?",
+      "opciones": [
+        "Partit liberal del franquisme",
+        "Única organització política permesa, dirigida per l'Estat",
+        "Associació d'excombatents",
+        "Sindicat obrer oficial"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El Movimiento Nacional era l'única organització política legal i estava dirigida per l'Estat."
+    },
+    {
+      "id": "f20",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Qui va ser designat com a successor de Franco en 1969?",
+      "opciones": [
+        "Carrero Blanco",
+        "Joan Carles de Borbó",
+        "Manuel Fraga Iribarne",
+        "Alfonso XIII"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Joan Carles de Borbó va ser designat successor de Franco el 1969."
+    },
+    {
+      "id": "f21",
+      "categoria": "Història",
+      "subTema": "El franquisme (1939–1975)",
+      "pregunta": "Quin esdeveniment marca l'etapa final del franquisme?",
+      "opciones": [
+        "L'ingrés a la ONU",
+        "L'atemptat d'ETA contra Carrero Blanco (1973)",
+        "La visita de Nixon",
+        "El Pla d'Estabilització"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'atemptat d'ETA contra Carrero Blanco el 1973 va marcar l'inici de la fi del franquisme."
     }
   ]
 }
