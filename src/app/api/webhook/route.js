@@ -40,12 +40,12 @@ export async function POST(req) {
       // ✅ Grant access to the product
       await connectMongo();
 
-      const userId = payload.meta.custom_data.user_id;
-      console.log("Updating user:", userId);
+      const email = payload.data.attributes.user_email || payload.data.attributes.email;
+      console.log("Updating user with email:", email);
 
-      const user = await User.findById(userId);
+      const user = await User.findOne({ email });
       if (!user) {
-        console.error("User not found:", userId);
+        console.error("User not found with email:", email);
         return NextResponse.json(
           { error: "User not found" },
           { status: 404 }
@@ -56,7 +56,7 @@ export async function POST(req) {
       user.customerId = payload.data.attributes.customer_id;
       
       await user.save();
-      console.log("User updated successfully:", userId);
+      console.log("User updated successfully:", email);
     }
 
     return NextResponse.json({ success: true });

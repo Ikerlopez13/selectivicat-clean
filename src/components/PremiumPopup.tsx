@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSession, signIn } from 'next-auth/react';
 
 export default function PremiumPopup() {
   const [show, setShow] = useState(false);
@@ -11,6 +12,7 @@ export default function PremiumPopup() {
   const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const [isPremium, setIsPremium] = useState<boolean | null>(null);
+  const { data: session } = useSession();
 
   // No mostrar en estas páginas
   const excludedPaths = [
@@ -100,41 +102,50 @@ export default function PremiumPopup() {
   const handleClose = () => {
     setShow(false);
     if (typeof window !== 'undefined') {
-      // Guardar el tiempo hasta el que no se debe mostrar el popup (10 minutos)
-      const closedUntil = Date.now() + 10 * 60 * 1000;
+      // Guardar el tiempo hasta el que no se debe mostrar el popup (7 minutos)
+      const closedUntil = Date.now() + 7 * 60 * 1000;
       localStorage.setItem('premiumPopupClosedUntil', closedUntil.toString());
+    }
+  };
+
+  const handlePremiumClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const stripeUrl = "https://buy.stripe.com/28oaG31EX7Qf8DK4gj";
+    if (!session) {
+      signIn(undefined, { callbackUrl: stripeUrl });
+    } else {
+      window.location.href = stripeUrl;
     }
   };
 
   if (loading || !show) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white p-4 rounded-xl border-2 border-selectivi-yellow max-w-xs w-[320px] z-[9999]">
+    <div className="fixed bottom-6 right-6 bg-white p-6 rounded-2xl border-4 border-selectivi-yellow max-w-xs w-[340px] z-[2147483647] shadow-2xl flex flex-col items-center" style={{ pointerEvents: 'auto' }}>
       <button 
         onClick={handleClose}
-        className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-xl font-bold"
+        className="absolute top-2 right-2 text-black bg-white border-2 border-selectivi-yellow rounded-full w-8 h-8 flex items-center justify-center text-xl font-bold hover:bg-gray-100 transition"
+        aria-label="Cerrar popup"
       >
         ✕
       </button>
-      <div className="text-center">
-        <h2 className="text-2xl font-extrabold mb-1 text-selectivi-yellow">Oferta de llançament!</h2>
-        <div className="flex flex-col items-center mb-1">
-          <span className="text-xs text-gray-400 line-through">24,99 €</span>
-          <span className="text-3xl font-extrabold text-selectivi-yellow leading-tight">9,99 €</span>
+      <div className="text-center w-full">
+        <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Estudiant un dissabte?</h2>
+        <div className="text-gray-600 mb-2">Això es per a tu, un fora de serie</div>
+        <div className="flex flex-col items-center mb-2">
+          <span className="text-base text-gray-400 line-through">24,99€</span>
+          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">6,99€</span>
         </div>
-        <div className="mb-1 text-sm text-gray-700 font-semibold">Només aquesta setmana</div>
-        <div className="mb-2 text-base font-bold text-selectivi-yellow" style={{fontSize: '1.1rem', letterSpacing: '0.01em'}}>Temps restant: <span className="font-mono bg-yellow-100 px-1 py-0.5 rounded text-yellow-800" style={{fontSize: '1.1em'}}>{timeLeft}</span></div>
-        <ul className="text-left mb-3 list-disc list-inside text-gray-800 text-sm font-medium space-y-1">
-          <li>Preguntes quasi il·limitades</li>
-          <li>Filtra per subtemes</li>
-          <li>Estadístiques detallades <span className="text-xs text-gray-500">(pròximament)</span></li>
-        </ul>
-        <Link
-          href="/premium"
-          className="inline-block bg-selectivi-yellow text-white font-bold text-base px-6 py-2 rounded-lg hover:bg-yellow-600 transition-colors mt-2"
+        <a
+          href="https://buy.stripe.com/28oaG31EX7Qf8DK4gj"
+          onClick={handlePremiumClick}
+          className="inline-block bg-selectivi-yellow text-white font-bold text-lg px-6 py-3 rounded-lg hover:bg-yellow-600 transition-colors mb-4 mt-2 w-full"
         >
-          Fes-te Premium ✨
-        </Link>
+          Fes-te Premium ara →
+        </a>
+        <div className="flex justify-center mt-2 mb-1">
+          <img src="/images/regalo.png" alt="Regalo" className="w-28 h-28 object-contain mx-auto" />
+        </div>
       </div>
     </div>
   );
