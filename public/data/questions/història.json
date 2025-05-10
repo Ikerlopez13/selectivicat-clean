@@ -569,5 +569,440 @@
       "explicacion": "El Partit Socialista Unificat de Catalunya (PSUC) es va fundar el juliol de 1936 per la unificació de quatre partits marxistes catalans: Unió Socialista de Catalunya, Partit Comunista de Catalunya, Partit Català Proletari i la Federació Catalana del PSOE."
     }
   ],
-  "premium": []
+  "premium": [
+    {
+      "id": "gc1",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Què general va liderar les tropes franquistes a la batalla de l'Ebre?",
+      "opciones": [
+        "Juan Yagüe",
+        "Francisco Franco",
+        "Emilio Mola",
+        "Gonzalo Queipo de Llano"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Juan Yagüe va ser el general que va liderar les tropes franquistes durant la Batalla de l'Ebre, una de les batalles més importants de la Guerra Civil espanyola."
+    },
+    {
+      "id": "gc2",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "En quina batalla decisiva de la Guerra Civil va patir una gran derrota l'exèrcit republicà, perdent el control de l'Aragó?",
+      "opciones": [
+        "Batalla de Teruel",
+        "Batalla de l'Ebre",
+        "Batalla de Guadalajara",
+        "Batalla de la Corunya"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Batalla de l'Ebre va ser una derrota decisiva per a l'exèrcit republicà, que va perdre el control de l'Aragó i va marcar un punt d'inflexió en el desenvolupament de la guerra."
+    },
+    {
+      "id": "gc3",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin general va ser nomenat cap suprem de l'exèrcit republicà al començament de la guerra?",
+      "opciones": [
+        "Francisco Franco",
+        "José Miaja",
+        "Vicente Rojo",
+        "Juan Negrín"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Vicente Rojo va ser nomenat cap suprem de l'exèrcit republicà al començament de la guerra, destacat per la seva habilitat estratègica i organitzativa."
+    },
+    {
+      "id": "gc4",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quina va ser la rellevància de la Batalla de Guadalajara (1937) per a la República?",
+      "opciones": [
+        "Va marcar el final de l'oposició republicana",
+        "Va aconseguir la primera gran victòria contra les tropes feixistes",
+        "Va ser una victòria tècnica però sense conseqüències militars",
+        "Va establir la divisió interna entre els republicans"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Batalla de Guadalajara va ser important perquè va suposar la primera gran victòria de l'exèrcit republicà contra les tropes feixistes, tot i que no va tenir conseqüències estratègiques duradores."
+    },
+    {
+      "id": "gc5",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Qui va ser el general que va dirigir les forces franquistes durant la Revolta dels \"Nueve\" a les Canàries?",
+      "opciones": [
+        "Francisco Franco",
+        "Juan Yagüe",
+        "Gonzalo Queipo de Llano",
+        "José Varela"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Francisco Franco va ser el general que va dirigir les forces franquistes durant la Revolta dels \"Nueve\" a les Canàries, un esdeveniment clau en l'inici de la Guerra Civil."
+    },
+    {
+      "id": "gc6",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quina va ser l'estratègia militar adoptada durant la Batalla de Teruel (1937)?",
+      "opciones": [
+        "L'ús de tàctiques de guerra de trinxeres",
+        "L'ús massiu de bombardeigs aeris sobre la població civil",
+        "Un atac combinat d'infanteria i aviació",
+        "La utilització d'armes químiques"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Durant la Batalla de Teruel es va utilitzar una estratègia d'atac combinat d'infanteria i aviació, que va ser una tàctica innovadora per a l'època."
+    },
+    {
+      "id": "gc7",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin d'aquests esdeveniments va marcar la fi de la Batalla de l'Ebre?",
+      "opciones": [
+        "La retirada massiva de l'exèrcit republicà",
+        "La victòria definitiva de les forces franquistes",
+        "La rendició de les brigades internacionals",
+        "La signatura d'un armistici"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Batalla de l'Ebre va finalitzar amb la retirada massiva de l'exèrcit republicà, que va marcar un punt d'inflexió en el desenvolupament de la guerra."
+    },
+    {
+      "id": "gc8",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin va ser el paper del general Queipo de Llano durant la Guerra Civil?",
+      "opciones": [
+        "Va dirigir les forces franquistes durant la defensa de Madrid",
+        "Va liderar la revolta a les Canàries",
+        "Va ser responsable de la repressió a Andalusia",
+        "Va lluitar al costat de la Unió Soviètica"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El general Queipo de Llano va ser responsable de la repressió a Andalusia, on va exercir un control fèrri i va implementar mesures repressives contra la població."
+    },
+    {
+      "id": "f1",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quin va ser l'objectiu de la Llei de la Successió (1947)?",
+      "opciones": [
+        "Proclamar la democràcia i les llibertats individuals",
+        "Establir l'autarquia econòmica de l'estat franquista",
+        "Declarar que Franco seria \"cap d'estat per a tota la vida\"",
+        "Afavorir el sistema parlamentari"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La Llei de Successió de 1947 va declarar que Franco seria \"cap d'estat per a tota la vida\", consolidant així el seu poder absolut."
+    },
+    {
+      "id": "f2",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina era la finalitat de la Llei de Premsa (1938) del règim franquista?",
+      "opciones": [
+        "Permetre la llibertat de premsa a tots els partits",
+        "Controlar estrictament els mitjans de comunicació",
+        "Garantir la llibertat d'expressió per als republicans",
+        "Crear un sistema de censura a través d'organismes independents"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Llei de Premsa de 1938 va ser una eina per controlar estrictament els mitjans de comunicació, eliminant qualsevol veu crítica al règim."
+    },
+    {
+      "id": "f3",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina va ser la Llei de Cortes de 1942?",
+      "opciones": [
+        "Va crear una nova organització sindical",
+        "Va establir l'afirmació de la unitat nacional espanyola",
+        "Va ampliar els drets de les regions autònomes",
+        "Va consolidar la representació política franquista amb el \"movimiento\""
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "La Llei de Cortes de 1942 va consolidar la representació política franquista a través del \"movimiento\", creant una estructura política controlada pel règim."
+    },
+    {
+      "id": "f4",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina era la Llei d'Ordenació de l'Ensenyament de 1945?",
+      "opciones": [
+        "Va promoure l'ensenyament en llengües regionals",
+        "Va establir l'ensenyament religiós com a obligatori",
+        "Va eliminar les universitats a Espanya",
+        "Va facilitar la creació de noves institucions educatives independents"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Llei d'Ordenació de l'Ensenyament de 1945 va establir l'ensenyament religiós com a obligatori, reflectint la influència de l'Església Catòlica en el règim franquista."
+    },
+    {
+      "id": "f5",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina va ser la Llei d'Amnistia de 1977?",
+      "opciones": [
+        "Va reconèixer els crims del règim franquista",
+        "Va permetre la legalització dels partits d'esquerra",
+        "Va eximir de responsabilitats els delictes comesos durant el franquisme",
+        "Va establir la separació entre l'església i l'estat"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La Llei d'Amnistia de 1977 va eximir de responsabilitats els delictes comesos durant el franquisme, com a part del procés de transició cap a la democràcia."
+    },
+    {
+      "id": "f6",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "La Llei de Reforma Política (1976) va ser una de les clau per a:",
+      "opciones": [
+        "La creació d'un sistema democràtic parlamentari",
+        "La instauració d'una nova dictadura comunista",
+        "La dissolució de les Corts franquistes",
+        "L'abolició del Sistema de Seguretat Social"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La Llei de Reforma Política de 1976 va ser clau per a la dissolució de les Corts franquistes i l'inici del procés de transició democràtica."
+    },
+    {
+      "id": "t1",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin va ser l'efecte de l'entrada d'Espanya a la Comunitat Econòmica Europea (CEE) el 1986?",
+      "opciones": [
+        "La recuperació econòmica immediata del país",
+        "L'aïllament polític d'Espanya en el context internacional",
+        "El retrocés de les llibertats individuals a Espanya",
+        "La consolidació d'Espanya com a estat democràtic a Europa"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "L'entrada d'Espanya a la CEE el 1986 va consolidar el país com a estat democràtic a Europa, marcant el final del procés de transició."
+    },
+    {
+      "id": "t2",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin era el principal objectiu de la Llei d'Amnistia de 1977?",
+      "opciones": [
+        "Amnistiar els delictes comesos durant el franquisme",
+        "Reprimir les manifestacions democràtiques",
+        "Aconseguir l'amnistia internacional per a Espanya",
+        "Permetre l'entrada d'estrangers a Espanya"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La Llei d'Amnistia de 1977 tenia com a objectiu principal amnistiar els delictes comesos durant el franquisme, facilitant així la reconciliació nacional."
+    },
+    {
+      "id": "t3",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin dels següents esdeveniments va consolidar el sistema parlamentari a Espanya després de la mort de Franco?",
+      "opciones": [
+        "La creació de la Llei de Premsa",
+        "L'aprovació de la Constitució de 1978",
+        "La dimissió de Juan Carlos I",
+        "La legalització de l'oposició política"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'aprovació de la Constitució de 1978 va ser l'esdeveniment que va consolidar definitivament el sistema parlamentari a Espanya després de la mort de Franco."
+    },
+    {
+      "id": "gc9",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin va ser el paper de l'exèrcit marroquí durant la Guerra Civil espanyola?",
+      "opciones": [
+        "Van ser determinants en la defensa de Madrid",
+        "Van jugar un paper crucial en les primeres victòries franquistes",
+        "Van mantenir una postura neutral durant el conflicte",
+        "Van lluitar només al costat republicà"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'exèrcit marroquí va ser crucial en les primeres victòries franquistes, especialment en la conquesta de Badajoz i l'avanç cap a Madrid, aportant experiència en combat i una gran capacitat militar."
+    },
+    {
+      "id": "gc10",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin dels següents generals franquistes va ser conegut com el \"Càpit de la Resistència\" durant la Guerra Civil?",
+      "opciones": [
+        "Francisco Franco",
+        "Juan Yagüe",
+        "Gonzalo Queipo de Llano",
+        "José Enrique Varela"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "José Enrique Varela va ser conegut com el \"Càpit de la Resistència\" per la seva habilitat en la defensa i la seva experiència militar, especialment durant la defensa de Madrid."
+    },
+    {
+      "id": "gc11",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quin va ser el resultat de la Batalla de Teruel (1937-1938)?",
+      "opciones": [
+        "La derrota decisiva de les forces franquistes",
+        "La victòria definitiva de la República, que va consolidar el front de l'Est",
+        "La presa de la ciutat per les forces franquistes, que va reforçar el control sobre Aragó",
+        "Un empat, amb una estabilització del front"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La Batalla de Teruel va acabar amb la presa de la ciutat per les forces franquistes, un fet que va reforçar significativament el seu control sobre Aragó i va marcar un punt d'inflexió en el desenvolupament de la guerra."
+    },
+    {
+      "id": "gc12",
+      "categoria": "Història",
+      "subTema": "Guerra Civil",
+      "pregunta": "Quina va ser la postura de les brigades internacionals durant la Guerra Civil?",
+      "opciones": [
+        "Es van mantenir neutrals davant els dos bàndols",
+        "Van combatre només al costat de les forces franquistes",
+        "Van lluitar al costat de la República, com a suport militar",
+        "Es van integrar en l'exèrcit italià"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Les brigades internacionals van lluitar al costat de la República, aportant suport militar i voluntaris de diversos països que van combatre contra el feixisme durant la Guerra Civil espanyola."
+    },
+    {
+      "id": "f7",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quin va ser l'objectiu de la Llei de Responsabilitats Polítiques de 1939?",
+      "opciones": [
+        "Prohibir la llibertat d'expressió i la premsa",
+        "D'assenyalar com a culpables els opositors al règim i posar-los a la presó",
+        "Persegir les organitzacions religioses",
+        "Facilitar la creació de partits d'esquerra"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Llei de Responsabilitats Polítiques de 1939 va ser una eina repressiva que va permetre assenyalar com a culpables els opositors al règim i posar-los a la presó, consolidant així el control del nou estat franquista."
+    },
+    {
+      "id": "f8",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Què va establir la Llei de l'Autarquia Econòmica (1939)?",
+      "opciones": [
+        "Va fomentar la cooperació internacional i les importacions",
+        "Va promoure la independència econòmica d'Espanya mitjançant la limitació d'importacions",
+        "Va obrir el mercat espanyol a les inversions estrangeres",
+        "Va garantir la llibertat d'iniciatives empresarials privades"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Llei de l'Autarquia Econòmica va promoure la independència econòmica d'Espanya mitjançant la limitació d'importacions, intentant fer el país autosuficient en un context d'aïllament internacional."
+    },
+    {
+      "id": "f9",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quin va ser el contingut principal de la Llei de Cortes (1942)?",
+      "opciones": [
+        "Va establir un sistema de sufragi universal a Espanya",
+        "Va donar poders absoluts a Franco per governar sense oposició",
+        "Va garantir la llibertat política per a totes les ideologies",
+        "Va crear una nova Constitució democràtica"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Llei de Cortes de 1942 va donar poders absoluts a Franco per governar sense oposició, consolidant així el seu règim dictatorial i eliminant qualsevol possibilitat de participació política democràtica."
+    },
+    {
+      "id": "f10",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina va ser la finalitat de la repressió franquista durant els primers anys de la dictadura?",
+      "opciones": [
+        "Fomentar la democràcia participativa",
+        "Controlar la classe obrera mitjançant els sindicats",
+        "Eliminar qualsevol oposició política, incloent els republicans, socialistes i comunistes",
+        "Afavorir la creació de noves organitzacions polítiques independents"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La repressió franquista va tenir com a finalitat eliminar qualsevol oposició política, incloent els republicans, socialistes i comunistes, per consolidar el nou règim dictatorial."
+    },
+    {
+      "id": "f11",
+      "categoria": "Història",
+      "subTema": "Franquisme",
+      "pregunta": "Quina va ser la influència de la \"Ley del Libro\" de 1957 en la cultura espanyola durant el franquisme?",
+      "opciones": [
+        "Va promoure la publicació de llibres en diverses llengües regionals",
+        "Va facilitar la creació de publicacions independents",
+        "Va establir la censura prèvia per als llibres publicats a Espanya",
+        "Va garantir la llibertat d'expressió en tots els àmbits"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La \"Ley del Libro\" de 1957 va establir la censura prèvia per als llibres publicats a Espanya, controlant així la producció cultural i limitant la llibertat d'expressió."
+    },
+    {
+      "id": "t4",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin va ser el principal desafiament per a Adolfo Suárez com a president durant la Transició?",
+      "opciones": [
+        "Mantenir el règim franquista intacte",
+        "Organitzar eleccions generals lliures i democràtiques",
+        "Crear una nova constitució per a Espanya",
+        "Afavorir l'entrada d'Espanya a l'OTAN"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El principal desafiament per a Adolfo Suárez va ser organitzar eleccions generals lliures i democràtiques, un pas fonamental en el procés de transició cap a la democràcia."
+    },
+    {
+      "id": "t5",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin va ser l'impacte de l'aprovació de la Constitució de 1978?",
+      "opciones": [
+        "Va suposar la conservació d'un sistema autoritari",
+        "Va consolidar el sistema parlamentari i les llibertats democràtiques",
+        "Va permetre la creació de partits comunistes",
+        "Va imposar una monarquia absolutista sota Joan Carles I"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'aprovació de la Constitució de 1978 va consolidar el sistema parlamentari i les llibertats democràtiques, establint les bases del nou règim democràtic espanyol."
+    },
+    {
+      "id": "t6",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quina va ser la importància de l'entrada d'Espanya a la Comunitat Econòmica Europea el 1986?",
+      "opciones": [
+        "Va establir el sistema socialista a Espanya",
+        "Va suposar l'inici d'una política econòmica liberal i de lliure comerç",
+        "Va garantir el sistema autoritari",
+        "Va aïllar Espanya de la resta d'Europa"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'entrada d'Espanya a la CEE el 1986 va suposar l'inici d'una política econòmica liberal i de lliure comerç, marcant l'integració definitiva d'Espanya en l'Europa democràtica."
+    },
+    {
+      "id": "t7",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quina va ser la finalitat de l'amnistia política de 1977?",
+      "opciones": [
+        "La creació de partits d'esquerra al poder",
+        "La possibilitat de la tornada dels exiliats i l'amnistia als opositors franquistes",
+        "La proclamació d'un nou sistema autoritari",
+        "La dissolució de les forces de seguretat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'amnistia política de 1977 va permetre la tornada dels exiliats i l'amnistia als opositors franquistes, facilitant així la reconciliació nacional i la transició cap a la democràcia."
+    },
+    {
+      "id": "t8",
+      "categoria": "Història",
+      "subTema": "Transició",
+      "pregunta": "Quin va ser el paper de la monarquia en la Transició?",
+      "opciones": [
+        "Va ser un obstacle per a l'arribada de la democràcia",
+        "Va actuar com a garant de la continuïtat del règim franquista",
+        "Va ser clau per garantir l'èxit de la democràcia i les reformes",
+        "Va mantenir un paper de govern absolutista"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La monarquia, sota el lideratge de Joan Carles I, va ser clau per garantir l'èxit de la democràcia i les reformes, actuant com a motor del canvi i garant de la transició pacífica."
+    }
+  ]
 }
