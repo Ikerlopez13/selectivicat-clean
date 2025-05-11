@@ -53,6 +53,28 @@ export default function PremiumPopup() {
   }, [pathname]);
 
   useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const endDate = new Date();
+      // Establecer la hora de finalización a las 23:59 de hoy
+      endDate.setHours(23, 59, 0, 0);
+      const difference = endDate.getTime() - now.getTime();
+      if (difference <= 0) {
+        setTimeLeft('Oferta finalitzada!');
+        return;
+      }
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+      setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+    };
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
     if (isPremium === null || isLoggedIn === null) return;
     if (!isLoggedIn || isPremium) {
       setLoading(false);
@@ -74,30 +96,6 @@ export default function PremiumPopup() {
     }
     setLoading(false);
   }, [isPremium, isLoggedIn, pathname]);
-
-  useEffect(() => {
-    // Calcular el tiempo restante hasta el domingo a las 23:59
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const endDate = new Date();
-      // Encontrar el próximo domingo
-      endDate.setDate(now.getDate() + (7 - now.getDay()));
-      endDate.setHours(23, 59, 0, 0);
-      const difference = endDate.getTime() - now.getTime();
-      if (difference <= 0) {
-        setTimeLeft('Oferta finalitzada!');
-        return;
-      }
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
-      setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    };
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   const handleClose = () => {
     setShow(false);
@@ -130,19 +128,21 @@ export default function PremiumPopup() {
         ✕
       </button>
       <div className="text-center w-full">
-        <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Estudiant un dissabte?</h2>
+        <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Últim día</h2>
         <div className="text-gray-600 mb-2">Això es per a tu, un fora de serie</div>
         <div className="flex flex-col items-center mb-2">
           <span className="text-base text-gray-400 line-through">24,99€</span>
-          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">6,99€</span>
+          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">9,99€</span>
+          <span className="ml-2 font-mono bg-yellow-100 px-2 py-1 rounded text-yellow-800 text-base md:text-lg" style={{letterSpacing: '0.01em'}}>
+          {timeLeft}
+        </span>
         </div>
-        <a
-          href="https://buy.stripe.com/28oaG31EX7Qf8DK4gj"
-          onClick={handlePremiumClick}
+        <Link
+          href="/premium"
           className="inline-block bg-selectivi-yellow text-white font-bold text-lg px-6 py-3 rounded-lg hover:bg-yellow-600 transition-colors mb-4 mt-2 w-full"
         >
           Fes-te Premium ara →
-        </a>
+        </Link>
         <div className="flex justify-center mt-2 mb-1">
           <img src="/images/regalo.png" alt="Regalo" className="w-28 h-28 object-contain mx-auto" />
         </div>

@@ -28,8 +28,7 @@ export default function LaunchDiscountBanner() {
     const calculateTimeLeft = () => {
       const now = new Date();
       const endDate = new Date();
-      // Encontrar el próximo domingo
-      endDate.setDate(now.getDate() + (7 - now.getDay()));
+      // Establecer la hora de finalización a las 23:59 de hoy
       endDate.setHours(23, 59, 0, 0);
       const difference = endDate.getTime() - now.getTime();
       if (difference <= 0) {
@@ -40,7 +39,8 @@ export default function LaunchDiscountBanner() {
       const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((difference / 1000 / 60) % 60);
       const seconds = Math.floor((difference / 1000) % 60);
-      setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+      const formatted = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      setTimeLeft(formatted);
     };
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
