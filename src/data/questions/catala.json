@@ -141,5 +141,141 @@
       "explicacion": "'Amb què treballava' és una subordinada adjectiva o de relatiu introduïda per la preposició 'amb' i el pronom relatiu 'què'."
     }
   ],
-  "premium": []
+  "premium": [
+    {
+      "id": "catp1",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina és la forma correcta de substituir el complement subratllat per un pronom feble? 'No recordo [de la reunió]'",
+      "opciones": ["No la recordo", "No ho recordo", "No en recordo", "No li recordo"],
+      "respuestaCorrecta": 2,
+      "explicacion": "El complement està introduït per la preposició 'de', per tant s'ha de substituir per 'en'."
+    },
+    {
+      "id": "catp2",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quin pronom feble substitueix correctament el complement? 'Confio [en els meus amics]'",
+      "opciones": ["Els confio", "Hi confio", "En confio", "Els hi confio"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els complements introduïts per qualsevol preposició excepte 'de' es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp3",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta?",
+      "opciones": ["No n'he vist cap", "No ho he vist cap", "No l'he vist cap", "No hi he vist cap"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb quantificatius o indefinits, s'utilitza 'en'."
+    },
+    {
+      "id": "catp4",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina és la forma correcta? 'S'ha fet [soci del club]'",
+      "opciones": ["S'hi ha fet", "Se n'ha fet", "S'ho ha fet", "S'ha fet-ne"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb expressions com 'fer-se soci de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp5",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'No [dir] el secret a ningú' (substitueix el CD)",
+      "opciones": ["No el diré a ningú", "No ho diré a ningú", "No en diré a ningú", "No li diré a ningú"],
+      "respuestaCorrecta": 1,
+      "explicacion": "El CD neutre (això, allò, una oració) es substitueix per 'ho'."
+    },
+    {
+      "id": "catp6",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'Han comprat [dues pomes]' (substitueix el CD)",
+      "opciones": ["Les han comprat", "En han comprat dues", "Hi han comprat dues", "Ho han comprat dues"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb quantitat, s'utilitza 'en'."
+    },
+    {
+      "id": "catp7",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'No [tenir] cap moneda' (substitueix el CD)",
+      "opciones": ["No la tinc cap", "No en tinc cap", "No ho tinc cap", "No hi tinc cap"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb quantificatius, s'utilitza 'en'."
+    },
+    {
+      "id": "catp8",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'Saps caminar [de genollons]?' (substitueix el complement)",
+      "opciones": ["No, no en sé caminar", "No, no ho sé caminar", "No, no hi sé caminar", "No, no la sé caminar"],
+      "respuestaCorrecta": 2,
+      "explicacion": "Els complements circumstancials de mode, encara que vagin amb 'de', es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp9",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'No [oblidar-se] que tens una cita' (substitueix el complement)",
+      "opciones": ["No me n'oblido", "No me hi oblido", "No me l'oblido", "No me ho oblido"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb verbs que regeixen 'de', com 'oblidar-se de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp10",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'Aniràs [a València]?' (substitueix el complement)",
+      "opciones": ["Sí, demà n'hi aniré", "Sí, demà hi aniré", "Sí, demà en aniré", "Sí, demà ho aniré"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els complements introduïts per preposició diferent de 'de' es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp11",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'Feia de llevadora, però ara ja no [fer] (substitueix el complement)'",
+      "opciones": ["Ja no en fa", "Ja no ho fa", "Ja no la fa", "Ja no hi fa"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb el verb 'fer de' + professió, s'utilitza 'en'."
+    },
+    {
+      "id": "catp12",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'La mare ha arribat [cansada del mercat]' (substitueix el complement d'estat)",
+      "opciones": ["La mare en ha arribat del mercat", "La mare hi ha arribat del mercat", "La mare ho ha arribat del mercat", "La mare l'ha arribat del mercat"],
+      "respuestaCorrecta": 1,
+      "explicacion": "En general, els complements d'estat s'introdueixen amb 'hi'."
+    },
+    {
+      "id": "catp13",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'L'Anna s'ha fet sòcia del teatre. (substitueix el complement)'",
+      "opciones": ["L'Anna se n'ha fet", "L'Anna s'hi ha fet", "L'Anna ho ha fet", "L'Anna l'ha fet"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb expressions com 'fer-se soci de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp14",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'Els amics li diuen Poti, però en realitat no [dir] pas' (substitueix el complement)",
+      "opciones": ["no se n'hi diu pas", "no se n'ho diu pas", "no se n'hi diu pas", "no se n'ho diu pas"],
+      "respuestaCorrecta": 3,
+      "explicacion": "Amb els verbs 'dir-se' i 'posar' (nom a algú), es pot usar 'en/ho'."
+    },
+    {
+      "id": "catp15",
+      "categoria": "Català",
+      "subTema": "Pronoms Febles",
+      "pregunta": "Quina frase és correcta? 'He vist un noi estranger. (substitueix el CD)'",
+      "opciones": ["N'he vist un", "L'he vist un", "Ho he vist un", "Hi he vist un"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb CD introduït per numeral o indefinit, s'utilitza 'en'."
+    }
+  ]
 } 

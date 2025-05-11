@@ -504,12 +504,17 @@ const Onboarding: React.FC<{
 
 // Función para obtener el mensaje de apoyo basado en la puntuación
 function getSupportMessage(score: number): string {
-  if (score >= 9) {
-    return "Impressionant! Estàs més que preparat/da per a la Selectivitat! 🌟";
-  } else if (score >= 7) {
-    return "Molt bé! Vas pel bon camí, segueix així! 💪";
-  } else if (score >= 5) {
-    return "Vas bé, però encara pots millorar. Segueix practicant! 📚";
+  const notaSobre14 = score * 14;
+  if (notaSobre14 >= 13.99) {
+    return "Enhorabona! Has fet un test perfecte! 🥇 Ets un/a crack!";
+  } else if (notaSobre14 >= 12) {
+    return "Brutal! Tens una nota d'excel·lent, pots aconseguir qualsevol grau! 🏆";
+  } else if (notaSobre14 >= 10) {
+    return "Molt bona nota! Estàs preparat/da per la Selectivitat, segueix així! 🌟";
+  } else if (notaSobre14 >= 7) {
+    return "Bona feina! Vas pel bon camí, però encara pots millorar una mica més. 💪";
+  } else if (notaSobre14 >= 5) {
+    return "No està malament, però pots treure més nota amb una mica més de pràctica! 📚";
   } else {
     return "No et desanimis! Amb més pràctica ho conseguiràs! 💪";
   }

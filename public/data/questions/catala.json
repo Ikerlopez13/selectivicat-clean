@@ -269,32 +269,509 @@
   ],
   "premium": [
     {
-      "id": "cat-p1",
+      "id": "catp1",
       "categoria": "Català",
-      "subTema": "Literatura",
-      "pregunta": "Quin és l'autor de 'La plaça del Diamant'?",
-      "opciones": [
-        "Salvador Espriu",
-        "Joan Maragall",
-        "Mercè Rodoreda",
-        "Josep Pla"
-      ],
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta de substituir el complement subratllat per un pronom feble? 'No recordo [de la reunió]'",
+      "opciones": ["No la recordo", "No ho recordo", "No en recordo", "No li recordo"],
       "respuestaCorrecta": 2,
-      "explicacion": "'La plaça del Diamant' és una novel·la escrita per Mercè Rodoreda, publicada l'any 1962. És considerada una de les obres més importants de la literatura catalana del segle XX."
+      "explicacion": "El complement està introduït per la preposició 'de', per tant s'ha de substituir per 'en'."
     },
     {
-      "id": "cat-p2",
+      "id": "catp2",
       "categoria": "Català",
-      "subTema": "Literatura",
-      "pregunta": "Quin d'aquests autors pertany al Modernisme català?",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quin pronom feble substitueix correctament el complement? 'Confio [en els meus amics]'",
+      "opciones": ["Els confio", "Hi confio", "En confio", "Els hi confio"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els complements introduïts per qualsevol preposició excepte 'de' es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp3",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta?",
+      "opciones": ["No n'he vist cap", "No ho he vist cap", "No l'he vist cap", "No hi he vist cap"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb quantificatius o indefinits, s'utilitza 'en'."
+    },
+    {
+      "id": "catp4",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta? 'S'ha fet [soci del club]'",
+      "opciones": ["S'hi ha fet", "Se n'ha fet", "S'ho ha fet", "S'ha fet-ne"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb expressions com 'fer-se soci de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp5",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'No [dir] el secret a ningú' (substitueix el CD)",
+      "opciones": ["No el diré a ningú", "No ho diré a ningú", "No en diré a ningú", "No li diré a ningú"],
+      "respuestaCorrecta": 1,
+      "explicacion": "El CD neutre (això, allò, una oració) es substitueix per 'ho'."
+    },
+    {
+      "id": "catp6",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'Han comprat [dues pomes]' (substitueix el CD)",
+      "opciones": ["Les han comprat", "En han comprat dues", "Hi han comprat dues", "Ho han comprat dues"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb quantitat, s'utilitza 'en'."
+    },
+    {
+      "id": "catp7",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'No [tenir] cap moneda' (substitueix el CD)",
+      "opciones": ["No la tinc cap", "No en tinc cap", "No ho tinc cap", "No hi tinc cap"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb quantificatius, s'utilitza 'en'."
+    },
+    {
+      "id": "catp8",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'Saps caminar [de genollons]?' (substitueix el complement)",
+      "opciones": ["No, no en sé caminar", "No, no ho sé caminar", "No, no hi sé caminar", "No, no la sé caminar"],
+      "respuestaCorrecta": 2,
+      "explicacion": "Els complements circumstancials de mode, encara que vagin amb 'de', es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp9",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'No [oblidar-se] que tens una cita' (substitueix el complement)",
+      "opciones": ["No me n'oblido", "No me hi oblido", "No me l'oblido", "No me ho oblido"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb verbs que regeixen 'de', com 'oblidar-se de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp10",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'Aniràs [a València]?' (substitueix el complement)",
+      "opciones": ["Sí, demà n'hi aniré", "Sí, demà hi aniré", "Sí, demà en aniré", "Sí, demà ho aniré"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Els complements introduïts per preposició diferent de 'de' es substitueixen per 'hi'."
+    },
+    {
+      "id": "catp11",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'Feia de llevadora, però ara ja no [fer] (substitueix el complement)'",
+      "opciones": ["Ja no en fa", "Ja no ho fa", "Ja no la fa", "Ja no hi fa"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb el verb 'fer de' + professió, s'utilitza 'en'."
+    },
+    {
+      "id": "catp12",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'La mare ha arribat [cansada del mercat]' (substitueix el complement d'estat)",
+      "opciones": ["La mare en ha arribat del mercat", "La mare hi ha arribat del mercat", "La mare ho ha arribat del mercat", "La mare l'ha arribat del mercat"],
+      "respuestaCorrecta": 1,
+      "explicacion": "En general, els complements d'estat s'introdueixen amb 'hi'."
+    },
+    {
+      "id": "catp13",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'L'Anna s'ha fet sòcia del teatre. (substitueix el complement)'",
+      "opciones": ["L'Anna se n'ha fet", "L'Anna s'hi ha fet", "L'Anna ho ha fet", "L'Anna l'ha fet"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb expressions com 'fer-se soci de', s'utilitza 'en'."
+    },
+    {
+      "id": "catp14",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'Els amics li diuen Poti, però en realitat no [dir] pas' (substitueix el complement)",
+      "opciones": ["no se n'hi diu pas", "no se n'ho diu pas", "no se n'hi diu pas", "no se n'ho diu pas"],
+      "respuestaCorrecta": 3,
+      "explicacion": "Amb els verbs 'dir-se' i 'posar' (nom a algú), es pot usar 'en/ho'."
+    },
+    {
+      "id": "catp15",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina frase és correcta? 'He vist un noi estranger. (substitueix el CD)'",
+      "opciones": ["N'he vist un", "L'he vist un", "Ho he vist un", "Hi he vist un"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Amb CD introduït per numeral o indefinit, s'utilitza 'en'."
+    },
+    {
+      "id": "catp16",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta de la frase: 'Vaig veure en Pau ahir i vaig donar el llibre a en Pau'?",
       "opciones": [
-        "Ausiàs March",
-        "Salvador Espriu",
-        "Josep Carner",
-        "Joan Maragall"
+        "Vaig veure'l ahir i vaig donar-li el llibre.",
+        "El vaig veure ahir i li vaig donar el llibre.",
+        "Vaig-lo veure ahir i vaig-lo donar el llibre.",
+        "El vaig veure ahir i vaig donar-lo el llibre."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La forma correcta és 'El vaig veure ahir i li vaig donar el llibre.' perquè s'utilitzen els pronoms febles 'el' (CD) i 'li' (CI) en posició proclítica."
+    },
+    {
+      "id": "catp17",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta amb pronom feble per: 'Estic pensant en aquell projecte'?",
+      "opciones": [
+        "L'estic pensant",
+        "L'hi estic pensant",
+        "L'estic-hi pensant",
+        "Hi estic pensant"
       ],
       "respuestaCorrecta": 3,
-      "explicacion": "Joan Maragall és un dels màxims representants del Modernisme català, moviment cultural de finals del segle XIX i principis del XX."
+      "explicacion": "Els complements de règim introduïts per preposició diferent de 'de' es substitueixen per 'hi'. Per tant, 'Hi estic pensant' és la forma correcta."
+    },
+    {
+      "id": "catp18",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Frase amb doble pronom: 'Donarà el llibre a la Maria'.",
+      "opciones": [
+        "Li'l donarà",
+        "El-li donarà",
+        "Donarà-li'l",
+        "El donarà-li"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles és 'Li'l donarà' (CI + CD). L'ordre i la forma són essencials en català."
+    },
+    {
+      "id": "catp19",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta per: 'Parla sovint de política'?",
+      "opciones": [
+        "Hi parla sovint",
+        "En parla sovint",
+        "Li parla sovint",
+        "S'hi parla sovint"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En aquest cas, 'de política' és un complement de règim introduït per 'de', però en català normatiu, amb 'parlar de', es pot usar 'en' o 'hi', però 'hi' és la forma preferent en registres formals."
+    },
+    {
+      "id": "catp20",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Frase correcta: 'Va menjar-se les pomes'?",
+      "opciones": [
+        "Se les va menjar",
+        "Se va menjar-les",
+        "Va se-les menjar",
+        "Se-les va menjar-se"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La forma correcta és 'Se les va menjar', amb els pronoms en posició proclítica davant del verb auxiliar."
+    },
+    {
+      "id": "catp21",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Forma correcta amb futur: 'Explicaran la veritat a tu'",
+      "opciones": [
+        "T'ho explicaran",
+        "Ho t'explicaran",
+        "T'explicaran-ho",
+        "Explicaran-te-ho"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles (CI + CD) és 'T'ho explicaran', amb l'ordre proclític correcte."
+    },
+    {
+      "id": "catp22",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Substitueix 'He vist en Joan a casa seva':",
+      "opciones": [
+        "El l'he vist allà",
+        "L'hi he vist",
+        "L'he vist-li",
+        "Hi l'he vist"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La forma correcta és 'L'hi he vist', on 'el' substitueix 'en Joan' i 'hi' substitueix 'a casa seva'."
+    },
+    {
+      "id": "catp23",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Han parlat dels seus pares' amb pronom:",
+      "opciones": [
+        "Els han parlat",
+        "N'han parlat",
+        "Hi han parlat",
+        "Els hi han parlat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb complements introduïts per 'de', s'utilitza el pronom 'en': 'N'han parlat'."
+    },
+    {
+      "id": "catp24",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Porta el llibre a la Laia':",
+      "opciones": [
+        "Porta-li'l",
+        "Porta-el-li",
+        "Li porta'l",
+        "Porta-li-lo"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles (CI + CD) és 'Porta-li'l'."
+    },
+    {
+      "id": "catp25",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Van parlar de tu ahir':",
+      "opciones": [
+        "Et van parlar ahir",
+        "Hi van parlar ahir",
+        "En van parlar ahir",
+        "Te'n van parlar ahir"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Amb complements introduïts per 'de', s'utilitza 'en': 'En van parlar ahir'."
+    },
+    {
+      "id": "catp26",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta de la frase: 'Vaig veure en Pau ahir i vaig donar el llibre a en Pau'?",
+      "opciones": [
+        "Vaig veure'l ahir i vaig donar-li el llibre.",
+        "El vaig veure ahir i li vaig donar el llibre.",
+        "Vaig-lo veure ahir i vaig-lo donar el llibre.",
+        "El vaig veure ahir i vaig donar-lo el llibre."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La forma correcta és 'El vaig veure ahir i li vaig donar el llibre.' perquè s'utilitzen els pronoms febles 'el' (CD) i 'li' (CI) en posició proclítica."
+    },
+    {
+      "id": "catp27",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta amb pronom feble per: 'Estic pensant en aquell projecte'?",
+      "opciones": [
+        "L'estic pensant",
+        "L'hi estic pensant",
+        "L'estic-hi pensant",
+        "Hi estic pensant"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Els complements de règim introduïts per preposició diferent de 'de' es substitueixen per 'hi'. Per tant, 'Hi estic pensant' és la forma correcta."
+    },
+    {
+      "id": "catp28",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Frase amb doble pronom: 'Donarà el llibre a la Maria'.",
+      "opciones": [
+        "Li'l donarà",
+        "El-li donarà",
+        "Donarà-li'l",
+        "El donarà-li"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles és 'Li'l donarà' (CI + CD). L'ordre i la forma són essencials en català."
+    },
+    {
+      "id": "catp29",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Quina és la forma correcta per: 'Parla sovint de política'?",
+      "opciones": [
+        "Hi parla sovint",
+        "En parla sovint",
+        "Li parla sovint",
+        "S'hi parla sovint"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "En aquest cas, 'de política' és un complement de règim introduït per 'de', però en català normatiu, amb 'parlar de', es pot usar 'en' o 'hi', però 'hi' és la forma preferent en registres formals."
+    },
+    {
+      "id": "catp30",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Frase correcta: 'Va menjar-se les pomes'?",
+      "opciones": [
+        "Se les va menjar",
+        "Se va menjar-les",
+        "Va se-les menjar",
+        "Se-les va menjar-se"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La forma correcta és 'Se les va menjar', amb els pronoms en posició proclítica davant del verb auxiliar."
+    },
+    {
+      "id": "catp31",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Forma correcta amb futur: 'Explicaran la veritat a tu'",
+      "opciones": [
+        "T'ho explicaran",
+        "Ho t'explicaran",
+        "T'explicaran-ho",
+        "Explicaran-te-ho"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles (CI + CD) és 'T'ho explicaran', amb l'ordre proclític correcte."
+    },
+    {
+      "id": "catp32",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "Substitueix 'He vist en Joan a casa seva':",
+      "opciones": [
+        "El l'he vist allà",
+        "L'hi he vist",
+        "L'he vist-li",
+        "Hi l'he vist"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La forma correcta és 'L'hi he vist', on 'el' substitueix 'en Joan' i 'hi' substitueix 'a casa seva'."
+    },
+    {
+      "id": "catp33",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Han parlat dels seus pares' amb pronom:",
+      "opciones": [
+        "Els han parlat",
+        "N'han parlat",
+        "Hi han parlat",
+        "Els hi han parlat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Amb complements introduïts per 'de', s'utilitza el pronom 'en': 'N'han parlat'."
+    },
+    {
+      "id": "catp34",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Porta el llibre a la Laia':",
+      "opciones": [
+        "Porta-li'l",
+        "Porta-el-li",
+        "Li porta'l",
+        "Porta-li-lo"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La combinació correcta de pronoms febles (CI + CD) és 'Porta-li'l'."
+    },
+    {
+      "id": "catp35",
+      "categoria": "Català",
+      "subTema": "Pronoms febles",
+      "pregunta": "'Van parlar de tu ahir':",
+      "opciones": [
+        "Et van parlar ahir",
+        "Hi van parlar ahir",
+        "En van parlar ahir",
+        "Te'n van parlar ahir"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Amb complements introduïts per 'de', s'utilitza 'en': 'En van parlar ahir'."
+    },
+    {
+      "id": "catp36",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'No vindrà perquè està malalt' és una subordinada:",
+      "opciones": ["Final", "Causal", "Consecutiva", "Temporal"],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una subordinada causal perquè expressa el motiu pel qual no vindrà."
+    },
+    {
+      "id": "catp37",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'M'agrada que vinguis a veure'm' és:",
+      "opciones": ["Adjectiva", "Substantiva", "Temporal", "Causal"],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una subordinada substantiva perquè fa la funció de complement directe del verb 'agrada'."
+    },
+    {
+      "id": "catp38",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'L'home que viu aquí és el meu oncle' conté:",
+      "opciones": ["Adverbial", "Substantiva", "Adjectiva", "Consecutiva"],
+      "respuestaCorrecta": 2,
+      "explicacion": "La subordinada 'que viu aquí' és una adjectiva perquè complementa el nom 'home'."
+    },
+    {
+      "id": "catp39",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'Encara que plogui, sortirem': subordinada...",
+      "opciones": ["Temporal", "Concessiva", "Consecutiva", "Final"],
+      "respuestaCorrecta": 1,
+      "explicacion": "És una subordinada concessiva perquè expressa una dificultat o obstacle que no impedeix l'acció principal."
+    },
+    {
+      "id": "catp40",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'Treballa perquè vol diners': subordinada...",
+      "opciones": ["Final", "Causal", "Final", "Condicional"],
+      "respuestaCorrecta": 2,
+      "explicacion": "En aquest cas, 'perquè vol diners' expressa la finalitat de l'acció, per tant és una subordinada final."
+    },
+    {
+      "id": "catp41",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'T'ho dic perquè ho sàpigues':",
+      "opciones": ["Final", "Causal", "Substantiva", "Temporal"],
+      "respuestaCorrecta": 0,
+      "explicacion": "'Perquè ho sàpigues' expressa la finalitat de l'acció de dir, per tant és una subordinada final."
+    },
+    {
+      "id": "catp42",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'Quan arribi, truca'm': subordinada...",
+      "opciones": ["Final", "Causal", "Temporal", "Substantiva"],
+      "respuestaCorrecta": 2,
+      "explicacion": "'Quan arribi' indica el moment en què s'ha de realitzar l'acció, per tant és una subordinada temporal."
+    },
+    {
+      "id": "catp43",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'Tan feliç n'estava que plorava': subordinada...",
+      "opciones": ["Consecutiva", "Final", "Causal", "Adjectiva"],
+      "respuestaCorrecta": 0,
+      "explicacion": "'Que plorava' expressa la conseqüència de l'estat de felicitat, per tant és una subordinada consecutiva."
+    },
+    {
+      "id": "catp44",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'Fes-ho com t'he dit': subordinada...",
+      "opciones": ["Final", "Adverbial de manera", "Causal", "Substantiva"],
+      "respuestaCorrecta": 1,
+      "explicacion": "'Com t'he dit' indica la manera en què s'ha de fer l'acció, per tant és una subordinada adverbial de manera."
+    },
+    {
+      "id": "catp45",
+      "categoria": "Català",
+      "subTema": "Subordinades",
+      "pregunta": "'No saps si vindran o no': subordinada...",
+      "opciones": ["Substantiva interrogativa", "Causal", "Temporal", "Condicional"],
+      "respuestaCorrecta": 0,
+      "explicacion": "'Si vindran o no' és una subordinada substantiva interrogativa indirecta, ja que depèn del verb 'saber' i expressa una pregunta."
     }
   ]
 } 
