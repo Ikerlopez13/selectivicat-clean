@@ -193,6 +193,706 @@
       ],
       "respuestaCorrecta": 3,
       "explicacion": "Al pis o estatge nival només creixen petites plantes rupícoles adaptades a les roques, com líquens i molses. Les pinedes de pi negre es troben al pis subalpí (1.200-2.400 m)."
+    },
+    {
+      "id": "g11",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quin és la forma de la Terra?",
+      "opciones": [
+        "Esfèrica perfecta",
+        "El·lipsoide de revolució",
+        "Plana amb relleus",
+        "Circular aixafada"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La Terra té forma d'el·lipsoide de revolució, lleugerament aixafada pels pols."
+    },
+    {
+      "id": "g12",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quina línia imaginària divideix la Terra en els hemisferis nord i sud?",
+      "opciones": [
+        "Meridià de Greenwich",
+        "Paral·lel del Tròpic de Càncer",
+        "Ecuador",
+        "Línia internacional de canvi de data"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'Ecuador és la línia imaginària que divideix la Terra en hemisferi nord i sud."
+    },
+    {
+      "id": "g13",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quina és la funció principal d'una projecció cartogràfica?",
+      "opciones": [
+        "Mostrar l'altitud de la superfície terrestre",
+        "Representar la Terra de manera plana",
+        "Determinar les coordenades geogràfiques exactes",
+        "Dividir la Terra en hemisferis"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La funció principal d'una projecció cartogràfica és representar la Terra, que és una superfície corba, en un pla."
+    },
+    {
+      "id": "g14",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quin tipus de projecció cartogràfica s'utilitza habitualment per a les mapes mundials?",
+      "opciones": [
+        "Projecció cilíndrica de Mercator",
+        "Projecció cònica de Lambert",
+        "Projecció azimutal",
+        "Projecció polar"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La projecció cilíndrica de Mercator és la més utilitzada per als mapes mundials."
+    },
+    {
+      "id": "g15",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quina és la unitat de mesura utilitzada per a les distàncies en la Terra?",
+      "opciones": [
+        "Quilòmetre",
+        "Raig de llum",
+        "Mil·límetre",
+        "Nàutica"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La unitat de mesura més utilitzada per a distàncies terrestres és el quilòmetre."
+    },
+    {
+      "id": "g16",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Què és un paral·lel?",
+      "opciones": [
+        "Una línia vertical que passa pel Pol Nord",
+        "Una línia horitzontal que uneix els dos hemisferis",
+        "Una línia que uneix els dos Pols",
+        "Una línia horitzontal que es fa a la mateixa distància de l'Equador"
+      ],
+      "respuestaCorrecta": 3,
+      "explicacion": "Un paral·lel és una línia horitzontal imaginària a la mateixa distància de l'Equador."
+    },
+    {
+      "id": "g17",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quin meridià és considerat el meridià zero?",
+      "opciones": [
+        "Meridià de París",
+        "Meridià de Greenwich",
+        "Meridià de l'Equador",
+        "Meridià de Tòquio"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El meridià de Greenwich és el meridià zero a partir del qual es mesuren les longituds."
+    },
+    {
+      "id": "g18",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quina distància correspon a un grau de latitud a la superfície terrestre?",
+      "opciones": [
+        "10 quilòmetres",
+        "100 quilòmetres",
+        "111 quilòmetres",
+        "200 quilòmetres"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Un grau de latitud equival aproximadament a 111 quilòmetres a la superfície terrestre."
+    },
+    {
+      "id": "g19",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Quina projecció cartogràfica és la més adient per representar les zones polars?",
+      "opciones": [
+        "Projecció cilíndrica",
+        "Projecció conforme de Mercator",
+        "Projecció azimutal",
+        "Projecció trapezoïdal"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La projecció azimutal és la més adequada per representar les zones polars."
+    },
+    {
+      "id": "g20",
+      "categoria": "Geografia",
+      "subTema": "La Terra i la seva Representació – Preguntes tipus test",
+      "pregunta": "Què representa una línia de longitud a la Terra?",
+      "opciones": [
+        "La distància entre dos paral·lels",
+        "L'angle entre un punt i el meridià de Greenwich",
+        "L'altitud respecte al nivell del mar",
+        "L'angle entre el Sol i la Terra"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Una línia de longitud representa l'angle entre un punt de la Terra i el meridià de Greenwich."
+    },
+    {
+      "id": "g21",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina de les següents afirmacions descriu millor la globalització?",
+      "opciones": [
+        "La reducció de les distàncies entre els països gràcies a l'avenç de les comunicacions i el comerç.",
+        "El procés d'aïllament de les economies per protegir-les de l'exterior.",
+        "La creació de fronteres més estrictes entre els estats.",
+        "L'augment de les polítiques proteccionistes per limitar la competència global."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La globalització implica la reducció de distàncies i l'increment de la interconnexió global."
+    },
+    {
+      "id": "g22",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quin dels següents factors contribueix més a la globalització?",
+      "opciones": [
+        "La disminució de les taxes duaneres.",
+        "L'augment de les barreres comercials.",
+        "La restricció de les migracions internacionals.",
+        "La concentració de la producció en els mercats locals."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La disminució de les taxes duaneres facilita el comerç internacional i la globalització."
+    },
+    {
+      "id": "g23",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Què s'entén per ''desenvolupament econòmic''?",
+      "opciones": [
+        "El creixement de les economies emergents.",
+        "L'augment del benestar social a través de la millora de les condicions de vida, l'educació i la salut.",
+        "El creixement de la població urbana.",
+        "L'augment del comerç internacional."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El desenvolupament econòmic implica la millora de la qualitat de vida, l'educació i la salut."
+    },
+    {
+      "id": "g24",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina de les següents afirmacions sobre les desigualtats globals és certa?",
+      "opciones": [
+        "Les desigualtats globals estan disminuint a tot el món.",
+        "Els països més rics han aconseguit una distribució de riquesa més equitativa.",
+        "La diferència entre els països més rics i més pobres ha augmentat en les últimes dècades.",
+        "Tots els països han aconseguit el mateix nivell de desenvolupament."
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La diferència entre països rics i pobres ha augmentat en les últimes dècades."
+    },
+    {
+      "id": "g25",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina institució internacional té com a objectiu promoure el desenvolupament sostenible i la reducció de la pobresa?",
+      "opciones": [
+        "L'Organització Mundial del Comerç (OMC).",
+        "El Banc Mundial.",
+        "La Unió Europea.",
+        "L'Organització de les Nacions Unides (ONU)."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El Banc Mundial té com a objectiu principal el desenvolupament sostenible i la reducció de la pobresa."
+    },
+    {
+      "id": "g26",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina de les següents característiques defineix millor la 'societat globalitzada'?",
+      "opciones": [
+        "La interdependència econòmica, social i cultural entre els països.",
+        "La creació d'una economia tancada a nivell global.",
+        "La presència de grans murs entre països per protegir les economies locals.",
+        "La creació de polítiques econòmiques que impedeixen el comerç internacional."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La societat globalitzada es caracteritza per la interdependència entre països."
+    },
+    {
+      "id": "g27",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina de les següents opcions descriu millor els països desenvolupats?",
+      "opciones": [
+        "Països amb alt nivell de producció industrial, alta qualitat de vida i baix índex de pobresa.",
+        "Països amb una agricultura predominant, poc desenvolupament industrial i alta taxa de mortalitat.",
+        "Països amb economies tancades i amb poc comerç exterior.",
+        "Països que depenen exclusivament del comerç agrícola."
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "Els països desenvolupats tenen alta producció industrial, qualitat de vida i baix índex de pobresa."
+    },
+    {
+      "id": "g28",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quina és la relació entre la globalització i la distribució de la riquesa?",
+      "opciones": [
+        "La globalització ha fet que la riquesa estigui més equitativament distribuïda arreu del món.",
+        "La globalització ha augmentat la concentració de la riquesa en algunes regions i ha empobrit altres.",
+        "La globalització ha reduït les desigualtats en tots els països.",
+        "La globalització no té cap impacte en la distribució de la riquesa."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La globalització ha augmentat la concentració de la riquesa en algunes regions i ha empobrit altres."
+    },
+    {
+      "id": "g29",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quin dels següents exemples és una conseqüència negativa de la globalització?",
+      "opciones": [
+        "L'augment del comerç internacional.",
+        "L'augment de les desigualtats socials i econòmiques.",
+        "La millora en l'educació global.",
+        "La millora en l'accés a serveis sanitaris en els països desenvolupats."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Una de les conseqüències negatives de la globalització és l'augment de les desigualtats socials i econòmiques."
+    },
+    {
+      "id": "g30",
+      "categoria": "Geografia",
+      "subTema": "Globalització i desenvolupament – Preguntes tipus test",
+      "pregunta": "Quin dels següents elements forma part dels ODS (Objectius de Desenvolupament Sostenible) de les Nacions Unides?",
+      "opciones": [
+        "Aconseguir un comerç internacional lliure de barreres.",
+        "Millorar la salut i el benestar de tots els individus arreu del món.",
+        "Reduir els impostos globals.",
+        "Fomentar la privatització de les economies locals."
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Millorar la salut i el benestar és un dels Objectius de Desenvolupament Sostenible de l'ONU."
+    },
+    {
+      "id": "g31",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "Quin sector inclou l'agricultura, la ramaderia i la pesca?",
+      "opciones": [
+        "Sector terciari",
+        "Sector secundari",
+        "Sector primari",
+        "Sector quaternari"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El sector primari inclou agricultura, ramaderia i pesca."
+    },
+    {
+      "id": "g32",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "El sector secundari es caracteritza per:",
+      "opciones": [
+        "Oferir serveis",
+        "Transformar matèries primeres",
+        "Extreure recursos naturals",
+        "Analitzar dades"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El sector secundari transforma matèries primeres en productes elaborats."
+    },
+    {
+      "id": "g33",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "Quina d'aquestes fonts d'energia és renovable?",
+      "opciones": [
+        "Petroli",
+        "Energia solar",
+        "Carbó",
+        "Gas natural"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'energia solar és una font renovable."
+    },
+    {
+      "id": "g34",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "Què és la deslocalització industrial?",
+      "opciones": [
+        "Concentrar la producció a Europa",
+        "Reduir el transport de mercaderies",
+        "Traslladar la producció a països amb costos baixos",
+        "Tancar fàbriques obsoletes"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La deslocalització industrial consisteix a traslladar la producció a països amb costos més baixos."
+    },
+    {
+      "id": "g35",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "El turisme és un exemple del sector:",
+      "opciones": [
+        "Primari",
+        "Secundari",
+        "Terciari",
+        "Quaternari"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "El turisme pertany al sector terciari o de serveis."
+    },
+    {
+      "id": "g36",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "L'agricultura intensiva es caracteritza per:",
+      "opciones": [
+        "Poc ús de tecnologia",
+        "Rotació tradicional de cultius",
+        "Alt ús de tecnologia i productivitat elevada",
+        "Pràctiques ecològiques"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'agricultura intensiva utilitza molta tecnologia i té alta productivitat."
+    },
+    {
+      "id": "g37",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "Quina és una activitat del sector quaternari?",
+      "opciones": [
+        "Investigació científica",
+        "Ramaderia",
+        "Construcció",
+        "Transport"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "La investigació científica és pròpia del sector quaternari."
+    },
+    {
+      "id": "g38",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "El comerç internacional és més intens entre:",
+      "opciones": [
+        "Països en desenvolupament",
+        "Països desenvolupats",
+        "Països del sud global",
+        "Zones rurals"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El comerç internacional és més intens entre països desenvolupats."
+    },
+    {
+      "id": "g39",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "El model d'economia circular busca:",
+      "opciones": [
+        "Reduir residus i reutilitzar materials",
+        "Consumir més recursos",
+        "Afavorir la globalització",
+        "Crear empreses multinacionals"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'economia circular busca reduir residus i reutilitzar materials."
+    },
+    {
+      "id": "g40",
+      "categoria": "Geografia",
+      "subTema": "Territori i activitats econòmiques – Preguntes tipus test",
+      "pregunta": "Una característica de l'agricultura ecològica és:",
+      "opciones": [
+        "Ús intensiu de pesticides",
+        "Respecte pel medi ambient",
+        "Major productivitat a qualsevol preu",
+        "Explotació intensiva del sòl"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'agricultura ecològica es basa en el respecte pel medi ambient."
+    },
+    {
+      "id": "g41",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "Què és la densitat de població?",
+      "opciones": [
+        "Nombre de naixements en un any",
+        "Percentatge d'immigrants",
+        "Habitants per km²",
+        "Nombre total d'habitants d'un país"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La densitat de població és el nombre d'habitants per km²."
+    },
+    {
+      "id": "g42",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "Una àrea metropolitana és:",
+      "opciones": [
+        "Una petita ciutat",
+        "Un poble amb serveis bàsics",
+        "Una ciutat gran i els municipis que l'envolten",
+        "Una regió agrícola"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Una àrea metropolitana és una ciutat gran i els municipis que l'envolten."
+    },
+    {
+      "id": "g43",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "La migració interior es produeix quan:",
+      "opciones": [
+        "Es canvia de país",
+        "S'emigra a un altre continent",
+        "Es canvia de zona dins el mateix país",
+        "Es viatja per turisme"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "La migració interior és el desplaçament dins el mateix país."
+    },
+    {
+      "id": "g44",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "Quina d'aquestes és una causa de despoblament rural?",
+      "opciones": [
+        "Millores tecnològiques",
+        "Falta de serveis i oportunitats",
+        "Canvi climàtic",
+        "Educació gratuïta"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La falta de serveis i oportunitats afavoreix el despoblament rural."
+    },
+    {
+      "id": "g45",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "El creixement natural de la població és:",
+      "opciones": [
+        "Diferència entre naixements i defuncions",
+        "Nombre d'immigrants",
+        "Taxes de natalitat i fecunditat",
+        "Moviments migratoris"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El creixement natural és la diferència entre naixements i defuncions."
+    },
+    {
+      "id": "g46",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "El terme 'població activa' fa referència a:",
+      "opciones": [
+        "Nens i jubilats",
+        "Persones en edat i condicions de treballar",
+        "Emigrants",
+        "Dones només"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La població activa són les persones en edat i condicions de treballar."
+    },
+    {
+      "id": "g47",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "Una ciutat amb més de 10 milions d'habitants s'anomena:",
+      "opciones": [
+        "Ciutat mitjana",
+        "Àrea rural",
+        "Megalòpolis",
+        "Regió perifèrica"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Una ciutat amb més de 10 milions d'habitants és una megalòpolis."
+    },
+    {
+      "id": "g48",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "El creixement urbà horizontal implica:",
+      "opciones": [
+        "Construcció en alçada",
+        "Expansió de la ciutat cap a l'exterior",
+        "Renovació del centre històric",
+        "Protecció del medi ambient"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El creixement urbà horizontal és l'expansió de la ciutat cap a l'exterior."
+    },
+    {
+      "id": "g49",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "El sistema urbà d'un país es refereix a:",
+      "opciones": [
+        "Conjunt de ciutats i les seves relacions",
+        "Només la capital",
+        "Zones turístiques",
+        "Infraestructures rurals"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "El sistema urbà és el conjunt de ciutats i les seves relacions."
+    },
+    {
+      "id": "g50",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (I) – Preguntes tipus test",
+      "pregunta": "Què afavoreix la formació de ciutats?",
+      "opciones": [
+        "Nomadisme",
+        "Activitats econòmiques diverses",
+        "Desertificació",
+        "Clima extrem"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La diversitat d'activitats econòmiques afavoreix la formació de ciutats."
+    },
+    {
+      "id": "g51",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "L'envelliment de la població es produeix quan:",
+      "opciones": [
+        "Neixen molts infants",
+        "Immigren joves",
+        "Augmenta el percentatge de gent gran",
+        "Disminueix l'esperança de vida"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "L'envelliment de la població es produeix quan augmenta el percentatge de gent gran."
+    },
+    {
+      "id": "g52",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "La taxa de fecunditat indica:",
+      "opciones": [
+        "Naixements per any",
+        "Fills per dona en edat fèrtil",
+        "Taxa de mortalitat",
+        "Quantitat d'homes i dones"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "La taxa de fecunditat indica el nombre de fills per dona en edat fèrtil."
+    },
+    {
+      "id": "g53",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "L'èxode rural és:",
+      "opciones": [
+        "Desplaçament del camp a la ciutat",
+        "Emigració a altres països",
+        "Tancament d'empreses",
+        "Retorn al medi rural"
+      ],
+      "respuestaCorrecta": 0,
+      "explicacion": "L'èxode rural és el desplaçament del camp a la ciutat."
+    },
+    {
+      "id": "g54",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "Les ciutats sostenibles es basen en:",
+      "opciones": [
+        "Urbanització ràpida",
+        "Reducció de l'impacte ambiental",
+        "Creixement descontrolat",
+        "Eliminació del transport públic"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Les ciutats sostenibles busquen reduir l'impacte ambiental."
+    },
+    {
+      "id": "g55",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "Un polígon industrial és:",
+      "opciones": [
+        "Una zona residencial",
+        "Una àrea verda",
+        "Espai destinat a activitats industrials",
+        "Centre comercial"
+      ],
+      "respuestaCorrecta": 2,
+      "explicacion": "Un polígon industrial és un espai destinat a activitats industrials."
+    },
+    {
+      "id": "g56",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "L'habitatge social busca:",
+      "opciones": [
+        "Edificis de luxe",
+        "Facilitar l'accés a l'habitatge a famílies vulnerables",
+        "Augmentar el preu de la vivenda",
+        "Només cases unifamiliars"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "L'habitatge social facilita l'accés a famílies vulnerables."
+    },
+    {
+      "id": "g57",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "El fenomen del 'turisme urbà' es refereix a:",
+      "opciones": [
+        "Estades llargues al camp",
+        "Visitar ciutats per motius culturals o d'oci",
+        "Viure a l'estranger",
+        "Pràctiques esportives"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El turisme urbà és visitar ciutats per motius culturals o d'oci."
+    },
+    {
+      "id": "g58",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "El transport públic ajuda a:",
+      "opciones": [
+        "Contaminar més",
+        "Reduir emissions i embussos",
+        "Privatitzar serveis",
+        "Crear habitatges"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El transport públic ajuda a reduir emissions i embussos."
+    },
+    {
+      "id": "g59",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "Una conseqüència del creixement ràpid de les ciutats pot ser:",
+      "opciones": [
+        "Millor qualitat de vida",
+        "Problemes d'infraestructura i contaminació",
+        "Disminució del consum",
+        "Augment de la biodiversitat"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "El creixement ràpid de les ciutats pot causar problemes d'infraestructura i contaminació."
+    },
+    {
+      "id": "g60",
+      "categoria": "Geografia",
+      "subTema": "Població i sistema urbà (II) – Preguntes tipus test",
+      "pregunta": "Les 'smart cities' es caracteritzen per:",
+      "opciones": [
+        "Molta població rural",
+        "Ús intensiu de tecnologia per gestionar serveis",
+        "Absència de xarxes digitals",
+        "Dependència del petroli"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Les smart cities utilitzen tecnologia per gestionar serveis urbans."
     }
   ]
 }
