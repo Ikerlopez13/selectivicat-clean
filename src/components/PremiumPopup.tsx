@@ -56,8 +56,9 @@ export default function PremiumPopup() {
     const calculateTimeLeft = () => {
       const now = new Date();
       const endDate = new Date();
-      // Establecer la hora de finalización a las 23:59 de hoy
-      endDate.setHours(23, 59, 0, 0);
+      // Establecer la hora de finalización al domingo que viene a las 11:59
+      endDate.setDate(now.getDate() + (7 - now.getDay() + 7) % 7);
+      endDate.setHours(11, 59, 0, 0);
       const difference = endDate.getTime() - now.getTime();
       if (difference <= 0) {
         setTimeLeft('Oferta finalitzada!');
@@ -108,7 +109,7 @@ export default function PremiumPopup() {
 
   const handlePremiumClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const stripeUrl = "https://buy.stripe.com/28oaG31EX7Qf8DK4gj";
+    const stripeUrl = "https://buy.stripe.com/00g15tcjB1rR8DK3ce";
     if (!session) {
       signIn(undefined, { callbackUrl: stripeUrl });
     } else {
@@ -128,11 +129,11 @@ export default function PremiumPopup() {
         ✕
       </button>
       <div className="text-center w-full">
-        <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Últim día</h2>
+        <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Nova oferta per temps limitat</h2>
         <div className="text-gray-600 mb-2">Això es per a tu, un fora de serie</div>
         <div className="flex flex-col items-center mb-2">
           <span className="text-base text-gray-400 line-through">24,99€</span>
-          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">9,99€</span>
+          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">14,99€</span>
           <span className="ml-2 font-mono bg-yellow-100 px-2 py-1 rounded text-yellow-800 text-base md:text-lg" style={{letterSpacing: '0.01em'}}>
           {timeLeft}
         </span>

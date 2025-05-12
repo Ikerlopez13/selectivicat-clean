@@ -106,8 +106,8 @@ export default function PremiumPage() {
                 <h3 className="text-2xl font-bold mb-4">Pla Premium</h3>
                 <p className="text-gray-600 mb-6">Tot el que necessites per a la Selectivitat</p>
                 <div className="mb-8 flex flex-col items-center">
-                  <span className="text-sm text-gray-400 line-through">24,99 €</span>
-                  <span className="text-4xl font-bold text-yellow-500 ml-2">9,99 €</span>
+                  <span className="text-sm text-gray-400 line-through">24,99 €</span>
+                  <span className="text-4xl font-bold text-yellow-500 ml-2">14,99 €</span>
                   <span className="text-gray-500 ml-2">/pago único</span>
                   <div className="mt-2 inline-flex items-center gap-1 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,7 +245,7 @@ export default function PremiumPage() {
                 >
                   <h3 className="text-lg font-bold mb-2">Durant quant temps tinc accés?</h3>
                   <p className="text-gray-600">
-                    Un sol pagament de <span className="text-sm text-gray-400 line-through">24,99 €</span> <span className="text-lg font-bold text-yellow-500 ml-1">9,99 €</span>, i és teu per sempre! No és una subscripció - pagues una vegada i tens accés il·limitat 
+                    Un sol pagament de <span className="text-sm text-gray-400 line-through">24,99 €</span> <span className="text-lg font-bold text-yellow-500 ml-1">14,99 €</span>, i és teu per sempre! No és una subscripció - pagues una vegada i tens accés il·limitat 
                     a tots els continguts premium sense càrrecs addicionals ni renovacions.
                   </p>
                 </motion.div>

@@ -15,8 +15,8 @@ export default function PremiumCheckoutInfo() {
           <h1 className="text-3xl font-bold mb-4 text-yellow-700">Quasi ho tens! 🚀</h1>
           <div className="flex flex-col items-center mb-4">
             <div className="flex items-end gap-2">
-              <span className="text-sm text-gray-400 line-through">24,99 €</span>
-              <span className="text-3xl font-extrabold text-selectivi-yellow">9,99 €</span>
+              <span className="text-sm text-gray-400 line-through">24,99 €</span>
+              <span className="text-3xl font-extrabold text-selectivi-yellow">14,99 €</span>
             </div>
             <span className="text-base text-yellow-700 font-semibold mt-1">un sol pagament &rarr; <span className="italic">entrar a la carrera dels teus somnis</span></span>
           </div>
