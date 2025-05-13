@@ -55,7 +55,7 @@ export default function LaunchDiscountBanner() {
         <span className="mb-1 md:mb-0">Oferta de llançament! Premium aquesta setmana.</span>
         <span className="flex items-center gap-2">
           <span className="text-xs text-gray-200 line-through">24,99 €</span>
-          <span className="text-2xl md:text-3xl font-extrabold text-white" style={{letterSpacing: '0.01em'}}>14,99 €</span>
+          <span className="text-2xl md:text-3xl font-extrabold text-white" style={{letterSpacing: '0.01em'}}>9,99 €</span>
         </span>
         <span className="ml-2 font-mono bg-yellow-100 px-2 py-1 rounded text-yellow-800 text-base md:text-lg" style={{letterSpacing: '0.01em'}}>
           {timeLeft}

@@ -89,13 +89,7 @@ export default function SeleTestPage() {
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isOnboardingComplete, setIsOnboardingComplete] = useState(false);
-  const [showAd, setShowAd] = useState(false);
 
-  useEffect(() => {
-    if (gameState.currentQuestionIndex > 0 && gameState.currentQuestionIndex % 5 === 0) {
-      setShowAd(true);
-    }
-  }, [gameState.currentQuestionIndex]);
 
   // Cargar pregunta actual
   useEffect(() => {
@@ -262,11 +256,7 @@ export default function SeleTestPage() {
       <NavbarMain />
       
       <main className="container mx-auto px-4 py-12">
-        {showAd && !session?.user?.hasPremiumStatus && isProd && (
-          <div className="max-w-4xl mx-auto mb-8">
-            <AdSenseAd slot="1859826246" />
-          </div>
-        )}
+
         
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <div className="mb-8">

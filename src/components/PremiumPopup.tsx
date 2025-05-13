@@ -130,10 +130,10 @@ export default function PremiumPopup() {
       </button>
       <div className="text-center w-full">
         <h2 className="text-2xl font-extrabold mb-1 text-gray-900">Nova oferta per temps limitat</h2>
-        <div className="text-gray-600 mb-2">Això es per a tu, un fora de serie</div>
+        <div className="text-gray-600 mb-2">Sense anuncis, i molt més...</div>
         <div className="flex flex-col items-center mb-2">
           <span className="text-base text-gray-400 line-through">24,99€</span>
-          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">14,99€</span>
+          <span className="text-4xl font-extrabold text-selectivi-yellow leading-tight">9,99€</span>
           <span className="ml-2 font-mono bg-yellow-100 px-2 py-1 rounded text-yellow-800 text-base md:text-lg" style={{letterSpacing: '0.01em'}}>
           {timeLeft}
         </span>
