@@ -680,23 +680,6 @@ export default function SeleTest() {
     }
   };
 
-  // Helper para mostrar anuncios laterales
-  const SideAds = () => (
-    !isPremium && isClient && isProd ? (
-      <>
-        <div className="hidden xl:block w-[160px] sticky top-24 h-[600px]">
-          <ins className="adsbygoogle"
-            style={{ display: 'block', width: '160px', height: '600px' }}
-            data-ad-client="ca-pub-4829722017444918"
-            data-ad-slot="1859826246"
-            data-ad-format="vertical"
-            data-full-width-responsive="false">
-          </ins>
-        </div>
-      </>
-    ) : null
-  );
-
   if (!isClient || loadingPremium || isPremium === null) {
     return (
       <div className="min-h-screen flex flex-col bg-gray-50">
@@ -713,8 +696,23 @@ export default function SeleTest() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-        <div className="flex justify-between">
-          <SideAds />
+        <div className="flex flex-row justify-center w-full">
+          {/* Lateral izquierdo */}
+          {!isPremium && isClient && isProd && (
+            <div className="hidden xl:flex flex-col items-center w-[180px] mr-4">
+              <div className="sticky top-28">
+                <ins className="adsbygoogle"
+                  style={{ display: 'block', width: '160px', height: '600px' }}
+                  data-ad-client="ca-pub-4829722017444918"
+                  data-ad-slot="1859826246"
+                  data-ad-format="vertical"
+                  data-full-width-responsive="false">
+                </ins>
+              </div>
+            </div>
+          )}
+
+          {/* Contenido principal */}
           <div className="flex-1 max-w-3xl mx-auto">
             {showOnboarding ? (
               <Onboarding onComplete={handleOnboardingComplete} isPremium={!!isPremium} />
@@ -804,7 +802,21 @@ export default function SeleTest() {
               </div>
             )}
           </div>
-          <SideAds />
+
+          {/* Lateral derecho */}
+          {!isPremium && isClient && isProd && (
+            <div className="hidden xl:flex flex-col items-center w-[180px] ml-4">
+              <div className="sticky top-28">
+                <ins className="adsbygoogle"
+                  style={{ display: 'block', width: '160px', height: '600px' }}
+                  data-ad-client="ca-pub-4829722017444918"
+                  data-ad-slot="1859826246"
+                  data-ad-format="vertical"
+                  data-full-width-responsive="false">
+                </ins>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <FooterMain />
