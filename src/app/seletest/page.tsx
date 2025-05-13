@@ -113,44 +113,44 @@ const subjectIdToCategory: Record<string, string> = {
 const matematiquesList = getMatematiquesList();
 
 // Utility function for formatting text with LaTeX
-  const formatText = (text: string) => {
-    if (!text) return '';
-    
-    const cleanDelimiters = (formula: string) => {
-      return formula
-        .replace(/\\\[|\\\]/g, '')
-        .replace(/\\\(|\\\)/g, '')
-        .replace(/\$\$/g, '')
-        .replace(/\$/g, '')
-        .trim();
-    };
-
-    const parts = text.split(/(\$\$.*?\$\$|\$.*?\$|\\\[.*?\\\]|\\\(.*?\\\))/gs);
-    
-    return parts.map((part: string, index: number) => {
-      const isDisplayMath = part.startsWith('$$') || part.startsWith('\\[');
-      const isInlineMath = part.startsWith('$') || part.startsWith('\\(');
-      
-      if (isDisplayMath || isInlineMath) {
-        const formula = cleanDelimiters(part);
-        try {
-          return (
-            <span key={index} className={`${isDisplayMath ? 'block my-4' : 'inline-block mx-1'}`}>
-              {isDisplayMath ? (
-                <BlockMath math={formula} errorColor="#FF0000" />
-              ) : (
-                <InlineMath math={formula} errorColor="#FF0000" />
-              )}
-            </span>
-          );
-        } catch (error) {
-          console.error('Error rendering LaTeX:', error, formula);
-          return <span key={index} className="text-red-500">{formula}</span>;
-        }
-      }
-      return <span key={index}>{part}</span>;
-    });
+const formatText = (text: string) => {
+  if (!text) return '';
+  
+  const cleanDelimiters = (formula: string) => {
+    return formula
+      .replace(/\\\[|\\\]/g, '')
+      .replace(/\\\(|\\\)/g, '')
+      .replace(/\$\$/g, '')
+      .replace(/\$/g, '')
+      .trim();
   };
+
+  const parts = text.split(/(\$\$.*?\$\$|\$.*?\$|\\\[.*?\\\]|\\\(.*?\\\))/gs);
+  
+  return parts.map((part: string, index: number) => {
+    const isDisplayMath = part.startsWith('$$') || part.startsWith('\\[');
+    const isInlineMath = part.startsWith('$') || part.startsWith('\\(');
+    
+    if (isDisplayMath || isInlineMath) {
+      const formula = cleanDelimiters(part);
+      try {
+        return (
+          <span key={index} className={`${isDisplayMath ? 'block my-4' : 'inline-block mx-1'}`}>
+            {isDisplayMath ? (
+              <BlockMath math={formula} errorColor="#FF0000" />
+            ) : (
+              <InlineMath math={formula} errorColor="#FF0000" />
+            )}
+          </span>
+        );
+      } catch (error) {
+        console.error('Error rendering LaTeX:', error, formula);
+        return <span key={index} className="text-red-500">{formula}</span>;
+      }
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
 
 // Componente para mostrar una pregunta individual
 const Question: React.FC<QuestionProps> = ({ 
@@ -192,98 +192,68 @@ const Question: React.FC<QuestionProps> = ({
   const isIncorrect = hasAnswered && selectedAnswer && selectedAnswer !== question.respuestaCorrecta.toString();
 
   return (
-    <div className="flex justify-between items-start gap-4">
-      {!isPremium && isClient && (
-        <div className="hidden xl:block w-[160px] sticky top-24">
-          <div id="adContainer-left">
-            <ins className="adsbygoogle"
-              style={{ display: 'block', width: '160px', height: '600px' }}
-              data-ad-client="ca-pub-4829722017444918"
-              data-ad-slot="1859826246"
-              data-ad-format="vertical"
-              data-full-width-responsive="false">
-            </ins>
-          </div>
+    <div className="w-full max-w-3xl mx-auto">
+      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+        <div className="flex items-center gap-2 mb-4">
+          <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
+            question.categoria === "Història" ? "bg-red-100 text-red-800" :
+            question.categoria === "Filosofia" ? "bg-purple-100 text-purple-800" :
+            question.categoria === "Física" ? "bg-blue-100 text-blue-800" :
+            "bg-green-100 text-green-800"
+          }`}>
+            {question.categoria}
+          </span>
         </div>
-      )}
-
-      <div className={`${isPremium ? 'w-full max-w-3xl mx-auto' : 'flex-1 max-w-3xl'}`}>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-              question.categoria === "Història" ? "bg-red-100 text-red-800" :
-              question.categoria === "Filosofia" ? "bg-purple-100 text-purple-800" :
-              question.categoria === "Física" ? "bg-blue-100 text-blue-800" :
-              "bg-green-100 text-green-800"
-            }`}>
-              {question.categoria}
-            </span>
-          </div>
-          
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">{formatText(question.pregunta)}</h3>
-          
-          <div className="space-y-3">
-            {question.opciones.map((option: string, index: number) => (
-              <button
-                key={index}
-                onClick={() => !hasAnswered && onSelectAnswer(index.toString())}
-                disabled={hasAnswered}
-                className={`w-full text-left p-4 rounded-lg border transition-all ${
-                  selectedAnswer === index.toString() && isCorrect ? "bg-green-100 border-green-500 text-green-800" :
-                  selectedAnswer === index.toString() && isIncorrect ? "bg-red-100 border-red-500 text-red-800" :
-                  selectedAnswer === index.toString() ? "bg-gray-100 border-gray-300" :
-                  hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-50 border-green-300 text-green-800" :
-                  "hover:bg-gray-50 border-gray-200"
-                }`}
-              >
-                <div className="flex items-center">
-                  <span className={`flex-shrink-0 h-6 w-6 rounded-full flex items-center justify-center mr-3 ${
-                    selectedAnswer === index.toString() && isCorrect ? "bg-green-500 text-white" :
-                    selectedAnswer === index.toString() && isIncorrect ? "bg-red-500 text-white" :
-                    selectedAnswer === index.toString() ? "bg-gray-300" :
-                    hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-500 text-white" :
-                    "bg-gray-200"
-                  }`}>
-                    {String.fromCharCode(65 + index)}
-                  </span>
-                  <span className="flex-grow text-gray-700">{formatText(option)}</span>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          {hasAnswered && (
-            <div className="mt-6 space-y-4">
-              <div className={`p-4 rounded-lg ${isCorrect ? 'bg-green-50' : 'bg-red-50'}`}>
-                <h4 className="font-semibold mb-2">Explicación:</h4>
-                <p className="text-gray-700">
-                  {formatText(question.explicacion)}
-                </p>
+        
+        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900">{formatText(question.pregunta)}</h3>
+        
+        <div className="space-y-3">
+          {question.opciones.map((option: string, index: number) => (
+            <button
+              key={index}
+              onClick={() => !hasAnswered && onSelectAnswer(index.toString())}
+              disabled={hasAnswered}
+              className={`w-full text-left p-4 rounded-lg border transition-all ${
+                selectedAnswer === index.toString() && hasAnswered && selectedAnswer === question.respuestaCorrecta.toString() ? "bg-green-100 border-green-500 text-green-800" :
+                selectedAnswer === index.toString() && hasAnswered && selectedAnswer !== question.respuestaCorrecta.toString() ? "bg-red-100 border-red-500 text-red-800" :
+                selectedAnswer === index.toString() ? "bg-gray-100 border-gray-300" :
+                hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-50 border-green-300 text-green-800" :
+                "hover:bg-gray-50 border-gray-200"
+              }`}
+            >
+              <div className="flex items-center">
+                <span className={`flex-shrink-0 h-6 w-6 rounded-full flex items-center justify-center mr-3 ${
+                  selectedAnswer === index.toString() && hasAnswered && selectedAnswer === question.respuestaCorrecta.toString() ? "bg-green-500 text-white" :
+                  selectedAnswer === index.toString() && hasAnswered && selectedAnswer !== question.respuestaCorrecta.toString() ? "bg-red-500 text-white" :
+                  selectedAnswer === index.toString() ? "bg-gray-300" :
+                  hasAnswered && index.toString() === question.respuestaCorrecta.toString() ? "bg-green-500 text-white" :
+                  "bg-gray-200"
+                }`}>
+                  {String.fromCharCode(65 + index)}
+                </span>
+                <span className="flex-grow text-gray-700">{formatText(option)}</span>
               </div>
-              <button
-                onClick={() => onSelectAnswer('next')}
-                className="w-full bg-selectivi-yellow text-white py-3 rounded-lg hover:bg-selectivi-yellow/90 transition-colors"
-              >
-                Siguiente pregunta
-              </button>
-            </div>
-          )}
+            </button>
+          ))}
         </div>
-      </div>
 
-      {!isPremium && isClient && (
-        <div className="hidden xl:block w-[160px] sticky top-24">
-          <div id="adContainer-right">
-            <ins className="adsbygoogle"
-              style={{ display: 'block', width: '160px', height: '600px' }}
-              data-ad-client="ca-pub-4829722017444918"
-              data-ad-slot="1859826246"
-              data-ad-format="vertical"
-              data-full-width-responsive="false">
-            </ins>
+        {hasAnswered && (
+          <div className="mt-6 space-y-4">
+            <div className={`p-4 rounded-lg ${hasAnswered && selectedAnswer === question.respuestaCorrecta.toString() ? 'bg-green-50' : 'bg-red-50'}`}>
+              <h4 className="font-semibold mb-2">Explicación:</h4>
+              <p className="text-gray-700">
+                {formatText(question.explicacion)}
+              </p>
+            </div>
+            <button
+              onClick={() => onSelectAnswer('next')}
+              className="w-full bg-selectivi-yellow text-white py-3 rounded-lg hover:bg-selectivi-yellow/90 transition-colors"
+            >
+              Siguiente pregunta
+            </button>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
