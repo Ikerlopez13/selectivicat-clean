@@ -147,25 +147,13 @@ export default function PremiumPage() {
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    Mode pràctica per temes específics
+                    <span className="font-medium">Filtra i practica per subtemes</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    Estadístiques detallades del teu progrés (próximament)
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Accés prioritari a nous continguts
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Suport premium
+                    <span className="font-medium">Sense anuncis, experiència neta</span>
                   </li>
                 </ul>
                 <ButtonCheckout />
@@ -187,8 +175,8 @@ export default function PremiumPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Més Pràctica</h3>
-                  <p className="text-gray-600">Accedeix a totes les preguntes sense límits per practicar tant com vulguis.</p>
+                  <h3 className="text-xl font-bold mb-2">Preguntes il·limitades</h3>
+                  <p className="text-gray-600">Practica sense límits: accés a totes les preguntes premium i simuladors.</p>
                 </motion.div>
 
                 <motion.div 
@@ -202,8 +190,8 @@ export default function PremiumPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Seguiment Detallat</h3>
-                  <p className="text-gray-600">Analitza el teu progrés amb estadístiques detallades i identifica àrees de millora.</p>
+                  <h3 className="text-xl font-bold mb-2">Filtra per subtemes</h3>
+                  <p className="text-gray-600">Tria exactamente els subtemes que vols practicar i personalitza el teu aprenentatge.</p>
                 </motion.div>
 
                 <motion.div 
@@ -217,8 +205,8 @@ export default function PremiumPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Millors Resultats</h3>
-                  <p className="text-gray-600">Prepara't millor amb accés complet a tots els recursos i augmenta les teves possibilitats d'èxit.</p>
+                  <h3 className="text-xl font-bold mb-2">Sense anuncis</h3>
+                  <p className="text-gray-600">Gaudeix d'una experiència neta i sense distraccions, només per a Premium.</p>
                 </motion.div>
               </div>
             </div>
