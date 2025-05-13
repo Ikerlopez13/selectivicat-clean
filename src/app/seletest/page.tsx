@@ -739,26 +739,12 @@ export default function SeleTest() {
                   </div>
 
                   {questions.length > 0 && currentQuestionIndex < questions.length && questions[currentQuestionIndex] && (
-                    <>
-                      <Question
-                        question={questions[currentQuestionIndex]}
-                        selectedAnswer={selectedAnswer}
-                        onSelectAnswer={handleSelectAnswer}
-                        hasAnswered={hasAnswered}
-                      />
-                      {/* Banner AdSense solo móvil debajo de la pregunta */}
-                      {!isPremium && isClient && isProd && (
-                        <div className="block xl:hidden w-full flex justify-center my-4">
-                          <ins className="adsbygoogle"
-                            style={{ display: 'block', width: '320px', height: '100px' }}
-                            data-ad-client="ca-pub-4829722017444918"
-                            data-ad-slot="1859826246"
-                            data-ad-format="horizontal"
-                            data-full-width-responsive="true">
-                          </ins>
-                        </div>
-                      )}
-                    </>
+                    <Question
+                      question={questions[currentQuestionIndex]}
+                      selectedAnswer={selectedAnswer}
+                      onSelectAnswer={handleSelectAnswer}
+                      hasAnswered={hasAnswered}
+                    />
                   )}
                 </div>
               ) : (
@@ -817,6 +803,18 @@ export default function SeleTest() {
                 </div>
               )}
             </div>
+            {/* Banner AdSense solo móvil, fuera del recuadro blanco */}
+            {!isPremium && isClient && isProd && (
+              <div className="block xl:hidden w-full flex justify-center my-4">
+                <ins className="adsbygoogle"
+                  style={{ display: 'block', width: '320px', height: '100px' }}
+                  data-ad-client="ca-pub-4829722017444918"
+                  data-ad-slot="1859826246"
+                  data-ad-format="horizontal"
+                  data-full-width-responsive="true">
+                </ins>
+              </div>
+            )}
           </div>
 
           {/* Lateral derecho (solo escritorio) */}
