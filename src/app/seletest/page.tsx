@@ -697,9 +697,9 @@ export default function SeleTest() {
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
         <div className="flex flex-row justify-center w-full">
-          {/* Lateral izquierdo SOLO si hay suficiente espacio (xl y pantalla muy ancha) */}
+          {/* Lateral izquierdo (solo escritorio) */}
           {!isPremium && isClient && isProd && (
-            <div className="hidden xl:flex flex-col items-center w-[180px] mr-4 2xl:block">
+            <div className="hidden xl:flex flex-col items-center w-[180px] mr-4">
               <div className="sticky top-28">
                 <ins className="adsbygoogle"
                   style={{ display: 'block', width: '160px', height: '600px' }}
@@ -818,6 +818,21 @@ export default function SeleTest() {
               )}
             </div>
           </div>
+
+          {/* Lateral derecho (solo escritorio) */}
+          {!isPremium && isClient && isProd && (
+            <div className="hidden xl:flex flex-col items-center w-[180px] ml-4">
+              <div className="sticky top-28">
+                <ins className="adsbygoogle"
+                  style={{ display: 'block', width: '160px', height: '600px' }}
+                  data-ad-client="ca-pub-4829722017444918"
+                  data-ad-slot="1859826246"
+                  data-ad-format="vertical"
+                  data-full-width-responsive="false">
+                </ins>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <FooterMain />
