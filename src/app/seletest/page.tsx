@@ -697,7 +697,7 @@ export default function SeleTest() {
       <NavbarMain />
       <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
         <div className="flex flex-row justify-center w-full">
-          {/* Lateral izquierdo (solo escritorio) */}
+          {/* Lateral izquierdo (solo escritorio, solo uno) */}
           {!isPremium && isClient && isProd && (
             <div className="hidden xl:flex flex-col items-center w-[180px] mr-4">
               <div className="sticky top-28">
@@ -803,21 +803,9 @@ export default function SeleTest() {
                 </div>
               )}
             </div>
-            {/* Banner AdSense solo móvil, fuera del recuadro blanco */}
-            {!isPremium && isClient && isProd && (
-              <div className="block xl:hidden w-full flex justify-center my-4">
-                <ins className="adsbygoogle"
-                  style={{ display: 'block', width: '320px', height: '100px' }}
-                  data-ad-client="ca-pub-4829722017444918"
-                  data-ad-slot="1859826246"
-                  data-ad-format="horizontal"
-                  data-full-width-responsive="true">
-                </ins>
-              </div>
-            )}
           </div>
 
-          {/* Lateral derecho (solo escritorio) */}
+          {/* Lateral derecho (solo escritorio, solo uno) */}
           {!isPremium && isClient && isProd && (
             <div className="hidden xl:flex flex-col items-center w-[180px] ml-4">
               <div className="sticky top-28">
