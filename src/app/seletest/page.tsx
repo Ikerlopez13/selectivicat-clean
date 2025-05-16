@@ -11,6 +11,7 @@ import { useSession } from "next-auth/react";
 import type { Question } from "@/types/questions";
 import { getMatematiquesList, getSubTemasForCategory, filterQuestionsBySubTemas } from '@/utils/matematiques-utils';
 import AdSenseAd from '@/components/AdSenseAd';
+import Script from 'next/script';
 
 // At the top of the file, add this line after the imports
 const isProd = process.env.NODE_ENV === 'production';
@@ -663,135 +664,144 @@ export default function SeleTest() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <NavbarMain />
-      <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
-        <div className="flex flex-row justify-center w-full">
-          {/* Lateral izquierdo (solo escritorio, solo uno) */}
-          {!isPremium && isClient && isProd && (
-            <div className="hidden xl:flex flex-col items-center w-[180px] mr-4">
-              <div className="sticky top-28">
-                <ins className="adsbygoogle"
-                  style={{ display: 'block', width: '160px', height: '600px' }}
-                  data-ad-client="ca-pub-4829722017444918"
-                  data-ad-slot="1859826246"
-                  data-ad-format="vertical"
-                  data-full-width-responsive="false">
-                </ins>
-              </div>
-            </div>
-          )}
-
-          {/* Contenido principal siempre centrado y con max-w-3xl */}
-          <div className="flex-1 flex flex-col items-center">
-            <div className="w-full max-w-3xl">
-              {showOnboarding ? (
-                <Onboarding onComplete={handleOnboardingComplete} isPremium={!!isPremium} />
-              ) : !gameOver ? (
-                <div className="container mx-auto">
-                  <div className="mb-6 max-w-3xl mx-auto">
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-xl font-bold">
-                        Pregunta {currentQuestionIndex + 1} de {questions.length}
-                      </h2>
-                      <span className="text-gray-500">
-                        Puntuación: {score} / {currentQuestionIndex}
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                      <div
-                        className="bg-selectivi-yellow h-2 rounded-full transition-all duration-300"
-                        style={{
-                          width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  {questions.length > 0 && currentQuestionIndex < questions.length && questions[currentQuestionIndex] && (
-                    <Question
-                      question={questions[currentQuestionIndex]}
-                      selectedAnswer={selectedAnswer}
-                      onSelectAnswer={handleSelectAnswer}
-                      hasAnswered={hasAnswered}
-                    />
-                  )}
+    <>
+      <Script
+        id="adsbygoogle-init"
+        strategy="afterInteractive"
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829722017444918"
+        crossOrigin="anonymous"
+      />
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <NavbarMain />
+        <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
+          <div className="flex flex-row justify-center w-full">
+            {/* Lateral izquierdo (solo escritorio, solo uno) */}
+            {!isPremium && isClient && isProd && (
+              <div className="hidden xl:flex flex-col items-center w-[180px] mr-4">
+                <div className="sticky top-28">
+                  <ins className="adsbygoogle"
+                    style={{ display: 'block', width: '160px', height: '600px' }}
+                    data-ad-client="ca-pub-4829722017444918"
+                    data-ad-slot="1859826246"
+                    data-ad-format="vertical"
+                    data-full-width-responsive="false">
+                  </ins>
                 </div>
-              ) : (
-                <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
-                  <div className="inline-flex justify-center items-center p-4 bg-selectivi-yellow/20 rounded-full mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-selectivi-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-3xl font-bold mb-4">Test completat!</h2>
-                  <div className="space-y-4 mb-8">
-                    <p className="text-xl">
-                      La teva puntuació: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
-                    </p>
-                    <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block">
-                      <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
-                      <span className="text-3xl font-bold text-yellow-600">{((score / questions.length) * 14).toFixed(2)} / 14</span>
+              </div>
+            )}
+
+            {/* Contenido principal siempre centrado y con max-w-3xl */}
+            <div className="flex-1 flex flex-col items-center">
+              <div className="w-full max-w-3xl">
+                {showOnboarding ? (
+                  <Onboarding onComplete={handleOnboardingComplete} isPremium={!!isPremium} />
+                ) : !gameOver ? (
+                  <div className="container mx-auto">
+                    <div className="mb-6 max-w-3xl mx-auto">
+                      <div className="flex justify-between items-center">
+                        <h2 className="text-xl font-bold">
+                          Pregunta {currentQuestionIndex + 1} de {questions.length}
+                        </h2>
+                        <span className="text-gray-500">
+                          Puntuación: {score} / {currentQuestionIndex}
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                        <div
+                          className="bg-selectivi-yellow h-2 rounded-full transition-all duration-300"
+                          style={{
+                            width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
+                          }}
+                        ></div>
+                      </div>
                     </div>
-                    <p className="text-lg text-gray-600">
-                      {getSupportMessage(score / questions.length)}
-                    </p>
+
+                    {questions.length > 0 && currentQuestionIndex < questions.length && questions[currentQuestionIndex] && (
+                      <Question
+                        question={questions[currentQuestionIndex]}
+                        selectedAnswer={selectedAnswer}
+                        onSelectAnswer={handleSelectAnswer}
+                        hasAnswered={hasAnswered}
+                      />
+                    )}
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button 
-                      onClick={() => {
-                        const notaSobre14 = parseFloat(((correctAnswers / questions.length) * 14).toFixed(2));
-                        let emoji = '🎓';
-                        if (notaSobre14 >= 12) emoji = '🏆';
-                        else if (notaSobre14 >= 10) emoji = '🌟';
-                        else if (notaSobre14 >= 7) emoji = '📚';
-                        else emoji = '💪';
-                        const text = `He obtingut un ${notaSobre14.toFixed(2)}/14 a SelectiviCat! ${emoji}\nPosa't a prova tu també a https://selectivi.cat`;
-                        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-                      }}
-                      className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                ) : (
+                  <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 text-center">
+                    <div className="inline-flex justify-center items-center p-4 bg-selectivi-yellow/20 rounded-full mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-selectivi-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                       </svg>
-                      Compartir per WhatsApp
-                    </button>
-                    <button 
-                      onClick={() => {
-                        setShowResults(false);
-                        setCurrentQuestionIndex(0);
-                        setScore(0);
-                        setCorrectAnswers(0);
-                        setGameOver(false);
-                        setShowOnboarding(true);
-                      }}
-                      className="flex items-center justify-center gap-2 bg-selectivi-yellow hover:bg-yellow-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                      Torna a començar
-                    </button>
+                    </div>
+                    <h2 className="text-3xl font-bold mb-4">Test completat!</h2>
+                    <div className="space-y-4 mb-8">
+                      <p className="text-xl">
+                        La teva puntuació: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
+                      </p>
+                      <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block">
+                        <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
+                        <span className="text-3xl font-bold text-yellow-600">{((score / questions.length) * 14).toFixed(2)} / 14</span>
+                      </div>
+                      <p className="text-lg text-gray-600">
+                        {getSupportMessage(score / questions.length)}
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <button 
+                        onClick={() => {
+                          const notaSobre14 = parseFloat(((correctAnswers / questions.length) * 14).toFixed(2));
+                          let emoji = '🎓';
+                          if (notaSobre14 >= 12) emoji = '🏆';
+                          else if (notaSobre14 >= 10) emoji = '🌟';
+                          else if (notaSobre14 >= 7) emoji = '📚';
+                          else emoji = '💪';
+                          const text = `He obtingut un ${notaSobre14.toFixed(2)}/14 a SelectiviCat! ${emoji}\nPosa't a prova tu també a https://selectivi.cat`;
+                          window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+                        }}
+                        className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                        </svg>
+                        Compartir per WhatsApp
+                      </button>
+                      <button 
+                        onClick={() => {
+                          setShowResults(false);
+                          setCurrentQuestionIndex(0);
+                          setScore(0);
+                          setCorrectAnswers(0);
+                          setGameOver(false);
+                          setShowOnboarding(true);
+                        }}
+                        className="flex items-center justify-center gap-2 bg-selectivi-yellow hover:bg-yellow-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                      >
+                        Torna a començar
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Lateral derecho (solo escritorio, solo uno) */}
-          {!isPremium && isClient && isProd && (
-            <div className="hidden xl:flex flex-col items-center w-[180px] ml-4">
-              <div className="sticky top-28">
-                <ins className="adsbygoogle"
-                  style={{ display: 'block', width: '160px', height: '600px' }}
-                  data-ad-client="ca-pub-4829722017444918"
-                  data-ad-slot="1859826246"
-                  data-ad-format="vertical"
-                  data-full-width-responsive="false">
-                </ins>
+                )}
               </div>
             </div>
-          )}
+
+            {/* Lateral derecho (solo escritorio, solo uno) */}
+            {!isPremium && isClient && isProd && (
+              <div className="hidden xl:flex flex-col items-center w-[180px] ml-4">
+                <div className="sticky top-28">
+                  <ins className="adsbygoogle"
+                    style={{ display: 'block', width: '160px', height: '600px' }}
+                    data-ad-client="ca-pub-4829722017444918"
+                    data-ad-slot="1859826246"
+                    data-ad-format="vertical"
+                    data-full-width-responsive="false">
+                  </ins>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <FooterMain />
-    </div>
+    </>
   );
 } 
