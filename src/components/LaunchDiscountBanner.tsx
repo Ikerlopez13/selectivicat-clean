@@ -27,13 +27,11 @@ export default function LaunchDiscountBanner() {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      const endDate = new Date();
-      // Establecer la hora de finalización al domingo que viene a las 11:59
-      endDate.setDate(now.getDate() + (7 - now.getDay() + 7) % 7);
-      endDate.setHours(11, 59, 0, 0);
-      const difference = endDate.getTime() - now.getTime();
+      // FECHA DE LA SELECTIVITAT 2025: 11 de junio de 2025 a las 9:00
+      const selectivitatDate = new Date('2025-06-11T09:00:00');
+      const difference = selectivitatDate.getTime() - now.getTime();
       if (difference <= 0) {
-        setTimeLeft('Oferta finalitzada!');
+        setTimeLeft('La Selectivitat ja ha començat!');
         return;
       }
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -50,23 +48,24 @@ export default function LaunchDiscountBanner() {
   if (isPremium) return null;
 
   return (
-    <div className="w-full bg-selectivi-yellow text-white py-3 px-4 flex flex-col md:flex-row items-center justify-center gap-2 text-center font-semibold text-base md:text-lg shadow-md z-40 mt-16">
-      <span className="flex flex-col md:flex-row items-center gap-2">
-        <span className="mb-1 md:mb-0">Oferta de llançament! Premium aquesta setmana.</span>
-        <span className="flex items-center gap-2">
-          <span className="text-xs text-gray-200 line-through">24,99 €</span>
-          <span className="text-2xl md:text-3xl font-extrabold text-white" style={{letterSpacing: '0.01em'}}>9,99 €</span>
-        </span>
-        <span className="ml-2 font-mono bg-yellow-100 px-2 py-1 rounded text-yellow-800 text-base md:text-lg" style={{letterSpacing: '0.01em'}}>
-          {timeLeft}
-        </span>
-      </span>
-      <Link
-        href="/premium"
-        className="ml-0 md:ml-4 bg-white text-selectivi-yellow font-bold px-4 py-1.5 rounded-lg shadow hover:bg-yellow-100 transition-colors border border-yellow-300"
-      >
-        Fes-te Premium ✨
-      </Link>
+    <div className="w-full bg-red-200 text-red-800 py-3 px-4 flex flex-col md:flex-row items-center justify-center gap-2 text-center font-semibold text-base md:text-lg shadow-md z-40 mt-16">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
+        <div className="flex items-center gap-2 text-lg md:text-xl font-bold text-red-900">
+          <span role="img" aria-label="alarm">⏰</span>
+          <span>Queden</span>
+          <span className="bg-[#ffe5e5] text-red-700 font-bold px-4 py-1.5 rounded-lg shadow" style={{fontSize: '1.15em', letterSpacing: '0.01em'}}>
+            {timeLeft}
+          </span>
+          <span>per la Selectivitat 2025!</span>
+        </div>
+        <a
+          href="/premium/checkout-info"
+          className="mt-2 md:mt-0 px-6 py-3 bg-white text-red-700 font-bold rounded-xl shadow hover:bg-red-100 border border-red-200 transition text-lg md:text-xl"
+          style={{ minWidth: 220, textAlign: 'center' }}
+        >
+          Prepara't ara o serà massa tard!
+        </a>
+      </div>
     </div>
   );
 } 
