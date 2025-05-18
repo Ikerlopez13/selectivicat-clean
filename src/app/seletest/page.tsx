@@ -776,13 +776,16 @@ export default function SeleTest() {
         <meta name="twitter:description" content="Practica per la Selectivitat amb tests reals i simuladors gratuïts. Millora la teva nota amb preguntes de Selectivitat de totes les matèries. Prova SeleTest ara!" />
         <meta name="twitter:image" content="https://selectivi.cat/images/logo/icon.png" />
       </Head>
-      <Script
-        id="adsbygoogle-init"
-        strategy="afterInteractive"
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829722017444918"
-        crossOrigin="anonymous"
-      />
+      {/* Solo cargar el script de AdSense si NO es premium */}
+      {!isPremium && (
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4829722017444918"
+          crossOrigin="anonymous"
+        />
+      )}
       <div className="min-h-screen flex flex-col bg-gray-50">
         <NavbarMain />
         <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
