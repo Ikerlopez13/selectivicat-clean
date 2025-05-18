@@ -12,6 +12,7 @@ import type { Question } from "@/types/questions";
 import { getMatematiquesList, getSubTemasForCategory, filterQuestionsBySubTemas } from '@/utils/matematiques-utils';
 import AdSenseAd from '@/components/AdSenseAd';
 import Script from 'next/script';
+import Head from 'next/head';
 
 // At the top of the file, add this line after the imports
 const isProd = process.env.NODE_ENV === 'production';
@@ -665,6 +666,20 @@ export default function SeleTest() {
 
   return (
     <>
+      <Head>
+        <title>Practica Selectivitat Online | Tests de Selectivitat Gratuïts</title>
+        <meta name="description" content="Practica per la Selectivitat amb tests reals i simuladors gratuïts. Millora la teva nota amb preguntes de Selectivitat de totes les matèries. Prova SeleTest ara!" />
+        <meta name="keywords" content="selectivitat, practicar selectivitat, tests selectivitat, simulador selectivitat, preguntes selectivitat, examens selectivitat, practicar exàmens selectivitat, selectivitat online, selectivitat gratis" />
+        <meta property="og:title" content="Practica Selectivitat Online | Tests de Selectivitat Gratuïts" />
+        <meta property="og:description" content="Practica per la Selectivitat amb tests reals i simuladors gratuïts. Millora la teva nota amb preguntes de Selectivitat de totes les matèries. Prova SeleTest ara!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://selectivi.cat/seletest" />
+        <meta property="og:image" content="https://selectivi.cat/images/logo/icon.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Practica Selectivitat Online | Tests de Selectivitat Gratuïts" />
+        <meta name="twitter:description" content="Practica per la Selectivitat amb tests reals i simuladors gratuïts. Millora la teva nota amb preguntes de Selectivitat de totes les matèries. Prova SeleTest ara!" />
+        <meta name="twitter:image" content="https://selectivi.cat/images/logo/icon.png" />
+      </Head>
       <Script
         id="adsbygoogle-init"
         strategy="afterInteractive"
@@ -675,6 +690,16 @@ export default function SeleTest() {
       <div className="min-h-screen flex flex-col bg-gray-50">
         <NavbarMain />
         <div className="pt-24 pb-16 px-4 md:px-8 flex-grow">
+          {/* Texto SEO visible arriba del test */}
+          <div className="max-w-3xl mx-auto mb-8 bg-white rounded-xl shadow p-6 text-center">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-selectivi-yellow">Practica per la Selectivitat amb SeleTest</h1>
+            <p className="text-lg text-gray-700 mb-2">
+              Benvingut/da al simulador de <strong>tests de Selectivitat</strong> més complet. Aquí pots <strong>practicar Selectivitat</strong> online amb preguntes reals de totes les matèries: Matemàtiques, Biologia, Química, Història, Filosofia, Geografia i més. Millora la teva nota practicant amb exàmens reals i descobreix el teu nivell abans de la prova oficial. Prova SeleTest gratis i prepara't per triomfar!
+            </p>
+            <p className="text-base text-gray-500">
+              Paraules clau: practicar selectivitat, tests selectivitat, simulador selectivitat, preguntes selectivitat, practicar exàmens selectivitat.
+            </p>
+          </div>
           <div className="flex flex-row justify-center w-full">
             {/* Lateral izquierdo (solo escritorio, solo uno) */}
             {!isPremium && isClient && isProd && (
