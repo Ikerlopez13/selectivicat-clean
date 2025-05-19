@@ -5,7 +5,7 @@ import NavbarMain from '@/components/NavbarMain'
 import Providers from '@/components/Providers'
 import { Analytics } from '@vercel/analytics/react'
 import LaunchDiscountBanner from '@/components/LaunchDiscountBanner'
-import PremiumPopup from '@/components/PremiumPopup'
+// import PremiumPopup from '@/components/PremiumPopup'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,7 +36,7 @@ export default function RootLayout({
         <Providers>
           <NavbarMain />
           <LaunchDiscountBanner />
-          <PremiumPopup />
+          {/* <PremiumPopup /> */}
           <main className="min-h-screen">
             {children}
           </main>

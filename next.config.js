@@ -30,8 +30,11 @@ const nextConfig = {
       },
     ];
   },
-  // Configuración para servir archivos PDF estáticos correctamente
+  // Configuración para servir archivos estáticos grandes
   output: 'standalone',
+  experimental: {
+    largePageDataBytes: 128 * 100000, // 12.8MB
+  },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if

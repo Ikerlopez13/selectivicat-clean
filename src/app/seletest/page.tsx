@@ -676,14 +676,14 @@ export default function SeleTest() {
                 autoPlay
                 muted
                 playsInline
-                loop={false}
+                loop
                 className="w-full h-full object-cover"
                 style={{height: '260px'}}
-                ref={el => {
-                  if (el) {
-                    el.onloadedmetadata = () => { el.currentTime = 0; };
-                    el.ontimeupdate = () => { if (el.currentTime >= 30) { el.pause(); el.currentTime = 30; } };
-                  }
+                onError={(e) => {
+                  console.error('Error loading video:', e);
+                }}
+                onLoadedData={() => {
+                  console.log('Video loaded successfully');
                 }}
               >
                 El teu navegador no suporta la reproducció de vídeo.
