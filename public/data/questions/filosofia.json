@@ -198,20 +198,7 @@
       "respuestaCorrecta": 0,
       "explicacion": "La temperança s'aconsegueix quan hi ha unanimitat i harmonia entre les tres parts de l'ànima, sense conflictes entre l'element que mana (la raó) i els dos que obeeixen, estant tots d'acord que la raó ha de governar."
     },
-    {
-      "id": "b97",
-      "categoria": "Filosofia",
-      "subTema": "Plató",
-      "pregunta": "Quina és la relació entre la justícia individual i la justícia a la ciutat segons el text?",
-      "opciones": [
-        "No hi ha cap punt borrós entre la visió de la justícia individual i la de la ciutat",
-        "Són conceptes totalment diferents i incompatibles",
-        "La justícia individual és més important que la de la ciutat",
-        "La justícia de la ciutat no té relació amb la individual"
-      ],
-      "respuestaCorrecta": 0,
-      "explicacion": "Segons el text, no hi ha cap punt borrós entre la visió de la justícia que es troba en l'individu i la que es troba a la ciutat, suggerint que són el mateix tipus de justícia aplicat a diferents escales."
-    },
+    
     {
       "id": "b98",
       "categoria": "Filosofia",
