@@ -1,0 +1,552 @@
+{
+  "standard": [
+    {
+      "pregunta": "Què són les fonts de finançament d'una empresa?",
+      "opciones": [
+        "Els beneficis obtinguts per la venda de productes",
+        "Els recursos líquids o mitjans de pagament per cobrir necessitats dineràries",
+        "Els materials utilitzats en la producció",
+        "Els clients habituals de l'empresa"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Les fonts de finançament són els recursos líquids o mitjans de pagament que utilitza l'empresa per cobrir les seves necessitats dineràries."
+    },
+    {
+      "pregunta": "Què són les amortitzacions?",
+      "opciones": [
+        "Préstecs a curt termini",
+        "Valor que va perdent l'immobilitzat en el procés de producció",
+        "Aportacions de capital social",
+        "Crèdits comercials"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Les amortitzacions reflecteixen la pèrdua de valor dels actius immobilitzats durant el procés productiu."
+    },
+    {
+      "pregunta": "Què és el crèdit comercial?",
+      "opciones": [
+        "Préstec bancari a llarg termini",
+        "Finançament automàtic quan l'empresa deixa a deure les compres als proveïdors",
+        "Aportació de capital social",
+        "Fons de reserves"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El crèdit comercial és el finançament automàtic que s'obté quan l'empresa deixa a deure les compres als proveïdors."
+    },
+    {
+      "pregunta": "Què és el descompte d'efectes?",
+      "opciones": [
+        "Un préstec a llarg termini",
+        "Portar lletres de clients al banc abans del venciment per obtenir liquiditat",
+        "Una ampliació de capital",
+        "Un tipus d'acció a la borsa"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El descompte d'efectes consisteix a portar lletres de clients al banc abans del venciment per obtenir liquiditat immediata."
+    },
+    {
+      "pregunta": "Quin és l'inconvenient principal del facturatge?",
+      "opciones": [
+        "No aporta liquiditat immediata",
+        "Té un cost elevat d'interès i comissió",
+        "No evita problemes de morositat",
+        "Només es pot fer amb accions"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El facturatge té com a inconvenient principal el seu cost elevat d'interès i comissió."
+    },
+    {
+      "pregunta": "Què són les fonts espontànies de finançament?",
+      "opciones": [
+        "Préstecs bancaris",
+        "Fons que no requereixen negociació prèvia, com deutes amb Hisenda o Seguretat Social",
+        "Accions preferents",
+        "Obligacions convertibles"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Les fonts espontànies de finançament són aquelles que no requereixen negociació prèvia, com deutes amb Hisenda o Seguretat Social."
+    },
+    {
+      "pregunta": "Quina diferència hi ha entre actius financers de renda fixa i de renda variable?",
+      "opciones": [
+        "Els de renda fixa tenen fluxos coneguts, els de variable són incerts i depenen de dividends i valor d'accions",
+        "Els de renda fixa són accions, els de variable són bons",
+        "Els de renda variable sempre donen pèrdues",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Els actius de renda fixa tenen fluxos coneguts, mentre que els de renda variable són incerts i depenen de dividends i valor d'accions."
+    },
+    {
+      "pregunta": "Què és el mercat primari o d'emissió?",
+      "opciones": [
+        "On es venen accions entre particulars",
+        "On una empresa o l'Estat emet valors per captar inversors",
+        "On es negocien només bons",
+        "On es paguen dividends"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El mercat primari és on una empresa o l'Estat emet valors per captar inversors."
+    },
+    {
+      "pregunta": "Què és una OPV (oferta pública de venda)?",
+      "opciones": [
+        "Venda d'accions de nova emissió",
+        "Venda d'accions ja existents al públic",
+        "Compra de bons per l'Estat",
+        "Préstec a curt termini"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Una OPV és la venda d'accions ja existents al públic."
+    },
+    {
+      "pregunta": "Què és una OPS (oferta pública de subscripció)?",
+      "opciones": [
+        "Venda d'accions ja existents",
+        "Oferta d'accions de nova emissió per ampliació de capital",
+        "Compra de deute públic",
+        "Venda de lletres del tresor"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Una OPS és l'oferta d'accions de nova emissió per ampliació de capital."
+    },
+    {
+      "pregunta": "Quin criteri és clau per seleccionar una font de finançament?",
+      "opciones": [
+        "El cost de la font",
+        "El color de l'empresa",
+        "El nombre d'accionistes",
+        "El tipus de producte venut"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El cost de la font és un criteri clau per seleccionar la millor opció de finançament."
+    },
+    {
+      "pregunta": "Quina és la funció principal de la comptabilitat en una empresa?",
+      "opciones": [
+        "Registrar només els ingressos",
+        "Proporcionar informació econòmica a diferents usuaris",
+        "Controlar només les despeses",
+        "Fer publicitat de l'empresa"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "La informació econòmica i financera en l'empresa. La comptabilitat",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La comptabilitat té com a objectiu principal proporcionar informació econòmica a la direcció, propietaris, treballadors i creditors."
+    },
+    {
+      "pregunta": "Com es defineix el patrimoni d'una empresa?",
+      "opciones": [
+        "Només els diners en efectiu",
+        "Conjunt de béns i drets menys les obligacions",
+        "Només els béns materials",
+        "Només les obligacions"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "La informació econòmica i financera en l'empresa. La comptabilitat",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El patrimoni és el conjunt de béns i drets de l'empresa un cop deduïdes les obligacions (deutes)."
+    },
+    {
+      "pregunta": "Què estableix el principi de la partida doble en comptabilitat?",
+      "opciones": [
+        "Cada operació afecta només una partida",
+        "Cada operació es registra al Deure i a l'Haver, i les sumes han de ser iguals",
+        "Només es registren les vendes",
+        "Només es registren les compres"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "La informació econòmica i financera en l'empresa. La comptabilitat",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El principi de la partida doble estableix que tota operació afecta almenys dues comptes, i la suma del Deure ha de ser igual a la suma de l'Haver."
+    },
+    {
+      "pregunta": "Què és la estructura econòmica d'una empresa?",
+      "opciones": [
+        "El conjunt de deutes a curt termini",
+        "El conjunt d'inversions (actiu) que té l'empresa",
+        "El capital social",
+        "Els beneficis acumulats"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "L'estructura econòmica d'una empresa està formada per l'actiu, és a dir, el conjunt d'inversions que té l'empresa."
+    },
+    {
+      "pregunta": "Quina diferència hi ha entre finançament intern i extern?",
+      "opciones": [
+        "L'intern prové de recursos propis generats per l'empresa, l'extern de fonts alienes",
+        "L'intern són préstecs bancaris, l'extern són accions",
+        "L'intern només és a curt termini",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El finançament intern prové de recursos generats per l'empresa (reserves, amortitzacions), mentre que l'extern prové de fonts alienes (préstecs, capital social, etc.)."
+    },
+    {
+      "pregunta": "Què és una estratègia corporativa?",
+      "opciones": [
+        "Una estratègia a curt termini i molt específica",
+        "Una estratègia global i a llarg termini per a tota l'empresa",
+        "Una estratègia només per a màrqueting",
+        "Una estratègia per a la gestió de recursos humans"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "L'estratègia corporativa estableix el marc global i a llarg termini per a la presa de decisions de tota l'empresa."
+    },
+    {
+      "pregunta": "Quina és la funció principal de la cadena de valor en una empresa?",
+      "opciones": [
+        "Reduir el nombre de treballadors",
+        "Analitzar i optimitzar les activitats que generen valor",
+        "Augmentar els preus dels productes",
+        "Eliminar la competència"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La cadena de valor permet analitzar i optimitzar les activitats de l'empresa per generar més valor pel client final."
+    },
+    {
+      "pregunta": "Quin és el primer pas per desenvolupar un projecte empresarial?",
+      "opciones": [
+        "Buscar finançament",
+        "Estudiar la idea de negoci",
+        "Contractar treballadors",
+        "Triar la forma jurídica"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El primer pas per a un projecte empresarial és estudiar i definir la idea de negoci."
+    },
+    {
+      "pregunta": "Quina és la responsabilitat social de l'empresa?",
+      "opciones": [
+        "Només obtenir beneficis",
+        "Crear llocs de treball i tenir cura del medi ambient",
+        "Reduir costos",
+        "Augmentar la producció"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "L'empresa té la responsabilitat social de crear ocupació i actuar de manera sostenible amb el medi ambient."
+    }
+  ],
+  "premium": [
+    {
+      "pregunta": "Què són les fonts de finançament d'una empresa?",
+      "opciones": [
+        "Els beneficis obtinguts per la venda de productes",
+        "Els recursos líquids o mitjans de pagament per cobrir necessitats dineràries",
+        "Els materials utilitzats en la producció",
+        "Els clients habituals de l'empresa"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Les fonts de finançament són els recursos líquids o mitjans de pagament que utilitza l'empresa per cobrir les seves necessitats dineràries."
+    },
+    {
+      "pregunta": "Quan es considera que una font de finançament és a curt termini?",
+      "opciones": [
+        "Quan el termini de devolució és superior a l'any",
+        "Quan el termini de devolució és inferior a l'any",
+        "Quan prové de recursos propis",
+        "Quan és un préstec sense interessos"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Una font de finançament es considera a curt termini si el termini de devolució és inferior a l'any."
+    },
+    {
+      "pregunta": "Quin dels següents és un exemple de finançament intern?",
+      "opciones": [
+        "Préstecs bancaris",
+        "Capital social",
+        "Reserves i quotes d'amortització",
+        "Crèdits comercials"
+      ],
+      "respuestaCorrecta": 2,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El finançament intern es produeix quan l'empresa utilitza recursos propis o recursos financers interns per finançar les seves operacions."
+    },
+    {
+      "pregunta": "Els mitjans de finançament aliens són…",
+      "opciones": [
+        "Capital i reserves",
+        "Préstecs i crèdits",
+        "Beneficis no distribuïts",
+        "Amortitzacions"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "El financament en l'empresa",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Els mitjans de finançament aliens són aquells recursos financers que no provenen de l'empresa mateixa, sinó de tercers."
+    },
+    {
+      "pregunta": "Què són les reserves en una empresa?",
+      "opciones": [
+        "Préstecs a curt termini",
+        "Beneficis no distribuïts que es queden a l'empresa",
+        "Aportacions dels socis",
+        "Fons per a pèrdues futures"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Les reserves són beneficis no distribuïts que es mantenen a l'empresa per reforçar la seva situació financera."
+    },
+    {
+      "pregunta": "Què és un emprèstit?",
+      "opciones": [
+        "Un préstec bancari a curt termini",
+        "Un títol de crèdit emès per l'empresa a llarg termini",
+        "Una ampliació de capital",
+        "Un tipus de leasing"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Un emprèstit és un títol de crèdit emès per l'empresa per captar recursos a llarg termini."
+    },
+    {
+      "pregunta": "Quina diferència hi ha entre leasing i renting?",
+      "opciones": [
+        "El leasing permet opció de compra al final, el renting no",
+        "El renting només és per a particulars",
+        "El leasing no inclou assegurança",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El leasing permet adquirir el bé al final del contracte, mentre que el renting no ofereix aquesta opció."
+    },
+    {
+      "pregunta": "Què és el període de recuperació (pay back) d'una inversió?",
+      "opciones": [
+        "El temps que triga a obtenir beneficis",
+        "El temps necessari per recuperar el desemborsament inicial",
+        "El temps que dura l'amortització",
+        "El temps que dura el contracte de leasing"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El període de recuperació indica el temps necessari per recuperar la inversió inicial a través dels fluxos de caixa generats."
+    },
+    {
+      "pregunta": "Què indica el VAN (Valor Actual Net)?",
+      "opciones": [
+        "El valor actualitzat dels cobraments menys els pagaments d'una inversió",
+        "El volum de vendes",
+        "El capital social",
+        "El període de recuperació"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El VAN mesura el valor actual de tots els fluxos de caixa d'una inversió, restant el desemborsament inicial."
+    },
+    {
+      "pregunta": "Què és la TIR (Taxa Interna de Rendibilitat)?",
+      "opciones": [
+        "La taxa de descompte que fa que el VAN sigui zero",
+        "El volum de vendes",
+        "El període de recuperació",
+        "El capital social"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Gestió financera",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La TIR és la taxa de descompte que iguala a zero el VAN d'una inversió i indica la rendibilitat relativa d'aquesta."
+    },
+    {
+      "pregunta": "Quins són els tres nivells d'estratègia empresarial?",
+      "opciones": [
+        "Estratègia de màrqueting, de producció i de vendes",
+        "Estratègia corporativa, de negoci i funcional",
+        "Estratègia de recursos humans, financera i comercial",
+        "Estratègia de producte, de preu i de distribució"
+      ],
+      "respuestaCorrecta": 1,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Els tres nivells d'estratègia són: corporativa (global i a llarg termini), de negoci (més concreta) i funcional (operativa i a curt termini)."
+    },
+    {
+      "pregunta": "Què és la matriu DAFO?",
+      "opciones": [
+        "Una eina per analitzar debilitats, amenaces, fortaleses i oportunitats",
+        "Un tipus d'estratègia de màrqueting",
+        "Un model de creixement empresarial",
+        "Un tipus de cadena de valor"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La matriu DAFO serveix per identificar les debilitats, amenaces, fortaleses i oportunitats de l'empresa."
+    },
+    {
+      "pregunta": "Què analitza el model de les cinc forces de Porter?",
+      "opciones": [
+        "La situació competitiva d'una empresa en el seu entorn",
+        "El creixement intern de l'empresa",
+        "La cadena de valor",
+        "La internacionalització"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El model de Porter analitza la rivalitat, l'amenaça de nous competidors, productes substitutius, poder de clients i proveïdors."
+    },
+    {
+      "pregunta": "Quina diferència hi ha entre creixement intern i extern?",
+      "opciones": [
+        "L'intern implica ampliar la capacitat productiva pròpia, l'extern adquirir o fusionar-se amb altres empreses",
+        "L'intern és més ràpid",
+        "L'extern només es fa amb empreses familiars",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El creixement intern es basa en recursos propis, mentre que l'extern implica adquisicions, fusions o aliances."
+    },
+    {
+      "pregunta": "Què és un clúster empresarial?",
+      "opciones": [
+        "Una concentració geogràfica d'empreses d'un mateix sector",
+        "Una fusió de dues empreses",
+        "Un tipus de holding",
+        "Una estratègia de diferenciació"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "Un clúster és una concentració d'empreses, institucions i universitats d'un mateix sector en una regió."
+    },
+    {
+      "pregunta": "Quina és la diferència principal entre una estratègia global i una multidomèstica?",
+      "opciones": [
+        "La global centralitza recursos i decisions, la multidomèstica adapta l'estratègia a cada país",
+        "La global només es fa a nivell local",
+        "La multidomèstica només serveix per a pimes",
+        "No hi ha diferència"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Direcció estratègica i creixement empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "L'estratègia global busca una gestió centralitzada, mentre que la multidomèstica adapta l'estratègia a cada mercat local."
+    },
+    {
+      "pregunta": "Què és el pla d'empresa?",
+      "opciones": [
+        "Un document que planifica i analitza la viabilitat del projecte empresarial",
+        "Un contracte de treball",
+        "Un informe de vendes",
+        "Un balanç comptable"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El pla d'empresa és una planificació estratègica que analitza la viabilitat i objectius del projecte."
+    },
+    {
+      "pregunta": "Quina diferència principal hi ha entre una SL i una SA?",
+      "opciones": [
+        "El capital mínim i la transmissió de participacions o accions",
+        "El nombre de treballadors",
+        "El tipus d'impost",
+        "La responsabilitat il·limitada"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La principal diferència és el capital mínim i la manera de transmetre les participacions (SL) o accions (SA)."
+    },
+    {
+      "pregunta": "Què és una cooperativa?",
+      "opciones": [
+        "Una associació sense ànim de lucre que desenvolupa una activitat empresarial",
+        "Una societat anònima",
+        "Una empresa individual",
+        "Un tipus de franquícia"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La cooperativa és una associació de persones amb interessos comuns que desenvolupen una activitat empresarial sense ànim de lucre."
+    },
+    {
+      "pregunta": "Què és el punt mort o umbral de rendibilitat?",
+      "opciones": [
+        "El nivell de vendes en què els ingressos igualen els costos",
+        "El capital social mínim",
+        "El nombre de treballadors",
+        "El cost variable unitari"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "El punt mort és el nivell de vendes en què els ingressos igualen els costos i l'empresa no té ni pèrdues ni beneficis."
+    },
+    {
+      "pregunta": "Quin és l'objectiu principal de l'estudi de mercat en un projecte empresarial?",
+      "opciones": [
+        "Analitzar la demanda, la competència i les tendències del mercat",
+        "Reduir els costos de producció",
+        "Augmentar el capital social",
+        "Seleccionar la forma jurídica"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "L'estudi de mercat serveix per analitzar la demanda, la competència i les tendències per valorar la viabilitat comercial."
+    },
+    {
+      "pregunta": "Què és la viabilitat tècnica d'un projecte empresarial?",
+      "opciones": [
+        "La capacitat de l'empresa per aconseguir la infraestructura i tecnologia necessàries",
+        "El nombre de socis",
+        "El capital social mínim",
+        "El tipus d'impost aplicable"
+      ],
+      "respuestaCorrecta": 0,
+      "subTema": "Projecte empresarial",
+      "categoria": "Economia de l'empresa",
+      "explicacion": "La viabilitat tècnica fa referència a la capacitat de l'empresa per aconseguir la infraestructura i tecnologia necessàries per produir."
+    }
+  ]
+} 

@@ -29,7 +29,8 @@ const categoryToJsonFile: { [key: string]: string } = {
   'Història': 'història.json',
   'Català': 'catala.json',
   'Castellano': 'castellano.json',
-  'Filosofia': 'filosofia.json'
+  'Filosofia': 'filosofia.json',
+  "Economia de l'empresa": 'economia_empresa.json'
 };
 
 // Definición de interfaces y tipos
@@ -95,7 +96,8 @@ const availableSubjects: Subject[] = [
   
   // Fase Específica - Humanidades y Ciencias Sociales
   { id: 'matematiques-aplicades', name: 'Matemàtiques CCSS', category: 'Social' },
-  { id: 'geografia', name: 'Geografia', category: 'Social' }
+  { id: 'geografia', name: 'Geografia', category: 'Social' },
+  { id: 'economia-empresa', name: "Economia de l'empresa", category: 'Social' }
 ];
 
 // Mapeo de IDs a categorías
@@ -107,6 +109,7 @@ const subjectIdToCategory: Record<string, string> = {
   'biologia': 'Biologia',
   'matematiques-aplicades': 'Matemàtiques CCSS',
   'geografia': 'Geografia',
+  'economia-empresa': "Economia de l'empresa",
   'historia': 'Història',
   'catala': 'Català',
   'castella': 'Castellano'
@@ -836,10 +839,16 @@ export default function SeleTest() {
                     <p className="text-xl">
                       La teva puntuació: <span className="font-bold text-selectivi-yellow">{score}</span> de {questions.length}
                     </p>
-                    <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block">
+                    <div className="my-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg inline-block mb-8">
                       <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
                       <span className="text-3xl font-bold text-yellow-600">{((score / questions.length) * 14).toFixed(2)} / 14</span>
                     </div>
+                    <AdSenseAd
+                      slot="1859826246"
+                      flyerUrl="https://www.fourvenues.com/liker-13/events/macro-festival-fi-de-selectivitat-17-by-disconnect-x-selectivicat---sala-barrokos-13-06-2025-K1FW"
+                      flyerImg="/images/Group 16.png"
+                      className="mt-12 mb-8 shadow-xl hover:scale-105 transition-transform duration-200 cursor-pointer"
+                    />
                     <p className="text-lg text-gray-600">
                       {getSupportMessage(score / questions.length)}
                     </p>
