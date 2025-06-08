@@ -891,6 +891,9 @@ export default function SeleTest() {
                         Fet per <a href="https://instagram.com/ikerlopezttp" target="_blank" rel="noopener noreferrer" className="text-selectivi-yellow hover:underline font-bold">@ikerlopezttp</a>
                       </p>
                     </div>
+                    <p className="text-sm text-gray-500 mt-1">
+                      <a href="https://instagram.com/ikerlopezttp" target="_blank" rel="noopener noreferrer" className="text-selectivi-yellow font-semibold hover:underline">Segueix-me</a> i guanya un Premium!
+                    </p>
                   </div>
                 </div>
               )}
