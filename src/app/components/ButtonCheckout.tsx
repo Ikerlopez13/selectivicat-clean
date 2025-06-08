@@ -1,5 +1,7 @@
+import Link from 'next/link';
+
 <Link
-  href="/premium/checkout-info"
+  href="/premium"
   className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-50 border-2 border-yellow-300 rounded-lg text-yellow-700 font-bold text-lg hover:bg-yellow-100 transition"
   style={{ boxShadow: '0 2px 8px 0 #fef3c7' }}
 >

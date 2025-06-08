@@ -843,12 +843,6 @@ export default function SeleTest() {
                       <span className="block text-lg font-semibold text-yellow-700">Nota simulada sobre 14:</span>
                       <span className="text-3xl font-bold text-yellow-600">{((score / questions.length) * 14).toFixed(2)} / 14</span>
                     </div>
-                    <AdSenseAd
-                      slot="1859826246"
-                      flyerUrl="https://www.fourvenues.com/liker-13/events/macro-festival-fi-de-selectivitat-17-by-disconnect-x-selectivicat---sala-barrokos-13-06-2025-K1FW"
-                      flyerImg="/images/Group 16.png"
-                      className="mt-12 mb-8 shadow-xl hover:scale-105 transition-transform duration-200 cursor-pointer"
-                    />
                     <p className="text-lg text-gray-600">
                       {getSupportMessage(score / questions.length)}
                     </p>
@@ -885,6 +879,18 @@ export default function SeleTest() {
                     >
                       Torna a començar
                     </button>
+                  </div>
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex items-center justify-center gap-3">
+                      <img 
+                        src="/images/iker-profile.jpg" 
+                        alt="Iker López" 
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <p className="text-gray-600 font-semibold">
+                        Fet per <a href="https://instagram.com/ikerlopezttp" target="_blank" rel="noopener noreferrer" className="text-selectivi-yellow hover:underline font-bold">@ikerlopezttp</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}

@@ -79,7 +79,7 @@ export default function NavbarMain() {
     { href: "/examenes", text: "Exàmens" },
     { href: "/millors-videos", text: "Millors Videos" },
     { href: "/blog", text: "Blog" },
-    ...(!isPremium ? [{ href: "/premium/checkout-info", text: "Fes-te Premium ✨" }] : [])
+    ...(!isPremium ? [{ href: "/premium", text: "Fes-te Premium ✨" }] : [])
   ];
 
   if (!mounted || loadingPremium || isPremium === null) {

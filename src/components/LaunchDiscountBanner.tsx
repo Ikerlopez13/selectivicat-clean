@@ -59,7 +59,7 @@ export default function LaunchDiscountBanner() {
           <span>per la Selectivitat 2025!</span>
         </div>
         <a
-          href="/premium/checkout-info"
+          href="/premium"
           className="mt-2 md:mt-0 px-6 py-3 bg-white text-red-700 font-bold rounded-xl shadow hover:bg-red-100 border border-red-200 transition text-lg md:text-xl"
           style={{ minWidth: 220, textAlign: 'center' }}
         >
